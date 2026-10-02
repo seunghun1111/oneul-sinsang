@@ -1,0 +1,39 @@
+[
+  {
+    "id": "oliveyoung-maeil-puretein-330ml",
+    "productSlug": "maeil-3",
+    "retailer": "올리브영",
+    "title": "퓨어틴 프로틴 쉐이크 330ml 1+1",
+    "url": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000263160",
+    "price": 5900,
+    "quantity": 2,
+    "unit": "330ml",
+    "stockStatus": "in_stock",
+    "observedAt": "2026-10-02T06:00:00.000Z"
+  },
+  {
+    "id": "oliveyoung-orion-pokachip-cheese-60g",
+    "productSlug": "orion-1423",
+    "retailer": "올리브영",
+    "title": "포카칩 황치즈맛 60g",
+    "url": "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000268598",
+    "price": 2000,
+    "quantity": 1,
+    "unit": "60g",
+    "stockStatus": "in_stock",
+    "observedAt": "2026-10-02T06:00:00.000Z"
+  },
+  {
+    "id": "kurly-samyang-1963-pagaejang-115g",
+    "productSlug": "samyang-1337",
+    "retailer": "컬리",
+    "title": "삼양1963 우지파개장 큰컵 115g",
+    "url": "https://www.kurly.com/goods/1002224967",
+    "price": 1510,
+    "regularPrice": 1780,
+    "quantity": 1,
+    "unit": "115g",
+    "stockStatus": "in_stock",
+    "observedAt": "2026-10-02T06:53:06.283Z"
+  }
+]

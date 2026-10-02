@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "node --experimental-strip-types --test scripts/*.test.mjs",
-    "update:products": "node --experimental-strip-types scripts/update-static-products.ts"
+    "update:products": "node --experimental-strip-types scripts/update-static-products.ts",
+    "update:offers": "node --experimental-strip-types scripts/update-static-offers.ts"
   },
   "dependencies": {
     "next": "16.3.5",

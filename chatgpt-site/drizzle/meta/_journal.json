@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1790058314562,
+      "tag": "0000_minor_jamie_braddock",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790762686206,
+      "tag": "0001_shocking_wolverine",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1790832362968,
+      "tag": "0002_bouncy_lake",
+      "breakpoints": true
+    }
+  ]
+}

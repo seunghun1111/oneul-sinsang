@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `announced_date` text;

@@ -14,9 +14,7 @@ export default async function ProductDetailPage(props: PageProps<"/products/[id]
   return <><Header /><main className="detail-shell"><Link className="back-link" href="/">← 신상 목록</Link>
     <section className="detail-card"><div className="detail-visual" style={{ background: meta.color }}><span aria-hidden="true">{meta.emoji}</span><span className={`badge badge-${product.productType}`}>{typeLabel[product.productType]}</span></div>
       <div className="detail-copy"><p className="eyebrow">{product.brand} · {meta.label}</p><h1>{product.name}</h1><p className="detail-description">{product.description}</p>
-        <dl className="detail-list"><div><dt>가격</dt><dd>{product.price?.toLocaleString("ko-KR")}원</dd></div><div><dt>출시일</dt><dd>{product.releaseDate}</dd></div><div><dt>판매처</dt><dd>{product.retailer}</dd></div><div><dt>상품 유형</dt><dd>{typeLabel[product.productType]}</dd></div></dl>
-        <a className="source-button" href={product.sourceUrl} target="_blank" rel="noreferrer">공식 페이지 보기 ↗</a>
+        <dl className="detail-list"><div><dt>예시 가격</dt><dd>{product.price?.toLocaleString("ko-KR")}원</dd></div><div><dt>예시 출시일</dt><dd>{product.releaseDate}</dd></div><div><dt>예시 판매처</dt><dd>{product.retailer}</dd></div><div><dt>상품 유형</dt><dd>{typeLabel[product.productType]}</dd></div></dl>
       </div></section>
   </main></>;
 }
-

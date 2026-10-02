@@ -12,9 +12,10 @@ export function ProductCard({ product }: { product: Product }) {
     </Link>
     <div className="product-content"><div className="product-kicker"><span>{product.brand}</span><span>·</span><span>{meta.label}</span></div>
       <Link href={`/products/${product.id}`}><h2>{product.name}</h2></Link><p className="product-description">{product.description}</p>
-      <div className="product-footer">{product.price ? <strong>{product.price.toLocaleString("ko-KR")}원</strong> : <strong>공식 가격 미정</strong>}<time dateTime={product.releaseDate}>{formatDate(product.releaseDate)}</time></div>
+      <div className="product-commerce">{product.price != null && <strong>{product.price.toLocaleString("ko-KR")}원</strong>}{product.retailer && <span>판매처 {product.retailer}</span>}{product.price == null && !product.retailer && <span>가격·판매처 정보 없음</span>}</div>
+      <div className="product-footer"><span>공식 발표</span><time dateTime={product.releaseDate}>{formatDate(product.releaseDate)}</time></div>
     </div>
   </article>;
 }
 
-function formatDate(date?: string) { return date ? `${Number(date.slice(5, 7))}월 ${Number(date.slice(8, 10))}일 발표` : "발표일 미정"; }
+function formatDate(date?: string) { return date ? `${Number(date.slice(5, 7))}월 ${Number(date.slice(8, 10))}일` : "날짜 미정"; }

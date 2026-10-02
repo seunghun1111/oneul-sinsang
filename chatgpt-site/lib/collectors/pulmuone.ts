@@ -1,3 +1,5 @@
+import { extractCommerce } from "./commerce.ts";
+
 const ORIGIN = "https://news.pulmuone.co.kr";
 const LIST_URL = `${ORIGIN}/pulmuone/newsroom/listDataroom.do`;
 const MAX_LIST_PAGES = 2;
@@ -10,8 +12,8 @@ export type PulmuoneProduct = {
   normalizedName: string;
   category: "meal" | "drink" | "snack";
   productType: "new";
-  price: null;
-  retailer: "풀무원";
+  price: number | null;
+  retailer: string | null;
   releaseDate: null;
   announcedDate: string;
   description: string;
@@ -83,6 +85,7 @@ export function parsePulmuoneDetail(html: string, article: Article): PulmuonePro
   const body = html.match(/<div\s+class=["']txt_ty01["'][^>]*>([\s\S]*?)<\/div>/)?.[1];
   if (!body) return null;
   const description = plainText(body).slice(0, 280);
+  const commerce = extractCommerce(`${article.title} ${plainText(body)}`);
   if (!description.includes(name)) return null;
   const imageSource = body.match(/<img\b[^>]*\bsrc=(["'])(.*?)\1/i)?.[2];
   let imageUrl: string | null = null;
@@ -99,8 +102,8 @@ export function parsePulmuoneDetail(html: string, article: Article): PulmuonePro
     normalizedName: name.normalize("NFKC").toLocaleLowerCase("ko-KR").replace(/[^a-z0-9가-힣]/g, ""),
     category,
     productType: "new",
-    price: null,
-    retailer: "풀무원",
+    price: commerce.price,
+    retailer: commerce.retailer,
     releaseDate: null,
     announcedDate: article.date,
     description: `공식 발표 ${article.date} · ${description}`,

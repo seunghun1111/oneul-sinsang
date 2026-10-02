@@ -1,3 +1,5 @@
+import { extractCommerce } from "./commerce.ts";
+
 const ORIGIN = "https://www.maeil.com";
 const LIST_URL = `${ORIGIN}/news/press.jsp`;
 const MAX_ARTICLES = 12;
@@ -10,8 +12,8 @@ export type MaeilProduct = {
   normalizedName: string;
   category: "drink" | "dessert";
   productType: "new";
-  price: null;
-  retailer: "매일유업";
+  price: number | null;
+  retailer: string | null;
   releaseDate: null;
   announcedDate: string;
   description: string;
@@ -69,6 +71,7 @@ export function parseMaeilDetail(html: string, article: Article): MaeilProduct |
   const content = view.match(/<section\s+class=["']cont["'][^>]*>([\s\S]*?)<\/section>/i)?.[1];
   if (!content) return null;
   const description = plainText(content).slice(0, 280);
+  const commerce = extractCommerce(`${article.title} ${plainText(content)}`);
   if (!description.includes(name)) return null;
   const imageSource = view.match(/<div\s+class=["']thumb["'][^>]*>[\s\S]*?<img\b[^>]*\bsrc=(["'])(.*?)\1/i)?.[2];
   let imageUrl: string | null = null;
@@ -85,8 +88,8 @@ export function parseMaeilDetail(html: string, article: Article): MaeilProduct |
     normalizedName: name.normalize("NFKC").toLocaleLowerCase("ko-KR").replace(/[^a-z0-9가-힣]/g, ""),
     category,
     productType: "new",
-    price: null,
-    retailer: "매일유업",
+    price: commerce.price,
+    retailer: commerce.retailer,
     releaseDate: null,
     announcedDate: article.date,
     description: `공식 발표 ${article.date} · ${description}`,

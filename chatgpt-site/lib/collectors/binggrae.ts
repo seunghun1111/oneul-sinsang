@@ -1,3 +1,5 @@
+import { extractCommerce } from "./commerce.ts";
+
 const ORIGIN = "https://www.bing.co.kr";
 const LIST_URL = `${ORIGIN}/news/news_announced`;
 const MAX_ARTICLES = 10;
@@ -10,8 +12,8 @@ export type CollectedProduct = {
   normalizedName: string;
   category: "drink" | "icecream" | "dessert";
   productType: "new";
-  price: null;
-  retailer: "빙그레";
+  price: number | null;
+  retailer: string | null;
   releaseDate: null;
   announcedDate: string;
   description: string;
@@ -70,6 +72,7 @@ export function parseBinggraeDetail(html: string, article: Article): CollectedPr
   const content = html.match(/<div\s+class=["'][^"']*\btxt_box\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/);
   if (!content) return null;
   const description = plainText(content[1]).slice(0, 280);
+  const commerce = extractCommerce(`${article.title} ${plainText(content[1])}`);
   if (!description.includes(name)) return null;
   const imageTag = [...content[1].matchAll(/<img\b[^>]*>/gi)]
     .find(match => decodeHtml(match[0].match(/\balt=(["'])(.*?)\1/i)?.[2] ?? "").includes(name));
@@ -88,8 +91,8 @@ export function parseBinggraeDetail(html: string, article: Article): CollectedPr
     normalizedName: name.normalize("NFKC").toLocaleLowerCase("ko-KR").replace(/[^a-z0-9가-힣]/g, ""),
     category,
     productType: "new",
-    price: null,
-    retailer: "빙그레",
+    price: commerce.price,
+    retailer: commerce.retailer,
     releaseDate: null,
     announcedDate: article.date,
     description: `공식 발표 ${article.date} · ${description}`,

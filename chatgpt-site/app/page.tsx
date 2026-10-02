@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { RefreshCw, Search } from "lucide-react";
 
-type Product = { id:number; brand:string; name:string; category:string; productType:string; price:number|null; releaseDate:string|null; announcedDate:string|null; description:string; emoji:string; sourceUrl:string; imageUrl:string|null };
+type Product = { id:number; brand:string; name:string; category:string; productType:string; price:number|null; retailer:string|null; releaseDate:string|null; announcedDate:string|null; description:string; emoji:string; sourceUrl:string; imageUrl:string|null };
 const cats = [["all","전체"],["cafe","카페"],["drink","음료"],["ramen","라면"],["meal","간편식"],["snack","과자"],["dessert","디저트"],["icecream","아이스크림"],["etc","기타"]];
 const labels = Object.fromEntries(cats);
 
@@ -28,6 +28,7 @@ function ProductCard({ product }: { product: Product }) {
         {product.price != null && <strong>{product.price.toLocaleString("ko-KR")}원</strong>}
         {product.announcedDate && <time dateTime={product.announcedDate}>공식 발표 {product.announcedDate.replaceAll("-", ".")}</time>}
       </div>
+      {product.retailer && <p className="retailer">판매처 {product.retailer}</p>}
       {product.sourceUrl && <a className="source" href={product.sourceUrl} target="_blank" rel="noopener noreferrer">공식 출처 보기</a>}
     </div>
   </article>;

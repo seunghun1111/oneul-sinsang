@@ -16,6 +16,7 @@ export async function GET() {
       category: products.category,
       productType: products.productType,
       price: products.price,
+      retailer: products.retailer,
       releaseDate: products.releaseDate,
       announcedDate: products.announcedDate,
       description: products.description,

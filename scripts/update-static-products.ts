@@ -15,7 +15,7 @@ type Candidate = {
   category: string;
   productType: "new";
   price: number | null;
-  retailer: string;
+  retailer: string | null;
   releaseDate: string | null;
   announcedDate: string;
   description: string;
@@ -40,9 +40,9 @@ export function mergeProducts(existing: Product[], candidates: Candidate[], chec
       normalizedName: candidate.normalizedName,
       category,
       productType: candidate.productType,
-      ...(candidate.price == null ? {} : { price: candidate.price }),
+      ...(candidate.price != null ? { price: candidate.price } : previous?.price != null ? { price: previous.price } : {}),
       currency: "KRW",
-      retailer: candidate.retailer,
+      ...(candidate.retailer ? { retailer: candidate.retailer } : previous?.retailer && previous.retailer !== previous.brand ? { retailer: previous.retailer } : {}),
       ...(candidate.imageUrl ? { imageUrl: candidate.imageUrl } : previous?.imageUrl ? { imageUrl: previous.imageUrl } : {}),
       sourceUrl: candidate.sourceUrl,
       sourceType: "press_release",

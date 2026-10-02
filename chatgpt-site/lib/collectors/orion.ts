@@ -1,3 +1,5 @@
+import { extractCommerce } from "./commerce.ts";
+
 const ORIGIN = "https://www.orionworld.com";
 const LIST_URL = `${ORIGIN}/board/list/87`;
 const MAX_ARTICLES = 10;
@@ -10,8 +12,8 @@ export type OrionProduct = {
   normalizedName: string;
   category: "snack";
   productType: "new";
-  price: null;
-  retailer: "오리온";
+  price: number | null;
+  retailer: string | null;
   releaseDate: null;
   announcedDate: string;
   description: string;
@@ -71,6 +73,7 @@ export function parseOrionDetail(html: string, article: Article): OrionProduct |
   const body = view.match(/<div\s+class=["']content["'][^>]*>([\s\S]*?)<\/div>/)?.[1];
   if (!body) return null;
   const description = plainText(body).slice(0, 280);
+  const commerce = extractCommerce(`${title} ${plainText(body)}`);
   if (!description.includes(name)) return null;
   const imageSource = body.match(/<img\b[^>]*\bsrc=(["'])(.*?)\1/i)?.[2];
   let imageUrl: string | null = null;
@@ -87,8 +90,8 @@ export function parseOrionDetail(html: string, article: Article): OrionProduct |
     normalizedName: name.normalize("NFKC").toLocaleLowerCase("ko-KR").replace(/[^a-z0-9가-힣]/g, ""),
     category: "snack",
     productType: "new",
-    price: null,
-    retailer: "오리온",
+    price: commerce.price,
+    retailer: commerce.retailer,
     releaseDate: null,
     announcedDate: article.date,
     description: `공식 발표 ${article.date} · ${description}`,

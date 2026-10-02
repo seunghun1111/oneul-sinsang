@@ -1,3 +1,5 @@
+import { extractCommerce } from "./commerce.ts";
+
 const ORIGIN = "https://samyangfoods.com";
 const LIST_URL = `${ORIGIN}/kor/publicity/press/list.do?searchCateCd=035002&pageUnit=20`;
 const MAX_ARTICLES = 20;
@@ -10,8 +12,8 @@ export type SamyangProduct = {
   normalizedName: string;
   category: "ramen" | "meal" | "etc";
   productType: "new";
-  price: null;
-  retailer: "삼양식품";
+  price: number | null;
+  retailer: string | null;
   releaseDate: null;
   announcedDate: string;
   description: string;
@@ -63,6 +65,7 @@ export function parseSamyangDetail(html: string, article: Article): SamyangProdu
   if (!name) return null;
   const content = board.split(/<div\s+class=["']con["'][^>]*>/)[1];
   if (!content || !plainText(content).includes(name)) return null;
+  const commerce = extractCommerce(`${title} ${plainText(content)}`);
   let imageUrl: string | null = null;
   for (const match of content.matchAll(/<img\b[^>]*\bsrc=(["'])(.*?)\1/gi)) {
     try {
@@ -81,8 +84,8 @@ export function parseSamyangDetail(html: string, article: Article): SamyangProdu
     normalizedName: name.normalize("NFKC").toLocaleLowerCase("ko-KR").replace(/[^a-z0-9가-힣]/g, ""),
     category,
     productType: "new",
-    price: null,
-    retailer: "삼양식품",
+    price: commerce.price,
+    retailer: commerce.retailer,
     releaseDate: null,
     announcedDate: article.date,
     description: `공식 발표 ${article.date} · ${title}`,

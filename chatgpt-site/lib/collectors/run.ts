@@ -36,7 +36,7 @@ export async function saveCandidates(candidates: Candidate[]) {
     const inserted = await db.insert(products).values(candidate).onConflictDoNothing().returning({ id: products.id });
     created += inserted.length;
     if (inserted.length) continue;
-    const [existing] = await db.select({ id: products.id, sourceUrl: products.sourceUrl, imageUrl: products.imageUrl, announcedDate: products.announcedDate, category: products.category, emoji: products.emoji, description: products.description })
+    const [existing] = await db.select({ id: products.id, sourceUrl: products.sourceUrl, imageUrl: products.imageUrl, announcedDate: products.announcedDate, category: products.category, emoji: products.emoji, description: products.description, price: products.price, retailer: products.retailer })
       .from(products)
       .where(and(eq(products.brand, candidate.brand), eq(products.normalizedName, candidate.normalizedName)))
       .limit(1);

@@ -4,6 +4,7 @@ export const categoryMeta: Record<ProductCategory, { label: string; emoji: strin
   convenience: { label: "편의점", emoji: "🏪", color: "#e9f7ef" },
   cafe: { label: "카페", emoji: "☕", color: "#f3eadf" },
   ramen: { label: "라면", emoji: "🍜", color: "#fff0db" },
+  meal: { label: "간편식", emoji: "🍱", color: "#edf5d7" },
   snack: { label: "과자", emoji: "🍪", color: "#fff2c8" },
   drink: { label: "음료", emoji: "🥤", color: "#e7f3ff" },
   dessert: { label: "디저트", emoji: "🍰", color: "#ffe9ef" },
@@ -12,4 +13,3 @@ export const categoryMeta: Record<ProductCategory, { label: string; emoji: strin
 };
 
 export const typeLabel: Record<ProductType, string> = { new: "NEW", seasonal: "SEASON", limited: "LIMITED", renewal: "RENEWAL" };
-

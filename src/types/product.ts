@@ -4,6 +4,7 @@ export type ProductCategory =
   | "convenience"
   | "cafe"
   | "ramen"
+  | "meal"
   | "snack"
   | "drink"
   | "dessert"
@@ -32,4 +33,3 @@ export interface Product {
   createdAt: string;
   updatedAt: string;
 }
-

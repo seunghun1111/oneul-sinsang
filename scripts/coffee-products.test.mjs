@@ -27,6 +27,13 @@ test("커피 수집 경로는 허용된 공개 공식 도메인만 사용한다"
   assert.ok(links.every(link => !/(^|\.)kakao\.com$|(^|\.)daum\.net$/.test(new URL(link.url).hostname)));
 });
 
+test("가격 확인 경로와 제공 범위를 별도로 관리한다", () => {
+  const webPriceSources = coffeeBrandSources.filter(source => source.priceAccess === "web");
+  assert.ok(webPriceSources.length >= 6);
+  assert.ok(webPriceSources.every(source => source.channels.some(channel => channel.providesPrice)));
+  assert.ok(coffeeBrandSources.every(source => source.priceNote.length > 0));
+});
+
 test("기본 목록에는 최근 판매가 확인된 신상만 포함한다", () => {
   const currentCoffee = coffeeProducts.filter(product => product.availabilityStatus === "on_sale");
   assert.ok(currentCoffee.length > 0);

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { extractOfficialProductNames, toCoffeeCandidates } from "./lib/coffee-collector.ts";
+import { extractOfficialProductNames, isRobotsAllowed, toCoffeeCandidates } from "./lib/coffee-collector.ts";
 import { mergeCoffeeProducts } from "./update-coffee-products.ts";
 
 const source = { id:"sample", brand:"샘플커피", note:"", channels:[] };
@@ -13,6 +13,12 @@ test("공식 구조화 데이터와 NEW 표시에서 상품명만 추출한다",
 test("브랜드 공식 신메뉴 영역 밖의 오래된 상품은 수집하지 않는다", () => {
   const html = `<div class="menu_slider new_menu_slider"><p class="best_tit">새 라떼</p></div><!-- 고메 --><p class="best_tit">오래된 라떼</p>`;
   assert.deepEqual(extractOfficialProductNames(html, "https://paikdabang.com/menu/menu_new/", "2026-10-06T00:00:00.000Z"), ["새 라떼"]);
+});
+
+test("robots.txt의 가장 구체적인 규칙을 우선 적용한다", () => {
+  const robots = `User-agent: *\nDisallow: /menu/\nAllow: /menu/product_view.do`;
+  assert.equal(isRobotsAllowed(robots, "https://example.com/menu/drink_list.do"), false);
+  assert.equal(isRobotsAllowed(robots, "https://example.com/menu/product_view.do?product_cd=1"), true);
 });
 
 test("가격과 이미지를 저장하지 않는 커피 상품으로 변환한다", () => {

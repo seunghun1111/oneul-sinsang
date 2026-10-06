@@ -24,6 +24,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Check CU official NEW products
+        run: npm run update:cu
       - run: npm run update:coffee
       - run: npm run update:products
       - run: npm test

@@ -2,7 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { coffeeBrandSources } from "../src/data/coffee-sources.ts";
 import type { Product } from "../src/types/product.ts";
-import { collectCoffeeSource } from "./lib/coffee-collector.ts";
+import { collectCoffeeSource, collectStarbucksFromSitemaps } from "./lib/coffee-collector.ts";
 
 const dataUrl = new URL("../src/data/coffee-products-auto.json", import.meta.url);
 
@@ -25,7 +25,7 @@ export function mergeCoffeeProducts(existing: Product[], observed: Product[], ch
 async function main() {
   const checkedAt = new Date().toISOString();
   const existing = JSON.parse(await readFile(dataUrl, "utf8")) as Product[];
-  const settled = await Promise.all(coffeeBrandSources.map(source => collectCoffeeSource(source, checkedAt)));
+  const settled = await Promise.all(coffeeBrandSources.map(source => source.id === "starbucks" ? collectStarbucksFromSitemaps(source, checkedAt) : collectCoffeeSource(source, checkedAt)));
   const observed = settled.flatMap(result => result.candidates) as Product[];
   const verifiedUrls = new Set(settled.flatMap(result => result.verifiedUrls));
   const checked = settled.reduce((sum, result) => sum + result.checked, 0);

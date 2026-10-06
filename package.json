@@ -10,6 +10,7 @@
     "lint": "eslint",
     "test": "node --experimental-strip-types --test scripts/*.test.mjs",
     "update:coffee": "node --experimental-strip-types scripts/update-coffee-products.ts",
+    "update:cu": "node --experimental-strip-types scripts/update-cu-products.ts",
     "update:products": "node --experimental-strip-types scripts/update-static-products.ts"
   },
   "dependencies": {

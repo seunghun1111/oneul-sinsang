@@ -13,6 +13,7 @@ type Candidate = {
   name: string;
   normalizedName: string;
   category: string;
+  subCategory?: string;
   productType: "new";
   price: number | null;
   retailer: string | null;
@@ -20,6 +21,7 @@ type Candidate = {
   announcedDate: string;
   description: string;
   sourceUrl: string;
+  sourceType?: "official_site" | "press_release";
   imageUrl: string | null;
 };
 
@@ -27,9 +29,10 @@ const dataUrl = new URL("../src/data/products.json", import.meta.url);
 const validCategories = new Set<ProductCategory>(["convenience", "cafe", "ramen", "meal", "snack", "drink", "dessert", "icecream", "etc"]);
 
 export function mergeProducts(existing: Product[], candidates: Candidate[], checkedAt: string): Product[] {
-  const byIdentity = new Map(existing.map(product => [`${product.brand}:${product.normalizedName}`, product]));
+  const identity = (item: Pick<Product, "id" | "brand" | "normalizedName">) => item.brand === "CU" ? `CU:${item.id}` : `${item.brand}:${item.normalizedName}`;
+  const byIdentity = new Map(existing.map(product => [identity(product), product]));
   for (const candidate of candidates) {
-    const key = `${candidate.brand}:${candidate.normalizedName}`;
+    const key = identity({ id: candidate.slug, brand: candidate.brand, normalizedName: candidate.normalizedName });
     const previous = byIdentity.get(key);
     const detectedAt = previous?.firstDetectedAt ?? checkedAt;
     const category = validCategories.has(candidate.category as ProductCategory) ? candidate.category as ProductCategory : "etc";
@@ -39,15 +42,21 @@ export function mergeProducts(existing: Product[], candidates: Candidate[], chec
       name: candidate.name,
       normalizedName: candidate.normalizedName,
       category,
+      ...(candidate.subCategory ? { subCategory: candidate.subCategory } : previous?.subCategory ? { subCategory: previous.subCategory } : {}),
       productType: candidate.productType,
       currency: "KRW",
       ...(candidate.retailer ? { retailer: candidate.retailer } : previous?.retailer && previous.retailer !== previous.brand ? { retailer: previous.retailer } : {}),
+      ...(candidate.imageUrl ? { imageUrl: candidate.imageUrl } : previous?.imageUrl ? { imageUrl: previous.imageUrl } : {}),
       sourceUrl: candidate.sourceUrl,
-      sourceType: "press_release",
-      releaseDate: candidate.releaseDate ?? candidate.announcedDate,
+      sourceType: candidate.sourceType ?? "press_release",
+      releaseDate: candidate.sourceType === "official_site"
+        ? previous?.releaseDate ?? detectedAt.slice(0, 10)
+        : candidate.releaseDate ?? candidate.announcedDate,
       firstDetectedAt: detectedAt,
       lastCheckedAt: checkedAt,
-      description: `${candidate.brand} 공식 발표에서 확인된 ${candidate.name} 신상품`,
+      description: candidate.sourceType === "official_site"
+        ? candidate.description
+        : `${candidate.brand} 공식 발표에서 확인된 ${candidate.name} 신상품`,
       availabilityStatus: "on_sale",
       availabilityCheckedAt: checkedAt,
       isActive: true,
@@ -58,10 +67,12 @@ export function mergeProducts(existing: Product[], candidates: Candidate[], chec
   return [...byIdentity.values()].map((product) => {
     const safeProduct = { ...product };
     delete safeProduct.price;
-    delete safeProduct.imageUrl;
+    if (safeProduct.sourceType !== "official_site") delete safeProduct.imageUrl;
     return {
       ...safeProduct,
-      description: `${safeProduct.brand} 공식 발표에서 확인된 ${safeProduct.name} 신상품`,
+      description: safeProduct.sourceType === "official_site"
+        ? safeProduct.description
+        : `${safeProduct.brand} 공식 발표에서 확인된 ${safeProduct.name} 신상품`,
     };
   }).sort((left, right) =>
     (right.releaseDate ?? right.firstDetectedAt).localeCompare(left.releaseDate ?? left.firstDetectedAt) || left.brand.localeCompare(right.brand, "ko-KR")

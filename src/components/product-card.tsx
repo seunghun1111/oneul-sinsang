@@ -7,7 +7,7 @@ export function ProductCard({ product }: { product: Product }) {
   const saleCheckedAt = product.availabilityCheckedAt ?? product.lastCheckedAt;
   return <article className="product-card">
     <Link href={`/products/${product.id}`} className="product-image" style={{ background: meta.color }}>
-      <span aria-hidden="true">{meta.emoji}</span><span className={`badge badge-${product.productType}`}>{typeLabel[product.productType]}</span>
+      {product.imageUrl ? <img src={product.imageUrl} alt={product.name} loading="lazy" /> : <span aria-hidden="true">{meta.emoji}</span>}<span className={`badge badge-${product.productType}`}>{typeLabel[product.productType]}</span>
     </Link>
     <div className="product-content"><div className="product-kicker"><span>{product.brand}</span><span>·</span><span>{product.subCategory ?? meta.label}</span></div>
       <Link href={`/products/${product.id}`}><h2>{product.name}</h2></Link><p className="product-description">{product.description}</p><p className="product-evidence">{product.sourceType === "press_release" ? "공식 신제품 발표 확인" : "공식 메뉴·상품 목록 확인"}</p>

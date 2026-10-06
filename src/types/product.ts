@@ -29,6 +29,8 @@ export interface Product {
   availabilityReason?: string;
   reviewStatus?: "pending" | "approved" | "rejected";
   reviewedAt?: string;
+  robotsPolicyUrl?: string;
+  robotsCheckedAt?: string;
   imageUrl?: string;
   sourceUrl: string;
   sourceType: "official_site" | "press_release" | "sns";

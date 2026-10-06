@@ -7,7 +7,7 @@ const BLOCKED_HOSTS = /(^|\.)(kakao\.com|daum\.net|kakaocorp\.com|daumcorp\.com|
 const GENERIC_NAMES = /^(new|menu|product|products|신메뉴|메뉴|상품|전체|자세히\s*보기|view\s*more)$/i;
 const PRODUCT_WORDS = /라떼|티|커피|에이드|스무디|주스|프라페|아메리카노|에스프레소|콜드\s*브루|케이크|빵|샌드|쿠키|베이글|텀블러|머그|컵|키링|보틀|드립백|원두|블렌드|캡슐|아이스크림|젤라또|latte|tea|coffee|ade|smoothie|juice|frappe|tumbler|mug|bottle|drip\s*bag|blend/i;
 
-export type CoffeeCandidate = Pick<Product, "id"|"brand"|"name"|"normalizedName"|"category"|"subCategory"|"productType"|"currency"|"sourceUrl"|"sourceType"|"firstDetectedAt"|"lastCheckedAt"|"description"|"availabilityStatus"|"availabilityCheckedAt"|"isActive"|"createdAt"|"updatedAt">;
+export type CoffeeCandidate = Pick<Product, "id"|"brand"|"name"|"normalizedName"|"category"|"subCategory"|"productType"|"currency"|"sourceUrl"|"sourceType"|"releaseDate"|"firstDetectedAt"|"lastCheckedAt"|"description"|"availabilityStatus"|"availabilityCheckedAt"|"isActive"|"createdAt"|"updatedAt"|"robotsPolicyUrl"|"robotsCheckedAt">;
 
 function textOnly(value: string) {
   return value.replace(/<[^>]+>/g, " ").replace(/&(?:nbsp|amp|quot|#39);/gi, " ").replace(/\s+/g, " ").trim();
@@ -84,11 +84,61 @@ export function toCoffeeCandidates(source: CoffeeBrandSource, kind: CoffeeSource
     const suffix = createHash("sha256").update(`${source.id}:${normalizedName}`).digest("hex").slice(0, 12);
     return {
       id:`coffee-${source.id}-${suffix}`, brand:source.brand, name, normalizedName, category:"cafe", subCategory:subCategory(kind, name),
-      productType:productType(name), currency:"KRW", sourceUrl, sourceType:"official_site", firstDetectedAt:checkedAt,
+      productType:productType(name), currency:"KRW", sourceUrl, sourceType:"official_site", releaseDate:undefined, firstDetectedAt:checkedAt,
       lastCheckedAt:checkedAt, description:`${source.brand} 공식 상품 목록에서 확인된 ${name} 신상품`, availabilityStatus:"on_sale",
-      availabilityCheckedAt:checkedAt, isActive:true, createdAt:checkedAt, updatedAt:checkedAt,
+      availabilityCheckedAt:checkedAt, isActive:true, createdAt:checkedAt, updatedAt:checkedAt, robotsPolicyUrl:undefined, robotsCheckedAt:undefined,
     };
   }).filter(candidate => candidate.normalizedName.length >= 2);
+}
+
+export function isRobotsAllowed(robotsText: string, targetUrl: string, userAgent = "OneulSinsang") {
+  const pathname = new URL(targetUrl).pathname;
+  let applies = false;
+  const rules: Array<{ allow:boolean; path:string }> = [];
+  for (const rawLine of robotsText.split(/\r?\n/)) {
+    const line = rawLine.replace(/#.*$/, "").trim();
+    if (!line) continue;
+    const [rawKey, ...rest] = line.split(":");
+    const key = rawKey.toLowerCase();
+    const value = rest.join(":").trim();
+    if (key === "user-agent") applies = value === "*" || userAgent.toLowerCase().includes(value.toLowerCase());
+    else if (applies && (key === "allow" || key === "disallow") && value) rules.push({ allow:key === "allow", path:value });
+  }
+  const matched = rules.filter(rule => pathname.startsWith(rule.path)).toSorted((a,b) => b.path.length - a.path.length)[0];
+  return matched?.allow ?? true;
+}
+
+function sitemapEntries(xml: string) {
+  return [...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>\s*<\/url>/gi)].map(match => ({ url:match[1].replaceAll("&amp;", "&"), lastmod:match[2] }));
+}
+
+export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch = fetch) {
+  const origin = "https://www.starbucks.co.kr";
+  const robotsPolicyUrl = `${origin}/robots.txt`;
+  const robotsResponse = await fetcher(robotsPolicyUrl, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
+  if (!robotsResponse.ok) throw new Error(`robots HTTP ${robotsResponse.status}`);
+  const robotsText = await robotsResponse.text();
+  const sitemapUrls = ["sitemap-drink.xml", "sitemap-food.xml", "sitemap-md.xml", "sitemap-coffee.xml"].map(item => `${origin}/${item}`);
+  if (sitemapUrls.some(url => !isRobotsAllowed(robotsText, url))) throw new Error("robots.txt에서 사이트맵 수집을 허용하지 않음");
+  const cutoff = new Date(new Date(checkedAt).getTime() - 45 * 86_400_000);
+  const sitemapResults = await Promise.all(sitemapUrls.map(async url => {
+    const response = await fetcher(url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
+    if (!response.ok) throw new Error(`sitemap HTTP ${response.status}`);
+    return sitemapEntries(await response.text()).filter(entry => new Date(`${entry.lastmod}T00:00:00Z`) >= cutoff);
+  }));
+  const entries = sitemapResults.flat().slice(0, 120);
+  const candidates: CoffeeCandidate[] = [];
+  for (let index = 0; index < entries.length; index += 6) {
+    const batch = entries.slice(index, index + 6);
+    const details = await Promise.allSettled(batch.map(async entry => {
+      if (!isRobotsAllowed(robotsText, entry.url)) return [];
+      const response = await fetcher(entry.url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
+      if (!response.ok) return [];
+      return toCoffeeCandidates(source, entry.url.includes("product_view") ? "md" : "menu", entry.url, extractOfficialProductNames(await response.text(), entry.url, checkedAt), checkedAt).map(candidate => ({ ...candidate, releaseDate:entry.lastmod, robotsPolicyUrl, robotsCheckedAt:checkedAt }));
+    }));
+    candidates.push(...details.flatMap(result => result.status === "fulfilled" ? result.value : []));
+  }
+  return { candidates:[...new Map(candidates.map(candidate => [candidate.normalizedName, candidate])).values()], verifiedUrls:entries.map(entry => entry.url), checked:sitemapUrls.length, failed:0 };
 }
 
 export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch = fetch) {

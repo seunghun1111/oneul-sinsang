@@ -7,7 +7,7 @@ import { offers } from "@/lib/offers";
 
 export default function Home() {
   return <><Header /><main>
-    <section className="hero"><div className="hero-copy"><span className="hero-label">현재 판매 확인 신상품</span><h1>지금 살 수 있는<br /><em>새로운 상품만.</em></h1><p>최근 출시되고 현재 판매가 확인된 상품을<br className="desktop-break" /> 한곳에서 확인해 보세요.</p></div>
+    <section className="hero"><div className="hero-copy"><span className="hero-label">현재 판매 확인 신상품</span><h1>지금 살 수 있는<br /><em>새로운 상품만.</em></h1><p>최근 출시되고 현재 판매 중임이 확인된 상품을<br className="desktop-break" /> 한곳에서 확인해 보세요.</p></div>
       <div className="hero-art" aria-hidden="true"><span className="art-orbit orbit-one">NEW</span><span className="art-orbit orbit-two">🍩</span><span className="art-main">🛍️</span><span className="art-spark spark-one">✦</span><span className="art-spark spark-two">✦</span></div>
     </section>
     <ProductExplorer products={products} offers={offers} />

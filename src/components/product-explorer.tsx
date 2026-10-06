@@ -14,7 +14,7 @@ export function ProductExplorer({ products, offers }: { products: Product[]; off
   const [category, setCategory] = useState<ProductCategory | "all">("all");
   const [brand, setBrand] = useState("all");
   const [sort, setSort] = useState<"release" | "detected">("release");
-  const [view, setView] = useState<"card" | "list">("card");
+  const [view, setView] = useState<"card" | "list">("list");
   const brands = useMemo(() => category === "all" ? [] : [...new Set(products.filter(product => product.category === category).map(product => product.brand))].toSorted(), [category, products]);
   const filtered = useMemo(() => products.filter((product) => (category === "all" || product.category === category) && (brand === "all" || product.brand === brand)).toSorted((a, b) => {
     const left = sort === "release" ? a.releaseDate ?? "" : a.firstDetectedAt;

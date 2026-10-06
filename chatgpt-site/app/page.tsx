@@ -23,20 +23,16 @@ function ProductVisual({ product }: { product: Product }) {
 function ProductCard({ product, offers }: { product: Product; offers: Offer[] }) {
   const summary = product.description.replace(/^공식 발표 \d{4}-\d{2}-\d{2} · /, "").trim();
   const productOffers = offers.filter(offer => offer.productSlug === String(product.id) || offer.productSlug === productSlug(product.sourceUrl));
-  const lowestOffer = productOffers.filter(offer => offer.stockStatus === "in_stock").toSorted((a,b)=>a.price-b.price)[0];
-  const saleCheckedAt = lowestOffer?.observedAt ?? product.availabilityCheckedAt;
+  const latestOffer = productOffers.filter(offer => offer.stockStatus === "in_stock").toSorted((a,b)=>b.observedAt.localeCompare(a.observedAt))[0];
+  const saleCheckedAt = latestOffer?.observedAt ?? product.availabilityCheckedAt;
   return <article>
     <ProductVisual product={product}/>
     <div className="card-body">
       <p>{product.brand} · {product.subCategory ?? labels[product.category] ?? "기타"}</p>
       <h2>{product.name}</h2>
       {summary && <p className="summary">{summary}</p>}
-      <div className="meta">
-        {lowestOffer ? <><strong>{lowestOffer.price.toLocaleString("ko-KR")}원부터</strong><small>{lowestOffer.evidenceType === "official" ? "공식 판매가" : "온라인 판매가"}</small></> : product.price != null ? <strong>{product.price.toLocaleString("ko-KR")}원</strong> : <strong className="price-unavailable">공식 가격 미제공</strong>}
-        {saleCheckedAt && <time dateTime={saleCheckedAt}>판매 확인 {saleCheckedAt.slice(0,10).replaceAll("-", ".")}</time>}
-      </div>
+      <div className="meta"><strong>현재 판매 확인</strong>{saleCheckedAt && <time dateTime={saleCheckedAt}>확인일 {saleCheckedAt.slice(0,10).replaceAll("-", ".")}</time>}</div>
       {product.retailer && <p className="retailer">판매처 {product.retailer}</p>}
-      {productOffers.length > 0 && <div className="offers" aria-label={`${product.name} 온라인 판매 정보`}>{productOffers.map(offer=><a key={offer.id} href={offer.url} target="_blank" rel="noopener noreferrer"><span><b>{offer.retailer}</b><small>{offer.evidenceType === "official" ? "공식 판매가" : "온라인 판매가"} · {offer.quantity > 1 ? `${offer.quantity}개 · ` : ""}{offer.unit}</small></span><span><strong>{offer.price.toLocaleString("ko-KR")}원</strong><small>{offer.stockStatus === "in_stock" ? "판매 중" : offer.stockStatus === "out_of_stock" ? "품절" : "상태 확인 필요"}</small></span></a>)}</div>}
       {product.sourceUrl && <a className="source" href={product.sourceUrl} target="_blank" rel="noopener noreferrer">공식 출처 보기</a>}
     </div>
   </article>;
@@ -73,7 +69,7 @@ export default function Home() {
   const [cat,setCat] = useState("all");
   const [brand,setBrand] = useState("all");
   const [query,setQuery] = useState("");
-  const [view,setView] = useState<"card"|"list">("card");
+  const [view,setView] = useState<"card"|"list">("list");
   const [loading,setLoading] = useState(true);
   const [error,setError] = useState("");
 
@@ -130,13 +126,13 @@ export default function Home() {
 
   return <main>
     <header><div className="brand"><span>오</span>오늘신상</div><div className="status">공식 출처 기반</div></header>
-    <section className="intro"><div><p className="eyebrow">현재 판매가 확인된 신상품만</p><h1>지금 살 수 있는 신상</h1><p>최근 90일 이내 출시되고 14일 안에 판매가 확인된 상품만 보여드려요.</p>{latestAnnouncement && <p><span className="latest">최근 출시 {latestAnnouncement.replaceAll("-", ".")}</span></p>}<div className="sources">커피 메뉴·MD 공식 경로 {coffeeSources.length || 18}개 브랜드 수집 대상</div></div><div className="count"><strong>{loading ? "…" : error && items.length===0 ? "—" : items.length}</strong><span>판매 중 신상</span></div></section>
+    <section className="intro"><div><p className="eyebrow">현재 판매 중임이 확인된 신상품만</p><h1>지금 살 수 있는 신상</h1><p>최근 90일 이내 출시되고 14일 안에 판매 상태가 확인된 상품만 보여드려요.</p>{latestAnnouncement && <p><span className="latest">최근 출시 {latestAnnouncement.replaceAll("-", ".")}</span></p>}<div className="sources">커피 메뉴·MD 공식 경로 {coffeeSources.length || 18}개 브랜드 수집 대상</div></div><div className="count"><strong>{loading ? "…" : error && items.length===0 ? "—" : items.length}</strong><span>판매 중 신상</span></div></section>
     <section className="workspace" aria-labelledby="products-title" aria-busy={loading}><h2 id="products-title" className="sr-only">신상품 목록</h2><div className="toolbar"><label className="search"><Search size={18} aria-hidden="true"/><input aria-label="브랜드나 상품명 검색" value={query} onChange={event=>setQuery(event.target.value)} placeholder="브랜드나 상품명 검색"/></label><button type="button" className="refresh" onClick={()=>void load()} aria-label={loading ? "새로고침 중" : "새로고침"} disabled={loading}><RefreshCw size={18} aria-hidden="true" className={loading ? "spin" : undefined}/></button><div className="view-toggle" aria-label="목록 표시 방식"><button type="button" className={view==="card"?"active":""} aria-label="카드 보기" aria-pressed={view==="card"} onClick={()=>setView("card")}><Grid2X2 size={17}/></button><button type="button" className={view==="list"?"active":""} aria-label="리스트 보기" aria-pressed={view==="list"} onClick={()=>setView("list")}><List size={18}/></button></div></div>
       <div className="category-stack"><div className="category-row"><span>대분류</span><nav aria-label="대분류 상품 분류">{availableCats.map(([id,label])=><button type="button" key={id} className={selectedCat===id?"active":""} aria-pressed={selectedCat===id} onClick={()=>{setCat(id);setBrand("all")}}>{label}</button>)}</nav></div>{availableBrands.length>0&&<div className="category-row brand-row"><span>브랜드</span><nav aria-label="중분류 브랜드"><button type="button" className={brand==="all"?"active":""} aria-pressed={brand==="all"} onClick={()=>setBrand("all")}>전체</button>{availableBrands.map(item=><button type="button" key={item} className={brand===item?"active":""} aria-pressed={brand===item} onClick={()=>setBrand(item)}>{item}</button>)}</nav></div>}</div>
       {!loading && !error && <p className="sr-only" aria-live="polite">검색 결과 {visible.length}개</p>}
       {error && <div className="notice" role="alert">{error}<button type="button" onClick={()=>void load()}>다시 시도</button></div>}
       {loading ? <div className="loading" role="status" aria-live="polite">상품 데이터를 불러오는 중…</div> : error && items.length===0 ? null : visible.length===0 ? <div className="empty" role="status">{items.length===0 ? "확인된 상품이 아직 없습니다. 공식 출처를 검증한 뒤 등록할 예정입니다." : "검색 결과가 없습니다. 검색어나 분류를 바꿔보세요."}</div> : <div className={`grid view-${view}`}>{visible.map(product=><ProductCard key={product.id} product={product} offers={offers}/>)}</div>}
     </section>
-    {coffeeSources.length > 0 && <section className="coffee-sources" aria-labelledby="coffee-source-title"><div className="source-head"><div><p>COFFEE WATCHLIST</p><h2 id="coffee-source-title">커피 브랜드 수집 경로</h2><span>신상품 발견 경로와 가격 확인 경로를 분리해 관리합니다.</span></div><strong>{coffeeSources.length}개 브랜드 · 웹 가격 {coffeeSources.filter(source=>source.priceAccess==="web").length}곳</strong></div><div className={`source-grid source-${view}`}>{coffeeSources.map(source=><article key={source.id}><div><b className={`price-${source.priceAccess}`}>{source.priceAccess==="web"?"웹 가격 확인":source.priceAccess==="app"?"앱 가격 확인":"가격 미공개"}</b><h3>{source.brand}</h3><p>{source.priceNote}</p></div><nav aria-label={`${source.brand} 공식 경로`}>{source.channels.map(channel=><a key={`${channel.kind}-${channel.url}`} href={channel.url} target="_blank" rel="noopener noreferrer">{channel.providesPrice?"가격 · ":""}{channel.label}{channel.priceScope&&<small>{channel.priceScope}</small>}</a>)}</nav></article>)}</div></section>}
+    {coffeeSources.length > 0 && <section className="coffee-sources" aria-labelledby="coffee-source-title"><div className="source-head"><div><p>COFFEE WATCHLIST</p><h2 id="coffee-source-title">커피 브랜드 수집 경로</h2><span>메뉴·MD·공식 소식에서 현재 판매 중인 신상품을 확인합니다.</span></div><strong>{coffeeSources.length}개 브랜드</strong></div><div className={`source-grid source-${view}`}>{coffeeSources.map(source=><article key={source.id}><div><b>수집 대상</b><h3>{source.brand}</h3><p>{source.note}</p></div><nav aria-label={`${source.brand} 공식 경로`}>{source.channels.map(channel=><a key={`${channel.kind}-${channel.url}`} href={channel.url} target="_blank" rel="noopener noreferrer">{channel.label}</a>)}</nav></article>)}</div></section>}
   </main>;
 }

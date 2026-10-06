@@ -40,22 +40,30 @@ export function mergeProducts(existing: Product[], candidates: Candidate[], chec
       normalizedName: candidate.normalizedName,
       category,
       productType: candidate.productType,
-      ...(candidate.price != null ? { price: candidate.price } : previous?.price != null ? { price: previous.price } : {}),
       currency: "KRW",
       ...(candidate.retailer ? { retailer: candidate.retailer } : previous?.retailer && previous.retailer !== previous.brand ? { retailer: previous.retailer } : {}),
-      ...(candidate.imageUrl ? { imageUrl: candidate.imageUrl } : previous?.imageUrl ? { imageUrl: previous.imageUrl } : {}),
       sourceUrl: candidate.sourceUrl,
       sourceType: "press_release",
       releaseDate: candidate.releaseDate ?? candidate.announcedDate,
       firstDetectedAt: detectedAt,
       lastCheckedAt: checkedAt,
-      description: candidate.description,
+      description: `${candidate.brand} 공식 발표에서 확인된 ${candidate.name} 신상품`,
+      availabilityStatus: "on_sale",
+      availabilityCheckedAt: checkedAt,
       isActive: true,
       createdAt: previous?.createdAt ?? checkedAt,
       updatedAt: checkedAt,
     });
   }
-  return [...byIdentity.values()].sort((left, right) =>
+  return [...byIdentity.values()].map((product) => {
+    const safeProduct = { ...product };
+    delete safeProduct.price;
+    delete safeProduct.imageUrl;
+    return {
+      ...safeProduct,
+      description: `${safeProduct.brand} 공식 발표에서 확인된 ${safeProduct.name} 신상품`,
+    };
+  }).sort((left, right) =>
     (right.releaseDate ?? right.firstDetectedAt).localeCompare(left.releaseDate ?? left.firstDetectedAt) || left.brand.localeCompare(right.brand, "ko-KR")
   );
 }

@@ -25,7 +25,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run update:products
-      - run: npm run update:offers
       - run: npm test
       - run: npm run lint
       - run: env GITHUB_ACTIONS=true npm run build
@@ -34,13 +33,13 @@ jobs:
           path: ./out
       - name: Commit updated product data
         run: |
-          if git diff --quiet -- src/data/products.json src/data/offers.json public/data/offers.json; then
+          if git diff --quiet -- src/data/products.json; then
             echo "No product changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/products.json src/data/offers.json public/data/offers.json
+          git add src/data/products.json
           git commit -m "chore: update official product data"
           git push
 

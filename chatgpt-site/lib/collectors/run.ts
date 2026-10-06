@@ -33,15 +33,18 @@ export async function saveCandidates(candidates: Candidate[]) {
   let updatedImages = 0;
   let updatedDates = 0;
   for (const candidate of candidates) {
-    const inserted = await db.insert(products).values(candidate).onConflictDoNothing().returning({ id: products.id });
+    const safeCandidate = { ...candidate, price:null, imageUrl:null, description:`${candidate.brand} 공식 발표에서 확인된 ${candidate.name} 신상품` };
+    const inserted = await db.insert(products).values(safeCandidate).onConflictDoNothing().returning({ id: products.id });
     created += inserted.length;
     if (inserted.length) continue;
     const [existing] = await db.select({ id: products.id, sourceUrl: products.sourceUrl, imageUrl: products.imageUrl, announcedDate: products.announcedDate, category: products.category, emoji: products.emoji, description: products.description, price: products.price, retailer: products.retailer })
       .from(products)
       .where(and(eq(products.brand, candidate.brand), eq(products.normalizedName, candidate.normalizedName)))
       .limit(1);
-    if (existing?.sourceUrl !== candidate.sourceUrl) continue;
-    const changes = changesForExisting(existing, candidate);
+    if (existing?.sourceUrl !== safeCandidate.sourceUrl) continue;
+    const changes = changesForExisting(existing, safeCandidate);
+    if (existing.imageUrl !== null) changes.imageUrl = null;
+    if (existing.price !== null) changes.price = null;
     if (changes.imageUrl) updatedImages++;
     if (changes.announcedDate) updatedDates++;
     if (Object.keys(changes).length) {

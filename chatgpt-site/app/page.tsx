@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Grid2X2, List, RefreshCw, Search } from "lucide-react";
 import offerData from "../data/offers.json";
 
-type Product = { id:string|number; brand:string; name:string; category:string; subCategory?:string; productType:string; price:number|null; retailer:string|null; releaseDate:string|null; announcedDate:string|null; description:string; emoji:string; sourceUrl:string; imageUrl:string|null };
+type Product = { id:string|number; brand:string; name:string; category:string; subCategory?:string; productType:string; price:number|null; retailer:string|null; releaseDate:string|null; announcedDate:string|null; description:string; emoji:string; sourceUrl:string; imageUrl:string|null; availabilityStatus?:string; availabilityCheckedAt?:string };
 type Offer = { id:string; productSlug:string; retailer:string; title:string; url:string; price:number; regularPrice:number|null; quantity:number; unit:string; stockStatus:"in_stock"|"out_of_stock"|"unknown"; observedAt:string };
 type CoffeeSource = { id:string; brand:string; note:string; channels:{ kind:"menu"|"md"|"news"|"shop"; label:string; url:string }[] };
 const fallbackOffers = offerData as Offer[];
@@ -24,6 +24,7 @@ function ProductCard({ product, offers }: { product: Product; offers: Offer[] })
   const summary = product.description.replace(/^공식 발표 \d{4}-\d{2}-\d{2} · /, "").trim();
   const productOffers = offers.filter(offer => offer.productSlug === productSlug(product.sourceUrl));
   const lowestOffer = productOffers.filter(offer => offer.stockStatus === "in_stock").toSorted((a,b)=>a.price-b.price)[0];
+  const saleCheckedAt = lowestOffer?.observedAt ?? product.availabilityCheckedAt;
   return <article>
     <ProductVisual product={product}/>
     <div className="card-body">
@@ -32,7 +33,7 @@ function ProductCard({ product, offers }: { product: Product; offers: Offer[] })
       {summary && <p className="summary">{summary}</p>}
       <div className="meta">
         {lowestOffer ? <strong>{lowestOffer.price.toLocaleString("ko-KR")}원부터</strong> : product.price != null && <strong>{product.price.toLocaleString("ko-KR")}원</strong>}
-        {product.announcedDate && <time dateTime={product.announcedDate}>공식 발표 {product.announcedDate.replaceAll("-", ".")}</time>}
+        {saleCheckedAt && <time dateTime={saleCheckedAt}>판매 확인 {saleCheckedAt.slice(0,10).replaceAll("-", ".")}</time>}
       </div>
       {product.retailer && <p className="retailer">판매처 {product.retailer}</p>}
       {productOffers.length > 0 && <div className="offers" aria-label={`${product.name} 온라인 판매 정보`}>{productOffers.map(offer=><a key={offer.id} href={offer.url} target="_blank" rel="noopener noreferrer"><span><b>{offer.retailer}</b><small>{offer.quantity > 1 ? `${offer.quantity}개 · ` : ""}{offer.unit}</small></span><span><strong>{offer.price.toLocaleString("ko-KR")}원</strong><small>{offer.stockStatus === "in_stock" ? "판매 중" : offer.stockStatus === "out_of_stock" ? "품절" : "상태 확인 필요"}</small></span></a>)}</div>}
@@ -51,9 +52,18 @@ function productSlug(sourceUrl:string) {
   return "";
 }
 
-function mergeCoffeeProducts(items:Product[], external:Product[]) {
+function mergeCurrentProducts(items:Product[], external:Product[], currentOffers:Offer[]) {
   const coffee = external.filter(product => product.category === "cafe").map(product => ({...product, price:product.price ?? null, retailer:product.retailer ?? null, releaseDate:product.releaseDate ?? null, announcedDate:product.releaseDate ?? null, description:product.description ?? "", emoji:product.subCategory?.includes("MD") ? "🎁" : "☕", imageUrl:product.imageUrl ?? null}));
-  return [...new Map([...items,...coffee].map(product=>[String(product.id),product])).values()];
+  const externalIds = new Set(external.map(product => String(product.id)));
+  const now = Date.now();
+  const verified = items.filter(product => {
+    if (externalIds.has(String(product.id))) return true;
+    const released = new Date(product.releaseDate ?? product.announcedDate ?? 0).getTime();
+    const isNew = Number.isFinite(released) && now - released <= 90 * 86_400_000;
+    const hasLiveOffer = currentOffers.some(offer => offer.productSlug === productSlug(product.sourceUrl) && offer.stockStatus === "in_stock" && now - new Date(offer.observedAt).getTime() <= 14 * 86_400_000);
+    return isNew && hasLiveOffer;
+  });
+  return [...new Map([...verified,...coffee].map(product=>[String(product.id),product])).values()];
 }
 
 export default function Home() {
@@ -78,8 +88,9 @@ export default function Home() {
       const data = await response.json() as { error?: string; products?: Product[] };
       if (!response.ok) throw new Error(data.error ?? "상품을 불러오지 못했습니다.");
       const external = productResponse.ok ? await productResponse.json() as Product[] : [];
-      setItems(mergeCoffeeProducts(data.products ?? [], external));
-      if (offerResponse.ok) setOffers(await offerResponse.json() as Offer[]);
+      const currentOffers = offerResponse.ok ? await offerResponse.json() as Offer[] : fallbackOffers;
+      setItems(mergeCurrentProducts(data.products ?? [], external, currentOffers));
+      setOffers(currentOffers);
       if (sourceResponse.ok) setCoffeeSources(await sourceResponse.json() as CoffeeSource[]);
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "상품을 불러오지 못했습니다.");
@@ -97,8 +108,9 @@ export default function Home() {
         const data = await response.json() as { error?: string; products?: Product[] };
         if (!response.ok) throw new Error(data.error ?? "상품을 불러오지 못했습니다.");
         const external = productResponse?.ok ? await productResponse.json() as Product[] : [];
-        if (active) setItems(mergeCoffeeProducts(data.products ?? [], external));
-        if (active && offerResponse?.ok) setOffers(await offerResponse.json() as Offer[]);
+        const currentOffers = offerResponse?.ok ? await offerResponse.json() as Offer[] : fallbackOffers;
+        if (active) setItems(mergeCurrentProducts(data.products ?? [], external, currentOffers));
+        if (active) setOffers(currentOffers);
         if (active && sourceResponse?.ok) setCoffeeSources(await sourceResponse.json() as CoffeeSource[]);
       })
       .catch(cause => { if (active) setError(cause instanceof Error ? cause.message : "상품을 불러오지 못했습니다."); })
@@ -115,7 +127,7 @@ export default function Home() {
 
   return <main>
     <header><div className="brand"><span>오</span>오늘신상</div><div className="status">공식 출처 기반</div></header>
-    <section className="intro"><div><p className="eyebrow">출처를 확인할 수 있는 신상품만</p><h1>뭐가 새로 나왔지?</h1><p>식품·음료·카페 MD 신상품을 공식 발표일 순으로 찾아보세요.</p>{latestAnnouncement && <p><span className="latest">최근 공식 발표 {latestAnnouncement.replaceAll("-", ".")}</span></p>}<div className="sources">커피 메뉴·MD 공식 경로 {coffeeSources.length || 18}개 브랜드 수집 대상</div></div><div className="count"><strong>{loading ? "…" : error && items.length===0 ? "—" : items.length}</strong><span>등록된 신상</span></div></section>
+    <section className="intro"><div><p className="eyebrow">현재 판매가 확인된 신상품만</p><h1>지금 살 수 있는 신상</h1><p>최근 90일 이내 출시되고 14일 안에 판매가 확인된 상품만 보여드려요.</p>{latestAnnouncement && <p><span className="latest">최근 출시 {latestAnnouncement.replaceAll("-", ".")}</span></p>}<div className="sources">커피 메뉴·MD 공식 경로 {coffeeSources.length || 18}개 브랜드 수집 대상</div></div><div className="count"><strong>{loading ? "…" : error && items.length===0 ? "—" : items.length}</strong><span>판매 중 신상</span></div></section>
     <section className="workspace" aria-labelledby="products-title" aria-busy={loading}><h2 id="products-title" className="sr-only">신상품 목록</h2><div className="toolbar"><label className="search"><Search size={18} aria-hidden="true"/><input aria-label="브랜드나 상품명 검색" value={query} onChange={event=>setQuery(event.target.value)} placeholder="브랜드나 상품명 검색"/></label><button type="button" className="refresh" onClick={()=>void load()} aria-label={loading ? "새로고침 중" : "새로고침"} disabled={loading}><RefreshCw size={18} aria-hidden="true" className={loading ? "spin" : undefined}/></button><div className="view-toggle" aria-label="목록 표시 방식"><button type="button" className={view==="card"?"active":""} aria-label="카드 보기" aria-pressed={view==="card"} onClick={()=>setView("card")}><Grid2X2 size={17}/></button><button type="button" className={view==="list"?"active":""} aria-label="리스트 보기" aria-pressed={view==="list"} onClick={()=>setView("list")}><List size={18}/></button></div></div>
       <nav aria-label="상품 분류">{availableCats.map(([id,label])=><button type="button" key={id} className={selectedCat===id?"active":""} aria-pressed={selectedCat===id} onClick={()=>setCat(id)}>{label}</button>)}</nav>
       {!loading && !error && <p className="sr-only" aria-live="polite">검색 결과 {visible.length}개</p>}

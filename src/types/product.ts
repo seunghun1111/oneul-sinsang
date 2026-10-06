@@ -22,6 +22,8 @@ export interface Product {
   price?: number;
   currency: "KRW";
   retailer?: string;
+  availabilityStatus?: "on_sale" | "sold_out" | "ended" | "unknown";
+  availabilityCheckedAt?: string;
   imageUrl?: string;
   sourceUrl: string;
   sourceType: "official_site" | "press_release" | "sns";

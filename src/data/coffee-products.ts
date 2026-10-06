@@ -2,7 +2,7 @@ import type { Product } from "@/types/product";
 
 const checkedAt = "2026-10-06T02:00:00.000Z";
 
-export const coffeeProducts: Product[] = [
+const rawCoffeeProducts: Product[] = [
   { id:"mega-house-milk-latte-2026-fall", brand:"메가MGC커피", name:"하우스밀크 라떼", normalizedName:"하우스밀크라떼", category:"cafe", subCategory:"음료", productType:"seasonal", currency:"KRW", sourceUrl:"https://www.mega-mgccoffee.com/", sourceType:"official_site", firstDetectedAt:checkedAt, lastCheckedAt:checkedAt, description:"메가MGC커피 하우스밀크와 에스프레소를 블렌딩한 2026 가을 시즌 라떼", isActive:true, createdAt:checkedAt, updatedAt:checkedAt },
   { id:"mega-orzo-latte-2026-fall", brand:"메가MGC커피", name:"무카페인 오르조라떼", normalizedName:"무카페인오르조라떼", category:"cafe", subCategory:"음료", productType:"seasonal", currency:"KRW", sourceUrl:"https://www.mega-mgccoffee.com/", sourceType:"official_site", firstDetectedAt:checkedAt, lastCheckedAt:checkedAt, description:"이탈리아산 오르조와 우유를 조합한 무카페인 2026 가을 시즌 라떼", isActive:true, createdAt:checkedAt, updatedAt:checkedAt },
   { id:"mega-golden-apple-black-tea-2026-fall", brand:"메가MGC커피", name:"저당 골든애플 블랙티", normalizedName:"저당골든애플블랙티", category:"cafe", subCategory:"음료", productType:"seasonal", currency:"KRW", sourceUrl:"https://www.mega-mgccoffee.com/", sourceType:"official_site", firstDetectedAt:checkedAt, lastCheckedAt:checkedAt, description:"사과와 블랙티를 조합하고 알룰로스를 사용한 저당 시즌 음료", isActive:true, createdAt:checkedAt, updatedAt:checkedAt },
@@ -14,3 +14,18 @@ export const coffeeProducts: Product[] = [
   { id:"hollys-hanbok-hollybear-keyring-2026", brand:"할리스", name:"한복 할리베어 키링", normalizedName:"한복할리베어키링", category:"cafe", subCategory:"MD", productType:"limited", currency:"KRW", sourceUrl:"https://www.hollys.co.kr/menu/md.do", sourceType:"official_site", firstDetectedAt:checkedAt, lastCheckedAt:checkedAt, description:"할리스 공식 MD 목록에서 확인된 한복 콘셉트 할리베어 키링", isActive:true, createdAt:checkedAt, updatedAt:checkedAt },
   { id:"paik-chunbae-collaboration-2026", brand:"빽다방", name:"춘배와 친구들 콜라보 음료·MD", normalizedName:"춘배와친구들콜라보음료MD", category:"cafe", subCategory:"콜라보 MD", productType:"limited", currency:"KRW", retailer:"일부 판매 매장", sourceUrl:"https://paikdabang.com/post_news/meowman/", sourceType:"official_site", releaseDate:"2026-05-21", firstDetectedAt:checkedAt, lastCheckedAt:checkedAt, description:"콜라보 음료 2종과 키링·변온컵·인형키링 세트로 구성된 한정 상품", isActive:true, createdAt:checkedAt, updatedAt:checkedAt },
 ];
+
+const confirmedCurrentSaleIds = new Set([
+  "mega-house-milk-latte-2026-fall",
+  "mega-orzo-latte-2026-fall",
+  "mega-golden-apple-black-tea-2026-fall",
+  "mega-sweet-harvest-bread-2026-fall",
+  "coffeebean-fall-menu-2026",
+  "paulbassett-nutty-mellow-dripbag-2026",
+  "paulbassett-soil-mug-green-2026",
+  "hollys-hanbok-hollybear-keyring-2026",
+]);
+
+export const coffeeProducts: Product[] = rawCoffeeProducts.map(product => confirmedCurrentSaleIds.has(product.id)
+  ? { ...product, availabilityStatus:"on_sale", availabilityCheckedAt:checkedAt }
+  : { ...product, availabilityStatus:"unknown" });

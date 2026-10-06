@@ -24,6 +24,12 @@ test("세븐일레븐과 이마트24도 최초 확인일부터 30일 동안 표�
   }
 });
 
+test("다른 상품도 공식 출시일부터 30일 미만인 경우만 표시한다", () => {
+  const coffee = product({ brand: "스타벅스", category: "cafe", releaseDate: "2026-09-07", firstDetectedAt: "2026-08-01T00:00:00.000Z" });
+  assert.equal(isCurrentlyOnSale(coffee, new Date("2026-10-06T00:00:00.000Z")), true);
+  assert.equal(isCurrentlyOnSale({ ...coffee, releaseDate: "2026-09-06" }, new Date("2026-10-06T00:00:00.000Z")), false);
+});
+
 test("오늘 업데이트는 한국 날짜 기준 최초 확인일로 판정한다", () => {
   const item = product({ firstDetectedAt: "2026-10-05T15:30:00.000Z" });
   assert.equal(seoulDateKey(item.firstDetectedAt), "2026-10-06");

@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { coffeeProducts } from "../src/data/coffee-products.ts";
 import { coffeeBrandSources } from "../src/data/coffee-sources.ts";
+import offers from "../src/data/offers.json" with { type: "json" };
 
 test("커피 카테고리에 메뉴와 MD가 함께 포함된다", () => {
   assert.ok(coffeeProducts.length >= 10);
@@ -32,6 +33,14 @@ test("가격 확인 경로와 제공 범위를 별도로 관리한다", () => {
   assert.ok(webPriceSources.length >= 6);
   assert.ok(webPriceSources.every(source => source.channels.some(channel => channel.providesPrice)));
   assert.ok(coffeeBrandSources.every(source => source.priceNote.length > 0));
+});
+
+test("커피 온라인 판매가는 개별 상품과 가격 근거를 연결한다", () => {
+  const coffeeIds = new Set(coffeeProducts.map(product => product.id));
+  const coffeeOffers = offers.filter(offer => coffeeIds.has(offer.productSlug));
+  assert.ok(coffeeOffers.length >= 4);
+  assert.ok(coffeeOffers.every(offer => offer.evidenceType === "official" || offer.evidenceType === "retailer"));
+  assert.ok(coffeeOffers.every(offer => offer.url.startsWith("https://") && offer.observedAt));
 });
 
 test("기본 목록에는 최근 판매가 확인된 신상만 포함한다", () => {

@@ -12,4 +12,5 @@ export interface Offer {
   unit: string;
   stockStatus: StockStatus;
   observedAt: string;
+  evidenceType?: "official" | "retailer";
 }

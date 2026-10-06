@@ -2,12 +2,16 @@ import { readFile, writeFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 import type { Offer, StockStatus } from "../src/types/offer.ts";
 
-type Target = Omit<Offer, "price" | "regularPrice" | "stockStatus" | "observedAt"> & { parser: "oliveyoung" | "kurly" };
+type Target = Omit<Offer, "price" | "regularPrice" | "stockStatus" | "observedAt"> & { parser: "oliveyoung" | "kurly"; matchLabel?: string };
 
 const targets: Target[] = [
   { id:"oliveyoung-orion-pokachip-cheese-60g", productSlug:"orion-1423", retailer:"올리브영", title:"포카칩 황치즈맛 60g", url:"https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000268598", quantity:1, unit:"60g", parser:"oliveyoung" },
   { id:"oliveyoung-maeil-puretein-330ml", productSlug:"maeil-3", retailer:"올리브영", title:"퓨어틴 프로틴 쉐이크 330ml 1+1", url:"https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000263160", quantity:2, unit:"330ml", parser:"oliveyoung" },
   { id:"kurly-samyang-1963-pagaejang-115g", productSlug:"samyang-1337", retailer:"컬리", title:"삼양1963 우지파개장 큰컵 115g", url:"https://www.kurly.com/goods/1002224967", quantity:1, unit:"115g", parser:"kurly" },
+  { id:"kurly-paulbassett-signature-dripbag-7", productSlug:"paulbassett-dripbag-signature-2026", retailer:"컬리", title:"폴 바셋 드립백 시그니처 블렌드 10g × 7개입", matchLabel:"[폴 바셋] 드립백 10g X 7개입 4종(택1)", url:"https://www.kurly.com/goods/5031487", quantity:7, unit:"10g", parser:"kurly", evidenceType:"retailer" },
+  { id:"kurly-paulbassett-ethiopia-dripbag-7", productSlug:"paulbassett-dripbag-ethiopia-2026", retailer:"컬리", title:"폴 바셋 드립백 에티오피아 10g × 7개입", matchLabel:"[폴 바셋] 드립백 10g X 7개입 4종(택1)", url:"https://www.kurly.com/goods/5031487", quantity:7, unit:"10g", parser:"kurly", evidenceType:"retailer" },
+  { id:"kurly-paulbassett-guatemala-dripbag-7", productSlug:"paulbassett-dripbag-guatemala-2026", retailer:"컬리", title:"폴 바셋 드립백 과테말라 10g × 7개입", matchLabel:"[폴 바셋] 드립백 10g X 7개입 4종(택1)", url:"https://www.kurly.com/goods/5031487", quantity:7, unit:"10g", parser:"kurly", evidenceType:"retailer" },
+  { id:"kurly-paulbassett-decaf-dripbag-7", productSlug:"paulbassett-dripbag-decaf-2026", retailer:"컬리", title:"폴 바셋 드립백 디카페인 블렌드 10g × 7개입", matchLabel:"[폴 바셋] 드립백 10g X 7개입 4종(택1)", url:"https://www.kurly.com/goods/5031487", quantity:7, unit:"10g", parser:"kurly", evidenceType:"retailer" },
 ];
 
 const sourceUrl = new URL("../src/data/offers.json", import.meta.url);
@@ -27,7 +31,7 @@ function statusFrom(text:string):StockStatus {
 
 export function parseOfferHtml(target:Target, html:string, observedAt:string):Offer {
   const text = plainText(html);
-  const anchor = target.title.split(" 1+1")[0];
+  const anchor = target.matchLabel ?? target.title.split(" 1+1")[0];
   const start = text.indexOf(anchor);
   if (start < 0) throw new Error("상품명을 확인할 수 없습니다.");
   const segment = text.slice(start,start+1800);
@@ -47,7 +51,8 @@ export function parseOfferHtml(target:Target, html:string, observedAt:string):Of
   if (price == null || price < 100 || price > 1_000_000) throw new Error("판매 가격을 확인할 수 없습니다.");
   return { id:target.id, productSlug:target.productSlug, retailer:target.retailer, title:target.title, url:target.url, price,
     ...(regularPrice && regularPrice > price ? {regularPrice}:{}), quantity:target.quantity, unit:target.unit,
-    stockStatus:target.parser === "kurly" && /"isPurchaseStatus":true/.test(html) ? "in_stock" : statusFrom(segment), observedAt };
+    stockStatus:target.parser === "kurly" && /"isPurchaseStatus":true/.test(html) ? "in_stock" : statusFrom(segment), observedAt,
+    evidenceType:target.evidenceType ?? "retailer" };
 }
 
 async function fetchHtml(url:string) {

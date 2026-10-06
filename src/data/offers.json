@@ -24,6 +24,58 @@
     "observedAt": "2026-10-02T06:00:00.000Z"
   },
   {
+    "id": "kurly-paulbassett-decaf-dripbag-7",
+    "productSlug": "paulbassett-dripbag-decaf-2026",
+    "retailer": "컬리",
+    "title": "폴 바셋 드립백 디카페인 블렌드 10g × 7개입",
+    "url": "https://www.kurly.com/goods/5031487",
+    "price": 13000,
+    "quantity": 7,
+    "unit": "10g",
+    "stockStatus": "in_stock",
+    "observedAt": "2026-10-06T04:40:00.000Z",
+    "evidenceType": "retailer"
+  },
+  {
+    "id": "kurly-paulbassett-ethiopia-dripbag-7",
+    "productSlug": "paulbassett-dripbag-ethiopia-2026",
+    "retailer": "컬리",
+    "title": "폴 바셋 드립백 에티오피아 10g × 7개입",
+    "url": "https://www.kurly.com/goods/5031487",
+    "price": 13000,
+    "quantity": 7,
+    "unit": "10g",
+    "stockStatus": "in_stock",
+    "observedAt": "2026-10-06T04:40:00.000Z",
+    "evidenceType": "retailer"
+  },
+  {
+    "id": "kurly-paulbassett-guatemala-dripbag-7",
+    "productSlug": "paulbassett-dripbag-guatemala-2026",
+    "retailer": "컬리",
+    "title": "폴 바셋 드립백 과테말라 10g × 7개입",
+    "url": "https://www.kurly.com/goods/5031487",
+    "price": 13000,
+    "quantity": 7,
+    "unit": "10g",
+    "stockStatus": "in_stock",
+    "observedAt": "2026-10-06T04:40:00.000Z",
+    "evidenceType": "retailer"
+  },
+  {
+    "id": "kurly-paulbassett-signature-dripbag-7",
+    "productSlug": "paulbassett-dripbag-signature-2026",
+    "retailer": "컬리",
+    "title": "폴 바셋 드립백 시그니처 블렌드 10g × 7개입",
+    "url": "https://www.kurly.com/goods/5031487",
+    "price": 13000,
+    "quantity": 7,
+    "unit": "10g",
+    "stockStatus": "in_stock",
+    "observedAt": "2026-10-06T04:40:00.000Z",
+    "evidenceType": "retailer"
+  },
+  {
     "id": "kurly-samyang-1963-pagaejang-115g",
     "productSlug": "samyang-1337",
     "retailer": "컬리",
@@ -34,6 +86,7 @@
     "quantity": 1,
     "unit": "115g",
     "stockStatus": "in_stock",
-    "observedAt": "2026-10-06T01:45:35.994Z"
+    "observedAt": "2026-10-06T04:49:45.001Z",
+    "evidenceType": "retailer"
   }
 ]

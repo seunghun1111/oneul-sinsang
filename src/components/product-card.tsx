@@ -13,7 +13,7 @@ export function ProductCard({ product, offers }: { product: Product; offers: Off
     <Link href={`/products/${product.id}`} className="product-image" style={{ background: meta.color }}>
       {product.imageUrl ? <img src={product.imageUrl} alt={`${product.name} 상품 이미지`} loading="lazy" referrerPolicy="no-referrer" /> : <span aria-hidden="true">{meta.emoji}</span>}<span className={`badge badge-${product.productType}`}>{typeLabel[product.productType]}</span>
     </Link>
-    <div className="product-content"><div className="product-kicker"><span>{product.brand}</span><span>·</span><span>{meta.label}</span></div>
+    <div className="product-content"><div className="product-kicker"><span>{product.brand}</span><span>·</span><span>{product.subCategory ?? meta.label}</span></div>
       <Link href={`/products/${product.id}`}><h2>{product.name}</h2></Link><p className="product-description">{product.description}</p>
       <div className="product-commerce">{lowestOffer ? <strong>{lowestOffer.price.toLocaleString("ko-KR")}원부터</strong> : product.price != null && <strong>{product.price.toLocaleString("ko-KR")}원</strong>}{availableOffers.length > 0 ? <span>온라인 판매처 {availableOffers.length}곳</span> : product.retailer ? <span>판매처 {product.retailer}</span> : <span>판매 정보 확인 중</span>}</div>
       <div className="product-footer"><span>공식 발표</span><time dateTime={product.releaseDate}>{formatDate(product.releaseDate)}</time></div>

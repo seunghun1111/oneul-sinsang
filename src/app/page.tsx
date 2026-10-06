@@ -1,5 +1,7 @@
 import { Header } from "@/components/header";
 import { ProductExplorer } from "@/components/product-explorer";
+import { CoffeeSourceDirectory } from "@/components/coffee-source-directory";
+import { coffeeBrandSources } from "@/data/coffee-sources";
 import { products } from "@/lib/products";
 import { offers } from "@/lib/offers";
 
@@ -9,6 +11,7 @@ export default function Home() {
       <div className="hero-art" aria-hidden="true"><span className="art-orbit orbit-one">NEW</span><span className="art-orbit orbit-two">🍩</span><span className="art-main">🛍️</span><span className="art-spark spark-one">✦</span><span className="art-spark spark-two">✦</span></div>
     </section>
     <ProductExplorer products={products} offers={offers} />
+    <CoffeeSourceDirectory sources={coffeeBrandSources} />
     <section className="about" id="about"><span aria-hidden="true">🔎</span><div><p className="section-kicker">ONEUL SINSANG</p><h2>공식 발표만 모아 봅니다</h2></div><p>GitHub Actions가 매일 브랜드 공식 발표를 확인하고 검증된 결과를 정적 데이터로 갱신합니다.</p></section>
   </main><footer><strong>오늘신상</strong><span>오늘의 새로움을 발견하세요.</span><small>© 2026 Oneul Sinsang</small></footer></>;
 }

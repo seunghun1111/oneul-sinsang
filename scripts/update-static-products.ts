@@ -29,7 +29,8 @@ const dataUrl = new URL("../src/data/products.json", import.meta.url);
 const validCategories = new Set<ProductCategory>(["convenience", "cafe", "ramen", "meal", "snack", "drink", "dessert", "icecream", "etc"]);
 
 export function mergeProducts(existing: Product[], candidates: Candidate[], checkedAt: string): Product[] {
-  const identity = (item: Pick<Product, "id" | "brand" | "normalizedName">) => item.brand === "CU" ? `CU:${item.id}` : `${item.brand}:${item.normalizedName}`;
+  const idBasedBrands = new Set(["CU", "세븐일레븐", "이마트24"]);
+  const identity = (item: Pick<Product, "id" | "brand" | "normalizedName">) => idBasedBrands.has(item.brand) ? `${item.brand}:${item.id}` : `${item.brand}:${item.normalizedName}`;
   const byIdentity = new Map(existing.map(product => [identity(product), product]));
   for (const candidate of candidates) {
     const key = identity({ id: candidate.slug, brand: candidate.brand, normalizedName: candidate.normalizedName });

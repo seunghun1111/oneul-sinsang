@@ -2,7 +2,8 @@ name: Update products
 
 on:
   schedule:
-    - cron: "15 21 * * *"
+    # 매일 06:30 Asia/Seoul (UTC 21:30, 전날)
+    - cron: "30 21 * * *"
   workflow_dispatch:
 
 permissions:
@@ -26,6 +27,8 @@ jobs:
       - run: npm ci
       - name: Check CU official NEW products
         run: npm run update:cu
+      - name: Check other convenience-store official NEW products
+        run: npm run update:convenience
       - run: npm run update:coffee
       - run: npm run update:products
       - run: npm test

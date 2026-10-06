@@ -1,4 +1,5 @@
 import type { Product } from "@/types/product";
+import autoCoffeeProductData from "./coffee-products-auto.json" with { type: "json" };
 
 const checkedAt = "2026-10-06T02:00:00.000Z";
 
@@ -44,6 +45,10 @@ const confirmedCurrentSaleIds = new Set([
   "hollys-hanbok-hollybear-keyring-2026",
 ]);
 
-export const coffeeProducts: Product[] = rawCoffeeProducts.map(product => confirmedCurrentSaleIds.has(product.id)
+const curatedCoffeeProducts: Product[] = rawCoffeeProducts.map(product => confirmedCurrentSaleIds.has(product.id)
   ? { ...product, availabilityStatus:"on_sale", availabilityCheckedAt:checkedAt }
   : { ...product, availabilityStatus:"unknown" });
+
+export const coffeeProducts: Product[] = [...new Map(
+  [...curatedCoffeeProducts, ...(autoCoffeeProductData as Product[]).filter(product => product.reviewStatus === "approved")].map(product => [`${product.brand}:${product.normalizedName}`, product]),
+).values()];

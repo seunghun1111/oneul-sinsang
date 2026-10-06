@@ -24,6 +24,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm run update:coffee
       - run: npm run update:products
       - run: npm test
       - run: npm run lint
@@ -33,13 +34,13 @@ jobs:
           path: ./out
       - name: Commit updated product data
         run: |
-          if git diff --quiet -- src/data/products.json; then
+          if git diff --quiet -- src/data/products.json src/data/coffee-products-auto.json; then
             echo "No product changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/products.json
+          git add src/data/products.json src/data/coffee-products-auto.json
           git commit -m "chore: update official product data"
           git push
 

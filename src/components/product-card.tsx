@@ -10,7 +10,7 @@ export function ProductCard({ product }: { product: Product }) {
       <span aria-hidden="true">{meta.emoji}</span><span className={`badge badge-${product.productType}`}>{typeLabel[product.productType]}</span>
     </Link>
     <div className="product-content"><div className="product-kicker"><span>{product.brand}</span><span>·</span><span>{product.subCategory ?? meta.label}</span></div>
-      <Link href={`/products/${product.id}`}><h2>{product.name}</h2></Link><p className="product-description">{product.description}</p>
+      <Link href={`/products/${product.id}`}><h2>{product.name}</h2></Link><p className="product-description">{product.description}</p><p className="product-evidence">{product.sourceType === "press_release" ? "공식 신제품 발표 확인" : "공식 메뉴·상품 목록 확인"}</p>
       <div className="product-commerce"><strong>현재 판매 확인</strong><span>{product.retailer ? `판매처 ${product.retailer}` : "공식 출처 기준"}</span></div>
       <div className="product-footer"><span>판매 확인</span><time dateTime={saleCheckedAt}>{formatDate(saleCheckedAt)}</time></div>
     </div>

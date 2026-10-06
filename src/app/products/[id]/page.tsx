@@ -14,7 +14,7 @@ export default async function ProductDetailPage(props: PageProps<"/products/[id]
   return <><Header /><main className="detail-shell"><Link className="back-link" href="/">← 신상 목록</Link>
     <section className="detail-card"><div className="detail-visual" style={{ background: meta.color }}><span aria-hidden="true">{meta.emoji}</span><span className={`badge badge-${product.productType}`}>{typeLabel[product.productType]}</span></div>
       <div className="detail-copy"><p className="eyebrow">{product.brand} · {meta.label}</p><h1>{product.name}</h1><p className="detail-description">{product.description}</p>
-        <dl className="detail-list">{product.retailer && <div><dt>판매처</dt><dd>{product.retailer}</dd></div>}{product.releaseDate && <div><dt>출시일</dt><dd>{product.releaseDate}</dd></div>}<div><dt>판매 상태</dt><dd>현재 판매 확인</dd></div>{product.availabilityCheckedAt && <div><dt>판매 확인일</dt><dd>{new Date(product.availabilityCheckedAt).toLocaleDateString("ko-KR")}</dd></div>}<div><dt>상품 유형</dt><dd>{typeLabel[product.productType]}</dd></div></dl>
+        <dl className="detail-list">{product.retailer && <div><dt>판매처</dt><dd>{product.retailer}</dd></div>}{product.releaseDate && <div><dt>출시일</dt><dd>{product.releaseDate}</dd></div>}<div><dt>확인 근거</dt><dd>{product.sourceType === "press_release" ? "공식 신제품 발표" : "공식 메뉴·상품 목록"}</dd></div><div><dt>판매 상태</dt><dd>현재 판매 확인</dd></div>{product.availabilityCheckedAt && <div><dt>판매 확인일</dt><dd>{new Date(product.availabilityCheckedAt).toLocaleDateString("ko-KR")}</dd></div>}<div><dt>상품 유형</dt><dd>{typeLabel[product.productType]}</dd></div></dl>
         <a className="source-button" href={product.sourceUrl} target="_blank" rel="noopener noreferrer">공식 출처 보기</a>
       </div></section>
   </main></>;

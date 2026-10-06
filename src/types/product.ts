@@ -24,6 +24,11 @@ export interface Product {
   retailer?: string;
   availabilityStatus?: "on_sale" | "sold_out" | "ended" | "unknown";
   availabilityCheckedAt?: string;
+  lastSeenAt?: string;
+  consecutiveMisses?: number;
+  availabilityReason?: string;
+  reviewStatus?: "pending" | "approved" | "rejected";
+  reviewedAt?: string;
   imageUrl?: string;
   sourceUrl: string;
   sourceType: "official_site" | "press_release" | "sns";

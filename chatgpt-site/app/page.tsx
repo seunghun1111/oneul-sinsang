@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Grid2X2, List, RefreshCw, Search } from "lucide-react";
 
-type Product = { id:string|number; brand:string; name:string; category:string; subCategory?:string; productType:string; price:number|null; retailer:string|null; releaseDate:string|null; announcedDate:string|null; description:string; emoji:string; sourceUrl:string; imageUrl:string|null; availabilityStatus?:string; availabilityCheckedAt?:string };
+type Product = { id:string|number; brand:string; name:string; category:string; subCategory?:string; productType:string; price:number|null; retailer:string|null; releaseDate:string|null; announcedDate:string|null; description:string; emoji:string; sourceUrl:string; sourceType?:string; imageUrl:string|null; availabilityStatus?:string; availabilityCheckedAt?:string };
 type CoffeeSource = { id:string; brand:string; note:string; channels:{ kind:"menu"|"md"|"news"|"shop"; label:string; url:string }[] };
 const cats = [["all","전체"],["cafe","카페"],["drink","음료"],["ramen","라면"],["meal","간편식"],["snack","과자"],["dessert","디저트"],["icecream","아이스크림"],["etc","기타"]];
 const labels = Object.fromEntries(cats);
@@ -20,6 +20,7 @@ function ProductCard({ product }: { product: Product }) {
       <p>{product.brand} · {product.subCategory ?? labels[product.category] ?? "기타"}</p>
       <h2>{product.name}</h2>
       {summary && <p className="summary">{summary}</p>}
+      <p className="evidence">{product.category === "cafe" && product.sourceType !== "press_release" ? "공식 메뉴·상품 목록 확인" : "공식 신제품 발표 확인"}</p>
       <div className="meta"><strong>현재 판매 확인</strong>{saleCheckedAt && <time dateTime={saleCheckedAt}>확인일 {saleCheckedAt.slice(0,10).replaceAll("-", ".")}</time>}</div>
       {product.retailer && <p className="retailer">판매처 {product.retailer}</p>}
       {product.sourceUrl && <a className="source" href={product.sourceUrl} target="_blank" rel="noopener noreferrer">공식 출처 보기</a>}
@@ -106,6 +107,6 @@ export default function Home() {
       {loading ? <div className="loading" role="status" aria-live="polite">상품 데이터를 불러오는 중…</div> : error && items.length===0 ? null : visible.length===0 ? <div className="empty" role="status">{items.length===0 ? "확인된 상품이 아직 없습니다. 공식 출처를 검증한 뒤 등록할 예정입니다." : "검색 결과가 없습니다. 검색어나 분류를 바꿔보세요."}</div> : <div className={`grid view-${view}`}>{visible.map(product=><ProductCard key={product.id} product={product}/>)}</div>}
     </section>
     {coffeeSources.length > 0 && <section className="coffee-sources" aria-labelledby="coffee-source-title"><div className="source-head"><div><p>COFFEE WATCHLIST</p><h2 id="coffee-source-title">커피 브랜드 수집 경로</h2><span>메뉴·MD·공식 소식에서 현재 판매 중인 신상품을 확인합니다.</span></div><strong>{coffeeSources.length}개 브랜드</strong></div><div className={`source-grid source-${view}`}>{coffeeSources.map(source=><article key={source.id}><div><b>수집 대상</b><h3>{source.brand}</h3><p>{source.note}</p></div><nav aria-label={`${source.brand} 공식 경로`}>{source.channels.map(channel=><a key={`${channel.kind}-${channel.url}`} href={channel.url} target="_blank" rel="noopener noreferrer">{channel.label}</a>)}</nav></article>)}</div></section>}
-    <section className="legal-note"><strong>비상업적 개인 프로젝트</strong><p>각 브랜드와 제휴·후원 관계가 없으며, 공식 출처에서 확인한 신상품 사실과 출처 링크만 제공합니다.</p><a href="https://github.com/seunghun1111/oneul-sinsang/issues" target="_blank" rel="noopener noreferrer">정정·삭제 요청</a></section>
+    <section className="legal-note"><strong>비상업적 개인 프로젝트</strong><p>각 브랜드와 제휴·후원 관계가 없으며, 공식 출처에서 확인한 신상품 사실과 출처 링크만 제공합니다.</p><a href="https://seunghun1111.github.io/oneul-sinsang/review">수집 현황</a><span aria-hidden="true"> · </span><a href="https://github.com/seunghun1111/oneul-sinsang/issues/new?template=correction.yml" target="_blank" rel="noopener noreferrer">정정·삭제 요청</a></section>
   </main>;
 }

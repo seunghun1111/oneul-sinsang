@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "오늘신상 — 화면 미리 보기",
-  description: "예시 상품으로 오늘신상의 상품 탐색 화면을 미리 살펴보세요. 표시된 상품 정보는 실제 출시 정보가 아닙니다.",
+  title: "오늘신상 — 공식 출처 기반 신상품 목록",
+  description: "브랜드 공식 발표와 공식 상품 목록에서 현재 판매가 확인된 신상품을 정리합니다.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

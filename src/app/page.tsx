@@ -12,5 +12,5 @@ export default function Home() {
     <ProductExplorer products={products} />
     <CoffeeSourceDirectory sources={coffeeBrandSources} />
     <section className="about" id="about"><span aria-hidden="true">🔎</span><div><p className="section-kicker">ONEUL SINSANG</p><h2>판매 중인 신상만 보여줍니다</h2></div><p>최근 90일 이내 출시·발견되고 14일 안에 판매가 다시 확인된 상품만 목록에 유지합니다.</p></section>
-  </main><footer><strong>오늘신상</strong><span>비상업적 개인 프로젝트이며 각 브랜드와 제휴·후원 관계가 없습니다.</span><a href="https://github.com/seunghun1111/oneul-sinsang/issues" target="_blank" rel="noopener noreferrer">정정·삭제 요청</a><small>© 2026 Oneul Sinsang</small></footer></>;
+  </main><footer><strong>오늘신상</strong><span>비상업적 개인 프로젝트이며 각 브랜드와 제휴·후원 관계가 없습니다.</span><a href="https://github.com/seunghun1111/oneul-sinsang/issues/new?template=correction.yml" target="_blank" rel="noopener noreferrer">정정·삭제 요청</a><small>© 2026 Oneul Sinsang</small></footer></>;
 }

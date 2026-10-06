@@ -12,17 +12,20 @@ const filters: Array<{ value: ProductCategory | "all"; label: string }> = [
 
 export function ProductExplorer({ products, offers }: { products: Product[]; offers: Offer[] }) {
   const [category, setCategory] = useState<ProductCategory | "all">("all");
+  const [brand, setBrand] = useState("all");
   const [sort, setSort] = useState<"release" | "detected">("release");
   const [view, setView] = useState<"card" | "list">("card");
-  const filtered = useMemo(() => products.filter((product) => category === "all" || product.category === category).toSorted((a, b) => {
+  const brands = useMemo(() => category === "all" ? [] : [...new Set(products.filter(product => product.category === category).map(product => product.brand))].toSorted(), [category, products]);
+  const filtered = useMemo(() => products.filter((product) => (category === "all" || product.category === category) && (brand === "all" || product.brand === brand)).toSorted((a, b) => {
     const left = sort === "release" ? a.releaseDate ?? "" : a.firstDetectedAt;
     const right = sort === "release" ? b.releaseDate ?? "" : b.firstDetectedAt;
     return right.localeCompare(left);
-  }), [category, products, sort]);
+  }), [brand, category, products, sort]);
 
   return <section className="catalog" aria-labelledby="catalog-title">
     <div className="catalog-heading"><div><p className="section-kicker">ON SALE NOW</p><h2 id="catalog-title">지금 판매 중인 신상품</h2><p>최근 90일 이내 출시되고, 최근 14일 안에 판매가 확인된 상품만 보여드립니다.</p></div><span className="result-count" aria-live="polite">{filtered.length}개의 판매 중 신상</span></div>
-    <div className="filter-row" aria-label="카테고리 필터">{filters.map((filter) => <button type="button" key={filter.value} className={category === filter.value ? "filter-chip selected" : "filter-chip"} aria-pressed={category === filter.value} onClick={() => setCategory(filter.value)}>{filter.value !== "all" && categoryMeta[filter.value].emoji} {filter.label}</button>)}</div>
+    <div className="filter-group"><span>대분류</span><div className="filter-row" aria-label="대분류 카테고리 필터">{filters.map((filter) => <button type="button" key={filter.value} className={category === filter.value ? "filter-chip selected" : "filter-chip"} aria-pressed={category === filter.value} onClick={() => { setCategory(filter.value); setBrand("all"); }}>{filter.value !== "all" && categoryMeta[filter.value].emoji} {filter.label}</button>)}</div></div>
+    {brands.length > 0 && <div className="filter-group brand-filter"><span>브랜드</span><div className="filter-row" aria-label="중분류 브랜드 필터"><button type="button" className={brand === "all" ? "filter-chip selected" : "filter-chip"} aria-pressed={brand === "all"} onClick={() => setBrand("all")}>전체</button>{brands.map(item => <button type="button" key={item} className={brand === item ? "filter-chip selected" : "filter-chip"} aria-pressed={brand === item} onClick={() => setBrand(item)}>{item}</button>)}</div></div>}
     <div className="sort-row"><span>판매 여부가 확인된 상품만 정리했습니다</span><div className="catalog-controls"><div className="sort-options" aria-label="정렬"><button type="button" className={sort === "release" ? "selected" : ""} aria-pressed={sort === "release"} onClick={() => setSort("release")}>출시일순</button><button type="button" className={sort === "detected" ? "selected" : ""} aria-pressed={sort === "detected"} onClick={() => setSort("detected")}>판매 확인순</button></div><div className="view-options" aria-label="목록 표시 방식"><button type="button" className={view === "card" ? "selected" : ""} aria-pressed={view === "card"} onClick={() => setView("card")}>카드</button><button type="button" className={view === "list" ? "selected" : ""} aria-pressed={view === "list"} onClick={() => setView("list")}>리스트</button></div></div></div>
     {filtered.length === 0 ? <p className="empty-products">확인된 신상품이 아직 없습니다. 다음 자동 수집 후 갱신됩니다.</p> : <div className={`product-grid view-${view}`}>{filtered.map((product) => <ProductCard key={product.id} product={product} offers={offers.filter(offer => offer.productSlug === product.id)} />)}</div>}
   </section>;

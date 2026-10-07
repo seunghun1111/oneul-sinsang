@@ -18,7 +18,7 @@ export function TodayUpdates({ products, date }: { products: Product[]; date: st
         {product.imageUrl ? <img src={product.imageUrl} alt="" loading="lazy" /> : <span aria-hidden="true">NEW</span>}
         <div><small>{product.brand} · {product.subCategory ?? "기타"}</small><strong>{product.name}</strong></div>
       </Link>)}</div>
-      {products.length > featured.length && <a className="today-more" href="#catalog-title">오늘 업데이트 전체 {products.length}개 보기 →</a>}
+      {products.length > featured.length && <a className="today-more" href="#category-directory-title">오늘 업데이트 {products.length}개를 메뉴별로 보기 →</a>}
     </>}
   </section>;
 }

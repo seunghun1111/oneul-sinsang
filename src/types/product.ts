@@ -3,6 +3,9 @@ export type ProductType = "new" | "seasonal" | "limited" | "renewal";
 export type ProductCategory =
   | "convenience"
   | "cafe"
+  | "burger"
+  | "pizza"
+  | "chicken"
   | "ramen"
   | "meal"
   | "snack"

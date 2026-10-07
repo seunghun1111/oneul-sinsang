@@ -29,6 +29,8 @@ jobs:
         run: npm run update:cu
       - name: Check other convenience-store official NEW products
         run: npm run update:convenience
+      - name: Check burger, pizza and chicken official NEW products
+        run: npm run update:foodservice
       - run: npm run update:coffee
       - run: npm run update:products
       - run: npm test

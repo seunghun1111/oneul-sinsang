@@ -6,7 +6,7 @@ import type { Product, ProductCategory } from "@/types/product";
 import { ProductCard } from "./product-card";
 
 const filters: Array<{ value: ProductCategory | "all"; label: string }> = [
-  { value: "all", label: "전체" }, { value: "convenience", label: "편의점" }, { value: "cafe", label: "카페" }, { value: "drink", label: "음료" }, { value: "ramen", label: "라면" }, { value: "meal", label: "간편식" }, { value: "snack", label: "과자" }, { value: "dessert", label: "디저트" }, { value: "icecream", label: "아이스크림" }, { value: "etc", label: "기타" },
+  { value: "all", label: "전체" }, { value: "convenience", label: "편의점" }, { value: "cafe", label: "카페" }, { value: "burger", label: "햄버거" }, { value: "pizza", label: "피자" }, { value: "chicken", label: "치킨" }, { value: "drink", label: "음료" }, { value: "ramen", label: "라면" }, { value: "meal", label: "간편식" }, { value: "snack", label: "과자" }, { value: "dessert", label: "디저트" }, { value: "icecream", label: "아이스크림" }, { value: "etc", label: "기타" },
 ];
 
 export function ProductExplorer({ products }: { products: Product[] }) {

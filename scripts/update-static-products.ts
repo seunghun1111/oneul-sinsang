@@ -29,7 +29,7 @@ const dataUrl = new URL("../src/data/products.json", import.meta.url);
 const validCategories = new Set<ProductCategory>(["convenience", "cafe", "burger", "pizza", "chicken", "ramen", "meal", "snack", "drink", "dessert", "icecream", "etc"]);
 
 export function mergeProducts(existing: Product[], candidates: Candidate[], checkedAt: string): Product[] {
-  const idBasedBrands = new Set(["CU", "세븐일레븐", "이마트24", "롯데리아", "도미노피자", "굽네"]);
+  const idBasedBrands = new Set(["CU", "세븐일레븐", "이마트24", "롯데리아", "맥도날드", "버거킹", "맘스터치", "도미노피자", "피자헛", "굽네", "KFC"]);
   const identity = (item: Pick<Product, "id" | "brand" | "normalizedName">) => idBasedBrands.has(item.brand) ? `${item.brand}:${item.id}` : `${item.brand}:${item.normalizedName}`;
   const byIdentity = new Map(existing.map(product => [identity(product), product]));
   for (const candidate of candidates) {
@@ -51,7 +51,7 @@ export function mergeProducts(existing: Product[], candidates: Candidate[], chec
       sourceUrl: candidate.sourceUrl,
       sourceType: candidate.sourceType ?? "press_release",
       releaseDate: candidate.sourceType === "official_site"
-        ? previous?.releaseDate ?? detectedAt.slice(0, 10)
+        ? candidate.releaseDate ?? previous?.releaseDate ?? detectedAt.slice(0, 10)
         : candidate.releaseDate ?? candidate.announcedDate,
       firstDetectedAt: detectedAt,
       lastCheckedAt: checkedAt,

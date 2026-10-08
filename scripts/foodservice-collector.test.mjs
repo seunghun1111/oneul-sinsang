@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { extractBurgerKingNewProducts, extractDominosNewProducts, extractGoobneNewProducts, extractKfcNewProducts, extractLotteriaNewProducts, extractMcDonaldsNewProducts, extractMomstouchNewProducts, extractPizzaHutNewProducts } from "./lib/foodservice-collector.ts";
+import { extractBurgerKingNewProducts, extractDominosNewProducts, extractGoobneNewProducts, extractKfcNewProducts, extractKyochonNewProducts, extractLotteriaNewProducts, extractMcDonaldsNewProducts, extractMomstouchNewProducts, extractPizzaHutNewProducts } from "./lib/foodservice-collector.ts";
 
 const checkedAt = "2026-10-07T00:00:00.000Z";
 
@@ -31,6 +31,15 @@ test("굽네 공식 신제품 영역에서 NEW 상품을 상품군과 함께 추
   assert.equal(products[0].subCategory, "치킨");
   assert.equal(products[0].name, "새 치킨");
   assert.equal(products[1].category, "pizza");
+});
+
+test("교촌 공식 신메뉴 전용 목록에서 치킨 상품을 추출한다", () => {
+  const html = `<h2>신메뉴</h2><ul class="menuProduct"><li><a href="view.asp?id=41577&cg=2"><p class="img"><img src="/uploadFiles/honey.png" alt="허니갈릭윙콤비 제품 이미지"></p><dl class="txt"><dt>허니갈릭윙콤비</dt></dl></a></li></ul>`;
+  const products = extractKyochonNewProducts(html, "2026-10-08T00:00:00.000Z");
+  assert.equal(products.length, 1);
+  assert.equal(products[0].slug, "kyochon-41577");
+  assert.equal(products[0].brand, "교촌치킨");
+  assert.equal(products[0].category, "chicken");
 });
 
 test("맥도날드는 최근 한 달 내 등록되고 현재 판매 중인 추천 버거만 추출한다", () => {

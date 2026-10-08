@@ -119,6 +119,24 @@ export function extractGoobneNewProducts(html: string, checkedAt: string): Foods
   return unique(products);
 }
 
+export function extractKyochonNewProducts(html: string, checkedAt: string): FoodserviceCandidate[] {
+  const sourceUrl = "https://www.kyochon.com/menu/chicken.asp?code=21";
+  const products: FoodserviceCandidate[] = [];
+  for (const item of html.split(/<li(?:\s[^>]*)?>/i).slice(1)) {
+    const id = item.match(/view\.asp\?id=(\d+)&amp;cg=2/i)?.[1] ?? item.match(/view\.asp\?id=(\d+)&cg=2/i)?.[1];
+    const rawName = item.match(/<dt>([\s\S]*?)<\/dt>/i)?.[1];
+    const imagePath = item.match(/<img[^>]+src=["']([^"']+)["'][^>]+alt=["'][^"']*제품 이미지/i)?.[1];
+    if (!id || !rawName) continue;
+    const name = clean(rawName);
+    products.push(candidate({
+      slug: `kyochon-${id}`, brand: "교촌치킨", name, category: "chicken", subCategory: "치킨", checkedAt,
+      description: "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴", sourceUrl,
+      imageUrl: imagePath ? new URL(imagePath, "https://www.kyochon.com").href : null,
+    }));
+  }
+  return unique(products);
+}
+
 type McDonaldsMenuResponse = {
   resultObject?: { list?: Array<Record<string, unknown>> };
 };
@@ -276,6 +294,12 @@ export async function collectGoobne(checkedAt = new Date().toISOString(), fetche
   const html = await fetchHtml("https://www.goobne.co.kr/main", fetcher);
   if (!html.includes("신제품") || !html.includes("slide-info")) throw new Error("굽네 신제품 페이지 구조 확인 실패");
   return extractGoobneNewProducts(html, checkedAt);
+}
+
+export async function collectKyochon(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+  const html = await fetchHtml("https://www.kyochon.com/menu/chicken.asp?code=21", fetcher);
+  if (!html.includes("신메뉴") || !html.includes("menuProduct")) throw new Error("교촌치킨 신메뉴 페이지 구조 확인 실패");
+  return extractKyochonNewProducts(html, checkedAt);
 }
 
 export async function collectMcDonalds(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {

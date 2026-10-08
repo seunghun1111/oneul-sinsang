@@ -1,0 +1,72 @@
+name: Review collected product
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: product-review
+  cancel-in-progress: false
+
+jobs:
+  review:
+    if: >-
+      (startsWith(github.event.issue.title, '[상품 승인] ') || startsWith(github.event.issue.title, '[상품 거절] ')) &&
+      (github.event.issue.author_association == 'OWNER' || github.event.issue.author_association == 'MEMBER' || github.event.issue.author_association == 'COLLABORATOR')
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Apply review decision
+        env:
+          REVIEW_ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: node --experimental-strip-types scripts/review-coffee-product.ts
+      - run: npm test
+      - run: npm run lint
+      - run: env GITHUB_ACTIONS=true npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+      - name: Commit reviewed product
+        id: commit
+        run: |
+          if git diff --quiet -- src/data/coffee-products-auto.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/coffee-products-auto.json
+          git commit -m "chore: review collected product"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Close review issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "검수 결과를 상품 데이터에 반영했습니다."
+          gh issue close "$ISSUE_NUMBER" --reason completed
+
+  deploy:
+    needs: review
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

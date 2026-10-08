@@ -1,7 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import type { Product } from "../src/types/product.ts";
-import { collectBurgerKing, collectDominos, collectGoobne, collectKfc, collectLotteria, collectMcDonalds, collectMomstouch, collectPizzaHut, type FoodserviceCandidate } from "./lib/foodservice-collector.ts";
+import { collectBurgerKing, collectDominos, collectGoobne, collectKfc, collectKyochon, collectLotteria, collectMcDonalds, collectMomstouch, collectPizzaHut, type FoodserviceCandidate } from "./lib/foodservice-collector.ts";
 import { mergeProducts } from "./update-static-products.ts";
 
 const dataUrl = new URL("../src/data/products.json", import.meta.url);
@@ -18,7 +18,7 @@ async function main() {
   const checkedAt = new Date().toISOString();
   const sources = [
     ["롯데리아", collectLotteria], ["맥도날드", collectMcDonalds], ["버거킹", collectBurgerKing], ["맘스터치", collectMomstouch],
-    ["도미노피자", collectDominos], ["피자헛", collectPizzaHut], ["굽네", collectGoobne], ["KFC", collectKfc],
+    ["도미노피자", collectDominos], ["피자헛", collectPizzaHut], ["굽네", collectGoobne], ["교촌치킨", collectKyochon], ["KFC", collectKfc],
   ] as const;
   const settled = await Promise.allSettled(sources.map(([, collect]) => collect(checkedAt)));
   const candidates: FoodserviceCandidate[] = [];

@@ -1,4 +1,4 @@
-import type { ProductCategory } from "@/types/product";
+import type { Product, ProductCategory } from "@/types/product";
 
 export type CategoryGroup = {
   slug: string;
@@ -24,4 +24,18 @@ export function getCategoryGroup(slug: string) {
 
 export function getCategoryGroupForCategory(category: ProductCategory) {
   return categoryGroups.find(group => group.categories.includes(category));
+}
+
+export function getCategoryGroupForProducts(products: Product[]) {
+  const counts = new Map<string, number>();
+
+  for (const product of products) {
+    const group = getCategoryGroupForCategory(product.category);
+    if (group) counts.set(group.slug, (counts.get(group.slug) ?? 0) + 1);
+  }
+
+  return categoryGroups
+    .map(group => ({ group, count: counts.get(group.slug) ?? 0 }))
+    .toSorted((left, right) => right.count - left.count)
+    .find(item => item.count > 0)?.group;
 }

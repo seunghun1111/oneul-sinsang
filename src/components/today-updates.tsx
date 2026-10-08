@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { Product } from "@/types/product";
 import { seoulDateKey } from "@/lib/product-window";
+import { getCategoryGroupForProducts } from "@/lib/category-groups";
 
 const DAY_LABELS = ["월", "화", "수", "목", "금", "토", "일"];
 
@@ -11,7 +12,10 @@ export function TodayUpdates({ products, today, dates }: { products: Product[]; 
   const [selectedDate, setSelectedDate] = useState(today);
   const selectedProducts = useMemo(() => products.filter(product => seoulDateKey(product.firstDetectedAt) === selectedDate), [products, selectedDate]);
   const categories = [...new Map(selectedProducts.map(product => [product.subCategory ?? "기타", 0])).keys()]
-    .map(label => ({ label, count: selectedProducts.filter(product => (product.subCategory ?? "기타") === label).length }))
+    .map(label => {
+      const categoryProducts = selectedProducts.filter(product => (product.subCategory ?? "기타") === label);
+      return { label, count: categoryProducts.length, group: getCategoryGroupForProducts(categoryProducts) };
+    })
     .toSorted((left, right) => right.count - left.count);
   const featured = selectedProducts.slice(0, 6);
   const weekRange = `${dates[0].slice(5).replace("-", ".")}–${dates[6].slice(5).replace("-", ".")}`;
@@ -31,7 +35,7 @@ export function TodayUpdates({ products, today, dates }: { products: Product[]; 
       })}
     </div>
     {selectedProducts.length === 0 ? <p className="today-empty">{selectedDate === today ? "오늘" : `${Number(selectedDate.slice(5, 7))}월 ${Number(selectedDate.slice(8))}일`} 새로 확인된 상품이 없습니다.</p> : <>
-      <div className="today-category-summary" aria-label="선택한 날짜의 상품군별 건수">{categories.map(category => <span key={category.label}>{category.label} <strong>{category.count}</strong></span>)}</div>
+      <div className="today-category-summary" aria-label="선택한 날짜의 상품군별 건수">{categories.map(category => category.group && <Link href={`/categories/${category.group.slug}`} key={category.label} aria-label={`${category.label} ${category.count}개, ${category.group.label}으로 이동`}>{category.label} <strong>{category.count}</strong></Link>)}</div>
       <div className="today-product-list">{featured.map(product => <Link href={`/products/${product.id}`} key={product.id} className="today-product">
         {product.imageUrl ? <img src={product.imageUrl} alt="" loading="lazy" /> : <span aria-hidden="true">NEW</span>}
         <div><small>{product.brand} · {product.subCategory ?? "기타"}</small><strong>{product.name}</strong></div>

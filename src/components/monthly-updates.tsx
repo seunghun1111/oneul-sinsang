@@ -1,10 +1,14 @@
 import Link from "next/link";
 import type { Product } from "@/types/product";
 import { seoulDateKey } from "@/lib/product-window";
+import { getCategoryGroupForProducts } from "@/lib/category-groups";
 
 export function MonthlyUpdates({ products, month }: { products: Product[]; month: string }) {
   const categories = [...new Set(products.map(product => product.subCategory ?? "기타"))]
-    .map(label => ({ label, count: products.filter(product => (product.subCategory ?? "기타") === label).length }))
+    .map(label => {
+      const categoryProducts = products.filter(product => (product.subCategory ?? "기타") === label);
+      return { label, count: categoryProducts.length, group: getCategoryGroupForProducts(categoryProducts) };
+    })
     .toSorted((left, right) => right.count - left.count);
   const featured = products
     .toSorted((left, right) => right.firstDetectedAt.localeCompare(left.firstDetectedAt))
@@ -17,7 +21,7 @@ export function MonthlyUpdates({ products, month }: { products: Product[]; month
     </div>
     {products.length === 0 ? <p className="monthly-empty">이번 달 새로 확인된 상품이 없습니다.</p> : <>
       <div className="monthly-category-summary" aria-label="이번 달 상품군별 건수">
-        {categories.map(category => <span key={category.label}>{category.label} <strong>{category.count}</strong></span>)}
+        {categories.map(category => category.group && <Link href={`/categories/${category.group.slug}`} key={category.label} aria-label={`${category.label} ${category.count}개, ${category.group.label}으로 이동`}>{category.label} <strong>{category.count}</strong></Link>)}
       </div>
       <div className="monthly-product-list">{featured.map(product => <Link href={`/products/${product.id}`} key={product.id} className="monthly-product">
         {product.imageUrl ? <img src={product.imageUrl} alt="" loading="lazy" /> : <span aria-hidden="true">NEW</span>}

@@ -14,6 +14,10 @@ export function seoulDateKey(value: string | Date) {
   }).format(date);
 }
 
+export function seoulMonthKey(value: string | Date) {
+  return seoulDateKey(value).slice(0, 7);
+}
+
 export function isDetectedToday(product: Product, now = new Date()) {
   return seoulDateKey(product.firstDetectedAt) === seoulDateKey(now);
 }

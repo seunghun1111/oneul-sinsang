@@ -1,7 +1,7 @@
 import type { Product } from "@/types/product";
 import productData from "@/data/products.json";
 import { coffeeProducts } from "@/data/coffee-products";
-import { isCurrentlyOnSale, isDetectedToday, seoulDateKey } from "@/lib/product-window";
+import { isCurrentlyOnSale, seoulDateKey, seoulWeekDateKeys } from "@/lib/product-window";
 
 const allProducts = [...(productData as Product[]), ...coffeeProducts];
 
@@ -11,8 +11,9 @@ export const products: Product[] = allProducts
 
 export function getProduct(id: string) { return products.find((product) => product.id === id); }
 
-export function getTodayProducts(now = new Date()) {
-  return products.filter(product => isDetectedToday(product, now));
+export function getWeekProducts(now = new Date()) {
+  const week = new Set(seoulWeekDateKeys(now));
+  return products.filter(product => week.has(seoulDateKey(product.firstDetectedAt)));
 }
 
-export { seoulDateKey };
+export { seoulDateKey, seoulWeekDateKeys };

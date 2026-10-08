@@ -18,6 +18,21 @@ export function isDetectedToday(product: Product, now = new Date()) {
   return seoulDateKey(product.firstDetectedAt) === seoulDateKey(now);
 }
 
+export function seoulWeekDateKeys(now = new Date()) {
+  const todayKey = seoulDateKey(now);
+  const today = new Date(`${todayKey}T12:00:00Z`);
+  const mondayOffset = (today.getUTCDay() + 6) % 7;
+  return Array.from({ length: 7 }, (_, index) => {
+    const date = new Date(today);
+    date.setUTCDate(today.getUTCDate() - mondayOffset + index);
+    return date.toISOString().slice(0, 10);
+  });
+}
+
+export function isDetectedOn(product: Product, dateKey: string) {
+  return seoulDateKey(product.firstDetectedAt) === dateKey;
+}
+
 export function isCurrentlyOnSale(product: Product, now = new Date()) {
   if (!product.isActive) return false;
   const convenienceBrands = new Set(["CU", "세븐일레븐", "이마트24"]);

@@ -9,7 +9,7 @@
 | 저장소 루트 | [GitHub Pages 공개 서비스](https://seunghun1111.github.io/oneul-sinsang/) | 매일 갱신되는 정적 상품 JSON |
 | [`chatgpt-site/`](chatgpt-site/) | 서버·DB를 사용하는 실제 서비스 | 공식 발표에서 수집한 상품 |
 
-루트의 `main` 브랜치에 푸시하면 `.github/workflows/deploy-pages.yml`이 GitHub Pages를 자동 배포합니다. `.github/workflows/update-products.yml`은 매일 오전 6시 30분(한국 시간)에 CU·세븐일레븐·이마트24와 롯데리아·맥도날드·버거킹·맘스터치·도미노피자·피자헛·굽네·KFC의 공식 상품 목록 및 공식 브랜드 발표를 읽어 `src/data/products.json`을 갱신하고, 변경이 있으면 커밋한 뒤 갱신된 정적 결과를 직접 Pages에 배포합니다. 야간 상품 갱신 이후이면서 출근 시간 전이고, GitHub Actions의 정각 실행 지연을 피할 수 있도록 6시 30분으로 설정했습니다. GitHub Pages 방문 시에는 외부 수집이나 DB 접근이 발생하지 않습니다.
+루트의 `main` 브랜치에 푸시하면 `.github/workflows/deploy-pages.yml`이 GitHub Pages를 자동 배포합니다. `.github/workflows/update-products.yml`은 매일 오전 6시 30분(한국 시간)에 CU·세븐일레븐·이마트24와 롯데리아·맥도날드·버거킹·맘스터치·도미노피자·피자헛·굽네·KFC·배스킨라빈스의 공식 상품 목록 및 공식 브랜드 발표를 읽어 `src/data/products.json`을 갱신하고, 변경이 있으면 커밋한 뒤 갱신된 정적 결과를 직접 Pages에 배포합니다. 야간 상품 갱신 이후이면서 출근 시간 전이고, GitHub Actions의 정각 실행 지연을 피할 수 있도록 6시 30분으로 설정했습니다. GitHub Pages 방문 시에는 외부 수집이나 DB 접근이 발생하지 않습니다.
 
 ## 로컬 실행과 검증
 

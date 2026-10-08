@@ -31,6 +31,8 @@ jobs:
         run: npm run update:convenience
       - name: Check burger, pizza and chicken official NEW products
         run: npm run update:foodservice
+      - name: Check ice cream official NEW products
+        run: npm run update:icecream
       - run: npm run update:coffee
       - run: npm run update:products
       - run: npm test

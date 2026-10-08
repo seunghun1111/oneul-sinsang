@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { isCurrentlyOnSale, isDetectedToday, seoulDateKey } from "../src/lib/product-window.ts";
+import { isCurrentlyOnSale, isDetectedOn, isDetectedToday, seoulDateKey, seoulWeekDateKeys } from "../src/lib/product-window.ts";
 
 function product(overrides = {}) {
   return {
@@ -34,4 +34,12 @@ test("오늘 업데이트는 한국 날짜 기준 최초 확인일로 판정한�
   const item = product({ firstDetectedAt: "2026-10-05T15:30:00.000Z" });
   assert.equal(seoulDateKey(item.firstDetectedAt), "2026-10-06");
   assert.equal(isDetectedToday(item, new Date("2026-10-06T10:00:00+09:00")), true);
+});
+
+test("이번 주는 한국 시간 기준 월요일부터 일요일까지 계산한다", () => {
+  assert.deepEqual(seoulWeekDateKeys(new Date("2026-10-08T10:00:00+09:00")), [
+    "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-10", "2026-10-11",
+  ]);
+  assert.equal(isDetectedOn(product({ firstDetectedAt: "2026-10-06T14:59:59.000Z" }), "2026-10-06"), true);
+  assert.equal(isDetectedOn(product({ firstDetectedAt: "2026-10-06T15:00:00.000Z" }), "2026-10-07"), true);
 });

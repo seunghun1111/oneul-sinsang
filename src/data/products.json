@@ -2822,9 +2822,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -2833,13 +2834,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "kyochon-41576",
@@ -2853,9 +2854,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -2864,13 +2866,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "kyochon-41574",
@@ -2884,9 +2886,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -2895,13 +2898,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "kyochon-41575",
@@ -2915,9 +2918,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -2926,13 +2930,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "kyochon-41578",
@@ -2946,9 +2950,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -2957,13 +2962,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "kyochon-41583",
@@ -2977,9 +2982,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -2988,13 +2994,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "kyochon-41582",
@@ -3008,9 +3014,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -3019,13 +3026,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "kyochon-41580",
@@ -3039,9 +3046,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -3050,13 +3058,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "kyochon-41579",
@@ -3070,9 +3078,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -3081,13 +3090,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "kyochon-41581",
@@ -3101,9 +3110,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -3112,13 +3122,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "kyochon-41130",
@@ -3132,9 +3142,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -3143,13 +3154,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "kyochon-41062",
@@ -3163,9 +3174,10 @@
     "newStatus": "active",
     "reviewEvidence": {
       "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
-      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "checkedAt": "2026-10-15T23:57:41.856Z",
       "robots": "not_provided",
-      "explicitNew": false
+      "explicitNew": false,
+      "officialNewListing": "kyochon_code_21"
     },
     "currency": "KRW",
     "retailer": "교촌치킨",
@@ -3174,13 +3186,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
-    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
+    "lastCheckedAt": "2026-10-15T23:57:41.856Z",
+    "description": "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
+    "availabilityCheckedAt": "2026-10-15T23:57:41.856Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T23:48:38.574Z"
+    "updatedAt": "2026-10-15T23:57:41.856Z"
   },
   {
     "id": "goobne-50174",

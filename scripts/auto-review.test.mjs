@@ -5,6 +5,15 @@ import {reviewAlerts} from "./lib/review-alerts.ts";
 const item={id:"nene-test",brand:"네네치킨",name:"신상",normalizedName:"신상",sourceUrl:"https://nenechicken.com/home_menu.asp",isActive:true,reviewEvidence:{sourceUrl:"https://nenechicken.com/home_menu.asp",checkedAt:"2026-10-15",robots:"not_provided",explicitNew:true}};
 const verdict=p=>evaluateProducts([p]).products[p.id];
 test("공식 NEW는 출시일·판매 증명이 없어도 승인",()=>assert.equal(verdict(item).decision,"approved"));
+test("교촌 공식 신메뉴 탭 근거만 제한적으로 승인한다",()=>{
+ const url="https://www.kyochon.com/menu/chicken.asp?code=21";
+ const k={...item,brand:"교촌치킨",sourceUrl:url,reviewEvidence:{...item.reviewEvidence,sourceUrl:url,explicitNew:false,officialNewListing:"kyochon_code_21"}};
+ assert.equal(verdict(k).decision,"approved");
+ assert.match(verdict(k).reason,/code=21/);
+ assert.equal(verdict({...k,sourceUrl:url.replace('21','4')}).decision,"pending");
+ assert.equal(verdict({...k,brand:"네네치킨"}).decision,"pending");
+ assert.equal(verdict({...k,reviewEvidence:{...k.reviewEvidence,robots:"blocked"}}).decision,"rejected");
+});
 test("오래된 날짜로 NEW를 자동 제외하지 않는다",()=>assert.equal(verdict({...item,releaseDate:"2024-01-01"}).decision,"approved"));
 test("NEW 없는 단순 목록·발표를 NEW로 추정하지 않는다",()=>assert.equal(verdict({...item,reviewEvidence:{...item.reviewEvidence,explicitNew:false,officialLaunchAnnouncement:true}}).decision,"pending"));
 test("명시적 정책 제한과 NEW 종료는 제외",()=>{

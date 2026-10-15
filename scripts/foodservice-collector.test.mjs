@@ -51,6 +51,16 @@ test("교촌 NEW 근거는 같은 상품 카드의 실제 표시만 인정한다
   assert.equal(products[0].reviewEvidence.checkedAt,checkedAt);
 });
 
+test("교촌 code=21은 신메뉴 제목과 활성 탭까지 확인해야 공식 신메뉴 근거다", () => {
+  const list='<ul class="menuProduct"><li><a href="view.asp?id=1&cg=2"><dt>새 치킨</dt></a></li></ul>';
+  const tab='<a class="active" href="chicken.asp?code=21">신메뉴</a>';
+  const extract=html=>extractKyochonNewProducts(html+list,checkedAt)[0].reviewEvidence;
+  assert.equal(extract('<h2>신메뉴 <span>안내</span></h2>'+tab).officialNewListing,'kyochon_code_21');
+  assert.equal(extract('<h2>전체메뉴</h2>'+tab).officialNewListing,undefined);
+  assert.equal(extract('<h2>신메뉴</h2>'+tab.replace('active','inactive')).officialNewListing,undefined);
+  assert.equal(extract('<!-- <h2>신메뉴</h2>'+tab+' -->').officialNewListing,undefined);
+});
+
 test("맥도날드는 최근 한 달 내 등록되고 현재 판매 중인 추천 버거만 추출한다", () => {
   const data = { resultObject: { list: [
     { seq: 1, korName: "새 버거 세트", regDate: "2026-September-15th", openTimeStart: "2026-09-17 00:00", openTimeEnd: "2026-10-21 23:59", exposureStatus: "menu,recommend", nameText: "버거", pcImageUrl: "/new.png" },

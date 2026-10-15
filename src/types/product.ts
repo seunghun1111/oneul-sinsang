@@ -39,6 +39,7 @@ export interface Product {
     checkedAt: string;
     robots: "allowed" | "not_provided" | "blocked";
     explicitNew?: boolean;
+    officialNewListing?: "kyochon_code_21";
     officialLaunchAnnouncement?: boolean;
     officialDate?: string;
     dateKind?: "launch" | "announcement";

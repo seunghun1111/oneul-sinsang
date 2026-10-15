@@ -36,11 +36,14 @@ export function evaluateProducts(products:Product[], now=new Date()): AutoReport
     if(!official) codes.push("source");
     if(e?.robots==="blocked") codes.push("blocked");
     else if(e && e.sourceUrl!==p.sourceUrl) codes.push("robots");
-    if(!e?.explicitNew) codes.push("new");
+    const kyochonListing = p.brand==="교촌치킨"
+      && p.sourceUrl==="https://www.kyochon.com/menu/chicken.asp?code=21"
+      && e?.sourceUrl===p.sourceUrl && e.officialNewListing==="kyochon_code_21";
+    if(!e?.explicitNew && !kyochonListing) codes.push("new");
     if(!p.isActive || p.newStatus==="removed") codes.push("ended");
     const rejected=codes.some(code=>["blocked","ended"].includes(code));
     const date=e?.officialDate;
-    verdicts[p.id]={decision:rejected?"rejected":codes.length?"pending":"approved",codes:codes.length?codes:["passed"],reason:(codes.length?codes:["passed"]).map(code=>reasons[code]).join(" · "),checkedAt:now.toISOString(),...(date?{verifiedDate:date}:{})};
+    verdicts[p.id]={decision:rejected?"rejected":codes.length?"pending":"approved",codes:codes.length?codes:["passed"],reason:!codes.length && kyochonListing && !e?.explicitNew ? "교촌치킨 공식 신메뉴 탭(code=21) 등록 확인으로 자동 승인했습니다. 이미지 NEW 문자 인식·출시일·매장 재고 확인과는 별개입니다" : (codes.length?codes:["passed"]).map(code=>reasons[code]).join(" · "),checkedAt:now.toISOString(),...(date?{verifiedDate:date}:{})};
   }
   return {version:1,checkedAt:now.toISOString(),products:verdicts};
 }

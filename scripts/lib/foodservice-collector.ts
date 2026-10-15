@@ -125,7 +125,11 @@ export function extractKyochonNewProducts(html: string, checkedAt: string): Food
   const sourceUrl = "https://www.kyochon.com/menu/chicken.asp?code=21";
   const products: FoodserviceCandidate[] = [];
   // Scope evidence to this product card; navigation, scripts and comments are not badges.
-  const listing = html.replace(/<!--[\s\S]*?-->/g, "").match(/<ul\b[^>]*class=["'][^"']*\bmenuProduct\b[^"']*["'][^>]*>([\s\S]*?)<\/ul>/i)?.[1] ?? "";
+  const visibleHtml = html.replace(/<!--[\s\S]*?-->/g, "").replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, "");
+  // code=21 is Kyochon's official new-menu tab. Image-embedded badges are not OCR evidence.
+  const officialNewListing = /<h2\b[^>]*>\s*신메뉴(?:\s|<)/i.test(visibleHtml)
+    && /<a\b(?=[^>]*href=["'](?:\/menu\/)?chicken\.asp\?code=21["'])(?=[^>]*class=["'][^"']*\bactive\b[^"']*["'])[^>]*>/i.test(visibleHtml);
+  const listing = visibleHtml.match(/<ul\b[^>]*class=["'][^"']*\bmenuProduct\b[^"']*["'][^>]*>([\s\S]*?)<\/ul>/i)?.[1] ?? "";
   for (const match of listing.matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/gi)) {
     const item = match[1].replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, "");
     const id = item.match(/view\.asp\?id=(\d+)&amp;cg=2/i)?.[1] ?? item.match(/view\.asp\?id=(\d+)&cg=2/i)?.[1];
@@ -137,9 +141,9 @@ export function extractKyochonNewProducts(html: string, checkedAt: string): Food
       || /<img\b[^>]*\balt=["']\s*NEW\s*["'][^>]*>/i.test(item);
     products.push({...candidate({
       slug: `kyochon-${id}`, brand: "교촌치킨", name, category: "chicken", subCategory: "치킨", checkedAt,
-      description: explicitNew ? "교촌치킨 공식 상품별 NEW 배지 확인" : "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인", sourceUrl,
+      description: explicitNew ? "교촌치킨 공식 상품별 NEW 배지 확인" : officialNewListing ? "교촌치킨 공식 신메뉴 탭(code=21)에 등록된 상품 확인" : "교촌치킨 공식 메뉴 확인 · 신메뉴 근거 미확인", sourceUrl,
       imageUrl: imagePath ? new URL(imagePath, "https://www.kyochon.com").href : null,
-    }), reviewEvidence:{sourceUrl,checkedAt,robots:"not_provided",explicitNew}});
+    }), reviewEvidence:{sourceUrl,checkedAt,robots:"not_provided",explicitNew,...(officialNewListing ? {officialNewListing:"kyochon_code_21" as const} : {})}});
   }
   return unique(products);
 }

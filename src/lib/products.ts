@@ -7,6 +7,10 @@ import { isCurrentlyOnSale, seoulDateKey, seoulMonthKey, seoulWeekDateKeys } fro
 const allProducts = [...(productData as Product[]), ...coffeeProducts];
 
 export const products: Product[] = allProducts
+  .map(product => {
+    const review = (reviewDecisions as Record<string, { decision: "approved" | "rejected"; reviewedAt: string }>)[product.id];
+    return review ? { ...product, reviewStatus:review.decision, reviewedAt:review.reviewedAt } : product;
+  })
   .filter(product => (reviewDecisions as Record<string, { decision: string }>)[product.id]?.decision !== "rejected")
   .filter(product => isCurrentlyOnSale(product))
   .toSorted((left, right) => (right.releaseDate ?? right.firstDetectedAt).localeCompare(left.releaseDate ?? left.firstDetectedAt));

@@ -23,13 +23,14 @@ type Candidate = {
   sourceUrl: string;
   sourceType?: "official_site" | "press_release";
   imageUrl: string | null;
+  reviewStatus?: "pending";
 };
 
 const dataUrl = new URL("../src/data/products.json", import.meta.url);
 const validCategories = new Set<ProductCategory>(["convenience", "cafe", "burger", "pizza", "chicken", "ramen", "meal", "snack", "drink", "dessert", "icecream", "etc"]);
 
 export function mergeProducts(existing: Product[], candidates: Candidate[], checkedAt: string): Product[] {
-  const idBasedBrands = new Set(["CU", "세븐일레븐", "이마트24", "롯데리아", "맥도날드", "버거킹", "맘스터치", "도미노피자", "피자헛", "굽네", "교촌치킨", "KFC", "배스킨라빈스"]);
+  const idBasedBrands = new Set(["CU", "세븐일레븐", "이마트24", "롯데리아", "맥도날드", "버거킹", "맘스터치", "도미노피자", "피자헛", "굽네", "교촌치킨", "KFC", "배스킨라빈스", "bhc", "푸라닭", "네네치킨", "BBQ", "하겐다즈", "나뚜루", "롯데웰푸드"]);
   const identity = (item: Pick<Product, "id" | "brand" | "normalizedName">) => idBasedBrands.has(item.brand) ? `${item.brand}:${item.id}` : `${item.brand}:${item.normalizedName}`;
   const byIdentity = new Map(existing.map(product => [identity(product), product]));
   for (const candidate of candidates) {
@@ -45,12 +46,14 @@ export function mergeProducts(existing: Product[], candidates: Candidate[], chec
       category,
       ...(candidate.subCategory ? { subCategory: candidate.subCategory } : previous?.subCategory ? { subCategory: previous.subCategory } : {}),
       productType: candidate.productType,
+      ...(previous?.reviewStatus || candidate.reviewStatus ? { reviewStatus:previous?.reviewStatus ?? candidate.reviewStatus } : {}),
+      ...(previous?.reviewedAt ? { reviewedAt:previous.reviewedAt } : {}),
       currency: "KRW",
       ...(candidate.retailer ? { retailer: candidate.retailer } : previous?.retailer && previous.retailer !== previous.brand ? { retailer: previous.retailer } : {}),
       ...(candidate.imageUrl ? { imageUrl: candidate.imageUrl } : previous?.imageUrl ? { imageUrl: previous.imageUrl } : {}),
       sourceUrl: candidate.sourceUrl,
       sourceType: candidate.sourceType ?? "press_release",
-      releaseDate: candidate.sourceType === "official_site"
+      releaseDate: candidate.reviewStatus === "pending" ? previous?.releaseDate : candidate.sourceType === "official_site"
         ? candidate.releaseDate ?? previous?.releaseDate ?? detectedAt.slice(0, 10)
         : candidate.releaseDate ?? candidate.announcedDate,
       firstDetectedAt: detectedAt,

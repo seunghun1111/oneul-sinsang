@@ -40,6 +40,7 @@ yarn-error.log*
 # Recoverable Git metadata from the standalone Sites checkout after monorepo integration.
 /.chatgpt-site-git-backup/
 /site-backups/
+/output/brand-research/
 
 # typescript
 *.tsbuildinfo

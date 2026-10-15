@@ -38,6 +38,7 @@ export function isDetectedOn(product: Product, dateKey: string) {
 }
 
 export function isCurrentlyOnSale(product: Product, now = new Date()) {
+  if (product.reviewStatus === "pending" || product.reviewStatus === "rejected") return false;
   if (!product.isActive) return false;
   const convenienceBrands = new Set(["CU", "세븐일레븐", "이마트24"]);
   const usesFirstDetection = convenienceBrands.has(product.brand);

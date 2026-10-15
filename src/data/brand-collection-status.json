@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-15T07:59:28.368Z",
+  "scope": "최신 목록 첫 페이지의 명시적 NEW 배지",
+  "results": [
+    {
+      "brand": "bhc",
+      "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/22/products",
+      "status": "success",
+      "newCount": 3,
+      "robots": "not_provided",
+      "note": "NEW 근거 확인, 개별 출시일 미확인으로 검수 대기"
+    },
+    {
+      "brand": "푸라닭",
+      "sourceUrl": "https://puradakchicken.com/menu/product.asp",
+      "status": "success",
+      "newCount": 4,
+      "robots": "checked",
+      "note": "NEW 근거 확인, 개별 출시일 미확인으로 검수 대기"
+    },
+    {
+      "brand": "네네치킨",
+      "sourceUrl": "https://nenechicken.com/home_menu.asp",
+      "status": "success",
+      "newCount": 6,
+      "robots": "checked",
+      "note": "NEW 근거 확인, 개별 출시일 미확인으로 검수 대기"
+    },
+    {
+      "brand": "BBQ",
+      "sourceUrl": "https://dt.bbq.co.kr/menu/menuList.asp?cidx=113&cname=%EC%8B%A0%EB%A9%94%EB%89%B4",
+      "status": "success",
+      "newCount": 0,
+      "robots": "not_provided",
+      "note": "읽은 최신 목록에서 상품별 NEW 배지가 확인되지 않음 (출시일·이미지 날짜로 추정하지 않음)"
+    },
+    {
+      "brand": "하겐다즈",
+      "sourceUrl": "https://haagendazs-store.co.kr/product/list.html?cate_no=25&sort_method=5",
+      "status": "success",
+      "newCount": 0,
+      "robots": "checked",
+      "note": "읽은 최신 목록에서 상품별 NEW 배지가 확인되지 않음 (출시일·이미지 날짜로 추정하지 않음)"
+    },
+    {
+      "brand": "나뚜루",
+      "sourceUrl": "https://www.lottesweetmall.com/product/list_ice.html?cate_no=344&sort_method=5",
+      "status": "success",
+      "newCount": 0,
+      "robots": "checked",
+      "note": "읽은 최신 목록에서 상품별 NEW 배지가 확인되지 않음 (출시일·이미지 날짜로 추정하지 않음)"
+    },
+    {
+      "brand": "롯데웰푸드",
+      "sourceUrl": "https://www.lottesweetmall.com/product/list_ice.html?cate_no=343&sort_method=5",
+      "status": "success",
+      "newCount": 0,
+      "robots": "checked",
+      "note": "읽은 최신 목록에서 상품별 NEW 배지가 확인되지 않음 (출시일·이미지 날짜로 추정하지 않음)"
+    }
+  ]
+}

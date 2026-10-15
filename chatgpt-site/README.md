@@ -1,4 +1,4 @@
-# 오늘신상 서버 사이트
+# 신상발견 서버 사이트
 
 공식 식품 브랜드 발표에서 확인한 신상품을 D1에 보관하고 보여 주는 [vinext](https://github.com/cloudflare/vinext) 기반 사이트입니다. 이 폴더는 상위 `oneul-sinsang` Git 저장소의 일부이며, 상위 폴더의 GitHub Pages 미리 보기와는 별도 배포 대상입니다.
 

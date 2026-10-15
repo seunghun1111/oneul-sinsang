@@ -17,7 +17,7 @@ async function request(path, init) {
 }
 
 const home = await request("/");
-if (home.response.status !== 200 || typeof home.body !== "string" || !home.body.includes("오늘신상")) {
+if (home.response.status !== 200 || typeof home.body !== "string" || !home.body.includes("신상발견")) {
   throw new Error("Home page smoke check failed.");
 }
 

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "오늘신상 — 새로 나온 맛을 한눈에",
-  description: "공식 발표 자료를 바탕으로 식품·음료 신상품을 찾아보는 서비스",
+  title: "신상발견 — 브랜드가 소개하는 NEW를 한곳에서",
+  description: "브랜드 공식 사이트의 NEW 상품을 발견하고 모읍니다. 최초 확인일과 출시일을 구분하며 메뉴·식품·MD를 함께 소개합니다.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

@@ -5,29 +5,29 @@ import { isCurrentlyOnSale, isDetectedOn, isDetectedToday, seoulDateKey, seoulMo
 function product(overrides = {}) {
   return {
     id: "cu-1", brand: "CU", name: "신상품", normalizedName: "신상품", category: "convenience",
-    productType: "new", currency: "KRW", sourceUrl: "https://cu.bgfretail.com/product/view.do?gdIdx=1",
+    reviewEvidence:{explicitNew:true}, productType: "new", currency: "KRW", sourceUrl: "https://cu.bgfretail.com/product/view.do?gdIdx=1",
     sourceType: "official_site", firstDetectedAt: "2026-09-07T00:00:00.000Z", lastCheckedAt: "2026-10-06T00:00:00.000Z",
     availabilityStatus: "on_sale", availabilityCheckedAt: "2026-10-06T00:00:00.000Z", isActive: true,
     createdAt: "2026-09-07T00:00:00.000Z", updatedAt: "2026-10-06T00:00:00.000Z", ...overrides,
   };
 }
 
-test("CU 상품은 최초 확인일부터 30일 미만인 경우만 표시한다", () => {
+test("CU는 NEW가 유지되는 동안 30일 제한 없이 표시한다", () => {
   assert.equal(isCurrentlyOnSale(product(), new Date("2026-10-06T00:00:00.000Z")), true);
-  assert.equal(isCurrentlyOnSale(product({ firstDetectedAt: "2026-09-06T00:00:00.000Z" }), new Date("2026-10-06T00:00:00.000Z")), false);
+  assert.equal(isCurrentlyOnSale(product({ firstDetectedAt: "2026-09-06T00:00:00.000Z" }), new Date("2026-10-06T00:00:00.000Z")), true);
 });
 
-test("세븐일레븐과 이마트24도 최초 확인일부터 30일 동안 표시한다", () => {
+test("다른 편의점도 NEW 유지 기간 동안 표시한다", () => {
   for (const brand of ["세븐일레븐", "이마트24"]) {
     assert.equal(isCurrentlyOnSale(product({ brand, firstDetectedAt: "2026-09-07T00:00:00.000Z" }), new Date("2026-10-06T00:00:00.000Z")), true);
-    assert.equal(isCurrentlyOnSale(product({ brand, firstDetectedAt: "2026-09-06T00:00:00.000Z" }), new Date("2026-10-06T00:00:00.000Z")), false);
+    assert.equal(isCurrentlyOnSale(product({ brand, firstDetectedAt: "2026-09-06T00:00:00.000Z" }), new Date("2026-10-06T00:00:00.000Z")), true);
   }
 });
 
-test("다른 상품도 공식 출시일부터 30일 미만인 경우만 표시한다", () => {
+test("출시일이 오래되어도 공식 NEW 유지 상품은 표시한다", () => {
   const coffee = product({ brand: "스타벅스", category: "cafe", releaseDate: "2026-09-07", firstDetectedAt: "2026-08-01T00:00:00.000Z" });
   assert.equal(isCurrentlyOnSale(coffee, new Date("2026-10-06T00:00:00.000Z")), true);
-  assert.equal(isCurrentlyOnSale({ ...coffee, releaseDate: "2026-09-06" }, new Date("2026-10-06T00:00:00.000Z")), false);
+  assert.equal(isCurrentlyOnSale({ ...coffee, releaseDate: "2026-09-06" }, new Date("2026-10-06T00:00:00.000Z")), true);
 });
 
 test("오늘 업데이트는 한국 날짜 기준 최초 확인일로 판정한다", () => {
@@ -47,4 +47,9 @@ test("이번 주는 한국 시간 기준 월요일부터 일요일까지 계산�
 test("이번 달은 한국 시간의 연월을 기준으로 계산한다", () => {
   assert.equal(seoulMonthKey("2026-09-30T14:59:59.000Z"), "2026-09");
   assert.equal(seoulMonthKey("2026-09-30T15:00:00.000Z"), "2026-10");
+});
+test("NEW 종료는 목록에서 제외하고 판매 상태 불명만으로 NEW를 숨기지 않는다",()=>{
+ assert.equal(isCurrentlyOnSale(product({newStatus:"removed"})),false);
+ assert.equal(isCurrentlyOnSale(product({availabilityStatus:"unknown"})),true);
+ assert.equal(isCurrentlyOnSale(product({reviewEvidence:undefined})),false);
 });

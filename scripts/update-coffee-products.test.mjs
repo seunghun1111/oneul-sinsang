@@ -55,6 +55,6 @@ test("공식 목록에서 두 번 연속 사라진 상품만 판매 종료 처�
   assert.equal(firstMiss.availabilityStatus, "unknown");
   assert.equal(firstMiss.isActive, true);
   const [secondMiss] = mergeCoffeeProducts([firstMiss], [], "2026-10-07T00:00:00.000Z", new Set([candidate.sourceUrl]));
-  assert.equal(secondMiss.availabilityStatus, "ended");
+  assert.equal(secondMiss.availabilityStatus, "unknown");
   assert.equal(secondMiss.isActive, false);
 });

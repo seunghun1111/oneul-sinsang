@@ -15,6 +15,6 @@ test("NEW 배지가 사라진 기존 CU 상품은 기본 목록에서 제외한�
   const previous = mergeCuProducts([], [candidate("cu-1", "이전상품")], "2026-10-05T00:00:00.000Z");
   const updated = mergeCuProducts(previous, [candidate("cu-2", "신상품")], checkedAt);
   assert.equal(updated.find(product => product.id === "cu-1")?.isActive, false);
-  assert.equal(updated.find(product => product.id === "cu-1")?.availabilityStatus, "ended");
+  assert.equal(updated.find(product => product.id === "cu-1")?.availabilityStatus, "unknown");
   assert.equal(updated.find(product => product.id === "cu-2")?.isActive, true);
 });

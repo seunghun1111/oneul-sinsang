@@ -7,7 +7,7 @@ test("전체 카테고리의 검수 결정이 재수집 결과보다 우선하�
  const coffee=[{...base,id:"coffee-test",category:"cafe",reviewStatus:"pending"}];
  const merged=mergeReviewCatalog(catalog,coffee,{"chicken-test":{decision:"rejected",reviewedAt:"2026-10-15"}});
  assert.deepEqual(merged.map(p=>p.reviewStatus),["rejected","approved","pending"]);
- assert.match(reviewReason(merged[2]),/개별 출시일/);
+ assert.match(reviewReason(merged[2]),/공식 NEW/);
  assert.match(reviewReason({...merged[2],releaseDate:"2026-10-15"}),/실제 출시일/);
  assert.equal(mergeReviewCatalog(catalog,catalog,{}).length,2);
 });

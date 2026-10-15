@@ -4,6 +4,7 @@ export type ReviewProduct = {
   availabilityStatus?: string; availabilityReason?: string; reviewStatus?: string; reviewedAt?: string;
   decisionSource?: "manual" | "automatic" | "legacy";
   automaticReason?: string; automaticCheckedAt?: string; verifiedDate?: string;
+  detectionKind?: "initial" | "newly_detected";
 };
 export type AutomaticReview = { products:Record<string,{decision:"approved"|"pending"|"rejected";reason:string;checkedAt:string;verifiedDate?:string}> };
 export type ReviewDecision = { decision: "approved" | "rejected"; reviewedAt: string };
@@ -22,7 +23,7 @@ export function reviewReason(product: ReviewProduct) {
   if (product.reviewStatus === "rejected") return "공식 신상품 기준 검수에서 제외된 상품입니다.";
   if (product.reviewStatus === "approved") return product.availabilityReason || "공식 출처의 NEW 표시 또는 신제품 발표에서 확인된 상품입니다.";
   return product.releaseDate
-    ? "공식 페이지 변경에서 감지됐습니다. 변경일과 실제 출시일이 다를 수 있어 최근 30일 출시 여부, NEW 표시와 현재 판매 여부를 확인해야 합니다."
-    : "개별 출시일을 확인하지 못했습니다. 최근 30일 신상품인지, 현재 판매 중인지 공식 출처에서 확인해야 합니다.";
+    ? "기존 기록일은 실제 출시일과 다를 수 있습니다. 상품별 공식 NEW 표시를 확인해야 합니다."
+    : "상품별 공식 NEW 표시를 확인해야 합니다. 출시일 미공개는 승인 제한 사유가 아닙니다.";
 }
 

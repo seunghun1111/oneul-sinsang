@@ -38,7 +38,7 @@ export function extractBaskinRobbinsNewProducts(fomHtml: string, announcement: {
       category: "icecream", subCategory: "아이스크림", productType: "new", currency: "KRW", price: null,
       retailer: "배스킨라빈스", sourceUrl: announcement.sourceUrl, sourceType: "official_site",
       releaseDate: announcement.date, announcedDate: announcement.date, firstDetectedAt: checkedAt, lastCheckedAt: checkedAt,
-      description: "배스킨라빈스 공식 이달의 맛과 FOM 신제품 공지에서 확인된 아이스크림",
+      description: "배스킨라빈스 공식 FOM NEW 신제품 영역에서 확인된 아이스크림",
       availabilityStatus: "on_sale", availabilityCheckedAt: checkedAt, isActive: true,
       createdAt: checkedAt, updatedAt: checkedAt,
       imageUrl: imagePath ? new URL(imagePath, "https://www.baskinrobbins.co.kr").href : null,
@@ -57,8 +57,6 @@ export async function collectBaskinRobbins(checkedAt = new Date().toISOString(),
   const noticeHtml = await fetchHtml("https://www.baskinrobbins.co.kr/information-center/notice/list.php?page=1", fetcher);
   const announcement = extractBaskinRobbinsAnnouncement(noticeHtml);
   if (!announcement) throw new Error("배스킨라빈스 FOM 신제품 공지 확인 실패");
-  const age = Date.parse(checkedAt) - Date.parse(`${announcement.date}T00:00:00+09:00`);
-  if (age < 0 || age >= 30 * 86_400_000) return [];
   const fomHtml = await fetchHtml("https://www.baskinrobbins.co.kr/menu/fom.php", fetcher);
   if (!fomHtml.includes("menu-fom-new")) throw new Error("배스킨라빈스 이달의 맛 페이지 구조 확인 실패");
   return extractBaskinRobbinsNewProducts(fomHtml, announcement, checkedAt);

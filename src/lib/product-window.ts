@@ -1,8 +1,5 @@
 import type { Product } from "../types/product.ts";
 
-const DAY = 86_400_000;
-const NEW_PRODUCT_DAYS = 30;
-const SALE_CHECK_DAYS = 14;
 
 export function seoulDateKey(value: string | Date) {
   const date = typeof value === "string" ? new Date(value) : value;
@@ -38,12 +35,7 @@ export function isDetectedOn(product: Product, dateKey: string) {
 }
 
 export function isCurrentlyOnSale(product: Product, now = new Date()) {
+  void now; // Kept for compatibility: NEW visibility has no launch-date window.
   if (product.reviewStatus === "pending" || product.reviewStatus === "rejected") return false;
-  if (!product.isActive) return false;
-  const convenienceBrands = new Set(["CU", "세븐일레븐", "이마트24"]);
-  const usesFirstDetection = convenienceBrands.has(product.brand);
-  const newSince = new Date(usesFirstDetection ? product.firstDetectedAt : product.releaseDate ?? product.firstDetectedAt);
-  if (!Number.isFinite(newSince.getTime()) || now.getTime() - newSince.getTime() >= NEW_PRODUCT_DAYS * DAY) return false;
-  return product.availabilityStatus === "on_sale" && Boolean(product.availabilityCheckedAt)
-    && now.getTime() - new Date(product.availabilityCheckedAt as string).getTime() <= SALE_CHECK_DAYS * DAY;
+  return product.isActive && product.newStatus !== "removed" && product.reviewEvidence?.explicitNew === true;
 }

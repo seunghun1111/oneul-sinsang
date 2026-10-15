@@ -27,7 +27,7 @@ const currentIds=new Set(candidates.map(product=>product.slug));
 const merged=mergeProducts(existing,candidates,checkedAt).map(product=>{
   // Full chicken NEW lists can prove badge disappearance. A single mall page cannot.
   if(!fullCheckedBrands.has(product.brand) || currentIds.has(product.id)) return product;
-  return {...product,isActive:false,availabilityStatus:"ended" as const,availabilityCheckedAt:checkedAt,updatedAt:checkedAt};
+  return {...product,isActive:false,newStatus:"removed" as const,availabilityStatus:"unknown" as const,availabilityCheckedAt:checkedAt,updatedAt:checkedAt};
 });
 await writeFile(dataUrl,JSON.stringify(merged,null,2)+"\n");
 await writeFile(new URL("../src/data/brand-collection-status.json",import.meta.url),JSON.stringify({checkedAt,scope:"최신 목록 첫 페이지의 명시적 NEW 배지",results},null,2)+"\n");

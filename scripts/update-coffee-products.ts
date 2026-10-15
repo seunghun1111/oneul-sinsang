@@ -12,12 +12,12 @@ export function mergeCoffeeProducts(existing: Product[], observed: Product[], ch
   for (const [key, product] of byIdentity) {
     if (!verifiedUrls.has(product.sourceUrl) || observedIdentities.has(key)) continue;
     const consecutiveMisses = (product.consecutiveMisses ?? 0) + 1;
-    byIdentity.set(key, { ...product, consecutiveMisses, lastCheckedAt:checkedAt, availabilityCheckedAt:checkedAt, availabilityStatus:consecutiveMisses >= 2 ? "ended" : "unknown", availabilityReason:consecutiveMisses >= 2 ? "공식 상품 목록에서 2회 연속 확인되지 않음" : "공식 상품 목록에서 재확인 대기 중", isActive:consecutiveMisses < 2, updatedAt:checkedAt });
+    byIdentity.set(key, { ...product, consecutiveMisses, lastCheckedAt:checkedAt, availabilityCheckedAt:checkedAt, newStatus:consecutiveMisses >= 2 ? "removed" : product.newStatus, availabilityStatus:"unknown", availabilityReason:consecutiveMisses >= 2 ? "공식 NEW 목록에서 2회 연속 확인되지 않음 (판매 종료 아님)" : "공식 상품 목록에서 재확인 대기 중", isActive:consecutiveMisses < 2, updatedAt:checkedAt });
   }
   for (const candidate of observed) {
     const key = `${candidate.brand}:${candidate.normalizedName}`;
     const previous = byIdentity.get(key);
-    byIdentity.set(key, { ...candidate, id:previous?.id ?? candidate.id, firstDetectedAt:previous?.firstDetectedAt ?? checkedAt, createdAt:previous?.createdAt ?? checkedAt, lastSeenAt:checkedAt, consecutiveMisses:0, availabilityReason:"공식 상품 목록에서 현재 확인됨", reviewStatus:previous?.reviewStatus ?? "pending", ...(previous?.reviewedAt ? { reviewedAt:previous.reviewedAt } : {}) });
+    byIdentity.set(key, { ...candidate, ...(previous?.detectionKind ? {detectionKind:previous.detectionKind} : {}), newStatus:"active", id:previous?.id ?? candidate.id, firstDetectedAt:previous?.firstDetectedAt ?? checkedAt, createdAt:previous?.createdAt ?? checkedAt, lastSeenAt:checkedAt, consecutiveMisses:0, availabilityReason:"공식 NEW 목록에서 확인됨", reviewStatus:previous?.reviewStatus ?? "pending", ...(previous?.reviewedAt ? { reviewedAt:previous.reviewedAt } : {}) });
   }
   return [...byIdentity.values()].toSorted((left, right) => right.firstDetectedAt.localeCompare(left.firstDetectedAt) || left.brand.localeCompare(right.brand, "ko-KR"));
 }

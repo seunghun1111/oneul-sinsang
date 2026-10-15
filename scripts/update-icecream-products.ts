@@ -10,7 +10,7 @@ export function mergeIcecreamProducts(existing: Product[], candidates: IcecreamC
   const currentIds = new Set(candidates.map(candidate => candidate.slug));
   return mergeProducts(existing, candidates, checkedAt).map(product => {
     if (product.brand !== "배스킨라빈스" || currentIds.has(product.id)) return product;
-    return { ...product, availabilityStatus: "ended" as const, availabilityCheckedAt: checkedAt, isActive: false, updatedAt: checkedAt };
+    return { ...product, newStatus: "removed" as const, availabilityStatus: "unknown" as const, availabilityCheckedAt: checkedAt, isActive: false, updatedAt: checkedAt };
   });
 }
 

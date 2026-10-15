@@ -51,13 +51,13 @@ test("맥도날드는 최근 한 달 내 등록되고 현재 판매 중인 추�
   assert.deepEqual(products.map(product => product.name), ["새 버거 세트"]);
 });
 
-test("버거킹은 최근 이미지 등록일의 NEW 단품 버거만 추출한다", () => {
+test("버거킹은 이미지 날짜와 관계없이 NEW 단품을 추출한다", () => {
   const data = { body: { allMenuList: [{ menuCategoryNm: "추천메뉴", menuInfo: [
     { menuCd: "1", menuNm: "새 와퍼", menuImgPath: "https://cdn/2026/09/20/a.png", menuFlagList: [{ menuFlagPk: "01" }] },
     { menuCd: "2", menuNm: "새 와퍼 세트", menuImgPath: "https://cdn/2026/09/20/b.png", menuFlagList: [{ menuFlagPk: "01" }] },
     { menuCd: "3", menuNm: "오래된 와퍼", menuImgPath: "https://cdn/2026/07/01/c.png", menuFlagList: [{ menuFlagPk: "01" }] },
   ] }] } };
-  assert.deepEqual(extractBurgerKingNewProducts(data, checkedAt).map(product => product.name), ["새 와퍼"]);
+  assert.deepEqual(extractBurgerKingNewProducts(data, checkedAt).map(product => product.name), ["새 와퍼", "오래된 와퍼"]);
 });
 
 test("맘스터치는 NEW 카드의 업로드 시각과 이름으로 버거·피자를 분류한다", () => {
@@ -72,7 +72,7 @@ test("KFC는 최근 한 달 내 시작되어 진행 중인 신제품 행사 메�
   assert.deepEqual(extractKfcNewProducts(html, checkedAt).map(product => product.name), ["새 치킨", "새 통다리"]);
 });
 
-test("피자헛은 최근 한 달 내 판매를 시작한 주문 가능 NEW 피자만 추출한다", () => {
+test("피자헛은 30일 이전 상품도 NEW 배지가 유지되면 추출한다", () => {
   const data = [{ digitalKey: "NEW1", rpstName: "새 피자", badge: "NEW", items: [{ saleStartDate: "2026-09-20T00:00:00+0900", saleEndDate: "2026-12-01T00:00:00+0900", orderable: "YES" }] }, { digitalKey: "OLD1", rpstName: "옛 피자", badge: "NEW", items: [{ saleStartDate: "2026-06-01T00:00:00+0900", saleEndDate: "2026-12-01T00:00:00+0900", orderable: "YES" }] }];
-  assert.deepEqual(extractPizzaHutNewProducts(data, checkedAt).map(product => product.name), ["새 피자"]);
+  assert.deepEqual(extractPizzaHutNewProducts(data, checkedAt).map(product => product.name), ["새 피자", "옛 피자"]);
 });

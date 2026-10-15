@@ -21,12 +21,12 @@ export function getProduct(id: string) { return products.find((product) => produ
 
 export function getWeekProducts(now = new Date()) {
   const week = new Set(seoulWeekDateKeys(now));
-  return products.filter(product => week.has(seoulDateKey(product.firstDetectedAt)));
+  return products.filter(product => product.detectionKind === "newly_detected" && week.has(seoulDateKey(product.firstDetectedAt)));
 }
 
 export function getMonthProducts(now = new Date()) {
   const month = seoulMonthKey(now);
-  return products.filter(product => seoulMonthKey(product.firstDetectedAt) === month);
+  return products.filter(product => product.detectionKind === "newly_detected" && seoulMonthKey(product.firstDetectedAt) === month);
 }
 
 export { seoulDateKey, seoulMonthKey, seoulWeekDateKeys };

@@ -16,7 +16,7 @@ export function MonthlyUpdates({ products, month }: { products: Product[]; month
 
   return <section className="monthly-updates" aria-labelledby="monthly-updates-title">
     <div className="monthly-update-heading">
-      <div><p className="section-kicker">THIS MONTH&apos;S NEW · {month.replace("-", ".")}</p><h2 id="monthly-updates-title">이번 달 신상</h2><p>이번 달 공식 목록에서 처음 확인된 상품을 모았습니다.</p></div>
+      <div><p className="section-kicker">THIS MONTH&apos;S NEW · {month.replace("-", ".")}</p><h2 id="monthly-updates-title">이번 달 신상</h2><p>초기 수집을 제외하고 이번 달 새로 확인된 NEW를 모았습니다.</p></div>
       <strong><span>{products.length}</span>개</strong>
     </div>
     {products.length === 0 ? <p className="monthly-empty">이번 달 새로 확인된 상품이 없습니다.</p> : <>

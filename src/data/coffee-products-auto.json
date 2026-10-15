@@ -24,7 +24,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-8fff4b37f692",
@@ -48,7 +49,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-5ef5f9b269d5",
@@ -72,7 +74,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-8b0bcca294ec",
@@ -99,7 +102,8 @@
     "lastSeenAt": "2026-10-13T02:41:37.418Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-ef8262b9fb1a",
@@ -126,7 +130,8 @@
     "lastSeenAt": "2026-10-14T00:30:23.026Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-843346cc1985",
@@ -153,7 +158,8 @@
     "lastSeenAt": "2026-10-14T00:30:23.026Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-63c209bd054a",
@@ -180,7 +186,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-23d9bf562811",
@@ -207,7 +214,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-3091f2a07200",
@@ -234,7 +242,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-5429e58cd232",
@@ -261,7 +270,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-94923f032bb5",
@@ -285,7 +295,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-2e6e498f9c4c",
@@ -309,7 +320,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-520494258baf",
@@ -333,7 +345,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-7cec31529446",
@@ -357,7 +370,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-236f4bd2366a",
@@ -381,7 +395,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-d38815c3bcd4",
@@ -405,7 +420,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-517a4736b1de",
@@ -429,7 +445,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-bd4cb585b838",
@@ -453,7 +470,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-0eee9bb9e48b",
@@ -477,7 +495,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-c49454fe6a04",
@@ -501,7 +520,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-022878c71fe5",
@@ -525,7 +545,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-60f728e154de",
@@ -549,7 +570,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-364782fe4cbd",
@@ -573,7 +595,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-f4e637ab6232",
@@ -597,7 +620,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-b9458a6554ee",
@@ -621,7 +645,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-77c3ebb081ab",
@@ -645,7 +670,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-f755fb6239ee",
@@ -669,7 +695,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-92c333502d71",
@@ -693,7 +720,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-4dcc41343d1f",
@@ -717,7 +745,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-94aeaf1bf417",
@@ -741,7 +770,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-81020d913be7",
@@ -765,7 +795,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-6b68b5044d78",
@@ -789,7 +820,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-6d61f6558421",
@@ -813,7 +845,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-d53205696dab",
@@ -837,7 +870,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-bbcc5eb47b5f",
@@ -861,7 +895,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-7b09a8810aa7",
@@ -885,7 +920,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-3a85273d7497",
@@ -909,7 +945,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-495538f9d1f2",
@@ -933,7 +970,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-ac17a396090e",
@@ -957,7 +995,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-e511fb6d31aa",
@@ -984,7 +1023,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-819181025d97",
@@ -1011,7 +1051,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-8715d931ccc4",
@@ -1038,7 +1079,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-22d5191ac501",
@@ -1065,7 +1107,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-d664a1bee098",
@@ -1092,7 +1135,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-52faaf48cb70",
@@ -1119,7 +1163,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-eef21cad1d74",
@@ -1146,7 +1191,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-5557efe04e95",
@@ -1173,7 +1219,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-6013b5bce281",
@@ -1200,7 +1247,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-63b650cf49b4",
@@ -1227,7 +1275,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-506663e0fade",
@@ -1254,7 +1303,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-f1c15a83eedd",
@@ -1281,7 +1331,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-ee9b35c8a4df",
@@ -1308,7 +1359,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-349b2386e534",
@@ -1335,7 +1387,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-98d2f9395fd6",
@@ -1362,7 +1415,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-714d30cddc54",
@@ -1389,7 +1443,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-06f5bb4d00d3",
@@ -1416,7 +1471,8 @@
     "lastSeenAt": "2026-10-08T01:12:23.418Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-82e210ca7566",
@@ -1443,7 +1499,8 @@
     "lastSeenAt": "2026-10-08T01:12:23.418Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-330372da100d",
@@ -1470,7 +1527,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-b803c52c9293",
@@ -1497,7 +1555,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-5f6379148edf",
@@ -1524,7 +1583,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-b20be4526f32",
@@ -1551,7 +1611,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-58e0f587322a",
@@ -1578,7 +1639,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-74ed65949c81",
@@ -1605,7 +1667,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-2f0b1f16b5b3",
@@ -1632,7 +1695,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-843be235de54",
@@ -1659,7 +1723,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-c456581c1787",
@@ -1686,7 +1751,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-c31a4570f4c3",
@@ -1713,7 +1779,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-04e243940b34",
@@ -1740,7 +1807,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-ee2ac0c38252",
@@ -1767,7 +1835,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-0078a8ae3a01",
@@ -1794,7 +1863,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-a25fe9574f0b",
@@ -1821,7 +1891,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-0e38dbd89e48",
@@ -1848,7 +1919,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-90cc7e35325c",
@@ -1875,7 +1947,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-050a746c1347",
@@ -1902,7 +1975,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-4e1f7e72804c",
@@ -1929,7 +2003,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-21c3850f2333",
@@ -1956,7 +2031,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-d69b4bfb2aa5",
@@ -1983,7 +2059,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-d1710ef1594a",
@@ -2010,7 +2087,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-bf1e4f0f20ef",
@@ -2037,7 +2115,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-f86f48accfb6",
@@ -2064,7 +2143,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-6e8f498b576a",
@@ -2091,7 +2171,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-14c7e0934520",
@@ -2118,7 +2199,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-b19430489b7c",
@@ -2145,7 +2227,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-4b4bbf95b82f",
@@ -2172,7 +2255,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-a5cb8243327a",
@@ -2199,7 +2283,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-74cdf04f30b3",
@@ -2226,7 +2311,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-88fbedcdae92",
@@ -2253,7 +2339,8 @@
     "lastSeenAt": "2026-10-09T01:20:54.546Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-092162dad706",
@@ -2280,7 +2367,8 @@
     "lastSeenAt": "2026-10-10T01:07:55.444Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-f30819bbf8ce",
@@ -2307,7 +2395,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-347fc9d6d187",
@@ -2334,7 +2423,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-8246e55645c4",
@@ -2361,7 +2451,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-c99577230d7b",
@@ -2388,7 +2479,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-5ae1fdd02f25",
@@ -2415,7 +2507,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-3d4a41afb20f",
@@ -2442,7 +2535,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-9a640bb2bb99",
@@ -2469,7 +2563,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-bad4be40546b",
@@ -2496,7 +2591,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-95948c614087",
@@ -2523,7 +2619,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-1e7eded43242",
@@ -2550,7 +2647,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-1d1cab600628",
@@ -2577,7 +2675,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-f220f8036e8c",
@@ -2604,7 +2703,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-dd7f58a3ddcf",
@@ -2631,7 +2731,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-753edfe8b41c",
@@ -2658,7 +2759,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-abf3e49a3af1",
@@ -2685,7 +2787,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-788916cba279",
@@ -2712,7 +2815,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-0be7b4c9dde1",
@@ -2739,7 +2843,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-5c9b358c6ad0",
@@ -2766,7 +2871,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-54c546bdfd56",
@@ -2793,7 +2899,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-12fbb6b1bf23",
@@ -2820,7 +2927,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-0f6d042537e1",
@@ -2847,7 +2955,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-eff14076ef97",
@@ -2874,7 +2983,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-85e27f2a0938",
@@ -2901,7 +3011,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-59cec3390a70",
@@ -2928,7 +3039,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-37e8cd08760e",
@@ -2955,7 +3067,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-3575c4106722",
@@ -2982,7 +3095,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-c52bc3f2a583",
@@ -3009,7 +3123,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-1367ba4757b3",
@@ -3036,7 +3151,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-f5e5ac07c29b",
@@ -3063,7 +3179,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-7dad8c211972",
@@ -3090,7 +3207,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-c7878cf4ed77",
@@ -3117,7 +3235,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-1c6e6eff6709",
@@ -3144,7 +3263,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-45b4108a536f",
@@ -3171,7 +3291,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-2f53e1a4d378",
@@ -3198,7 +3319,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-e4514c88f1ee",
@@ -3225,7 +3347,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-36306cf2b9dc",
@@ -3252,7 +3375,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-304a685e4215",
@@ -3279,7 +3403,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-dd5c451ca1c7",
@@ -3306,7 +3431,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-a7d5053cc31d",
@@ -3333,7 +3459,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-a24a74278ad4",
@@ -3360,7 +3487,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-2aa636618ca0",
@@ -3387,7 +3515,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-4866aacb3c29",
@@ -3414,7 +3543,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-7e4eb1882c9b",
@@ -3441,7 +3571,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-890fe5effd97",
@@ -3468,7 +3599,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-57fd3a9cb075",
@@ -3495,7 +3627,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-353366e26e6a",
@@ -3522,7 +3655,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-5a7411122a45",
@@ -3549,7 +3683,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-4e588a539667",
@@ -3576,7 +3711,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-661ecaf66ac4",
@@ -3603,7 +3739,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-9858874a41df",
@@ -3630,7 +3767,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-3d6a29fe96ce",
@@ -3657,7 +3795,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-44a81d574b2a",
@@ -3684,7 +3823,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-b2d30adf49a8",
@@ -3711,7 +3851,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-d973bbf629bc",
@@ -3738,7 +3879,8 @@
     "lastSeenAt": "2026-10-09T01:20:54.546Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-e19d2d3ebb0e",
@@ -3765,7 +3907,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-d9d2556f7670",
@@ -3792,7 +3935,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-083525f46210",
@@ -3819,7 +3963,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-3e919e8bb928",
@@ -3846,7 +3991,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-c606453f6a12",
@@ -3873,7 +4019,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-3ea29493fb8d",
@@ -3900,7 +4047,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-e1f62056205a",
@@ -3927,7 +4075,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-1d6c42663fc9",
@@ -3954,7 +4103,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-27f9ca148701",
@@ -3981,7 +4131,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-8fafe0538c38",
@@ -4008,7 +4159,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-30955b5964e0",
@@ -4035,7 +4187,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-cfb1f0461576",
@@ -4062,7 +4215,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-1e7e8b15bc70",
@@ -4089,7 +4243,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-881695bf8cb8",
@@ -4116,7 +4271,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-starbucks-7b793a551619",
@@ -4143,7 +4299,8 @@
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
-    "reviewStatus": "pending"
+    "reviewStatus": "pending",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-07239301071e",
@@ -4168,7 +4325,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-61af08823c1c",
@@ -4193,7 +4351,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-2a851d64fac2",
@@ -4218,7 +4377,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-c1b7dddf8349",
@@ -4243,7 +4403,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-3fe44152a1c3",
@@ -4268,7 +4429,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-15216e5987e7",
@@ -4293,7 +4455,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-e461efaea9ab",
@@ -4318,7 +4481,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-1e503204e93a",
@@ -4343,7 +4507,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-86a801a4234c",
@@ -4368,7 +4533,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-paik-ebc1bcfb7d88",
@@ -4393,7 +4559,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-7bb4f5d34a19",
@@ -4418,7 +4585,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-be9fb630e103",
@@ -4443,7 +4611,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-eaf70fd406d6",
@@ -4468,7 +4637,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-cc7573cd1950",
@@ -4493,7 +4663,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-8166f4d9a779",
@@ -4518,7 +4689,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-ediya-c27d1d39a9c3",
@@ -4543,7 +4715,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-7e0a4de95397",
@@ -4568,7 +4741,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-83151ada9e32",
@@ -4593,7 +4767,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-f551635e9b81",
@@ -4618,7 +4793,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-d1541af1353f",
@@ -4643,7 +4819,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-a065e4c3ea17",
@@ -4668,7 +4845,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-fdbacc051509",
@@ -4693,7 +4871,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-fe53ccddedb0",
@@ -4718,7 +4897,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-9593121e9fdd",
@@ -4743,7 +4923,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-e308b231f6b2",
@@ -4768,7 +4949,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-a0966a939b02",
@@ -4793,7 +4975,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-fb9c431953d1",
@@ -4818,7 +5001,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-86d0fe24d9c4",
@@ -4843,7 +5027,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-7d914846af60",
@@ -4868,7 +5053,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-ca657f238d01",
@@ -4893,7 +5079,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-1d5b11a3f3b0",
@@ -4918,7 +5105,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-fdd059ac3c4d",
@@ -4943,7 +5131,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-331c60015909",
@@ -4968,7 +5157,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-664c3bb95849",
@@ -4993,7 +5183,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-f7d03026d054",
@@ -5018,7 +5209,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-20a9e5ccbf88",
@@ -5043,7 +5235,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-6c5cf5fd8315",
@@ -5068,7 +5261,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-5b08d3723673",
@@ -5093,7 +5287,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-8c8107338b2b",
@@ -5118,7 +5313,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-a91dbb207ec7",
@@ -5143,7 +5339,8 @@
     "consecutiveMisses": 8,
     "availabilityReason": "공식 상품 목록에서 2회 연속 확인되지 않음",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-d8538c321920",
@@ -5168,7 +5365,8 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   },
   {
     "id": "coffee-hollys-155408be4624",
@@ -5193,6 +5391,7 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
-    "reviewedAt": "2026-10-06T09:00:00.000Z"
+    "reviewedAt": "2026-10-06T09:00:00.000Z",
+    "detectionKind": "initial"
   }
 ]

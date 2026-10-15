@@ -7,7 +7,7 @@ const BLOCKED_HOSTS = /(^|\.)(kakao\.com|daum\.net|kakaocorp\.com|daumcorp\.com|
 const GENERIC_NAMES = /^(new|menu|product|products|신메뉴|메뉴|상품|전체|자세히\s*보기|view\s*more)$/i;
 const PRODUCT_WORDS = /라떼|티|커피|에이드|스무디|주스|프라페|아메리카노|에스프레소|콜드\s*브루|케이크|빵|샌드|쿠키|베이글|텀블러|머그|컵|키링|보틀|드립백|원두|블렌드|캡슐|아이스크림|젤라또|latte|tea|coffee|ade|smoothie|juice|frappe|tumbler|mug|bottle|drip\s*bag|blend/i;
 
-export type CoffeeCandidate = Pick<Product, "id"|"brand"|"name"|"normalizedName"|"category"|"subCategory"|"productType"|"currency"|"sourceUrl"|"sourceType"|"releaseDate"|"firstDetectedAt"|"lastCheckedAt"|"description"|"availabilityStatus"|"availabilityCheckedAt"|"isActive"|"createdAt"|"updatedAt"|"robotsPolicyUrl"|"robotsCheckedAt">;
+export type CoffeeCandidate = Pick<Product, "id"|"brand"|"name"|"normalizedName"|"category"|"subCategory"|"productType"|"currency"|"sourceUrl"|"sourceType"|"releaseDate"|"firstDetectedAt"|"lastCheckedAt"|"description"|"availabilityStatus"|"availabilityCheckedAt"|"isActive"|"createdAt"|"updatedAt"|"robotsPolicyUrl"|"robotsCheckedAt"|"reviewEvidence">;
 
 function textOnly(value: string) {
   return value.replace(/<[^>]+>/g, " ").replace(/&(?:nbsp|amp|quot|#39);/gi, " ").replace(/\s+/g, " ").trim();
@@ -58,7 +58,7 @@ function extractKnownOfficialCards(html: string, sourceUrl: string, checkedAt: s
   return names;
 }
 
-export function extractOfficialProductNames(html: string, sourceUrl = "", checkedAt = new Date().toISOString()) {
+export function extractOfficialProductNames(html: string, sourceUrl = "", checkedAt = new Date().toISOString(), newOnly = false) {
   const structuredNames: string[] = [];
   for (const match of html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
     try { collectJsonLd(JSON.parse(match[1]), structuredNames); } catch { /* 공식 페이지의 잘못된 JSON-LD는 건너뜁니다. */ }
@@ -75,7 +75,8 @@ export function extractOfficialProductNames(html: string, sourceUrl = "", checke
       if (PRODUCT_WORDS.test(name)) markedNames.push(name);
     }
   }
-  return [...new Set([...structuredNames, ...markedNames, ...extractKnownOfficialCards(html, sourceUrl, checkedAt)].map(textOnly).filter(name => name.length >= 2 && name.length <= 80 && !GENERIC_NAMES.test(name) && !/^\d[\d,.]*원?$/.test(name)))];
+  const known = !newOnly || new URL(sourceUrl || "https://example.com").pathname.includes("menu_new") ? extractKnownOfficialCards(html,sourceUrl,checkedAt) : [];
+  return [...new Set([...(newOnly ? [] : structuredNames), ...markedNames, ...known].map(textOnly).filter(name => name.length >= 2 && name.length <= 80 && !GENERIC_NAMES.test(name) && !/^\d[\d,.]*원?$/.test(name)))];
 }
 
 export function toCoffeeCandidates(source: CoffeeBrandSource, kind: CoffeeSourceKind, sourceUrl: string, names: string[], checkedAt: string): CoffeeCandidate[] {
@@ -120,25 +121,26 @@ export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, ch
   const robotsText = await robotsResponse.text();
   const sitemapUrls = ["sitemap-drink.xml", "sitemap-food.xml", "sitemap-md.xml", "sitemap-coffee.xml"].map(item => `${origin}/${item}`);
   if (sitemapUrls.some(url => !isRobotsAllowed(robotsText, url))) throw new Error("robots.txt에서 사이트맵 수집을 허용하지 않음");
-  const cutoff = new Date(new Date(checkedAt).getTime() - 45 * 86_400_000);
   const sitemapResults = await Promise.all(sitemapUrls.map(async url => {
     const response = await fetcher(url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
     if (!response.ok) throw new Error(`sitemap HTTP ${response.status}`);
-    return sitemapEntries(await response.text()).filter(entry => new Date(`${entry.lastmod}T00:00:00Z`) >= cutoff);
+    return sitemapEntries(await response.text());
   }));
-  const entries = sitemapResults.flat().slice(0, 120);
+  const entries = sitemapResults.flat();
   const candidates: CoffeeCandidate[] = [];
+  const verifiedUrls:string[]=[];
   for (let index = 0; index < entries.length; index += 6) {
     const batch = entries.slice(index, index + 6);
     const details = await Promise.allSettled(batch.map(async entry => {
       if (!isRobotsAllowed(robotsText, entry.url)) return [];
       const response = await fetcher(entry.url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
       if (!response.ok) return [];
-      return toCoffeeCandidates(source, entry.url.includes("product_view") ? "md" : "menu", entry.url, extractOfficialProductNames(await response.text(), entry.url, checkedAt), checkedAt).map(candidate => ({ ...candidate, releaseDate:entry.lastmod, robotsPolicyUrl, robotsCheckedAt:checkedAt }));
+      verifiedUrls.push(entry.url);
+      return toCoffeeCandidates(source, entry.url.includes("product_view") ? "md" : "menu", entry.url, extractOfficialProductNames(await response.text(), entry.url, checkedAt, true), checkedAt).map(candidate => ({ ...candidate, reviewEvidence:{sourceUrl:entry.url,checkedAt,robots:"allowed" as const,explicitNew:true}, releaseDate:undefined, robotsPolicyUrl, robotsCheckedAt:checkedAt }));
     }));
     candidates.push(...details.flatMap(result => result.status === "fulfilled" ? result.value : []));
   }
-  return { candidates:[...new Map(candidates.map(candidate => [candidate.normalizedName, candidate])).values()], verifiedUrls:entries.map(entry => entry.url), checked:sitemapUrls.length, failed:0 };
+  return { candidates:[...new Map(candidates.map(candidate => [candidate.normalizedName, candidate])).values()], verifiedUrls, checked:sitemapUrls.length, failed:entries.length-verifiedUrls.length };
 }
 
 export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch = fetch) {
@@ -148,10 +150,10 @@ export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: 
     if (BLOCKED_HOSTS.test(url.hostname)) throw new Error("제한 도메인");
     const response = await fetcher(url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const names = extractOfficialProductNames(await response.text(), channel.url, checkedAt);
-    return toCoffeeCandidates(source, channel.kind, channel.url, names, checkedAt);
+    const names = extractOfficialProductNames(await response.text(), channel.url, checkedAt, true);
+    return toCoffeeCandidates(source, channel.kind, channel.url, names, checkedAt).map(candidate=>({...candidate,reviewEvidence:{sourceUrl:channel.url,checkedAt,robots:"not_provided" as const,explicitNew:true}}));
   }));
   const candidates = results.flatMap(result => result.status === "fulfilled" ? result.value : []);
-  const verifiedUrls = results.flatMap((result, index) => result.status === "fulfilled" && result.value.length > 0 ? [channels[index].url] : []);
+  const verifiedUrls = results.flatMap((result, index) => result.status === "fulfilled" ? [channels[index].url] : []);
   return { candidates:[...new Map(candidates.map(candidate => [candidate.normalizedName, candidate])).values()], verifiedUrls, checked:results.filter(result => result.status === "fulfilled").length, failed:results.filter(result => result.status === "rejected").length };
 }

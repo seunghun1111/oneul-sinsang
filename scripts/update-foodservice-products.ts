@@ -10,7 +10,7 @@ export function mergeFoodserviceProducts(existing: Product[], candidates: Foodse
   const current = new Set(candidates.map(candidate => `${candidate.brand}:${candidate.slug}`));
   return mergeProducts(existing, candidates, checkedAt).map(product => {
     if (!checkedBrands.includes(product.brand) || current.has(`${product.brand}:${product.id}`)) return product;
-    return { ...product, availabilityStatus: "ended" as const, availabilityCheckedAt: checkedAt, isActive: false, updatedAt: checkedAt };
+    return { ...product, newStatus: "removed" as const, availabilityStatus: "unknown" as const, availabilityCheckedAt: checkedAt, isActive: false, updatedAt: checkedAt };
   });
 }
 

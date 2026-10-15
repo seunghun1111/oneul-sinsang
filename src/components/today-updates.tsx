@@ -22,7 +22,7 @@ export function TodayUpdates({ products, today, dates }: { products: Product[]; 
 
   return <section className="today-updates" aria-labelledby="today-updates-title">
     <div className="today-update-heading">
-      <div><p className="section-kicker">THIS WEEK&apos;S NEW · {weekRange}</p><h2 id="today-updates-title">이번 주 신상</h2><p>공식 목록에서 이번 주 처음 확인된 상품을 날짜별로 보여줍니다.</p></div>
+      <div><p className="section-kicker">THIS WEEK&apos;S NEW · {weekRange}</p><h2 id="today-updates-title">이번 주 신상</h2><p>초기 수집을 제외하고 이번 주 새로 확인된 NEW를 날짜별로 보여줍니다.</p></div>
       <strong><span>{products.length}</span>개</strong>
     </div>
     <div className="week-date-tabs" role="tablist" aria-label="이번 주 날짜별 신상">

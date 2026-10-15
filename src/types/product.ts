@@ -31,6 +31,8 @@ export interface Product {
   consecutiveMisses?: number;
   availabilityReason?: string;
   reviewStatus?: "pending" | "approved" | "rejected";
+  newStatus?: "active" | "removed";
+  detectionKind?: "initial" | "newly_detected";
   reviewedAt?: string;
   reviewEvidence?: {
     sourceUrl: string;

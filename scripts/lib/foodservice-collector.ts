@@ -177,15 +177,13 @@ export function extractBurgerKingNewProducts(data: BurgerKingMenuResponse, check
       const id = String(item.menuCd ?? "");
       const name = clean(String(item.menuNm ?? ""));
       const imageUrl = String(item.menuImgPath ?? "");
-      const imageDate = imageUrl.match(/\/(\d{4})\/(\d{2})\/(\d{2})\//)?.slice(1);
       const isNew = Array.isArray(item.menuFlagList) && item.menuFlagList.some(flag => String((flag as { menuFlagPk?: unknown }).menuFlagPk) === "01");
       if (!id || seen.has(id) || !isNew || /(?:라지)?세트$/.test(name)) continue;
       if (!/(버거|와퍼|크리스퍼|맥시멈|오리지널스)/.test(name)) continue;
-      if (!imageDate || !withinDays(`${imageDate[0]}-${imageDate[1]}-${imageDate[2]}T00:00:00+09:00`, checkedAt)) continue;
       seen.add(id);
       products.push(candidate({
         slug: `burgerking-${id}`, brand: "버거킹", name, category: "burger", subCategory: "버거", checkedAt,
-        releaseDate: imageDate.join("-"), description: "버거킹 공식 메뉴의 NEW 배지와 최근 30일 내 이미지 등록일로 확인된 단품 버거",
+        releaseDate: null, description: "버거킹 공식 메뉴의 NEW 배지에서 확인된 단품 버거",
         sourceUrl: `https://www.burgerking.co.kr/menu/detail/${id}`, imageUrl,
       }));
     }
@@ -200,15 +198,14 @@ export function extractMomstouchNewProducts(html: string, checkedAt: string): Fo
     const id = item.match(/go_view\(["'](\d+)["']\)/i)?.[1];
     const rawName = item.match(/<h3[^>]*>[\s\S]*?<\/span>([\s\S]*?)<\/h3>/i)?.[1];
     const imagePath = item.match(/background-image:\s*url\(["']?([^"')]+)/i)?.[1];
-    const uploadTimestamp = imagePath?.match(/\/(\d{10})-[^/]+$/)?.[1];
-    if (!id || !rawName || !imagePath || !uploadTimestamp || !withinDays(Number(uploadTimestamp) * 1000, checkedAt)) continue;
+    if (!id || !rawName || !imagePath) continue;
     const name = clean(rawName);
     const category: FoodserviceCategory | null = /피자/.test(name) ? "pizza" : /치킨/.test(name) && !/버거/.test(name) ? "chicken" : /버거/.test(name) ? "burger" : null;
     if (!category) continue;
     products.push(candidate({
       slug: `momstouch-${id}`, brand: "맘스터치", name, category, subCategory: category === "pizza" ? "피자" : category === "chicken" ? "치킨" : "버거",
-      checkedAt, releaseDate: new Date(Number(uploadTimestamp) * 1000).toISOString().slice(0, 10),
-      description: "맘스터치 공식 신제품 메뉴의 NEW 배지와 최근 30일 내 이미지 업로드일로 확인된 상품",
+      checkedAt, releaseDate: null,
+      description: "맘스터치 공식 신제품 메뉴의 NEW 배지에서 확인된 상품",
       sourceUrl: `https://www.momstouch.co.kr/menu/view.php?idx=${id}&s_sect1=new`, imageUrl: new URL(imagePath, "https://www.momstouch.co.kr").href,
     }));
   }
@@ -256,10 +253,10 @@ export function extractPizzaHutNewProducts(data: PizzaHutMenu, checkedAt: string
     const entries = Array.isArray(item.items) ? item.items as Array<Record<string, unknown>> : [];
     const started = entries.map(entry => String(entry.saleStartDate ?? "")).filter(Boolean).sort()[0];
     const active = entries.some(entry => String(entry.orderable ?? "") === "YES" && activeAt(String(entry.saleStartDate ?? ""), String(entry.saleEndDate ?? ""), checkedAt));
-    if (!id || !name || String(item.badge ?? "") !== "NEW" || !started || !withinDays(started, checkedAt) || !active) return [];
+    if (!id || !name || String(item.badge ?? "") !== "NEW" || !started || !active) return [];
     return [candidate({
       slug: `pizzahut-${id.toLowerCase()}`, brand: "피자헛", name, category: "pizza", subCategory: "피자", checkedAt,
-      releaseDate: started.slice(0, 10), description: "피자헛 공식 메뉴 API의 NEW 배지에서 최근 30일 내 판매 시작되고 현재 주문 가능한 피자",
+      releaseDate: started.slice(0, 10), description: "피자헛 공식 메뉴 API의 NEW 배지에서 확인된 피자",
       sourceUrl: `https://www.pizzahut.co.kr/menu/pizza/best/${id}`,
     })];
   });

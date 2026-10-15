@@ -12,7 +12,7 @@ export function mergeCuProducts(existing: Product[], candidates: CuCandidate[], 
     if (product.brand !== "CU" || currentIds.has(product.id)) return product;
     return {
       ...product,
-      availabilityStatus: "ended" as const,
+      newStatus: "removed" as const, availabilityStatus: "unknown" as const,
       availabilityCheckedAt: checkedAt,
       isActive: false,
       updatedAt: checkedAt,

@@ -3,6 +3,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import type { Product } from "../src/types/product.ts";
 import { collectEmart24, collectSevenEleven, type ConvenienceCandidate } from "./lib/convenience-collector.ts";
 import { mergeProducts } from "./update-static-products.ts";
+import {runBrandCollection} from "./lib/brand-collection-run.ts";
 
 const dataUrl = new URL("../src/data/products.json", import.meta.url);
 
@@ -17,18 +18,12 @@ export function mergeConvenienceProducts(existing: Product[], candidates: Conven
 async function main() {
   const checkedAt = new Date().toISOString();
   const sources = [["세븐일레븐", collectSevenEleven], ["이마트24", collectEmart24]] as const;
-  const settled = await Promise.allSettled(sources.map(([, collect]) => collect(checkedAt)));
-  const candidates: ConvenienceCandidate[] = [];
-  const checkedBrands: string[] = [];
-  settled.forEach((result, index) => {
-    const brand = sources[index][0];
-    if (result.status === "fulfilled") {
-      checkedBrands.push(brand);
-      candidates.push(...result.value);
-      console.log(`${brand}: NEW ${result.value.length}건 확인`);
-    } else console.warn(`${brand}: 수집 실패, 기존 데이터 유지`);
-  });
-  if (checkedBrands.length === 0) throw new Error("편의점 공식 출처 수집에 모두 실패했습니다.");
+  const statusUrl=new URL("../src/data/convenience-collection-status.json",import.meta.url);
+  const previous=JSON.parse(await readFile(statusUrl,"utf8"));
+  const {candidates,checkedBrands,report}=await runBrandCollection<ConvenienceCandidate>(sources,checkedAt,previous.results);
+  await writeFile(statusUrl,JSON.stringify(report,null,2)+"\n");
+  for(const result of report.results) console.log(`${result.brand}: ${result.status==="success"?`NEW ${result.newCount}건 확인`:"수집 실패, 기존 데이터 유지"}`);
+  if (checkedBrands.length === 0) return; // Status report triggers notification; other collectors must still run.
   const existing = JSON.parse(await readFile(dataUrl, "utf8")) as Product[];
   await writeFile(dataUrl, `${JSON.stringify(mergeConvenienceProducts(existing, candidates, checkedBrands, checkedAt), null, 2)}\n`, "utf8");
 }

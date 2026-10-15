@@ -1,6 +1,7 @@
 import {readFile,writeFile} from "node:fs/promises";
 import {reviewAlerts,alertMarker} from "./lib/review-alerts.ts";
 import {coffeeCollectionFailures} from "./lib/coffee-collection-run.ts";
+import {brandCollectionFailures} from "./lib/brand-collection-run.ts";
 const base=new URL("../src/data/",import.meta.url);
 const read=async(name:string)=>JSON.parse(await readFile(new URL(name,base),"utf8"));
 const report=await read("auto-review.json");
@@ -9,6 +10,8 @@ const decisions=await read("review-decisions.json");
 const brand=await read("brand-collection-status.json");
 const failures=brand.results.filter((r:{status:string})=>r.status==="failed").map((r:{brand:string})=>r.brand);
 failures.push(...coffeeCollectionFailures(await read("coffee-collection-status.json")));
+failures.push(...brandCollectionFailures(await read("convenience-collection-status.json"),"편의점"));
+failures.push(...brandCollectionFailures(await read("foodservice-collection-status.json"),"외식"));
 if(process.env.COLLECTION_FAILED==="true") failures.push("일일 수집·검수 작업 실패 (Actions 실행 기록 확인)");
 const alerts=reviewAlerts(report,decisions,state.sent,failures);
 if(!alerts.length) {console.log("새 확인 필요 항목 없음");process.exit(0);}

@@ -1,6 +1,8 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { reviewReason, type ReviewProduct } from "../../lib/review/catalog";
+import {CollectionHealthPanel} from "./collection-health-panel";
+import type {CollectionHealth} from "../../lib/review/collection-health";
 const categories: Record<string, string> = { convenience:"편의점", cafe:"카페", burger:"햄버거", pizza:"피자", chicken:"치킨", ramen:"라면", meal:"간편식", snack:"과자", drink:"음료", dessert:"디저트", icecream:"아이스크림", etc:"기타" };
 const statuses: Record<string,string> = { pending:"검수 대기", approved:"승인", rejected:"제외" };
 function decisionUrl(product: ReviewProduct, approve: boolean) {
@@ -11,6 +13,10 @@ export default function ReviewInbox() {
   const [products,setProducts] = useState<ReviewProduct[]>([]);
   const [loading,setLoading] = useState(true);
   const [error,setError] = useState("");
+  const [collectionHealth,setCollectionHealth]=useState<CollectionHealth|null>(null);
+  const [collectionHealthError,setCollectionHealthError]=useState("");
+  const [collectionHealthLoading,setCollectionHealthLoading]=useState(true);
+  const healthRequest=useRef(0);
   const [category,setCategory] = useState("all");
   const [brand,setBrand] = useState("all");
   const [status,setStatus] = useState("all");
@@ -18,7 +24,19 @@ export default function ReviewInbox() {
   const [page,setPage] = useState(1);
   const [selected,setSelected] = useState<string[]>([]);
   const [decision,setDecision] = useState<"승인" | "거절" | null>(null);
+  async function loadHealth() {
+    const request=++healthRequest.current;
+    setCollectionHealthLoading(true);setCollectionHealthError("");
+    try {
+      const response=await fetch("/api/collection-health",{cache:"no-store"});
+      const data=await response.json() as {collectionHealth?:CollectionHealth;error?:string};
+      if(!response.ok||!data.collectionHealth)throw new Error(data.error||"운영 현황을 불러오지 못했습니다.");
+      if(request===healthRequest.current)setCollectionHealth(data.collectionHealth);
+    } catch {if(request===healthRequest.current)setCollectionHealthError("운영 현황을 갱신하지 못했습니다. 이전 표시가 남아 있다면 최신 상태가 아닐 수 있습니다. 상품 검수는 계속할 수 있습니다.");}
+    finally {if(request===healthRequest.current)setCollectionHealthLoading(false);}
+  }
   async function load() {
+    void loadHealth();
     setLoading(true); setError(""); setSelected([]); setDecision(null);
     try {
       const response = await fetch("/api/review", {cache:"no-store"});
@@ -42,6 +60,7 @@ export default function ReviewInbox() {
   }
   return <main className="review-admin">
     <header><div><a href="/">신상발견</a><h1>통합 검수함</h1><p>모든 카테고리의 수집 상품과 검수 근거를 한곳에서 확인합니다.</p></div><button onClick={()=>void load()} disabled={loading}>새로고침</button></header>
+    <CollectionHealthPanel health={collectionHealth} error={collectionHealthError} loading={collectionHealthLoading}/>
     <section className="review-totals" aria-label="전체 검수 현황" onClick={()=>{setSelected([]);setDecision(null)}}>{Object.entries(statuses).map(([key,label])=><button key={key} aria-pressed={status===key} onClick={()=>{setStatus(key);setPage(1)}}>{label}<strong>{products.filter(p=>p.reviewStatus===key).length}</strong></button>)}</section>
     <section className="review-controls" aria-label="검수 필터" onChange={()=>{setSelected([]);setDecision(null)}}>
       <label>카테고리<select value={category} onChange={e=>{setCategory(e.target.value);setBrand("all");setPage(1)}}><option value="all">전체</option>{Object.entries(categories).map(([key,label])=><option key={key} value={key}>{label} ({products.filter(p=>p.category===key).length})</option>)}</select></label>

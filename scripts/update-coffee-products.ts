@@ -3,6 +3,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { coffeeBrandSources } from "../src/data/coffee-sources.ts";
 import type { Product } from "../src/types/product.ts";
 import { collectCoffeeSource, collectStarbucksFromSitemaps } from "./lib/coffee-collector.ts";
+import {runCoffeeCollection} from "./lib/coffee-collection-run.ts";
 
 const dataUrl = new URL("../src/data/coffee-products-auto.json", import.meta.url);
 
@@ -25,11 +26,12 @@ export function mergeCoffeeProducts(existing: Product[], observed: Product[], ch
 async function main() {
   const checkedAt = new Date().toISOString();
   const existing = JSON.parse(await readFile(dataUrl, "utf8")) as Product[];
-  const settled = await Promise.all(coffeeBrandSources.map(source => source.id === "starbucks" ? collectStarbucksFromSitemaps(source, checkedAt) : collectCoffeeSource(source, checkedAt)));
-  const observed = settled.flatMap(result => result.candidates) as Product[];
-  const verifiedUrls = new Set(settled.flatMap(result => result.verifiedUrls));
-  const checked = settled.reduce((sum, result) => sum + result.checked, 0);
-  const failed = settled.reduce((sum, result) => sum + result.failed, 0);
+  const statusUrl=new URL("../src/data/coffee-collection-status.json",import.meta.url);
+  const previous=JSON.parse(await readFile(statusUrl,"utf8"));
+  const {observed,verifiedUrls,report}=await runCoffeeCollection(coffeeBrandSources,checkedAt,source=>source.id === "starbucks" ? collectStarbucksFromSitemaps(source, checkedAt) : collectCoffeeSource(source, checkedAt),previous.results);
+  await writeFile(statusUrl,JSON.stringify(report,null,2)+"\n");
+  const checked = report.results.reduce((sum, result) => sum + result.checked, 0);
+  const failed = report.results.reduce((sum, result) => sum + result.failed, 0);
   if (checked === 0) {
     console.warn(`커피 공식 경로를 확인하지 못해 기존 데이터 ${existing.length}건을 유지합니다.`);
     return;

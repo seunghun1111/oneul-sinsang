@@ -11,3 +11,11 @@ test("전체 카테고리의 검수 결정이 재수집 결과보다 우선하�
  assert.match(reviewReason({...merged[2],releaseDate:"2026-10-15"}),/실제 출시일/);
  assert.equal(mergeReviewCatalog(catalog,catalog,{}).length,2);
 });
+test("자동 판정 사유를 노출하고 관리자 결정이 우선한다",()=>{
+ const p={id:"test",name:"상품",category:"cafe",brand:"브랜드",sourceUrl:"https://example.com",firstDetectedAt:"2026-10-15",lastCheckedAt:"2026-10-15"};
+ const auto={products:{test:{decision:"pending",reason:"출시일 불명",checkedAt:"2026-10-15"}}};
+ const automatic=mergeReviewCatalog([p],[],{},auto)[0];
+ assert.equal(automatic.reviewStatus,"pending");assert.equal(reviewReason(automatic),"출시일 불명");
+ const manual=mergeReviewCatalog([p],[],{test:{decision:"approved",reviewedAt:"2026-10-15"}},auto)[0];
+ assert.equal(manual.reviewStatus,"approved");assert.equal(manual.decisionSource,"manual");assert.match(reviewReason(manual),/관리자/);
+});

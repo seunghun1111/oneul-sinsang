@@ -5,6 +5,7 @@ export type BrandCandidate = {
   subCategory: string; productType: "new"; price: null; retailer: string; releaseDate: null;
   announcedDate: string; description: string; sourceUrl: string; sourceType: "official_site";
   imageUrl: string | null; reviewStatus: "pending";
+  reviewEvidence?: import("../../src/types/product.ts").Product["reviewEvidence"];
 };
 type Source = { id: string; brand: string; url: string; category: BrandCandidate["category"]; parser: "bhc" | "puradak" | "nene" | "bbq" | "cafe24" };
 export const automatedBrandSources: Source[] = [
@@ -99,14 +100,17 @@ export async function collectAutomatedBrand(source: Source, checkedAt: string, f
   const init={headers:{"user-agent":UA},signal:AbortSignal.timeout(20000)};
   const policy=await fetcher(new URL("/robots.txt",source.url),init);
   let policyState="not_provided";
+  let policyText="";
   if(policy.ok) {
     const text=await policy.text();
     if(/<html|<!doctype/i.test(text)) throw new Error("robots.txt가 정책 대신 HTML을 반환함");
     if(!robotsAllows(text,source.url)) throw new Error("robots.txt 수집 제한 경로");
+    policyText=text;
     policyState="checked";
   } else if(policy.status!==404 && policy.status!==410) throw new Error(`robots HTTP ${policy.status}`);
   const response=await fetcher(source.url,{headers:{"user-agent":UA},signal:AbortSignal.timeout(20000)});
   if(!response.ok) throw new Error(`상품 목록 HTTP ${response.status}`);
   const candidates=extractBrandProducts(source,await response.text(),checkedAt);
-  return {candidates,policyState};
+  return {candidates:candidates.map(product=>({...product,reviewEvidence:{sourceUrl:product.sourceUrl,checkedAt,
+    robots:policyState!=="checked" ? "not_provided" as const : robotsAllows(policyText,product.sourceUrl) ? "allowed" as const : "blocked" as const,explicitNew:true}})),policyState};
 }

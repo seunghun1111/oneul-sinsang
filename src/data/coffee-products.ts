@@ -50,5 +50,5 @@ const curatedCoffeeProducts: Product[] = rawCoffeeProducts.map(product => confir
   : { ...product, availabilityStatus:"unknown" });
 
 export const coffeeProducts: Product[] = [...new Map(
-  [...curatedCoffeeProducts, ...(autoCoffeeProductData as Product[]).filter(product => product.reviewStatus === "approved")].map(product => [`${product.brand}:${product.normalizedName}`, product]),
+  [...curatedCoffeeProducts, ...(autoCoffeeProductData as Product[])].map(product => [`${product.brand}:${product.normalizedName}`, product]),
 ).values()];

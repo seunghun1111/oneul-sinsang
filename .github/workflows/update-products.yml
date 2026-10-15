@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
   pages: write
   id-token: write
 
@@ -37,21 +38,29 @@ jobs:
       - name: Check additional chicken and ice cream brands
         run: npm run update:brands
       - run: npm run update:products
+      - name: Evaluate automatic review evidence
+        run: npm run review:auto
       - run: npm test
       - run: npm run lint
       - run: env GITHUB_ACTIONS=true npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+      - name: Notify only new review exceptions (one daily digest)
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COLLECTION_FAILED: ${{ job.status == 'failure' }}
+        run: npm run review:notify -- --send
       - name: Commit updated product data
         run: |
-          if git diff --quiet -- src/data/products.json src/data/coffee-products-auto.json src/data/brand-collection-status.json; then
+          if git diff --quiet -- src/data/products.json src/data/coffee-products-auto.json src/data/brand-collection-status.json src/data/auto-review.json src/data/review-notification-state.json src/data/review-decisions.json; then
             echo "No product changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/products.json src/data/coffee-products-auto.json src/data/brand-collection-status.json
+          git add src/data/products.json src/data/coffee-products-auto.json src/data/brand-collection-status.json src/data/auto-review.json src/data/review-notification-state.json src/data/review-decisions.json
           git commit -m "chore: update official product data"
           git push
 

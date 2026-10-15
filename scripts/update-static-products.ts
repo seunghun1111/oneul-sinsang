@@ -24,6 +24,7 @@ type Candidate = {
   sourceType?: "official_site" | "press_release";
   imageUrl: string | null;
   reviewStatus?: "pending";
+  reviewEvidence?: Product["reviewEvidence"];
 };
 
 const dataUrl = new URL("../src/data/products.json", import.meta.url);
@@ -46,6 +47,7 @@ export function mergeProducts(existing: Product[], candidates: Candidate[], chec
       category,
       ...(candidate.subCategory ? { subCategory: candidate.subCategory } : previous?.subCategory ? { subCategory: previous.subCategory } : {}),
       productType: candidate.productType,
+      ...(candidate.reviewEvidence ? { reviewEvidence:candidate.reviewEvidence } : {}),
       ...(previous?.reviewStatus || candidate.reviewStatus ? { reviewStatus:previous?.reviewStatus ?? candidate.reviewStatus } : {}),
       ...(previous?.reviewedAt ? { reviewedAt:previous.reviewedAt } : {}),
       currency: "KRW",

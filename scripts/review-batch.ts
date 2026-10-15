@@ -26,7 +26,7 @@ export function applyReviewBatch(catalog: Product[], coffee: Product[], decision
   const nextDecisions = { ...decisions };
   const changedIds = new Set<string>();
   for (const id of uniqueIds) {
-    const current = decisions[id]?.decision ?? all.get(id)?.reviewStatus ?? "approved";
+    const current = decisions[id]?.decision;
     if (current !== decision) {
       nextDecisions[id] = { decision, reviewedAt };
       changedIds.add(id);

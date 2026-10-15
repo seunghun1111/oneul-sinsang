@@ -32,6 +32,16 @@ export interface Product {
   availabilityReason?: string;
   reviewStatus?: "pending" | "approved" | "rejected";
   reviewedAt?: string;
+  reviewEvidence?: {
+    sourceUrl: string;
+    checkedAt: string;
+    robots: "allowed" | "not_provided" | "blocked";
+    explicitNew?: boolean;
+    officialLaunchAnnouncement?: boolean;
+    officialDate?: string;
+    dateKind?: "launch" | "announcement";
+    saleConfirmed?: boolean;
+  };
   robotsPolicyUrl?: string;
   robotsCheckedAt?: string;
   imageUrl?: string;

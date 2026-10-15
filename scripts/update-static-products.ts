@@ -6,6 +6,7 @@ import { collectOrion } from "../chatgpt-site/lib/collectors/orion.ts";
 import { collectPulmuone } from "../chatgpt-site/lib/collectors/pulmuone.ts";
 import { collectSamyang } from "../chatgpt-site/lib/collectors/samyang.ts";
 import type { Product, ProductCategory } from "../src/types/product.ts";
+import {runPressCollection} from "./lib/press-collection-run.ts";
 
 type Candidate = {
   slug: string;
@@ -94,21 +95,14 @@ async function main() {
     ["빙그레", collectBinggrae], ["매일유업", collectMaeil], ["오리온", collectOrion],
     ["풀무원", collectPulmuone], ["삼양식품", collectSamyang],
   ] as const;
-  const settled = await Promise.allSettled(sources.map(([, collect]) => collect()));
-  const candidates: Candidate[] = [];
-  let succeeded = 0;
-  settled.forEach((result, index) => {
-    const source = sources[index][0];
-    if (result.status === "fulfilled" && result.value.length > 0) {
-      candidates.push(...result.value as Candidate[]);
-      succeeded++;
-      console.log(`${source}: ${result.value.length}건 확인`);
-    } else {
-      console.warn(`${source}: 수집 실패, 기존 데이터 유지`);
-    }
-  });
-  if (succeeded === 0) throw new Error("모든 공식 출처 수집에 실패했습니다.");
-  const products = mergeProducts(existing, candidates, new Date().toISOString());
+  const checkedAt=new Date().toISOString();
+  const statusUrl=new URL("../src/data/press-collection-status.json",import.meta.url);
+  const previous=JSON.parse(await readFile(statusUrl,"utf8"));
+  const {candidates,report}=await runPressCollection<Candidate>(sources,checkedAt,previous.results);
+  await writeFile(statusUrl,JSON.stringify(report,null,2)+"\n");
+  for(const result of report.results) console.log(`${result.brand}: ${result.status}, 상품 ${result.newCount}건, 요청 실패 ${result.requestFailures}건`);
+  if(report.results.every(result=>result.status==="failed")) return;
+  const products = mergeProducts(existing, candidates, checkedAt);
   await writeFile(dataUrl, `${JSON.stringify(products, null, 2)}\n`, "utf8");
   console.log(`정적 상품 데이터 ${products.length}건 저장 완료`);
 }

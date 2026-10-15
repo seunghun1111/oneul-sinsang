@@ -31,5 +31,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules", "chatgpt-site"]
+  "exclude": ["node_modules", "chatgpt-site", "site-backups"]
 }

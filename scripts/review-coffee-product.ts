@@ -3,6 +3,8 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import type { Product } from "../src/types/product.ts";
 
 const dataUrl = new URL("../src/data/coffee-products-auto.json", import.meta.url);
+const catalogUrl = new URL("../src/data/products.json", import.meta.url);
+const decisionsUrl = new URL("../src/data/review-decisions.json", import.meta.url);
 
 export function reviewCoffeeProduct(products: Product[], productId: string, decision: "approved" | "rejected", reviewedAt: string) {
   if (!/^[a-z0-9-]{3,160}$/i.test(productId)) throw new Error("올바르지 않은 상품 ID입니다.");
@@ -30,8 +32,15 @@ async function main() {
   if (!match) throw new Error("이슈 제목 형식이 올바르지 않습니다.");
   const decision = match[1] === "승인" ? "approved" : "rejected";
   const products = JSON.parse(await readFile(dataUrl, "utf8")) as Product[];
+  const catalog = JSON.parse(await readFile(catalogUrl, "utf8")) as Product[];
+  if (![...products, ...catalog].some(product => product.id === match[2])) throw new Error("상품을 찾을 수 없습니다.");
   const reviewedAt = new Date().toISOString();
-  await writeFile(dataUrl, `${JSON.stringify(reviewCoffeeProduct(products, match[2], decision, reviewedAt), null, 2)}\n`, "utf8");
+  const decisions = JSON.parse(await readFile(decisionsUrl, "utf8"));
+  decisions[match[2]] = { decision, reviewedAt };
+  if (products.some(product => product.id === match[2])) {
+    await writeFile(dataUrl, `${JSON.stringify(reviewCoffeeProduct(products, match[2], decision, reviewedAt), null, 2)}\n`, "utf8");
+  }
+  await writeFile(decisionsUrl, `${JSON.stringify(decisions, null, 2)}\n`, "utf8");
   console.log(`${match[2]}: ${decision}`);
 }
 

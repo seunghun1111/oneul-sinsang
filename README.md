@@ -29,6 +29,14 @@ node --experimental-strip-types --test lib/collectors/*.test.mjs
 
 서버·DB 사이트의 추가 설정과 로컬 D1 마이그레이션 절차는 [`chatgpt-site/README.md`](chatgpt-site/README.md)를 참고하세요.
 
+## 통합 검수함
+
+관리 화면은 ChatGPT Site의 `/review`에서 제공합니다. GitHub Pages는 공개 상품 조회만 제공하며 기존 `/review` 화면은 제거했습니다.
+
+Site 검수함은 GitHub의 최신 `products.json`, `coffee-products-auto.json`, `review-decisions.json`을 조회합니다. 카테고리·브랜드·검수 상태·상품명으로 필터링할 수 있습니다. 커피의 미검수 후보는 대기로, 기존 공식 수집 공개 상품은 승인으로 표시합니다. 신규 비커피 상품은 기존 공식 NEW 수집 기준을 유지합니다.
+
+승인·제외 요청은 GitHub 이슈에 등록하고 저장소 권한 검증 후 Actions가 처리합니다. 모든 카테고리의 제외 결정은 별도 검수 기록에 남아 재수집 후에도 공개 목록에서 제외됩니다. 공개 목록은 기존 30일·판매 확인 조건을 계속 적용합니다. 사이트에서 버튼만 누르면 즉시 완료되는 방식은 아니며, GitHub에서 요청 등록까지 마쳐야 합니다.
+
 ## 데이터 갱신
 
 `chatgpt-site`의 빙그레·오리온·삼양식품·매일유업·풀무원 수집기를 GitHub Pages 데이터 갱신에도 재사용합니다. 루트에서 `npm run update:products`를 실행하면 성공한 출처의 결과를 기존 JSON에 병합하며, 실패한 출처의 기존 데이터는 보존합니다. 별도 API 키나 수집 토큰은 사용하지 않습니다.

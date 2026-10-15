@@ -14,6 +14,7 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // The full-stack Site has its own ESLint configuration and dependencies.
     "chatgpt-site/**",
+    "site-backups/**",
   ]),
 ]);
 

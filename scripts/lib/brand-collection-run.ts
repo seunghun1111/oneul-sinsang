@@ -1,4 +1,4 @@
-export type BrandCollectionStatus={brand:string;status:"success"|"failed";newCount:number;failureSince?:string};
+export type BrandCollectionStatus={brand:string;status:"success"|"failed";newCount:number;failureSince?:string;reasonCode?:"unexpected_empty"};
 export async function runBrandCollection<T>(sources:readonly (readonly [string,(checkedAt:string)=>Promise<T[]>])[],checkedAt:string,previous:BrandCollectionStatus[]=[]) {
   const settled=await Promise.allSettled(sources.map(([,collect])=>Promise.resolve().then(()=>collect(checkedAt))));
   const candidates:T[]=[];
@@ -16,5 +16,5 @@ export async function runBrandCollection<T>(sources:readonly (readonly [string,(
   return {candidates,checkedBrands,report:{checkedAt,results}};
 }
 export function brandCollectionFailures(report:{results:BrandCollectionStatus[]},group:string) {
-  return report.results.filter(result=>result.status==="failed").map(result=>`${group} ${result.brand} / 수집 실패 / 발생 ${result.failureSince??"미확인"}`);
+  return report.results.filter(result=>result.status==="failed").map(result=>`${group} ${result.brand} / ${result.reasonCode==="unexpected_empty"?"기존 NEW 목록이 갑자기 0건: 구조·실제 종료 확인 필요 (기존 데이터 유지)":"수집 실패"} / 발생 ${result.failureSince??"미확인"}`);
 }

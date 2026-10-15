@@ -2818,6 +2818,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_Honey%20Garlic%20Wing%20Combo(3).png",
@@ -2825,14 +2833,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "kyochon-41576",
@@ -2842,6 +2849,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_Mala%20Red%20Wing%20Combo.png",
@@ -2849,14 +2864,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "kyochon-41574",
@@ -2866,6 +2880,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_Soy%20Sauce%20Wing%20Combo.png",
@@ -2873,14 +2895,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "kyochon-41575",
@@ -2890,6 +2911,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_Red%20Wing%20Combo.png",
@@ -2897,14 +2926,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "kyochon-41578",
@@ -2914,6 +2942,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_Soy%20&%20Red%20Wing%20Combo.png",
@@ -2921,14 +2957,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "kyochon-41583",
@@ -2938,6 +2973,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_Mala%20Red%20&%20Honey%20Garlic%20Combo.png",
@@ -2945,14 +2988,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "kyochon-41582",
@@ -2962,6 +3004,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_Red%20&%20Honey%20Garlic%20Combo.png",
@@ -2969,14 +3019,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "kyochon-41580",
@@ -2986,6 +3035,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_Soy%20&%20Honey%20Garlic%20Combo.png",
@@ -2993,14 +3050,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "kyochon-41579",
@@ -3010,6 +3066,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_Soy%20&%20Mala%20Red%20Combo.png",
@@ -3017,14 +3081,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "kyochon-41581",
@@ -3034,6 +3097,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_Red%20&%20Mala%20Red%20Combo.png",
@@ -3041,14 +3112,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "kyochon-41130",
@@ -3058,6 +3128,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_hg_whole.png",
@@ -3065,14 +3143,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "kyochon-41062",
@@ -3082,6 +3159,14 @@
     "category": "chicken",
     "subCategory": "치킨",
     "productType": "new",
+    "detectionKind": "initial",
+    "newStatus": "active",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "checkedAt": "2026-10-15T23:48:38.574Z",
+      "robots": "not_provided",
+      "explicitNew": false
+    },
     "currency": "KRW",
     "retailer": "교촌치킨",
     "imageUrl": "https://www.kyochon.com/uploadFiles/TB_ITEM/list_mala.png",
@@ -3089,14 +3174,13 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-08",
     "firstDetectedAt": "2026-10-08T08:22:10.103Z",
-    "lastCheckedAt": "2026-10-15T00:01:20.672Z",
-    "description": "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴",
+    "lastCheckedAt": "2026-10-15T23:48:38.574Z",
+    "description": "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인",
     "availabilityStatus": "on_sale",
-    "availabilityCheckedAt": "2026-10-15T00:01:20.672Z",
+    "availabilityCheckedAt": "2026-10-15T23:48:38.574Z",
     "isActive": true,
     "createdAt": "2026-10-08T08:22:10.103Z",
-    "updatedAt": "2026-10-15T00:01:20.672Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-15T23:48:38.574Z"
   },
   {
     "id": "goobne-50174",

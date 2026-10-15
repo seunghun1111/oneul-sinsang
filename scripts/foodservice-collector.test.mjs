@@ -40,6 +40,15 @@ test("교촌 공식 신메뉴 전용 목록에서 치킨 상품을 추출한다"
   assert.equal(products[0].slug, "kyochon-41577");
   assert.equal(products[0].brand, "교촌치킨");
   assert.equal(products[0].category, "chicken");
+  assert.equal(products[0].reviewEvidence.explicitNew, false);
+});
+
+test("교촌 NEW 근거는 같은 상품 카드의 실제 표시만 인정한다", () => {
+  const card=(id,badge="")=>`<li><a href="view.asp?id=${id}&cg=2"><dt>상품 ${id}</dt>${badge}</a></li>`;
+  const html=`<span>NEW</span><ul class="menuProduct">${card(1,'<span class="badge">NEW</span>')}${card(2)}${card(3,'<!-- <span>NEW</span> -->')}${card(4,'<img src="/badge.png" alt="NEW">')}${card(5,'<script>"<span>NEW</span>"</script>')}</ul>${card(6,'<span>NEW</span>')}`;
+  const products=extractKyochonNewProducts(html,checkedAt);
+  assert.deepEqual(products.map(p=>p.reviewEvidence.explicitNew),[true,false,false,true,false]);
+  assert.equal(products[0].reviewEvidence.checkedAt,checkedAt);
 });
 
 test("맥도날드는 최근 한 달 내 등록되고 현재 판매 중인 추천 버거만 추출한다", () => {

@@ -1,4 +1,5 @@
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
+import type { Product } from "../../src/types/product.ts";
 
 export type FoodserviceCategory = "burger" | "pizza" | "chicken";
 
@@ -18,6 +19,7 @@ export type FoodserviceCandidate = {
   sourceUrl: string;
   sourceType: "official_site";
   imageUrl: string | null;
+  reviewEvidence?: Product["reviewEvidence"];
 };
 
 const USER_AGENT = "OneulSinsang/1.0 (+non-commercial product index)";
@@ -122,17 +124,22 @@ export function extractGoobneNewProducts(html: string, checkedAt: string): Foods
 export function extractKyochonNewProducts(html: string, checkedAt: string): FoodserviceCandidate[] {
   const sourceUrl = "https://www.kyochon.com/menu/chicken.asp?code=21";
   const products: FoodserviceCandidate[] = [];
-  for (const item of html.split(/<li(?:\s[^>]*)?>/i).slice(1)) {
+  // Scope evidence to this product card; navigation, scripts and comments are not badges.
+  const listing = html.replace(/<!--[\s\S]*?-->/g, "").match(/<ul\b[^>]*class=["'][^"']*\bmenuProduct\b[^"']*["'][^>]*>([\s\S]*?)<\/ul>/i)?.[1] ?? "";
+  for (const match of listing.matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/gi)) {
+    const item = match[1].replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, "");
     const id = item.match(/view\.asp\?id=(\d+)&amp;cg=2/i)?.[1] ?? item.match(/view\.asp\?id=(\d+)&cg=2/i)?.[1];
     const rawName = item.match(/<dt>([\s\S]*?)<\/dt>/i)?.[1];
     const imagePath = item.match(/<img[^>]+src=["']([^"']+)["'][^>]+alt=["'][^"']*제품 이미지/i)?.[1];
     if (!id || !rawName) continue;
     const name = clean(rawName);
-    products.push(candidate({
+    const explicitNew = /<(?:span|i|em|strong)\b[^>]*>\s*NEW\s*<\/(?:span|i|em|strong)>/i.test(item)
+      || /<img\b[^>]*\balt=["']\s*NEW\s*["'][^>]*>/i.test(item);
+    products.push({...candidate({
       slug: `kyochon-${id}`, brand: "교촌치킨", name, category: "chicken", subCategory: "치킨", checkedAt,
-      description: "교촌치킨 공식 신메뉴 전용 목록에서 현재 판매 상품으로 확인된 메뉴", sourceUrl,
+      description: explicitNew ? "교촌치킨 공식 상품별 NEW 배지 확인" : "교촌치킨 공식 신메뉴 목록 확인 · 개별 신제품 표시는 미확인", sourceUrl,
       imageUrl: imagePath ? new URL(imagePath, "https://www.kyochon.com").href : null,
-    }));
+    }), reviewEvidence:{sourceUrl,checkedAt,robots:"not_provided",explicitNew}});
   }
   return unique(products);
 }

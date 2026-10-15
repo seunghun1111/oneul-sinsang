@@ -3,7 +3,7 @@ import productData from "@/data/products.json";
 import { coffeeProducts } from "@/data/coffee-products";
 import reviewDecisions from "@/data/review-decisions.json";
 import autoReview from "@/data/auto-review.json";
-import { isCurrentlyOnSale, seoulDateKey, seoulMonthKey, seoulWeekDateKeys } from "@/lib/product-window";
+import { includeInDiscoverySummary, isCurrentlyOnSale, seoulDateKey, seoulMonthKey, seoulWeekDateKeys } from "@/lib/product-window";
 
 const allProducts = [...(productData as Product[]), ...coffeeProducts];
 
@@ -21,12 +21,12 @@ export function getProduct(id: string) { return products.find((product) => produ
 
 export function getWeekProducts(now = new Date()) {
   const week = new Set(seoulWeekDateKeys(now));
-  return products.filter(product => product.detectionKind === "newly_detected" && week.has(seoulDateKey(product.firstDetectedAt)));
+  return products.filter(product => includeInDiscoverySummary(product, now) && week.has(seoulDateKey(product.firstDetectedAt)));
 }
 
 export function getMonthProducts(now = new Date()) {
   const month = seoulMonthKey(now);
-  return products.filter(product => product.detectionKind === "newly_detected" && seoulMonthKey(product.firstDetectedAt) === month);
+  return products.filter(product => includeInDiscoverySummary(product, now) && seoulMonthKey(product.firstDetectedAt) === month);
 }
 
 export { seoulDateKey, seoulMonthKey, seoulWeekDateKeys };

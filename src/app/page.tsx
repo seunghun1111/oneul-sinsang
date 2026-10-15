@@ -2,6 +2,7 @@ import { Header } from "@/components/header";
 import { CategoryDirectory } from "@/components/category-directory";
 import { TodayUpdates } from "@/components/today-updates";
 import { MonthlyUpdates } from "@/components/monthly-updates";
+import { INITIAL_SUMMARY_CUTOFF } from "@/lib/product-window";
 import { getMonthProducts, getWeekProducts, products, seoulDateKey, seoulMonthKey, seoulWeekDateKeys } from "@/lib/products";
 
 export default function Home() {
@@ -13,8 +14,8 @@ export default function Home() {
       <div className="hero-art" aria-hidden="true"><span className="art-orbit orbit-one">NEW</span><span className="art-orbit orbit-two">🍩</span><span className="art-main">🛍️</span><span className="art-spark spark-one">✦</span><span className="art-spark spark-two">✦</span></div>
     </section>
     <TodayUpdates products={weekProducts} today={seoulDateKey(now)} dates={seoulWeekDateKeys(now)} />
-    <MonthlyUpdates products={monthProducts} month={seoulMonthKey(now)} />
+    <MonthlyUpdates products={monthProducts} month={seoulMonthKey(now)} includeInitial={seoulDateKey(now) < INITIAL_SUMMARY_CUTOFF} />
     <CategoryDirectory products={products} />
-    <section className="about" id="about"><span aria-hidden="true">🔎</span><div><p className="section-kicker">SINSANG DISCOVERY</p><h2>공식 NEW 표시를 추적합니다</h2></div><p>출시일과 무관하게 공식 NEW 상품을 모읍니다. 초기 수집은 이번 주·이번 달 신규 집계에서 제외하며, NEW 표시 종료는 판매 종료를 의미하지 않습니다.</p></section>
+    <section className="about" id="about"><span aria-hidden="true">🔎</span><div><p className="section-kicker">SINSANG DISCOVERY</p><h2>공식 NEW 표시를 추적합니다</h2></div><p>출시일과 무관하게 공식 NEW 상품을 모읍니다. 이번 주에는 초기 수집도 집계하며, 10월 19일부터 초기 수집을 제외한 신규 발견 기준으로 전환합니다. NEW 표시 종료는 판매 종료를 의미하지 않습니다.</p></section>
   </main><footer><strong>신상발견</strong><span>비상업적 개인 프로젝트이며 각 브랜드와 제휴·후원 관계가 없습니다.</span><a href="https://github.com/seunghun1111/oneul-sinsang/issues/new?template=correction.yml" target="_blank" rel="noopener noreferrer">정정·삭제 요청</a><small>© 2026 Sinsang Discovery</small></footer></>;
 }

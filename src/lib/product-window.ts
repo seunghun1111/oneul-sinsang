@@ -1,5 +1,11 @@
 import type { Product } from "../types/product.ts";
 
+export const INITIAL_SUMMARY_CUTOFF = "2026-10-19";
+
+export function includeInDiscoverySummary(product: Product, now = new Date()) {
+  return seoulDateKey(now) < INITIAL_SUMMARY_CUTOFF || product.detectionKind === "newly_detected";
+}
+
 
 export function seoulDateKey(value: string | Date) {
   const date = typeof value === "string" ? new Date(value) : value;

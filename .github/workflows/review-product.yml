@@ -17,7 +17,7 @@ concurrency:
 jobs:
   review:
     if: >-
-      (startsWith(github.event.issue.title, '[상품 승인] ') || startsWith(github.event.issue.title, '[상품 거절] ')) &&
+      (startsWith(github.event.issue.title, '[상품 승인] ') || startsWith(github.event.issue.title, '[상품 거절] ') || startsWith(github.event.issue.title, '[상품 일괄 승인] ') || startsWith(github.event.issue.title, '[상품 일괄 거절] ')) &&
       (github.event.issue.author_association == 'OWNER' || github.event.issue.author_association == 'MEMBER' || github.event.issue.author_association == 'COLLABORATOR')
     runs-on: ubuntu-latest
     outputs:
@@ -32,6 +32,8 @@ jobs:
       - name: Apply review decision
         env:
           REVIEW_ISSUE_TITLE: ${{ github.event.issue.title }}
+          REVIEW_ISSUE_BODY: ${{ github.event.issue.body }}
+          REVIEW_REPORT_PATH: ${{ runner.temp }}/review-result.md
         run: node --experimental-strip-types scripts/review-coffee-product.ts
       - run: npm test
       - run: npm run lint
@@ -57,8 +59,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: |
-          gh issue comment "$ISSUE_NUMBER" --body "검수 결과를 상품 데이터에 반영했습니다."
+          gh issue comment "$ISSUE_NUMBER" --body-file "$RUNNER_TEMP/review-result.md"
           gh issue close "$ISSUE_NUMBER" --reason completed
+      - name: Report failed review
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: gh issue comment "$ISSUE_NUMBER" --body "검수 처리에 실패했습니다. 요청 형식과 상품 ID를 확인하세요. 이슈는 열린 상태로 유지됩니다. 자세한 결과는 Actions 실행 기록을 확인하세요."
 
   deploy:
     needs: review

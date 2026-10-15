@@ -16,8 +16,10 @@ export default function ReviewInbox() {
   const [status,setStatus] = useState("pending");
   const [query,setQuery] = useState("");
   const [page,setPage] = useState(1);
+  const [selected,setSelected] = useState<string[]>([]);
+  const [decision,setDecision] = useState<"승인" | "거절" | null>(null);
   async function load() {
-    setLoading(true); setError("");
+    setLoading(true); setError(""); setSelected([]); setDecision(null);
     try {
       const response = await fetch("/api/review", {cache:"no-store"});
       const data = await response.json() as { error?: string; products: ReviewProduct[] };
@@ -30,21 +32,44 @@ export default function ReviewInbox() {
   const brands = useMemo(() => [...new Set(products.filter(p => category === "all" || p.category === category).map(p=>p.brand))].sort(),[products,category]);
   const filtered = useMemo(() => products.filter(p => (category==="all" || p.category===category) && (brand==="all" || p.brand===brand) && (status==="all" || p.reviewStatus===status) && (p.name+" "+p.brand).toLowerCase().includes(query.toLowerCase())),[products,category,brand,status,query]);
   const visible = filtered.slice(0,page*40);
+  const selectedProducts = filtered.filter(product => selected.includes(product.id));
+  const requestProducts = selectedProducts.filter(product => product.reviewStatus !== (decision === "승인" ? "approved" : "rejected"));
+  const bulkParams = new URLSearchParams({title: `[상품 일괄 ${decision}] ${requestProducts.length}개`, body: "공식 출처에서 최근 30일 신상품과 현재 판매 여부를 확인했습니다.\n\n```json\n" + JSON.stringify({productIds:requestProducts.map(product=>product.id)}) + "\n```"});
+  const bulkUrl = "https://github.com/seunghun1111/oneul-sinsang/issues/new?" + bulkParams;
+  function toggleSelection(id: string) {
+    setDecision(null);
+    setSelected(current => current.includes(id) ? current.filter(item=>item!==id) : current.length < 50 ? [...current,id] : current);
+  }
   return <main className="review-admin">
     <header><div><a href="/">오늘신상</a><h1>통합 검수함</h1><p>모든 카테고리의 수집 상품과 검수 근거를 한곳에서 확인합니다.</p></div><button onClick={()=>void load()} disabled={loading}>새로고침</button></header>
-    <section className="review-totals" aria-label="전체 검수 현황">{Object.entries(statuses).map(([key,label])=><button key={key} aria-pressed={status===key} onClick={()=>{setStatus(key);setPage(1)}}>{label}<strong>{products.filter(p=>p.reviewStatus===key).length}</strong></button>)}</section>
-    <section className="review-controls" aria-label="검수 필터">
+    <section className="review-totals" aria-label="전체 검수 현황" onClick={()=>{setSelected([]);setDecision(null)}}>{Object.entries(statuses).map(([key,label])=><button key={key} aria-pressed={status===key} onClick={()=>{setStatus(key);setPage(1)}}>{label}<strong>{products.filter(p=>p.reviewStatus===key).length}</strong></button>)}</section>
+    <section className="review-controls" aria-label="검수 필터" onChange={()=>{setSelected([]);setDecision(null)}}>
       <label>카테고리<select value={category} onChange={e=>{setCategory(e.target.value);setBrand("all");setPage(1)}}><option value="all">전체</option>{Object.entries(categories).map(([key,label])=><option key={key} value={key}>{label} ({products.filter(p=>p.category===key).length})</option>)}</select></label>
       <label>브랜드<select value={brand} onChange={e=>{setBrand(e.target.value);setPage(1)}}><option value="all">전체</option>{brands.map(b=><option key={b}>{b}</option>)}</select></label>
       <label>상태<select value={status} onChange={e=>{setStatus(e.target.value);setPage(1)}}><option value="all">전체</option>{Object.entries(statuses).map(([key,label])=><option key={key} value={key}>{label}</option>)}</select></label>
       <label>검색<input value={query} onChange={e=>{setQuery(e.target.value);setPage(1)}} placeholder="상품명·브랜드 검색"/></label>
     </section>
     <p className="review-help">승인·제외 버튼에서 검수 요청을 등록하면 저장소 권한 확인 후 공개 목록에 반영됩니다. 반영 완료 후 새로고침하세요. 기존 공개 상품은 승인 상태로 표시합니다.</p>
+    <section className="bulk-review" aria-label="일괄 검수">
+      <strong aria-live="polite">{selectedProducts.length}개 선택</strong>
+      <button type="button" disabled={loading || visible.length===0} onClick={()=>{setSelected(visible.slice(0,50).map(p=>p.id));setDecision(null)}}>현재 표시 상품 선택 (최대 50개)</button>
+      <button type="button" disabled={selected.length===0} onClick={()=>{setSelected([]);setDecision(null)}}>선택 해제</button>
+      <button type="button" disabled={loading || selectedProducts.length===0} onClick={()=>setDecision("승인")}>선택 승인</button>
+      <button type="button" disabled={loading || selectedProducts.length===0} onClick={()=>setDecision("거절")}>선택 제외</button>
+      {decision && <div className="bulk-confirm" role="region" aria-label="일괄 검수 요청 확인">
+        <h2>{requestProducts.length}개 상품 {decision==="승인" ? "승인" : "제외"} 요청 확인</h2>
+        <p>동일 상태인 {selectedProducts.length-requestProducts.length}개는 요청에서 제외됩니다. 아래 상품의 공식 출처를 확인한 뒤 요청을 등록하세요.</p>
+        <ul>{requestProducts.map(p=><li key={p.id}>{p.brand} · {p.name}</li>)}</ul>
+        {requestProducts.length>0 && bulkUrl.length<=7000 && <a href={bulkUrl} target="_blank" rel="noopener noreferrer">GitHub에서 일괄 요청 등록</a>}
+        {bulkUrl.length>7000 && <p role="alert">요청 주소가 너무 깁니다. 선택 상품 수를 줄여 주세요.</p>}
+        <button type="button" onClick={()=>setDecision(null)}>취소</button>
+      </div>}
+    </section>
     {error && <p role="alert">{error}</p>}
     <p role="status">{loading ? "최신 수집 데이터 조회 중…" : filtered.length+"개 상품"}</p>
     {!loading && !error && filtered.length===0 && <p className="review-empty">선택한 조건에 해당하는 상품이 없습니다.</p>}
     <section aria-label="검수 상품 목록" className="review-admin-list">{visible.map(p=><article key={p.id}>
-      <div><span>{categories[p.category] || p.category}{p.subCategory ? " · "+p.subCategory : ""}</span><b className={"review-badge "+p.reviewStatus}>{statuses[p.reviewStatus || "approved"]}</b><h2>{p.name}</h2><strong>{p.brand}</strong><p>{reviewReason(p)}</p><small>최초 확인 {p.firstDetectedAt?.slice(0,10)} · 최근 확인 {p.lastCheckedAt?.slice(0,10)}{p.releaseDate ? " · 출시 "+p.releaseDate : ""}{p.reviewedAt ? " · 검수 "+p.reviewedAt.slice(0,10) : ""}</small></div>
+      <div><label className="review-select"><input type="checkbox" checked={selected.includes(p.id)} disabled={!selected.includes(p.id) && selected.length>=50} onChange={()=>toggleSelection(p.id)}/>{p.name} 선택</label><span>{categories[p.category] || p.category}{p.subCategory ? " · "+p.subCategory : ""}</span><b className={"review-badge "+p.reviewStatus}>{statuses[p.reviewStatus || "approved"]}</b><h2>{p.name}</h2><strong>{p.brand}</strong><p>{reviewReason(p)}</p><small>최초 확인 {p.firstDetectedAt?.slice(0,10)} · 최근 확인 {p.lastCheckedAt?.slice(0,10)}{p.releaseDate ? " · 출시 "+p.releaseDate : ""}{p.reviewedAt ? " · 검수 "+p.reviewedAt.slice(0,10) : ""}</small></div>
       <nav aria-label={p.name+" 검수"}><a href={p.sourceUrl} target="_blank" rel="noopener noreferrer">공식 출처 ↗</a>{p.reviewStatus!=="approved" && <a className="approve" href={decisionUrl(p,true)} target="_blank" rel="noopener noreferrer">승인 요청</a>}{p.reviewStatus!=="rejected" && <a href={decisionUrl(p,false)} target="_blank" rel="noopener noreferrer">제외 요청</a>}</nav>
     </article>)}</section>
     {visible.length<filtered.length && <button onClick={()=>setPage(page+1)}>더 보기 ({visible.length}/{filtered.length})</button>}

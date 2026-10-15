@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import type { Product } from "../src/types/product.ts";
+import { applyReviewBatch, parseReviewRequest } from "./review-batch.ts";
 
 const dataUrl = new URL("../src/data/coffee-products-auto.json", import.meta.url);
 const catalogUrl = new URL("../src/data/products.json", import.meta.url);
@@ -28,20 +29,19 @@ export function reviewCoffeeProduct(products: Product[], productId: string, deci
 
 async function main() {
   const title = process.env.REVIEW_ISSUE_TITLE ?? "";
-  const match = title.match(/^\[상품 (승인|거절)\]\s+([a-z0-9-]{3,160})$/i);
-  if (!match) throw new Error("이슈 제목 형식이 올바르지 않습니다.");
-  const decision = match[1] === "승인" ? "approved" : "rejected";
+  const { decision, productIds } = parseReviewRequest(title, process.env.REVIEW_ISSUE_BODY ?? "");
   const products = JSON.parse(await readFile(dataUrl, "utf8")) as Product[];
   const catalog = JSON.parse(await readFile(catalogUrl, "utf8")) as Product[];
-  if (![...products, ...catalog].some(product => product.id === match[2])) throw new Error("상품을 찾을 수 없습니다.");
   const reviewedAt = new Date().toISOString();
   const decisions = JSON.parse(await readFile(decisionsUrl, "utf8"));
-  decisions[match[2]] = { decision, reviewedAt };
-  if (products.some(product => product.id === match[2])) {
-    await writeFile(dataUrl, `${JSON.stringify(reviewCoffeeProduct(products, match[2], decision, reviewedAt), null, 2)}\n`, "utf8");
+  const result = applyReviewBatch(catalog, products, decisions, productIds, decision, reviewedAt);
+  if (result.changed > 0) {
+    await writeFile(dataUrl, `${JSON.stringify(result.coffee, null, 2)}\n`, "utf8");
+    await writeFile(decisionsUrl, `${JSON.stringify(result.decisions, null, 2)}\n`, "utf8");
   }
-  await writeFile(decisionsUrl, `${JSON.stringify(decisions, null, 2)}\n`, "utf8");
-  console.log(`${match[2]}: ${decision}`);
+  const summary = `검수 처리 결과: ${decision === "approved" ? "승인" : "제외"}\n\n요청 ${productIds.length}개 · 변경 ${result.changed}개 · 동일 상태로 건너뜀 ${result.skipped}개\n`;
+  if (process.env.REVIEW_REPORT_PATH) await writeFile(process.env.REVIEW_REPORT_PATH, summary, "utf8");
+  console.log(summary);
 }
 
 const entry = process.argv[1] ? pathToFileURL(fileURLToPath(new URL(process.argv[1], "file:"))).href : "";

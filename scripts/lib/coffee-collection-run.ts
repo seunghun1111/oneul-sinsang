@@ -2,7 +2,22 @@ import type { CoffeeBrandSource } from "../../src/data/coffee-sources.ts";
 import type { Product } from "../../src/types/product.ts";
 
 type Result={candidates:Product[];verifiedUrls:string[];checked:number;failed:number};
-export type CoffeeCollectionStatus={brand:string;sourceId:string;status:"success"|"partial"|"failed";checked:number;failed:number;newCount:number;failureSince?:string};
+export type CoffeeCollectionStatus={brand:string;sourceId:string;status:"success"|"partial"|"failed";checked:number;failed:number;newCount:number;failureSince?:string;reasonCode?:"unexpected_empty"};
+export function safeCoffeeVerifiedUrls(existing:Product[],observed:Product[],verifiedUrls:Set<string>) {
+  const seen=new Set(observed.map(product=>`${product.brand}:${product.sourceUrl}`));
+  const blocked=existing.filter(product=>product.isActive&&verifiedUrls.has(product.sourceUrl)&&!seen.has(`${product.brand}:${product.sourceUrl}`));
+  const unsafe=new Set(blocked.map(product=>product.sourceUrl));
+  return {verifiedUrls:new Set([...verifiedUrls].filter(url=>!unsafe.has(url))),blockedBrands:new Set(blocked.map(product=>product.brand))};
+}
+export function guardCoffeeEmptyNewLists(existing:Product[],observed:Product[],verifiedUrls:Set<string>,report:{checkedAt:string;results:CoffeeCollectionStatus[]},previous:CoffeeCollectionStatus[]=[]) {
+  const safe=safeCoffeeVerifiedUrls(existing,observed,verifiedUrls);
+  return {verifiedUrls:safe.verifiedUrls,report:{...report,results:report.results.map(result=>{
+    if(!safe.blockedBrands.has(result.brand)) return result;
+    const prior=previous.find(item=>item.sourceId===result.sourceId);
+    return {...result,status:result.status==="failed"?"failed" as const:"partial" as const,reasonCode:"unexpected_empty" as const,
+      failureSince:prior?.status!=="success"&&prior?.failureSince?prior.failureSince:report.checkedAt};
+  })}};
+}
 export async function runCoffeeCollection(sources:CoffeeBrandSource[],checkedAt:string,collect:(source:CoffeeBrandSource)=>Promise<Result>,previous:CoffeeCollectionStatus[]=[]) {
   const settled=await Promise.allSettled(sources.map(source=>Promise.resolve().then(()=>collect(source))));
   const observed:Product[]=[];
@@ -19,5 +34,5 @@ export async function runCoffeeCollection(sources:CoffeeBrandSource[],checkedAt:
   return {observed,verifiedUrls,report:{checkedAt,results}};
 }
 export function coffeeCollectionFailures(report:{results:CoffeeCollectionStatus[]}) {
-  return report.results.filter(result=>result.status!=="success").map(result=>`커피 ${result.brand} / ${result.status==="partial"?"일부 경로 실패":"수집 실패"} / 발생 ${result.failureSince??"미확인"}`);
+  return report.results.filter(result=>result.status!=="success").map(result=>`커피 ${result.brand} / ${result.reasonCode==="unexpected_empty"?"기존 경로 NEW가 갑자기 0건: 확인 필요 (기존 데이터 유지)":result.status==="partial"?"일부 경로 실패":"수집 실패"} / 발생 ${result.failureSince??"미확인"}`);
 }

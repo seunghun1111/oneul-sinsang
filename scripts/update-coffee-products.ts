@@ -3,11 +3,12 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { coffeeBrandSources } from "../src/data/coffee-sources.ts";
 import type { Product } from "../src/types/product.ts";
 import { collectCoffeeSource, collectStarbucksFromSitemaps } from "./lib/coffee-collector.ts";
-import {runCoffeeCollection} from "./lib/coffee-collection-run.ts";
+import {guardCoffeeEmptyNewLists,runCoffeeCollection,safeCoffeeVerifiedUrls} from "./lib/coffee-collection-run.ts";
 
 const dataUrl = new URL("../src/data/coffee-products-auto.json", import.meta.url);
 
 export function mergeCoffeeProducts(existing: Product[], observed: Product[], checkedAt: string, verifiedUrls = new Set<string>()) {
+  verifiedUrls=safeCoffeeVerifiedUrls(existing,observed,verifiedUrls).verifiedUrls;
   const byIdentity = new Map(existing.map(product => [`${product.brand}:${product.normalizedName}`, product]));
   const observedIdentities = new Set(observed.map(product => `${product.brand}:${product.normalizedName}`));
   for (const [key, product] of byIdentity) {
@@ -28,7 +29,9 @@ async function main() {
   const existing = JSON.parse(await readFile(dataUrl, "utf8")) as Product[];
   const statusUrl=new URL("../src/data/coffee-collection-status.json",import.meta.url);
   const previous=JSON.parse(await readFile(statusUrl,"utf8"));
-  const {observed,verifiedUrls,report}=await runCoffeeCollection(coffeeBrandSources,checkedAt,source=>source.id === "starbucks" ? collectStarbucksFromSitemaps(source, checkedAt) : collectCoffeeSource(source, checkedAt),previous.results);
+  const batch=await runCoffeeCollection(coffeeBrandSources,checkedAt,source=>source.id === "starbucks" ? collectStarbucksFromSitemaps(source, checkedAt) : collectCoffeeSource(source, checkedAt),previous.results);
+  const {observed}=batch;
+  const {verifiedUrls,report}=guardCoffeeEmptyNewLists(existing,observed,batch.verifiedUrls,batch.report,previous.results);
   await writeFile(statusUrl,JSON.stringify(report,null,2)+"\n");
   const checked = report.results.reduce((sum, result) => sum + result.checked, 0);
   const failed = report.results.reduce((sum, result) => sum + result.failed, 0);

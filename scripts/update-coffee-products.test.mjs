@@ -48,13 +48,14 @@ test("승인된 상품은 재수집 후에도 승인 상태를 보존한다", ()
   assert.equal(merged.reviewedAt, approved.reviewedAt);
 });
 
-test("공식 목록에서 두 번 연속 사라진 상품만 판매 종료 처리한다", () => {
+test("정상 NEW 목록에서 개별 상품이 두 번 연속 사라지면 NEW 종료 처리한다", () => {
   const checkedAt = "2026-10-06T00:00:00.000Z";
   const [candidate] = toCoffeeCandidates(source, "menu", "https://example.com/menu", ["가을 라떼"], checkedAt);
-  const [firstMiss] = mergeCoffeeProducts([candidate], [], checkedAt, new Set([candidate.sourceUrl]));
+  const [replacement]=toCoffeeCandidates(source,"menu",candidate.sourceUrl,["새 라떼"],checkedAt);
+  const firstMiss = mergeCoffeeProducts([candidate], [replacement], checkedAt, new Set([candidate.sourceUrl])).find(p=>p.id===candidate.id);
   assert.equal(firstMiss.availabilityStatus, "unknown");
   assert.equal(firstMiss.isActive, true);
-  const [secondMiss] = mergeCoffeeProducts([firstMiss], [], "2026-10-07T00:00:00.000Z", new Set([candidate.sourceUrl]));
+  const secondMiss = mergeCoffeeProducts([firstMiss], [replacement], "2026-10-07T00:00:00.000Z", new Set([candidate.sourceUrl])).find(p=>p.id===candidate.id);
   assert.equal(secondMiss.availabilityStatus, "unknown");
   assert.equal(secondMiss.isActive, false);
 });

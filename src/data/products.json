@@ -2801,20 +2801,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-10-12",
     "firstDetectedAt": "2026-10-13T02:42:08.639Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:29.592Z",
     "description": "풀무원 공식 발표에서 확인된 특등급 국산콩 두유 서리태 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-13T02:42:08.639Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:29.592Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3954",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:29.592Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "특등급 국산콩 두유 서리태",
+      "officialDate": "2026-10-12",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27033,20 +27035,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-09-15",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:29.830Z",
     "description": "풀무원 공식 발표에서 확인된 식감혁신 본격 떡볶이 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:29.830Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3936",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:29.830Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "식감혁신 본격 떡볶이",
+      "officialDate": "2026-09-15",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27264,20 +27268,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-09-03",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:30.960Z",
     "description": "오리온 공식 발표에서 확인된 포카칩 황치즈맛 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:30.960Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://www.orionworld.com/board/view/87?boardno=1423",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:30.960Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "포카칩 황치즈맛",
+      "officialDate": "2026-09-03",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27292,20 +27298,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-09-03",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:31.280Z",
     "description": "풀무원 공식 발표에서 확인된 생만두 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:31.280Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3925",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:31.280Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "생만두",
+      "officialDate": "2026-09-03",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27321,20 +27329,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-08-31",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:31.643Z",
     "description": "매일유업 공식 발표에서 확인된 어메이징 오트 말차 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:31.643Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://www.maeil.com/news/press_view.jsp?idx=8",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:31.643Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "어메이징 오트 말차",
+      "officialDate": "2026-08-31",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27350,20 +27360,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-08-31",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:32.140Z",
     "description": "삼양식품 공식 발표에서 확인된 삼양1963 X 짜르르 우지 선물세트 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:32.140Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1361",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:32.140Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "삼양1963 X 짜르르 우지 선물세트",
+      "officialDate": "2026-08-31",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27378,20 +27390,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-08-28",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-12T00:42:51.754Z",
+    "lastCheckedAt": "2026-10-16T13:35:32.358Z",
     "description": "풀무원 공식 발표에서 확인된 콩나물국 요리키트 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-12T00:42:51.754Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-12T00:42:51.754Z",
+    "updatedAt": "2026-10-16T13:35:32.358Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3921",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:32.358Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "콩나물국 요리키트",
+      "officialDate": "2026-08-28",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27407,20 +27421,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-08-27",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:32.586Z",
     "description": "빙그레 공식 발표에서 확인된 식후관리 워터 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:32.586Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://www.bing.co.kr/news/news_announced_view?anno_idx=359",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:32.586Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "식후관리 워터",
+      "officialDate": "2026-08-27",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27435,20 +27451,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-08-18",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:32.710Z",
     "description": "오리온 공식 발표에서 확인된 마켓오네이처 오!그래놀라 미쯔 스모어 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:32.710Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://www.orionworld.com/board/view/87?boardno=1420",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:32.710Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "마켓오네이처 오!그래놀라 미쯔 스모어",
+      "officialDate": "2026-08-18",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27464,20 +27482,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-08-04",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:32.899Z",
     "description": "매일유업 공식 발표에서 확인된 상하목장 콩물두유 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:32.899Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://www.maeil.com/news/press_view.jsp?idx=7",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:32.899Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "상하목장 콩물두유",
+      "officialDate": "2026-08-04",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27492,20 +27512,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-07-14",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-06T01:45:35.792Z",
+    "lastCheckedAt": "2026-10-16T13:35:33.007Z",
     "description": "오리온 공식 발표에서 확인된 마켓오네이처 오!그래놀라 저당 카카오 신상품",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-06T01:45:35.792Z",
+    "updatedAt": "2026-10-16T13:35:33.007Z",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T01:45:35.792Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://www.orionworld.com/board/view/87?boardno=1413",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:33.007Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "마켓오네이처 오!그래놀라 저당 카카오",
+      "officialDate": "2026-07-14",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27520,20 +27542,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-07-13",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:33.070Z",
     "description": "매일유업 공식 발표에서 확인된 퓨어틴(PURETEIN) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:33.070Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://www.maeil.com/news/press_view.jsp?idx=3",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:33.070Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "퓨어틴(PURETEIN)",
+      "officialDate": "2026-07-13",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27549,20 +27573,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-07-01",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:33.265Z",
     "description": "삼양식품 공식 발표에서 확인된 짜르르 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:33.265Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1349",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:33.265Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "짜르르",
+      "officialDate": "2026-07-01",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27577,20 +27603,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-05-26",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:33.591Z",
     "description": "삼양식품 공식 발표에서 확인된 삼양1963 큰컵 우지파개장 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:33.591Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1337",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:33.591Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "삼양1963 큰컵 우지파개장",
+      "officialDate": "2026-05-26",
+      "dateKind": "announcement"
     }
   },
   {
@@ -27605,20 +27633,22 @@
     "sourceType": "press_release",
     "releaseDate": "2026-04-27",
     "firstDetectedAt": "2026-10-02T04:58:41.210Z",
-    "lastCheckedAt": "2026-10-15T00:02:02.298Z",
+    "lastCheckedAt": "2026-10-16T13:35:34.047Z",
     "description": "삼양식품 공식 발표에서 확인된 바질토마토 프로틴파스타 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:02:02.298Z",
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
-    "updatedAt": "2026-10-15T00:02:02.298Z",
+    "updatedAt": "2026-10-16T13:35:34.047Z",
     "detectionKind": "initial",
     "reviewEvidence": {
       "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1329",
-      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "checkedAt": "2026-10-16T13:35:34.047Z",
       "robots": "allowed",
-      "explicitNew": false,
-      "newCheckReason": "announcement_only"
+      "officialLaunchAnnouncement": true,
+      "announcementProductName": "바질토마토 프로틴파스타",
+      "officialDate": "2026-04-27",
+      "dateKind": "announcement"
     }
   }
 ]

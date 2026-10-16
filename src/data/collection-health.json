@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-16T13:33:53.196Z",
+  "generatedAt": "2026-10-16T14:23:47.207Z",
   "rows": [
     {
       "id": "cu:CU",
@@ -112,8 +112,8 @@
       "groupLabel": "카페",
       "brand": "스타벅스",
       "status": "success",
-      "checkedAt": "2026-10-16T13:33:19.902Z",
-      "lastSuccessfulAt": "2026-10-16T13:33:19.902Z",
+      "checkedAt": "2026-10-16T14:23:11.736Z",
+      "lastSuccessfulAt": "2026-10-16T14:23:11.736Z",
       "newCount": 51,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -401,6 +401,104 @@
       "brand": "삼양식품",
       "status": "not_checked",
       "reason": "수집 결과 기록 없음 또는 유효한 확인 시각 없음"
+    }
+  ],
+  "imageQuality": [
+    {
+      "brand": "교촌치킨",
+      "officialProducts": 12,
+      "withImage": 12,
+      "missingImage": 0
+    },
+    {
+      "brand": "굽네",
+      "officialProducts": 6,
+      "withImage": 6,
+      "missingImage": 0
+    },
+    {
+      "brand": "네네치킨",
+      "officialProducts": 6,
+      "withImage": 6,
+      "missingImage": 0
+    },
+    {
+      "brand": "도미노피자",
+      "officialProducts": 1,
+      "withImage": 1,
+      "missingImage": 0
+    },
+    {
+      "brand": "롯데리아",
+      "officialProducts": 2,
+      "withImage": 2,
+      "missingImage": 0
+    },
+    {
+      "brand": "맘스터치",
+      "officialProducts": 11,
+      "withImage": 11,
+      "missingImage": 0
+    },
+    {
+      "brand": "배스킨라빈스",
+      "officialProducts": 2,
+      "withImage": 2,
+      "missingImage": 0
+    },
+    {
+      "brand": "버거킹",
+      "officialProducts": 1,
+      "withImage": 1,
+      "missingImage": 0
+    },
+    {
+      "brand": "빽다방",
+      "officialProducts": 12,
+      "withImage": 0,
+      "missingImage": 12
+    },
+    {
+      "brand": "세븐일레븐",
+      "officialProducts": 13,
+      "withImage": 8,
+      "missingImage": 5
+    },
+    {
+      "brand": "스타벅스",
+      "officialProducts": 77,
+      "withImage": 51,
+      "missingImage": 26
+    },
+    {
+      "brand": "이디야커피",
+      "officialProducts": 23,
+      "withImage": 0,
+      "missingImage": 23
+    },
+    {
+      "brand": "푸라닭",
+      "officialProducts": 4,
+      "withImage": 4,
+      "missingImage": 0
+    },
+    {
+      "brand": "할리스",
+      "officialProducts": 25,
+      "withImage": 0,
+      "missingImage": 25
+    },
+    {
+      "brand": "bhc",
+      "officialProducts": 3,
+      "withImage": 3,
+      "missingImage": 0
+    },
+    {
+      "brand": "CU",
+      "officialProducts": 698,
+      "withImage": 698,
+      "missingImage": 0
     }
   ]
 }

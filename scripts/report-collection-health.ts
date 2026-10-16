@@ -2,6 +2,7 @@ import {readFile,writeFile} from "node:fs/promises";
 import {buildCollectionHealth,type CollectionGroup} from "../chatgpt-site/lib/review/collection-health.ts";
 import {coffeeBrandSources} from "../src/data/coffee-sources.ts";
 import {automatedBrandSources} from "./lib/manual-brand-collector.ts";
+import {auditCollectedImages} from "./lib/collected-product.ts";
 const data=new URL("../src/data/",import.meta.url);
 const sources=[
  {id:"cu",label:"편의점 · CU",brands:["CU"],file:"cu-collection-status.json"},
@@ -19,5 +20,7 @@ async function read(file:string) {
 const reports=Object.fromEntries(await Promise.all(sources.map(async source=>[source.id,await read(source.file)])));
 const previous=await read("collection-health.json");
 const health=buildCollectionHealth(sources,reports,previous);
-await writeFile(new URL("collection-health.json",data),JSON.stringify(health,null,2)+"\n");
+const imageQuality=auditCollectedImages([...(await read("products.json")??[]),...(await read("coffee-products-auto.json")??[])]);
+await writeFile(new URL("collection-health.json",data),JSON.stringify({...health,imageQuality},null,2)+"\n");
+for(const row of imageQuality)if(row.missingImage)console.warn(`이미지 품질: ${row.brand} ${row.officialProducts}건 중 ${row.missingImage}건 미수집 (NEW 판정과 별도)`);
 console.log(`수집 운영 현황 ${health.rows.length}개 브랜드 경로 기록`);

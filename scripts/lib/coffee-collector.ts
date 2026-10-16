@@ -8,7 +8,7 @@ const BLOCKED_HOSTS = /(^|\.)(kakao\.com|daum\.net|kakaocorp\.com|daumcorp\.com|
 const GENERIC_NAMES = /^(new|menu|product|products|신메뉴|메뉴|상품|전체|자세히\s*보기|view\s*more)$/i;
 const PRODUCT_WORDS = /라떼|티|커피|에이드|스무디|주스|프라페|아메리카노|에스프레소|콜드\s*브루|케이크|빵|샌드|쿠키|베이글|텀블러|머그|컵|키링|보틀|드립백|원두|블렌드|캡슐|아이스크림|젤라또|latte|tea|coffee|ade|smoothie|juice|frappe|tumbler|mug|bottle|drip\s*bag|blend/i;
 
-export type CoffeeCandidate = Pick<Product, "id"|"brand"|"name"|"normalizedName"|"category"|"subCategory"|"productType"|"currency"|"sourceUrl"|"sourceType"|"releaseDate"|"firstDetectedAt"|"lastCheckedAt"|"description"|"availabilityStatus"|"availabilityCheckedAt"|"isActive"|"createdAt"|"updatedAt"|"robotsPolicyUrl"|"robotsCheckedAt"|"reviewEvidence">;
+export type CoffeeCandidate = Pick<Product, "id"|"brand"|"name"|"normalizedName"|"category"|"subCategory"|"productType"|"currency"|"sourceUrl"|"sourceType"|"imageUrl"|"releaseDate"|"firstDetectedAt"|"lastCheckedAt"|"description"|"availabilityStatus"|"availabilityCheckedAt"|"isActive"|"createdAt"|"updatedAt"|"robotsPolicyUrl"|"robotsCheckedAt"|"reviewEvidence">;
 
 function textOnly(value: string) {
   return value.replace(/<[^>]+>/g, " ").replace(/&(?:nbsp|amp|quot|#39);/gi, " ").replace(/\s+/g, " ").trim();
@@ -145,7 +145,7 @@ export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, ch
       for(const row of new Map(rows.map(row=>[row.id,row])).values()) {
         verifiedUrls.push(row.sourceUrl);
         if(!row.isNew){confirmedNotNewUrls.push(row.sourceUrl);continue;}
-        candidates.push(...toCoffeeCandidates(source,row.kind,row.sourceUrl,[row.name],checkedAt).map(p=>({...p,subCategory:row.subCategory,availabilityStatus:"unknown" as const,reviewEvidence:{sourceUrl:row.sourceUrl,checkedAt,robots:"allowed" as const,explicitNew:true},robotsPolicyUrl,robotsCheckedAt:checkedAt})));
+        candidates.push(...toCoffeeCandidates(source,row.kind,row.sourceUrl,[row.name],checkedAt).map(p=>({...p,...(row.imageUrl?{imageUrl:row.imageUrl}:{}),subCategory:row.subCategory,availabilityStatus:"unknown" as const,reviewEvidence:{sourceUrl:row.sourceUrl,checkedAt,robots:"allowed" as const,explicitNew:true},robotsPolicyUrl,robotsCheckedAt:checkedAt})));
       }
       checked++;
     }catch {failed++;}

@@ -38,6 +38,8 @@ jobs:
       - name: Check additional chicken and ice cream brands
         run: npm run update:brands
       - run: npm run update:products
+      - name: Recheck official announcements missing from recent lists
+        run: npm run review:press-recheck
       - name: Summarize collection operations
         if: always()
         run: npm run report:collection

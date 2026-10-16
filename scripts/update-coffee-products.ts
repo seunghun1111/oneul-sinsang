@@ -4,6 +4,7 @@ import { coffeeBrandSources } from "../src/data/coffee-sources.ts";
 import type { Product } from "../src/types/product.ts";
 import { collectCoffeeSource, collectStarbucksFromSitemaps } from "./lib/coffee-collector.ts";
 import {guardCoffeeEmptyNewLists,runCoffeeCollection,safeCoffeeVerifiedUrls} from "./lib/coffee-collection-run.ts";
+import {normalizeCollectedProduct} from "./lib/collected-product.ts";
 
 const dataUrl = new URL("../src/data/coffee-products-auto.json", import.meta.url);
 
@@ -23,7 +24,7 @@ export function mergeCoffeeProducts(existing: Product[], observed: Product[], ch
   for (const candidate of observed) {
     const key = `${candidate.brand}:${candidate.normalizedName}`;
     const previous = byIdentity.get(key);
-    byIdentity.set(key, { ...candidate, ...(previous?.detectionKind ? {detectionKind:previous.detectionKind} : {}), newStatus:"active", id:previous?.id ?? candidate.id, firstDetectedAt:previous?.firstDetectedAt ?? checkedAt, createdAt:previous?.createdAt ?? checkedAt, lastSeenAt:checkedAt, consecutiveMisses:0, availabilityReason:"공식 NEW 목록에서 확인됨", reviewStatus:previous?.reviewStatus ?? "pending", ...(previous?.reviewedAt ? { reviewedAt:previous.reviewedAt } : {}) });
+    byIdentity.set(key, normalizeCollectedProduct({ ...candidate, newStatus:"active", firstDetectedAt:checkedAt, createdAt:checkedAt, lastSeenAt:checkedAt, consecutiveMisses:0, availabilityReason:"공식 NEW 목록에서 확인됨", reviewStatus:"pending" },previous));
   }
   return [...byIdentity.values()].toSorted((left, right) => right.firstDetectedAt.localeCompare(left.firstDetectedAt) || left.brand.localeCompare(right.brand, "ko-KR"));
 }

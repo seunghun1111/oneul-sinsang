@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "review:press-recheck": "node --experimental-strip-types scripts/recheck-press-products.ts",
     "review:preview": "node --experimental-strip-types scripts/preview-review-automation.ts",
     "report:collection": "node --experimental-strip-types scripts/report-collection-health.ts",
     "review:auto": "node --experimental-strip-types scripts/auto-review-products.ts",

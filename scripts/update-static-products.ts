@@ -7,6 +7,7 @@ import { collectPulmuone } from "../chatgpt-site/lib/collectors/pulmuone.ts";
 import { collectSamyang } from "../chatgpt-site/lib/collectors/samyang.ts";
 import type { Product, ProductCategory } from "../src/types/product.ts";
 import {runPressCollection} from "./lib/press-collection-run.ts";
+import {normalizeCollectedProduct} from "./lib/collected-product.ts";
 
 type Candidate = {
   slug: string;
@@ -40,7 +41,7 @@ export function mergeProducts(existing: Product[], candidates: Candidate[], chec
     const previous = byIdentity.get(key);
     const detectedAt = previous?.firstDetectedAt ?? checkedAt;
     const category = validCategories.has(candidate.category as ProductCategory) ? candidate.category as ProductCategory : "etc";
-    byIdentity.set(key, {
+    byIdentity.set(key, normalizeCollectedProduct({
       id: previous?.id ?? candidate.slug,
       brand: candidate.brand,
       name: candidate.name,
@@ -72,12 +73,10 @@ export function mergeProducts(existing: Product[], candidates: Candidate[], chec
       isActive: true,
       createdAt: previous?.createdAt ?? checkedAt,
       updatedAt: checkedAt,
-    });
+    },previous));
   }
   return [...byIdentity.values()].map((product) => {
-    const safeProduct = { ...product };
-    delete safeProduct.price;
-    if (safeProduct.sourceType !== "official_site") delete safeProduct.imageUrl;
+    const safeProduct = normalizeCollectedProduct(product);
     return {
       ...safeProduct,
       description: safeProduct.sourceType === "official_site"

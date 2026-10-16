@@ -5,11 +5,16 @@ import{collectStarbucksFromSitemaps}from"./lib/coffee-collector.ts";
 import{mergeCoffeeProducts}from"./update-coffee-products.ts";
 import{guardCoffeeEmptyNewLists}from"./lib/coffee-collection-run.ts";
 const html=`var url='/menu/productListAjax.do';if(newicon == 'Y'){} result="W0000003";/* result="W9999999"; */`;
-const row=(id,flag)=>({product_CD:id,product_NM:"상품"+id,newicon:flag,sold_OUT:"Y"});
+const row=(id,flag)=>({product_CD:id,product_NM:"상품"+id,newicon:flag,sold_OUT:"Y",img_UPLOAD_PATH:"https://image.istarbucks.co.kr",file_PATH:`/upload/store/skuimg/2026/10/${id}.jpg`});
 test("스타벅스 실제 newicon만 판별하고 판매·시즌 상태로 대체하지 않는다",()=>{
  assert.deepEqual(starbucksCategoryCodes(html),["W0000003"]);
  assert.equal(parseStarbucksMenu({list:[row("1","Y")]},"drink")[0].isNew,true);
  assert.equal(parseStarbucksMenu({list:[row("2","N")]},"food")[0].isNew,false);
+ for(const section of ["drink","food","product"]){
+  const parsed=parseStarbucksMenu({list:[row("1","Y")]},section)[0];
+  assert.equal(parsed.imageUrl,"https://image.istarbucks.co.kr/upload/store/skuimg/2026/10/1.jpg");
+ }
+ assert.equal(parseStarbucksMenu({list:[{...row("1","Y"),img_UPLOAD_PATH:"https://evil.example.com"}]},"drink")[0].imageUrl,undefined);
  for(const flag of [undefined,"",true])assert.throws(()=>parseStarbucksMenu({list:[row("1",flag)]},"drink"));
  assert.throws(()=>parseStarbucksMenu({products:[]},"drink"));
 });
@@ -38,4 +43,6 @@ test("스타벅스 정상 3개 섹션 확인은 실패 알림을 만들지 않�
  const result=await collectStarbucksFromSitemaps({id:"starbucks",brand:"스타벅스",channels:[],note:""},"2026-10-16",fetcher);
  assert.equal(result.checked,3);assert.equal(result.failed,0);
  assert.equal(result.candidates.length,1);
+ assert.ok(result.candidates[0].imageUrl);
+ assert.equal(mergeCoffeeProducts([],result.candidates,"2026-10-16")[0].imageUrl,result.candidates[0].imageUrl);
 });

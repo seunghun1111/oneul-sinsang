@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-16T15:53:55.395Z",
+  "generatedAt": "2026-10-16T16:03:35.975Z",
   "rows": [
     {
       "id": "cu:CU",
@@ -8,8 +8,8 @@
       "groupLabel": "편의점 · CU",
       "brand": "CU",
       "status": "success",
-      "checkedAt": "2026-10-16T15:52:22.597Z",
-      "lastSuccessfulAt": "2026-10-16T15:52:22.597Z",
+      "checkedAt": "2026-10-16T16:02:08.763Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:08.763Z",
       "newCount": 698,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -19,7 +19,7 @@
       "groupLabel": "편의점 · 세븐·이마트24",
       "brand": "세븐일레븐",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:52:40.427Z",
+      "checkedAt": "2026-10-16T16:02:26.193Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -29,8 +29,8 @@
       "groupLabel": "편의점 · 세븐·이마트24",
       "brand": "이마트24",
       "status": "success",
-      "checkedAt": "2026-10-16T15:52:40.427Z",
-      "lastSuccessfulAt": "2026-10-16T15:52:40.427Z",
+      "checkedAt": "2026-10-16T16:02:26.193Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:26.193Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -40,7 +40,7 @@
       "groupLabel": "외식",
       "brand": "롯데리아",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:52:51.270Z",
+      "checkedAt": "2026-10-16T16:02:37.012Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -50,8 +50,8 @@
       "groupLabel": "외식",
       "brand": "맥도날드",
       "status": "success",
-      "checkedAt": "2026-10-16T15:52:51.270Z",
-      "lastSuccessfulAt": "2026-10-16T15:52:51.270Z",
+      "checkedAt": "2026-10-16T16:02:37.012Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:37.012Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -61,8 +61,8 @@
       "groupLabel": "외식",
       "brand": "버거킹",
       "status": "success",
-      "checkedAt": "2026-10-16T15:52:51.270Z",
-      "lastSuccessfulAt": "2026-10-16T15:52:51.270Z",
+      "checkedAt": "2026-10-16T16:02:37.012Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:37.012Z",
       "newCount": 10,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -72,7 +72,7 @@
       "groupLabel": "외식",
       "brand": "맘스터치",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:52:51.270Z",
+      "checkedAt": "2026-10-16T16:02:37.012Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -82,8 +82,8 @@
       "groupLabel": "외식",
       "brand": "도미노피자",
       "status": "success",
-      "checkedAt": "2026-10-16T15:52:51.270Z",
-      "lastSuccessfulAt": "2026-10-16T15:52:51.270Z",
+      "checkedAt": "2026-10-16T16:02:37.012Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:37.012Z",
       "newCount": 1,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -93,8 +93,8 @@
       "groupLabel": "외식",
       "brand": "피자헛",
       "status": "success",
-      "checkedAt": "2026-10-16T15:52:51.270Z",
-      "lastSuccessfulAt": "2026-10-16T15:52:51.270Z",
+      "checkedAt": "2026-10-16T16:02:37.012Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:37.012Z",
       "newCount": 1,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -104,8 +104,8 @@
       "groupLabel": "외식",
       "brand": "굽네",
       "status": "success",
-      "checkedAt": "2026-10-16T15:52:51.270Z",
-      "lastSuccessfulAt": "2026-10-16T15:52:51.270Z",
+      "checkedAt": "2026-10-16T16:02:37.012Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:37.012Z",
       "newCount": 6,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -115,8 +115,8 @@
       "groupLabel": "외식",
       "brand": "교촌치킨",
       "status": "success",
-      "checkedAt": "2026-10-16T15:52:51.270Z",
-      "lastSuccessfulAt": "2026-10-16T15:52:51.270Z",
+      "checkedAt": "2026-10-16T16:02:37.012Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:37.012Z",
       "newCount": 12,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -126,8 +126,8 @@
       "groupLabel": "외식",
       "brand": "KFC",
       "status": "success",
-      "checkedAt": "2026-10-16T15:52:51.270Z",
-      "lastSuccessfulAt": "2026-10-16T15:52:51.270Z",
+      "checkedAt": "2026-10-16T16:02:37.012Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:37.012Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -137,8 +137,8 @@
       "groupLabel": "아이스크림",
       "brand": "배스킨라빈스",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:01.952Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:01.952Z",
+      "checkedAt": "2026-10-16T16:02:47.835Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:47.835Z",
       "newCount": 2,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -148,8 +148,8 @@
       "groupLabel": "카페",
       "brand": "스타벅스",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:49.960Z",
       "newCount": 50,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -159,7 +159,7 @@
       "groupLabel": "카페",
       "brand": "투썸플레이스",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -169,8 +169,8 @@
       "groupLabel": "카페",
       "brand": "이디야커피",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:49.960Z",
       "newCount": 23,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -180,8 +180,8 @@
       "groupLabel": "카페",
       "brand": "메가MGC커피",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -191,7 +191,7 @@
       "groupLabel": "카페",
       "brand": "컴포즈커피",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -201,8 +201,8 @@
       "groupLabel": "카페",
       "brand": "빽다방",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:49.960Z",
       "newCount": 12,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -212,8 +212,8 @@
       "groupLabel": "카페",
       "brand": "우지커피",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -223,8 +223,8 @@
       "groupLabel": "카페",
       "brand": "텐퍼센트커피",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -234,8 +234,8 @@
       "groupLabel": "카페",
       "brand": "바나프레소",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -245,7 +245,7 @@
       "groupLabel": "카페",
       "brand": "더벤티",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -255,8 +255,8 @@
       "groupLabel": "카페",
       "brand": "매머드커피",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -266,7 +266,7 @@
       "groupLabel": "카페",
       "brand": "아티제",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -276,7 +276,7 @@
       "groupLabel": "카페",
       "brand": "할리스",
       "status": "partial",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "기존 NEW가 갑자기 0건입니다. 기존 상품을 유지하며 공식 목록·수집 구조 확인이 필요합니다."
     },
@@ -286,7 +286,7 @@
       "groupLabel": "카페",
       "brand": "커피빈코리아",
       "status": "partial",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "일부 경로·기사 요청이 실패했습니다. 성공한 결과만 반영합니다."
     },
@@ -296,8 +296,8 @@
       "groupLabel": "카페",
       "brand": "폴 바셋",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -307,7 +307,7 @@
       "groupLabel": "카페",
       "brand": "파스쿠찌",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -317,7 +317,7 @@
       "groupLabel": "카페",
       "brand": "엔제리너스",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -327,7 +327,7 @@
       "groupLabel": "카페",
       "brand": "탐앤탐스",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -337,7 +337,7 @@
       "groupLabel": "카페",
       "brand": "커피베이",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -347,7 +347,7 @@
       "groupLabel": "카페",
       "brand": "공차",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -357,8 +357,8 @@
       "groupLabel": "카페",
       "brand": "블루보틀",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
+      "lastSuccessfulAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -368,7 +368,7 @@
       "groupLabel": "카페",
       "brand": "테라로사",
       "status": "failed",
-      "checkedAt": "2026-10-16T15:53:04.122Z",
+      "checkedAt": "2026-10-16T16:02:49.960Z",
       "newCount": 0,
       "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -378,8 +378,8 @@
       "groupLabel": "추가 치킨·아이스크림",
       "brand": "bhc",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:29.413Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:29.413Z",
+      "checkedAt": "2026-10-16T16:03:13.532Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:13.532Z",
       "newCount": 3,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -389,8 +389,8 @@
       "groupLabel": "추가 치킨·아이스크림",
       "brand": "푸라닭",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:29.413Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:29.413Z",
+      "checkedAt": "2026-10-16T16:03:13.532Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:13.532Z",
       "newCount": 4,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -400,8 +400,8 @@
       "groupLabel": "추가 치킨·아이스크림",
       "brand": "네네치킨",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:29.413Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:29.413Z",
+      "checkedAt": "2026-10-16T16:03:13.532Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:13.532Z",
       "newCount": 6,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -411,8 +411,8 @@
       "groupLabel": "추가 치킨·아이스크림",
       "brand": "BBQ",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:29.413Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:29.413Z",
+      "checkedAt": "2026-10-16T16:03:13.532Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:13.532Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -422,8 +422,8 @@
       "groupLabel": "추가 치킨·아이스크림",
       "brand": "하겐다즈",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:29.413Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:29.413Z",
+      "checkedAt": "2026-10-16T16:03:13.532Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:13.532Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -433,8 +433,8 @@
       "groupLabel": "추가 치킨·아이스크림",
       "brand": "나뚜루",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:29.413Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:29.413Z",
+      "checkedAt": "2026-10-16T16:03:13.532Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:13.532Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -444,8 +444,8 @@
       "groupLabel": "추가 치킨·아이스크림",
       "brand": "롯데웰푸드",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:29.413Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:29.413Z",
+      "checkedAt": "2026-10-16T16:03:13.532Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:13.532Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -455,8 +455,8 @@
       "groupLabel": "식품 공식 발표",
       "brand": "빙그레",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:47.837Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:47.837Z",
+      "checkedAt": "2026-10-16T16:03:28.630Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:28.630Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -466,8 +466,8 @@
       "groupLabel": "식품 공식 발표",
       "brand": "매일유업",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:47.837Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:47.837Z",
+      "checkedAt": "2026-10-16T16:03:28.630Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:28.630Z",
       "newCount": 3,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -477,8 +477,8 @@
       "groupLabel": "식품 공식 발표",
       "brand": "오리온",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:47.837Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:47.837Z",
+      "checkedAt": "2026-10-16T16:03:28.630Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:28.630Z",
       "newCount": 2,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -488,8 +488,8 @@
       "groupLabel": "식품 공식 발표",
       "brand": "풀무원",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:47.837Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:47.837Z",
+      "checkedAt": "2026-10-16T16:03:28.630Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:28.630Z",
       "newCount": 2,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -499,8 +499,8 @@
       "groupLabel": "식품 공식 발표",
       "brand": "삼양식품",
       "status": "success",
-      "checkedAt": "2026-10-16T15:53:47.837Z",
-      "lastSuccessfulAt": "2026-10-16T15:53:47.837Z",
+      "checkedAt": "2026-10-16T16:03:28.630Z",
+      "lastSuccessfulAt": "2026-10-16T16:03:28.630Z",
       "newCount": 4,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     }

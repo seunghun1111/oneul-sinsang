@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-16T15:53:04.122Z",
+  "checkedAt": "2026-10-16T16:02:49.960Z",
   "results": [
     {
       "brand": "스타벅스",
@@ -16,6 +16,9 @@
       "checked": 0,
       "failed": 1,
       "newCount": 0,
+      "failureCodes": [
+        "dns"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z"
     },
     {
@@ -41,6 +44,9 @@
       "checked": 0,
       "failed": 2,
       "newCount": 0,
+      "failureCodes": [
+        "http"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z"
     },
     {
@@ -82,6 +88,9 @@
       "checked": 0,
       "failed": 1,
       "newCount": 0,
+      "failureCodes": [
+        "policy_unavailable"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z"
     },
     {
@@ -99,6 +108,9 @@
       "checked": 0,
       "failed": 4,
       "newCount": 0,
+      "failureCodes": [
+        "policy_unavailable"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z"
     },
     {
@@ -108,6 +120,9 @@
       "checked": 2,
       "failed": 1,
       "newCount": 0,
+      "failureCodes": [
+        "policy_blocked"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z",
       "reasonCode": "unexpected_empty"
     },
@@ -118,6 +133,9 @@
       "checked": 1,
       "failed": 1,
       "newCount": 0,
+      "failureCodes": [
+        "http"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z"
     },
     {
@@ -135,6 +153,9 @@
       "checked": 0,
       "failed": 1,
       "newCount": 0,
+      "failureCodes": [
+        "tls"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z"
     },
     {
@@ -144,6 +165,9 @@
       "checked": 0,
       "failed": 1,
       "newCount": 0,
+      "failureCodes": [
+        "policy_blocked"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z"
     },
     {
@@ -153,6 +177,9 @@
       "checked": 0,
       "failed": 1,
       "newCount": 0,
+      "failureCodes": [
+        "tls"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z"
     },
     {
@@ -162,6 +189,9 @@
       "checked": 0,
       "failed": 1,
       "newCount": 0,
+      "failureCodes": [
+        "http"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z"
     },
     {
@@ -171,6 +201,9 @@
       "checked": 0,
       "failed": 2,
       "newCount": 0,
+      "failureCodes": [
+        "http"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z"
     },
     {
@@ -188,6 +221,9 @@
       "checked": 0,
       "failed": 1,
       "newCount": 0,
+      "failureCodes": [
+        "http"
+      ],
       "failureSince": "2026-10-16T15:53:04.122Z"
     }
   ]

@@ -40,6 +40,7 @@ export interface Product {
     robots: "allowed" | "not_provided" | "blocked";
     explicitNew?: boolean;
     officialNewListing?: "kyochon_code_21";
+    newCheckReason?: "dynamic_page" | "no_new_mark" | "announcement_only" | "source_unavailable";
     officialLaunchAnnouncement?: boolean;
     officialDate?: string;
     dateKind?: "launch" | "announcement";

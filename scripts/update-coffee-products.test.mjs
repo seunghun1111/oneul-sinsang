@@ -15,6 +15,13 @@ test("브랜드 공식 신메뉴 영역 밖의 오래된 상품은 수집하지 
   assert.deepEqual(extractOfficialProductNames(html, "https://paikdabang.com/menu/menu_new/", "2026-10-06T00:00:00.000Z"), ["새 라떼"]);
 });
 
+test("이디야 추천 중 이미지 NEW 마크가 있는 카드만 신상품으로 인정한다",()=>{
+ const card=(name,badge)=>`<li><a>${badge}</a><p><a>${name}</a></p></li>`;
+ const html=`<ul class="pro_n bxSlider">${card("새 라떼",'<span class="new_icon"><img src="/new.png" alt="new"></span>')}${card("기존 커피","")}${card("주석 라떼",'<!-- <span class="new_icon"><img alt="new"></span> -->')}</ul>`;
+ assert.deepEqual(extractOfficialProductNames(html,"https://www.ediya.com/contents/drink.html",undefined,true),["새 라떼"]);
+ assert.deepEqual(extractOfficialProductNames('<img src="menuEtc_202610131039.png" alt="머그">',"https://www.hollys.co.kr/menu/md.do","2026-10-16",true),[]);
+});
+
 test("robots.txt의 가장 구체적인 규칙을 우선 적용한다", () => {
   const robots = `User-agent: *\nDisallow: /menu/\nAllow: /menu/product_view.do`;
   assert.equal(isRobotsAllowed(robots, "https://example.com/menu/drink_list.do"), false);

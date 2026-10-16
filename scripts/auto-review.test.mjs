@@ -16,6 +16,11 @@ test("교촌 공식 신메뉴 탭 근거만 제한적으로 승인한다",()=>{
 });
 test("오래된 날짜로 NEW를 자동 제외하지 않는다",()=>assert.equal(verdict({...item,releaseDate:"2024-01-01"}).decision,"approved"));
 test("NEW 없는 단순 목록·발표를 NEW로 추정하지 않는다",()=>assert.equal(verdict({...item,reviewEvidence:{...item.reviewEvidence,explicitNew:false,officialLaunchAnnouncement:true}}).decision,"pending"));
+test("재확인 보류 사유는 표시하지만 승인 근거로 대체하지 않는다",()=>{
+ const p={...item,reviewEvidence:{...item.reviewEvidence,explicitNew:false,newCheckReason:"announcement_only"}};
+ assert.equal(verdict(p).decision,"pending");
+ assert.match(verdict(p).reason,/공식 출시 발표는 확인/);
+});
 test("명시적 정책 제한과 NEW 종료는 제외",()=>{
  assert.equal(verdict({...item,reviewEvidence:{...item.reviewEvidence,robots:"blocked"}}).decision,"rejected");
  assert.equal(verdict({...item,newStatus:"removed"}).decision,"rejected");

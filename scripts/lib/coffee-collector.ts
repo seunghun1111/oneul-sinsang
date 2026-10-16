@@ -35,12 +35,16 @@ function collectJsonLd(value: unknown, output: string[]) {
   Object.values(item).forEach(child => collectJsonLd(child, output));
 }
 
-function extractKnownOfficialCards(html: string, sourceUrl: string, checkedAt: string) {
+function extractKnownOfficialCards(html: string, sourceUrl: string, checkedAt: string, newOnly = false) {
   const names: string[] = [];
   const url = new URL(sourceUrl, "https://example.com");
   if (url.hostname === "www.ediya.com" && url.pathname.endsWith("/drink.html")) {
     const recommended = html.match(/<ul class=["']pro_n bxSlider["']>([\s\S]*?)<\/ul>/i)?.[1] ?? "";
-    for (const match of recommended.matchAll(/<p>\s*<a[^>]*>([\s\S]*?)<\/a>\s*<\/p>/gi)) names.push(textOnly(match[1]));
+    for (const card of recommended.matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/gi)) {
+      if (newOnly && !/<span\b[^>]*class=["']new_icon["'][^>]*>\s*<img\b[^>]*alt=["']new["']/i.test(card[1])) continue;
+      const title=card[1].match(/<p>\s*<a[^>]*>([\s\S]*?)<\/a>\s*<\/p>/i)?.[1];
+      if(title) names.push(textOnly(title));
+    }
   }
   if (url.hostname === "paikdabang.com" && url.pathname.includes("menu_new")) {
     const start = html.indexOf('<div class="menu_slider new_menu_slider">');
@@ -48,7 +52,7 @@ function extractKnownOfficialCards(html: string, sourceUrl: string, checkedAt: s
     const currentSlider = start >= 0 ? html.slice(start, end > start ? end : start + 100_000) : "";
     for (const match of currentSlider.matchAll(/<p class=["']best_tit["']>([\s\S]*?)<\/p>/gi)) names.push(textOnly(match[1]));
   }
-  if (url.hostname === "www.hollys.co.kr" && url.pathname.endsWith("/md.do")) {
+  if (!newOnly && url.hostname === "www.hollys.co.kr" && url.pathname.endsWith("/md.do")) {
     const checked = new Date(checkedAt);
     for (const match of html.matchAll(/menuEtc_(\d{8})\d*\.[a-z]+["']\s+alt=["']([^"']+)["']/gi)) {
       const date = new Date(`${match[1].slice(0,4)}-${match[1].slice(4,6)}-${match[1].slice(6,8)}T00:00:00Z`);
@@ -59,6 +63,7 @@ function extractKnownOfficialCards(html: string, sourceUrl: string, checkedAt: s
 }
 
 export function extractOfficialProductNames(html: string, sourceUrl = "", checkedAt = new Date().toISOString(), newOnly = false) {
+  html=html.replace(/<!--[\s\S]*?-->/g, comment=>/^<!--\s*고메/.test(comment)?"<!-- 고메 -->":"");
   const structuredNames: string[] = [];
   for (const match of html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
     try { collectJsonLd(JSON.parse(match[1]), structuredNames); } catch { /* 공식 페이지의 잘못된 JSON-LD는 건너뜁니다. */ }
@@ -75,7 +80,7 @@ export function extractOfficialProductNames(html: string, sourceUrl = "", checke
       if (PRODUCT_WORDS.test(name)) markedNames.push(name);
     }
   }
-  const known = !newOnly || new URL(sourceUrl || "https://example.com").pathname.includes("menu_new") ? extractKnownOfficialCards(html,sourceUrl,checkedAt) : [];
+  const known = extractKnownOfficialCards(html,sourceUrl,checkedAt,newOnly);
   return [...new Set([...(newOnly ? [] : structuredNames), ...markedNames, ...known].map(textOnly).filter(name => name.length >= 2 && name.length <= 80 && !GENERIC_NAMES.test(name) && !/^\d[\d,.]*원?$/.test(name)))];
 }
 

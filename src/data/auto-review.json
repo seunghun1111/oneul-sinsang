@@ -727,8 +727,8 @@
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "kyochon-41577": {
       "decision": "approved",
@@ -907,108 +907,108 @@
       "checkedAt": "2026-10-15T09:48:44.582Z"
     },
     "seven-eleven-061235": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-090329": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-100431": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-104275": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-105871": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-106219": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-108594": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-111272": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-112581": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-113184": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-114403": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-117105": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "seven-eleven-119073": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "cu-28433": {
       "decision": "approved",
@@ -6899,20 +6899,20 @@
       "checkedAt": "2026-10-15T09:48:44.582Z"
     },
     "baskinrobbins-1165": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "baskinrobbins-1166": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "mcdonalds-843": {
       "decision": "rejected",
@@ -6985,8 +6985,8 @@
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "momstouch-306": {
       "decision": "approved",
@@ -7051,1360 +7051,1360 @@
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "pulmuone-3925": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "maeil-8": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "samyang-1361": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "pulmuone-3921": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "binggrae-359": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "orion-1420": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "maeil-7": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.521Z"
     },
     "orion-1413": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "maeil-3": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "samyang-1349": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "samyang-1337": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "samyang-1329": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-starbucks-af4398f7de51": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-hollys-8fff4b37f692": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품 목록은 확인했으나 해당 상품의 현재 NEW 표시를 확인하지 못했습니다. 추천 순서·이미지 수정일만으로 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-hollys-5ef5f9b269d5": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품 목록은 확인했으나 해당 상품의 현재 NEW 표시를 확인하지 못했습니다. 추천 순서·이미지 수정일만으로 승인하지 않습니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-starbucks-8b0bcca294ec": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-starbucks-ef8262b9fb1a": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-starbucks-843346cc1985": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-starbucks-63c209bd054a": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-starbucks-23d9bf562811": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-starbucks-3091f2a07200": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-starbucks-5429e58cd232": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-paik-94923f032bb5": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-paik-2e6e498f9c4c": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-paik-520494258baf": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-paik-7cec31529446": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-paik-236f4bd2366a": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-paik-d38815c3bcd4": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-paik-517a4736b1de": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-paik-bd4cb585b838": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-paik-0eee9bb9e48b": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-paik-c49454fe6a04": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:15.955Z"
     },
     "coffee-paik-022878c71fe5": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-paik-60f728e154de": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-364782fe4cbd": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-f4e637ab6232": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-b9458a6554ee": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-77c3ebb081ab": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-f755fb6239ee": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-92c333502d71": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-4dcc41343d1f": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-94aeaf1bf417": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-81020d913be7": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-6b68b5044d78": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-6d61f6558421": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-d53205696dab": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-bbcc5eb47b5f": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-7b09a8810aa7": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-3a85273d7497": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-495538f9d1f2": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-ediya-ac17a396090e": {
-      "decision": "pending",
+      "decision": "approved",
       "codes": [
-        "new"
+        "passed"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-starbucks-e511fb6d31aa": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-starbucks-819181025d97": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-starbucks-8715d931ccc4": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-starbucks-22d5191ac501": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-starbucks-d664a1bee098": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-starbucks-52faaf48cb70": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.413Z"
     },
     "coffee-starbucks-eef21cad1d74": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-5557efe04e95": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-6013b5bce281": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-63b650cf49b4": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-506663e0fade": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-f1c15a83eedd": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-ee9b35c8a4df": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-349b2386e534": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-98d2f9395fd6": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-714d30cddc54": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-06f5bb4d00d3": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-82e210ca7566": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-330372da100d": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-b803c52c9293": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-5f6379148edf": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-b20be4526f32": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-58e0f587322a": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-74ed65949c81": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-2f0b1f16b5b3": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-843be235de54": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-c456581c1787": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-c31a4570f4c3": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-04e243940b34": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-ee2ac0c38252": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-0078a8ae3a01": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:16.914Z"
     },
     "coffee-starbucks-a25fe9574f0b": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-0e38dbd89e48": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-90cc7e35325c": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-050a746c1347": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-4e1f7e72804c": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-21c3850f2333": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-d69b4bfb2aa5": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-d1710ef1594a": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-bf1e4f0f20ef": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-f86f48accfb6": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-6e8f498b576a": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-14c7e0934520": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-b19430489b7c": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-4b4bbf95b82f": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-a5cb8243327a": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-74cdf04f30b3": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-88fbedcdae92": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-092162dad706": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-f30819bbf8ce": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-347fc9d6d187": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-8246e55645c4": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-c99577230d7b": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-5ae1fdd02f25": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-3d4a41afb20f": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-9a640bb2bb99": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.326Z"
     },
     "coffee-starbucks-bad4be40546b": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-95948c614087": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-1e7eded43242": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-1d1cab600628": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-f220f8036e8c": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-dd7f58a3ddcf": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-753edfe8b41c": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-abf3e49a3af1": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-788916cba279": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-0be7b4c9dde1": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-5c9b358c6ad0": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-54c546bdfd56": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-12fbb6b1bf23": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-0f6d042537e1": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-eff14076ef97": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-85e27f2a0938": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-59cec3390a70": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-37e8cd08760e": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-3575c4106722": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-c52bc3f2a583": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-1367ba4757b3": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-f5e5ac07c29b": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-7dad8c211972": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-c7878cf4ed77": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-1c6e6eff6709": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:17.694Z"
     },
     "coffee-starbucks-45b4108a536f": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-2f53e1a4d378": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-e4514c88f1ee": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-36306cf2b9dc": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-304a685e4215": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-dd5c451ca1c7": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-a7d5053cc31d": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-a24a74278ad4": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-2aa636618ca0": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-4866aacb3c29": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-7e4eb1882c9b": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-890fe5effd97": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-57fd3a9cb075": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-353366e26e6a": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-5a7411122a45": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-4e588a539667": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-661ecaf66ac4": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-9858874a41df": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-3d6a29fe96ce": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-44a81d574b2a": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-b2d30adf49a8": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-d973bbf629bc": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-e19d2d3ebb0e": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-d9d2556f7670": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-083525f46210": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.049Z"
     },
     "coffee-starbucks-3e919e8bb928": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-starbucks-c606453f6a12": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-starbucks-3ea29493fb8d": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-starbucks-e1f62056205a": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-starbucks-1d6c42663fc9": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-starbucks-27f9ca148701": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-starbucks-8fafe0538c38": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-starbucks-30955b5964e0": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-starbucks-cfb1f0461576": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-starbucks-1e7e8b15bc70": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-starbucks-881695bf8cb8": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-starbucks-7b793a551619": {
       "decision": "pending",
       "codes": [
         "new"
       ],
-      "reason": "개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
-      "checkedAt": "2026-10-15T09:48:44.582Z"
+      "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
+      "checkedAt": "2026-10-16T00:13:18.440Z"
     },
     "coffee-paik-07239301071e": {
       "decision": "rejected",

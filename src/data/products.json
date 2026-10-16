@@ -2808,7 +2808,14 @@
     "isActive": true,
     "createdAt": "2026-10-13T02:42:08.639Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3954",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "kyochon-41577",
@@ -3519,14 +3526,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-090329",
@@ -3543,14 +3557,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-100431",
@@ -3567,14 +3588,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-104275",
@@ -3590,14 +3618,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-105871",
@@ -3613,14 +3648,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-106219",
@@ -3636,14 +3678,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-108594",
@@ -3659,14 +3708,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-111272",
@@ -3683,14 +3739,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-112581",
@@ -3707,14 +3770,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-113184",
@@ -3730,14 +3800,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-114403",
@@ -3754,14 +3831,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-117105",
@@ -3778,14 +3862,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "seven-eleven-119073",
@@ -3802,14 +3893,21 @@
     "sourceType": "official_site",
     "releaseDate": "2026-10-06",
     "firstDetectedAt": "2026-10-06T09:49:15.885Z",
-    "lastCheckedAt": "2026-10-06T09:49:15.885Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T09:49:15.885Z",
     "isActive": true,
     "createdAt": "2026-10-06T09:49:15.885Z",
-    "updatedAt": "2026-10-06T09:49:15.885Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "cu-28433",
@@ -26638,18 +26736,25 @@
     "currency": "KRW",
     "retailer": "배스킨라빈스",
     "imageUrl": "https://www.baskinrobbins.co.kr/upload/product/monthBest/newProduct/49466fae7a8a355aac60d843720ff523.png",
-    "sourceUrl": "https://www.baskinrobbins.co.kr/information-center/notice/view.php?seq=1475&page=1&findword=",
+    "sourceUrl": "https://www.baskinrobbins.co.kr/menu/fom.php",
     "sourceType": "official_site",
     "releaseDate": "2026-10-01",
     "firstDetectedAt": "2026-10-08T07:37:14.518Z",
-    "lastCheckedAt": "2026-10-15T00:01:31.458Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "배스킨라빈스 공식 이달의 맛과 FOM 신제품 공지에서 확인된 아이스크림",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:31.458Z",
     "isActive": true,
     "createdAt": "2026-10-08T07:37:14.518Z",
-    "updatedAt": "2026-10-15T00:01:31.458Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.baskinrobbins.co.kr/menu/fom.php",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "not_provided",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "baskinrobbins-1166",
@@ -26662,18 +26767,25 @@
     "currency": "KRW",
     "retailer": "배스킨라빈스",
     "imageUrl": "https://www.baskinrobbins.co.kr/upload/product/monthBest/newProduct/09c51d48c828ee4a28b024d4f3c7abd6.png",
-    "sourceUrl": "https://www.baskinrobbins.co.kr/information-center/notice/view.php?seq=1475&page=1&findword=",
+    "sourceUrl": "https://www.baskinrobbins.co.kr/menu/fom.php",
     "sourceType": "official_site",
     "releaseDate": "2026-10-01",
     "firstDetectedAt": "2026-10-08T07:37:14.518Z",
-    "lastCheckedAt": "2026-10-15T00:01:31.458Z",
+    "lastCheckedAt": "2026-10-16T00:12:06.122Z",
     "description": "배스킨라빈스 공식 이달의 맛과 FOM 신제품 공지에서 확인된 아이스크림",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:31.458Z",
     "isActive": true,
     "createdAt": "2026-10-08T07:37:14.518Z",
-    "updatedAt": "2026-10-15T00:01:31.458Z",
-    "detectionKind": "initial"
+    "updatedAt": "2026-10-16T00:12:06.122Z",
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.baskinrobbins.co.kr/menu/fom.php",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "robots": "not_provided",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "mcdonalds-843",
@@ -26928,7 +27040,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3936",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "momstouch-306",
@@ -27152,7 +27271,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.orionworld.com/board/view/87?boardno=1423",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "pulmuone-3925",
@@ -27173,7 +27299,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3925",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "maeil-8",
@@ -27195,7 +27328,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.maeil.com/news/press_view.jsp?idx=8",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "samyang-1361",
@@ -27217,7 +27357,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1361",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "pulmuone-3921",
@@ -27238,7 +27385,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-12T00:42:51.754Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3921",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "binggrae-359",
@@ -27260,7 +27414,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.bing.co.kr/news/news_announced_view?anno_idx=359",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "orion-1420",
@@ -27281,7 +27442,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.orionworld.com/board/view/87?boardno=1420",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "maeil-7",
@@ -27303,7 +27471,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.maeil.com/news/press_view.jsp?idx=7",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "orion-1413",
@@ -27324,7 +27499,14 @@
     "updatedAt": "2026-10-06T01:45:35.792Z",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-06T01:45:35.792Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.orionworld.com/board/view/87?boardno=1413",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "maeil-3",
@@ -27345,7 +27527,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.maeil.com/news/press_view.jsp?idx=3",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "samyang-1349",
@@ -27367,7 +27556,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1349",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "samyang-1337",
@@ -27388,7 +27584,14 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1337",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   },
   {
     "id": "samyang-1329",
@@ -27409,6 +27612,13 @@
     "isActive": true,
     "createdAt": "2026-10-02T04:58:41.210Z",
     "updatedAt": "2026-10-15T00:02:02.298Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1329",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "announcement_only"
+    }
   }
 ]

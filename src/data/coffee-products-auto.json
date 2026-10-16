@@ -25,7 +25,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002000",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-hollys-8fff4b37f692",
@@ -50,7 +57,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.hollys.co.kr/menu/md.do",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "no_new_mark"
+    }
   },
   {
     "id": "coffee-hollys-5ef5f9b269d5",
@@ -75,7 +89,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.hollys.co.kr/menu/md.do",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "no_new_mark"
+    }
   },
   {
     "id": "coffee-starbucks-8b0bcca294ec",
@@ -103,7 +124,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005769",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-ef8262b9fb1a",
@@ -131,7 +159,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005698",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-843346cc1985",
@@ -159,7 +194,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005768",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-63c209bd054a",
@@ -187,7 +229,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005663",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-23d9bf562811",
@@ -215,7 +264,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005697",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-3091f2a07200",
@@ -243,7 +299,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005646",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-5429e58cd232",
@@ -271,7 +334,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005647",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-paik-94923f032bb5",
@@ -285,18 +355,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 호지차라떼 (HOT) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-paik-2e6e498f9c4c",
@@ -310,18 +387,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 호지차라떼 ICED 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-paik-520494258baf",
@@ -335,18 +419,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 우바홍차 (HOT) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-paik-7cec31529446",
@@ -360,18 +451,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 우바홍차 (ICED) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-paik-236f4bd2366a",
@@ -385,18 +483,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 리치루이보스티 (HOT) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-paik-d38815c3bcd4",
@@ -410,18 +515,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 리치루이보스티 (ICED) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-paik-517a4736b1de",
@@ -435,18 +547,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 자몽블랙티 (HOT) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-paik-bd4cb585b838",
@@ -460,18 +579,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 자몽블랙티 (ICED) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-paik-0eee9bb9e48b",
@@ -485,18 +611,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 레몬블랙티 (HOT) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-paik-c49454fe6a04",
@@ -510,18 +643,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 레몬블랙티 (ICED) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-paik-022878c71fe5",
@@ -535,18 +675,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 사과유자티 (HOT) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-paik-60f728e154de",
@@ -560,18 +707,25 @@
     "sourceUrl": "https://paikdabang.com/menu/menu_new/",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "빽다방 공식 상품 목록에서 확인된 사과유자티 (ICED) 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-364782fe4cbd",
@@ -585,18 +739,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (L) HOT 가나 시그니처 초콜릿 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-f4e637ab6232",
@@ -610,18 +771,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (EX) HOT 가나 시그니처 초콜릿 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-b9458a6554ee",
@@ -635,18 +803,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (L) ICED 가나 시그니처 초콜릿 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-77c3ebb081ab",
@@ -660,18 +835,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (EX) ICED 가나 시그니처 초콜릿 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-f755fb6239ee",
@@ -685,18 +867,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (L) HOT 가나 초코 크림 오트 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-92c333502d71",
@@ -710,18 +899,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (EX) HOT 가나 초코 크림 오트 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-4dcc41343d1f",
@@ -735,18 +931,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (L) ICED 가나 초코 크림 오트 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-94aeaf1bf417",
@@ -760,18 +963,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (EX) ICED 가나 초코 크림 오트 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-81020d913be7",
@@ -785,18 +995,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (L) HOT 오트 커피 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-6b68b5044d78",
@@ -810,18 +1027,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (EX) HOT 오트 커피 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-6d61f6558421",
@@ -835,18 +1059,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (L) ICED 오트 커피 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-d53205696dab",
@@ -860,18 +1091,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (EX) ICED 오트 커피 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-bbcc5eb47b5f",
@@ -885,18 +1123,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (L) ICED 오트 콜드브루 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-7b09a8810aa7",
@@ -910,18 +1155,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (EX) ICED 오트 콜드브루 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-3a85273d7497",
@@ -935,18 +1187,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 (L) 아이스크림 가나 초코라떼 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-495538f9d1f2",
@@ -960,18 +1219,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 가나 초코 소프트 아이스크림 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-ediya-ac17a396090e",
@@ -985,18 +1251,25 @@
     "sourceUrl": "https://www.ediya.com/contents/drink.html",
     "sourceType": "official_site",
     "firstDetectedAt": "2026-10-08T01:12:23.418Z",
-    "lastCheckedAt": "2026-10-15T00:01:32.966Z",
+    "lastCheckedAt": "2026-10-16T00:11:51.419Z",
     "description": "이디야커피 공식 상품 목록에서 확인된 가나 초코 소프트 아이스크림 아포가토 신상품",
     "availabilityStatus": "on_sale",
     "availabilityCheckedAt": "2026-10-15T00:01:32.966Z",
     "isActive": true,
     "createdAt": "2026-10-08T01:12:23.418Z",
-    "updatedAt": "2026-10-15T00:01:32.966Z",
+    "updatedAt": "2026-10-16T00:11:51.419Z",
     "lastSeenAt": "2026-10-15T00:01:32.966Z",
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": true
+    },
+    "newStatus": "active"
   },
   {
     "id": "coffee-starbucks-e511fb6d31aa",
@@ -1024,7 +1297,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=106509",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-819181025d97",
@@ -1052,7 +1332,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=110621",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-8715d931ccc4",
@@ -1080,7 +1367,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=168007",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-22d5191ac501",
@@ -1108,7 +1402,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=168010",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-d664a1bee098",
@@ -1136,7 +1437,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=168016",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-52faaf48cb70",
@@ -1164,7 +1472,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=168066",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-eef21cad1d74",
@@ -1192,7 +1507,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=17",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-5557efe04e95",
@@ -1220,7 +1542,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=18",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-6013b5bce281",
@@ -1248,7 +1577,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=2",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-63b650cf49b4",
@@ -1276,7 +1612,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=400400000091",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-506663e0fade",
@@ -1304,7 +1647,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=400400000094",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-f1c15a83eedd",
@@ -1332,7 +1682,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=5210008055",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-ee9b35c8a4df",
@@ -1360,7 +1717,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=5210008070",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-349b2386e534",
@@ -1388,7 +1752,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=72",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-98d2f9395fd6",
@@ -1416,7 +1787,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002088",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-714d30cddc54",
@@ -1444,7 +1822,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002090",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-06f5bb4d00d3",
@@ -1472,7 +1857,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002259",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-82e210ca7566",
@@ -1500,7 +1892,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002262",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-330372da100d",
@@ -1528,7 +1927,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002403",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-b803c52c9293",
@@ -1556,7 +1962,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002760",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-5f6379148edf",
@@ -1584,7 +1997,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002956",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-b20be4526f32",
@@ -1612,7 +2032,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002959",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-58e0f587322a",
@@ -1640,7 +2067,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000005168",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-74ed65949c81",
@@ -1668,7 +2102,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000005304",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-2f0b1f16b5b3",
@@ -1696,7 +2137,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000005307",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-843be235de54",
@@ -1724,7 +2172,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000005377",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-c456581c1787",
@@ -1752,7 +2207,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006054",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-c31a4570f4c3",
@@ -1780,7 +2242,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006164",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-04e243940b34",
@@ -1808,7 +2277,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006165",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-ee2ac0c38252",
@@ -1836,7 +2312,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006172",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-0078a8ae3a01",
@@ -1864,7 +2347,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006235",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-a25fe9574f0b",
@@ -1892,7 +2382,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006238",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-0e38dbd89e48",
@@ -1920,7 +2417,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006303",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-90cc7e35325c",
@@ -1948,7 +2452,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006304",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-050a746c1347",
@@ -1976,7 +2487,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006305",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-4e1f7e72804c",
@@ -2004,7 +2522,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006412",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-21c3850f2333",
@@ -2032,7 +2557,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006415",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-d69b4bfb2aa5",
@@ -2060,7 +2592,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006466",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-d1710ef1594a",
@@ -2088,7 +2627,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006575",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-bf1e4f0f20ef",
@@ -2116,7 +2662,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006577",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-f86f48accfb6",
@@ -2144,7 +2697,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006941",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-6e8f498b576a",
@@ -2172,7 +2732,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006945",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-14c7e0934520",
@@ -2200,7 +2767,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006948",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-b19430489b7c",
@@ -2228,7 +2802,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006963",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-4b4bbf95b82f",
@@ -2256,7 +2837,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006976",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-a5cb8243327a",
@@ -2284,7 +2872,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006980",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-74cdf04f30b3",
@@ -2312,7 +2907,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006981",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-88fbedcdae92",
@@ -2340,7 +2942,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007152",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-092162dad706",
@@ -2368,7 +2977,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007155",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-f30819bbf8ce",
@@ -2396,7 +3012,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007158",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-347fc9d6d187",
@@ -2424,7 +3047,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007161",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-8246e55645c4",
@@ -2452,7 +3082,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007164",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-c99577230d7b",
@@ -2480,7 +3117,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007167",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-5ae1fdd02f25",
@@ -2508,7 +3152,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007170",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-3d4a41afb20f",
@@ -2536,7 +3187,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007173",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-9a640bb2bb99",
@@ -2564,7 +3222,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007178",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-bad4be40546b",
@@ -2592,7 +3257,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007181",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-95948c614087",
@@ -2620,7 +3292,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007184",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-1e7eded43242",
@@ -2648,7 +3327,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=5110006070",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-1d1cab600628",
@@ -2676,7 +3362,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=5110007181",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-f220f8036e8c",
@@ -2704,7 +3397,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=5110009171",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-dd7f58a3ddcf",
@@ -2732,7 +3432,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000001361",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-753edfe8b41c",
@@ -2760,7 +3467,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000001521",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-abf3e49a3af1",
@@ -2788,7 +3502,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000001610",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-788916cba279",
@@ -2816,7 +3537,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000001924",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-0be7b4c9dde1",
@@ -2844,7 +3572,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002065",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-5c9b358c6ad0",
@@ -2872,7 +3607,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002489",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-54c546bdfd56",
@@ -2900,7 +3642,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002900",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-12fbb6b1bf23",
@@ -2928,7 +3677,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004987",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-0f6d042537e1",
@@ -2956,7 +3712,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000003871",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-eff14076ef97",
@@ -2984,7 +3747,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004008",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-85e27f2a0938",
@@ -3012,7 +3782,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004028",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-59cec3390a70",
@@ -3040,7 +3817,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004097",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-37e8cd08760e",
@@ -3068,7 +3852,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004100",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-3575c4106722",
@@ -3096,7 +3887,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004414",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-c52bc3f2a583",
@@ -3124,7 +3922,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004421",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-1367ba4757b3",
@@ -3152,7 +3957,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004422",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-f5e5ac07c29b",
@@ -3180,7 +3992,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004989",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-7dad8c211972",
@@ -3208,7 +4027,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004506",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-c7878cf4ed77",
@@ -3236,7 +4062,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004517",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-1c6e6eff6709",
@@ -3264,7 +4097,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004521",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-45b4108a536f",
@@ -3292,7 +4132,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004784",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-2f53e1a4d378",
@@ -3320,7 +4167,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004823",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-e4514c88f1ee",
@@ -3348,7 +4202,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004833",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-36306cf2b9dc",
@@ -3376,7 +4237,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004858",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-304a685e4215",
@@ -3404,7 +4272,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004913",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-dd5c451ca1c7",
@@ -3432,7 +4307,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004914",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-a7d5053cc31d",
@@ -3460,7 +4342,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004916",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-a24a74278ad4",
@@ -3488,7 +4377,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004944",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-2aa636618ca0",
@@ -3516,7 +4412,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004953",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-4866aacb3c29",
@@ -3544,7 +4447,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004954",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-7e4eb1882c9b",
@@ -3572,7 +4482,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004963",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-890fe5effd97",
@@ -3600,7 +4517,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004964",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-57fd3a9cb075",
@@ -3628,7 +4552,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005072",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-353366e26e6a",
@@ -3656,7 +4587,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005073",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-5a7411122a45",
@@ -3684,7 +4622,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005088",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-4e588a539667",
@@ -3712,7 +4657,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005157",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-661ecaf66ac4",
@@ -3740,7 +4692,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005233",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-9858874a41df",
@@ -3768,7 +4727,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005291",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-3d6a29fe96ce",
@@ -3796,7 +4762,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005349",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-44a81d574b2a",
@@ -3824,7 +4797,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005350",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-b2d30adf49a8",
@@ -3852,7 +4832,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005372",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-d973bbf629bc",
@@ -3880,7 +4867,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005404",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-e19d2d3ebb0e",
@@ -3908,7 +4902,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005446",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-d9d2556f7670",
@@ -3936,7 +4937,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005447",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-083525f46210",
@@ -3964,7 +4972,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005465",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-3e919e8bb928",
@@ -3992,7 +5007,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005472",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-c606453f6a12",
@@ -4020,7 +5042,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005533",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-3ea29493fb8d",
@@ -4048,7 +5077,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005546",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-e1f62056205a",
@@ -4076,7 +5112,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005547",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-1d6c42663fc9",
@@ -4104,7 +5147,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005559",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-27f9ca148701",
@@ -4132,7 +5182,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005560",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-8fafe0538c38",
@@ -4160,7 +5217,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005562",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-30955b5964e0",
@@ -4188,7 +5252,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005567",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-cfb1f0461576",
@@ -4216,7 +5287,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005594",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-1e7e8b15bc70",
@@ -4244,7 +5322,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005607",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-881695bf8cb8",
@@ -4272,7 +5357,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005608",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-starbucks-7b793a551619",
@@ -4300,7 +5392,14 @@
     "consecutiveMisses": 0,
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "pending",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "reviewEvidence": {
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005609",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "robots": "allowed",
+      "explicitNew": false,
+      "newCheckReason": "dynamic_page"
+    }
   },
   {
     "id": "coffee-paik-07239301071e",

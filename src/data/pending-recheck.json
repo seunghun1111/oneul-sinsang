@@ -1,0 +1,1460 @@
+{
+  "version": 1,
+  "checkedAt": "2026-10-16T00:11:51.419Z",
+  "total": 187,
+  "confirmed": 44,
+  "products": {
+    "pulmuone-3954": {
+      "brand": "풀무원",
+      "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3954",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "seven-eleven-061235": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-090329": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-100431": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-104275": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-105871": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-106219": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-108594": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-111272": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-112581": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-113184": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-114403": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-117105": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "seven-eleven-119073": {
+      "brand": "세븐일레븐",
+      "sourceUrl": "https://www.7-eleven.co.kr/product/7prodList.asp",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "baskinrobbins-1165": {
+      "brand": "배스킨라빈스",
+      "sourceUrl": "https://www.baskinrobbins.co.kr/menu/fom.php",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "not_provided"
+    },
+    "baskinrobbins-1166": {
+      "brand": "배스킨라빈스",
+      "sourceUrl": "https://www.baskinrobbins.co.kr/menu/fom.php",
+      "checkedAt": "2026-10-16T00:12:06.122Z",
+      "confirmed": true,
+      "robots": "not_provided"
+    },
+    "pulmuone-3936": {
+      "brand": "풀무원",
+      "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3936",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "orion-1423": {
+      "brand": "오리온",
+      "sourceUrl": "https://www.orionworld.com/board/view/87?boardno=1423",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "pulmuone-3925": {
+      "brand": "풀무원",
+      "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3925",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "maeil-8": {
+      "brand": "매일유업",
+      "sourceUrl": "https://www.maeil.com/news/press_view.jsp?idx=8",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "samyang-1361": {
+      "brand": "삼양식품",
+      "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1361",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "pulmuone-3921": {
+      "brand": "풀무원",
+      "sourceUrl": "https://news.pulmuone.co.kr/pulmuone/newsroom/viewNewsroom.do?menu=dataroom&id=3921",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "binggrae-359": {
+      "brand": "빙그레",
+      "sourceUrl": "https://www.bing.co.kr/news/news_announced_view?anno_idx=359",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "orion-1420": {
+      "brand": "오리온",
+      "sourceUrl": "https://www.orionworld.com/board/view/87?boardno=1420",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "maeil-7": {
+      "brand": "매일유업",
+      "sourceUrl": "https://www.maeil.com/news/press_view.jsp?idx=7",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "orion-1413": {
+      "brand": "오리온",
+      "sourceUrl": "https://www.orionworld.com/board/view/87?boardno=1413",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "maeil-3": {
+      "brand": "매일유업",
+      "sourceUrl": "https://www.maeil.com/news/press_view.jsp?idx=3",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "samyang-1349": {
+      "brand": "삼양식품",
+      "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1349",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "samyang-1337": {
+      "brand": "삼양식품",
+      "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1337",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "samyang-1329": {
+      "brand": "삼양식품",
+      "sourceUrl": "https://samyangfoods.com/kor/publicity/press/view.do?seq=1329",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "announcement_only"
+    },
+    "coffee-starbucks-af4398f7de51": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002000",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-hollys-8fff4b37f692": {
+      "brand": "할리스",
+      "sourceUrl": "https://www.hollys.co.kr/menu/md.do",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "no_new_mark"
+    },
+    "coffee-hollys-5ef5f9b269d5": {
+      "brand": "할리스",
+      "sourceUrl": "https://www.hollys.co.kr/menu/md.do",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "no_new_mark"
+    },
+    "coffee-starbucks-8b0bcca294ec": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005769",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-ef8262b9fb1a": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005698",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-843346cc1985": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005768",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-63c209bd054a": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005663",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-23d9bf562811": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005697",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-3091f2a07200": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005646",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-5429e58cd232": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005647",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-paik-94923f032bb5": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-paik-2e6e498f9c4c": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-paik-520494258baf": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-paik-7cec31529446": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-paik-236f4bd2366a": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-paik-d38815c3bcd4": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-paik-517a4736b1de": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-paik-bd4cb585b838": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-paik-0eee9bb9e48b": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-paik-c49454fe6a04": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-paik-022878c71fe5": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-paik-60f728e154de": {
+      "brand": "빽다방",
+      "sourceUrl": "https://paikdabang.com/menu/menu_new/",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-364782fe4cbd": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-f4e637ab6232": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-b9458a6554ee": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-77c3ebb081ab": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-f755fb6239ee": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-92c333502d71": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-4dcc41343d1f": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-94aeaf1bf417": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-81020d913be7": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-6b68b5044d78": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-6d61f6558421": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-d53205696dab": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-bbcc5eb47b5f": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-7b09a8810aa7": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-3a85273d7497": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-495538f9d1f2": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-ediya-ac17a396090e": {
+      "brand": "이디야커피",
+      "sourceUrl": "https://www.ediya.com/contents/drink.html",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": true,
+      "robots": "allowed"
+    },
+    "coffee-starbucks-e511fb6d31aa": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=106509",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-819181025d97": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=110621",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-8715d931ccc4": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=168007",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-22d5191ac501": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=168010",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-d664a1bee098": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=168016",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-52faaf48cb70": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=168066",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-eef21cad1d74": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=17",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-5557efe04e95": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=18",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-6013b5bce281": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=2",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-63b650cf49b4": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=400400000091",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-506663e0fade": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=400400000094",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-f1c15a83eedd": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=5210008055",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-ee9b35c8a4df": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=5210008070",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-349b2386e534": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=72",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-98d2f9395fd6": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002088",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-714d30cddc54": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002090",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-06f5bb4d00d3": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002259",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-82e210ca7566": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002262",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-330372da100d": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002403",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-b803c52c9293": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002760",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-5f6379148edf": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002956",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-b20be4526f32": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000002959",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-58e0f587322a": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000005168",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-74ed65949c81": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000005304",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-2f0b1f16b5b3": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000005307",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-843be235de54": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000005377",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-c456581c1787": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006054",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-c31a4570f4c3": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006164",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-04e243940b34": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006165",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-ee2ac0c38252": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006172",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-0078a8ae3a01": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006235",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-a25fe9574f0b": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006238",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-0e38dbd89e48": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006303",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-90cc7e35325c": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006304",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-050a746c1347": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006305",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-4e1f7e72804c": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006412",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-21c3850f2333": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006415",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-d69b4bfb2aa5": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006466",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-d1710ef1594a": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006575",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-bf1e4f0f20ef": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006577",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-f86f48accfb6": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006941",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-6e8f498b576a": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006945",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-14c7e0934520": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006948",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-b19430489b7c": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006963",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-4b4bbf95b82f": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006976",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-a5cb8243327a": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006980",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-74cdf04f30b3": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000006981",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-88fbedcdae92": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007152",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-092162dad706": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007155",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-f30819bbf8ce": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007158",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-347fc9d6d187": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007161",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-8246e55645c4": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007164",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-c99577230d7b": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007167",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-5ae1fdd02f25": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007170",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-3d4a41afb20f": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007173",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-9a640bb2bb99": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007178",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-bad4be40546b": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007181",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-95948c614087": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/drink_view.do?product_cd=9200000007184",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-1e7eded43242": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=5110006070",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-1d1cab600628": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=5110007181",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-f220f8036e8c": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=5110009171",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-dd7f58a3ddcf": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000001361",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-753edfe8b41c": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000001521",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-abf3e49a3af1": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000001610",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-788916cba279": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000001924",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-0be7b4c9dde1": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002065",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-5c9b358c6ad0": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002489",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-54c546bdfd56": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000002900",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-12fbb6b1bf23": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004987",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-0f6d042537e1": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000003871",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-eff14076ef97": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004008",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-85e27f2a0938": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004028",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-59cec3390a70": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004097",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-37e8cd08760e": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004100",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-3575c4106722": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004414",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-c52bc3f2a583": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004421",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-1367ba4757b3": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004422",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-f5e5ac07c29b": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004989",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-7dad8c211972": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004506",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-c7878cf4ed77": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004517",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-1c6e6eff6709": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004521",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-45b4108a536f": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004784",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-2f53e1a4d378": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004823",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-e4514c88f1ee": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004833",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-36306cf2b9dc": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004858",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-304a685e4215": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004913",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-dd5c451ca1c7": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004914",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-a7d5053cc31d": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004916",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-a24a74278ad4": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004944",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-2aa636618ca0": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004953",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-4866aacb3c29": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004954",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-7e4eb1882c9b": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004963",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-890fe5effd97": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000004964",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-57fd3a9cb075": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005072",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-353366e26e6a": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005073",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-5a7411122a45": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005088",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-4e588a539667": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005157",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-661ecaf66ac4": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005233",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-9858874a41df": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005291",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-3d6a29fe96ce": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005349",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-44a81d574b2a": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005350",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-b2d30adf49a8": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005372",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-d973bbf629bc": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005404",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-e19d2d3ebb0e": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005446",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-d9d2556f7670": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005447",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-083525f46210": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005465",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-3e919e8bb928": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005472",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-c606453f6a12": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005533",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-3ea29493fb8d": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005546",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-e1f62056205a": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005547",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-1d6c42663fc9": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005559",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-27f9ca148701": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005560",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-8fafe0538c38": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005562",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-30955b5964e0": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005567",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-cfb1f0461576": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005594",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-1e7e8b15bc70": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005607",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-881695bf8cb8": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005608",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    },
+    "coffee-starbucks-7b793a551619": {
+      "brand": "스타벅스",
+      "sourceUrl": "https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000005609",
+      "checkedAt": "2026-10-16T00:11:51.419Z",
+      "confirmed": false,
+      "robots": "allowed",
+      "newCheckReason": "dynamic_page"
+    }
+  }
+}

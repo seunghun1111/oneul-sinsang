@@ -1,4 +1,5 @@
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
+import type {Product} from "../../src/types/product.ts";
 
 export type ConvenienceCandidate = {
   slug: string;
@@ -16,6 +17,7 @@ export type ConvenienceCandidate = {
   sourceUrl: string;
   sourceType: "official_site";
   imageUrl: string | null;
+  reviewEvidence?: Product["reviewEvidence"];
 };
 
 function clean(value: string) {
@@ -23,6 +25,7 @@ function clean(value: string) {
 }
 
 export function extractSevenElevenNewProducts(html: string, checkedAt: string): ConvenienceCandidate[] {
+  html=html.replace(/<!--[\s\S]*?-->/g, "");
   const products: ConvenienceCandidate[] = [];
   const items = html.split(/<ul class=["']tag_list_01["']>/i).slice(1);
   for (const item of items) {
@@ -38,6 +41,7 @@ export function extractSevenElevenNewProducts(html: string, checkedAt: string): 
       releaseDate: null, announcedDate: checkedAt.slice(0, 10),
       description: "세븐일레븐 공식 PB상품/신상품 목록의 신상품 탭에서 확인된 상품",
       sourceUrl: "https://www.7-eleven.co.kr/product/7prodList.asp", sourceType: "official_site",
+      reviewEvidence:{sourceUrl:"https://www.7-eleven.co.kr/product/7prodList.asp",checkedAt,robots:"not_provided",explicitNew:true},
       imageUrl: rawImage ? new URL(rawImage, "https://www.7-eleven.co.kr").href : null,
     });
   }

@@ -52,6 +52,13 @@ jobs:
       - run: npm test
       - run: npm run lint
       - run: env GITHUB_ACTIONS=true npm run build
+      - name: Reject stale collection results before publishing
+        run: |
+          remote_head=$(git ls-remote origin refs/heads/main | cut -f1)
+          if [ "$remote_head" != "$GITHUB_SHA" ]; then
+            echo "::error::main changed during collection. Existing data is preserved; rerun on the latest main."
+            exit 1
+          fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
@@ -72,6 +79,24 @@ jobs:
           git add src/data/products.json src/data/coffee-products-auto.json src/data/coffee-image-status.json src/data/brand-collection-status.json src/data/coffee-collection-status.json src/data/convenience-collection-status.json src/data/foodservice-collection-status.json src/data/press-collection-status.json src/data/cu-collection-status.json src/data/icecream-collection-status.json src/data/auto-review.json src/data/review-queue.json src/data/review-notification-state.json src/data/review-decisions.json src/data/new-history.json src/data/collection-health.json src/data/collection-policy-status.json
           git commit -m "chore: update official product data"
           git push
+      - name: Preserve collection diagnostics on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: collection-diagnostics-${{ github.run_id }}
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            src/data/*-collection-status.json
+            src/data/collection-health.json
+            src/data/collection-policy-status.json
+            src/data/coffee-image-status.json
+      - name: Notify failures occurring after the regular digest
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COLLECTION_FAILED: "true"
+        run: npm run review:notify -- --send
 
   deploy:
     environment:

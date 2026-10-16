@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { reviewReason, type ReviewProduct } from "../../lib/review/catalog";
 import {CollectionHealthPanel} from "./collection-health-panel";
 import type {CollectionHealth} from "../../lib/review/collection-health";
+import {DiscoveryPanel} from "./discovery-panel";
 const categories: Record<string, string> = { convenience:"편의점", cafe:"카페", burger:"햄버거", pizza:"피자", chicken:"치킨", ramen:"라면", meal:"간편식", snack:"과자", drink:"음료", dessert:"디저트", icecream:"아이스크림", etc:"기타" };
 const statuses: Record<string,string> = { pending:"검수 대기", approved:"승인", rejected:"제외" };
 function decisionUrl(product: ReviewProduct, approve: boolean) {
@@ -89,6 +90,7 @@ export default function ReviewInbox() {
     {!loading && !error && filtered.length===0 && <p className="review-empty">선택한 조건에 해당하는 상품이 없습니다.</p>}
     <section aria-label="검수 상품 목록" className="review-admin-list">{visible.map(p=><article key={p.id}>
       <div><label className="review-select"><input type="checkbox" checked={selected.includes(p.id)} disabled={!selected.includes(p.id) && selected.length>=50} onChange={()=>toggleSelection(p.id)}/>{p.name} 선택</label><span>{categories[p.category] || p.category}{p.subCategory ? " · "+p.subCategory : ""}</span><b className={"review-badge "+p.reviewStatus}>{statuses[p.reviewStatus || "approved"]} · {p.decisionSource==="manual"?"관리자":p.decisionSource==="automatic"?"자동 판정":"기존 판정"}</b><h2>{p.name}</h2><small>{p.detectionKind==="initial"?"초기 수집":p.detectionKind==="newly_detected"?"새로 확인된 NEW":"이전 수집 기록"}</small><strong>{p.brand}</strong><p>{reviewReason(p)}</p><small>최초 확인 {p.firstDetectedAt?.slice(0,10)} · 최근 확인 {p.lastCheckedAt?.slice(0,10)}{p.verifiedDate ? " · 검증된 출시/발표 "+p.verifiedDate : p.releaseDate ? " · 기존 기록일(미검증) "+p.releaseDate : ""}{p.automaticCheckedAt ? " · 자동 판정 "+p.automaticCheckedAt.slice(0,10) : ""}{p.reviewedAt ? " · 검수 "+p.reviewedAt.slice(0,10) : ""}</small></div>
+      <DiscoveryPanel product={p}/>
       <nav aria-label={p.name+" 검수"}><a href={p.sourceUrl} target="_blank" rel="noopener noreferrer">공식 출처 ↗</a>{p.reviewStatus!=="approved" && <a className="approve" href={decisionUrl(p,true)} target="_blank" rel="noopener noreferrer">승인 요청</a>}{p.reviewStatus!=="rejected" && <a href={decisionUrl(p,false)} target="_blank" rel="noopener noreferrer">제외 요청</a>}</nav>
     </article>)}</section>
     {visible.length<filtered.length && <button onClick={()=>setPage(page+1)}>더 보기 ({visible.length}/{filtered.length})</button>}

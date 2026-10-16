@@ -33,6 +33,7 @@ export interface Product {
   reviewStatus?: "pending" | "approved" | "rejected";
   newStatus?: "active" | "removed";
   detectionKind?: "initial" | "newly_detected";
+  discoveryReferences?: import("../../chatgpt-site/lib/review/discovery-evidence").DiscoveryReference[];
   reviewedAt?: string;
   reviewEvidence?: {
     sourceUrl: string;

@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import {createRequire} from "node:module";
+import {fileURLToPath} from "node:url";
+const require=createRequire(import.meta.url);
+const {build}=require("esbuild");
+const bundle=await build({stdin:{contents:`import React from "react";import{renderToStaticMarkup}from"react-dom/server";import{DiscoveryPanel}from"./app/review/discovery-panel";export const render=product=>renderToStaticMarkup(React.createElement(DiscoveryPanel,{product}));`,resolveDir:fileURLToPath(new URL("..",import.meta.url)),loader:"tsx"},bundle:true,format:"cjs",platform:"node",write:false,jsx:"automatic",logLevel:"silent"});
+const compiled={exports:{}};
+new Function("module","exports","require",bundle.outputFiles[0].text)(compiled,compiled.exports,require);
+const html=compiled.exports.render({brand:"브랜드",name:"상품 & 신상",category:"cafe",firstDetectedAt:"2026-10-16",sourceUrl:"https://example.com",reviewEvidence:{explicitNew:true}});
+for(const value of ["공식 NEW 확인","판매 여부 미확인","최초 발견일","출시 소식 검색","판매·주문 검색","기프티콘","승인 근거로 자동 저장되지 않습니다"])assert.ok(html.includes(value),value);
+assert.ok(!html.includes("판매 페이지 확인"));
+assert.ok(html.includes('rel="noopener noreferrer"'));
+console.log("발견·판매 근거 패널 렌더 검증 통과");

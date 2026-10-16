@@ -4,6 +4,7 @@ import { Header } from "@/components/header";
 import { getCategoryGroupForCategory } from "@/lib/category-groups";
 import { categoryMeta, typeLabel } from "@/lib/product-meta";
 import { getProduct, products } from "@/lib/products";
+import {discoveryEvidence} from "../../../../chatgpt-site/lib/review/discovery-evidence";
 
 export function generateStaticParams() { return products.map(({ id }) => ({ id })); }
 
@@ -13,10 +14,12 @@ export default async function ProductDetailPage(props: PageProps<"/products/[id]
   if (!product) notFound();
   const meta = categoryMeta[product.category];
   const group = getCategoryGroupForCategory(product.category);
+  const evidence=discoveryEvidence(product);
   return <><Header /><main className="detail-shell"><Link className="back-link" href={group ? `/categories/${group.slug}` : "/"}>← {group?.label ?? "신상 목록"}</Link>
     <section className="detail-card"><div className="detail-visual" style={{ background: meta.color }}>{product.imageUrl ? <img src={product.imageUrl} alt={product.name} /> : <span aria-hidden="true">{meta.emoji}</span>}<span className={`badge badge-${product.productType}`}>{typeLabel[product.productType]}</span></div>
       <div className="detail-copy"><p className="eyebrow">{product.brand} · {meta.label}</p><h1>{product.name}</h1><p className="detail-description">{product.description}</p>
-        <dl className="detail-list">{product.retailer && <div><dt>판매처</dt><dd>{product.retailer}</dd></div>}{product.brand === "CU" ? <div><dt>최초 확인일</dt><dd>{new Date(product.firstDetectedAt).toLocaleDateString("ko-KR", { timeZone: "Asia/Seoul" })}</dd></div> : product.releaseDate && <div><dt>기존 기록일 (출시일과 다를 수 있음)</dt><dd>{product.releaseDate}</dd></div>}<div><dt>확인 근거</dt><dd>{product.sourceType === "press_release" ? "공식 신제품 발표" : "공식 메뉴·상품 목록"}</dd></div><div><dt>수집 상태</dt><dd>공식 NEW 확인 (매장 재고 별도)</dd></div>{product.availabilityCheckedAt && <div><dt>목록 확인일</dt><dd>{new Date(product.availabilityCheckedAt).toLocaleDateString("ko-KR", { timeZone: "Asia/Seoul" })}</dd></div>}<div><dt>상품 유형</dt><dd>{typeLabel[product.productType]}</dd></div></dl>
+        <dl className="detail-list"><div><dt>{evidence.dateLabel}</dt><dd>{evidence.date||"미확인"}</dd></div><div><dt>신상 근거</dt><dd>{evidence.newLabel}</dd></div><div><dt>판매 근거</dt><dd>{evidence.saleLabel}</dd></div><div><dt>최근 목록 확인일</dt><dd>{product.lastCheckedAt.slice(0,10)}</dd></div><div><dt>상품 유형</dt><dd>{typeLabel[product.productType]}</dd></div></dl>
+        <p>최초 발견일은 출시일이 아닙니다. 검색·판매 링크 노출만으로 신상이나 매장 재고를 확정하지 않습니다.</p>
         <a className="source-button" href={product.sourceUrl} target="_blank" rel="noopener noreferrer">공식 출처 보기</a>
       </div></section>
   </main></>;

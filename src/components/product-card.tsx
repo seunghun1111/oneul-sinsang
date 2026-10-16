@@ -1,18 +1,19 @@
 import Link from "next/link";
 import { categoryMeta, typeLabel } from "@/lib/product-meta";
 import type { Product } from "@/types/product";
+import {discoveryEvidence} from "../../chatgpt-site/lib/review/discovery-evidence";
 
 export function ProductCard({ product }: { product: Product }) {
   const meta = categoryMeta[product.category];
-  const saleCheckedAt = product.availabilityCheckedAt ?? product.lastCheckedAt;
+  const evidence=discoveryEvidence(product);
   return <article className="product-card">
     <Link href={`/products/${product.id}`} className="product-image" style={{ background: meta.color }}>
       {product.imageUrl ? <img src={product.imageUrl} alt={product.name} loading="lazy" /> : <span aria-hidden="true">{meta.emoji}</span>}<span className={`badge badge-${product.productType}`}>{typeLabel[product.productType]}</span>
     </Link>
     <div className="product-content"><div className="product-kicker"><span>{product.brand}</span><span>·</span><span>{product.subCategory ?? meta.label}</span></div>
       <Link href={`/products/${product.id}`}><h2>{product.name}</h2></Link><small>{product.detectionKind==="initial"?"초기 수집":"새로 확인된 NEW"}</small><p className="product-description">{product.description}</p><p className="product-evidence">{product.sourceType === "press_release" ? "공식 신제품 발표 확인" : "공식 메뉴·상품 목록 확인"}</p>
-      <div className="product-commerce"><strong>공식 NEW 확인</strong><span>{product.retailer ? `판매처 ${product.retailer}` : "공식 출처 기준"}</span></div>
-      <div className="product-footer"><span>NEW 확인</span><time dateTime={saleCheckedAt}>{formatDate(saleCheckedAt)}</time></div>
+      <div className="product-commerce"><strong>{evidence.newLabel}</strong><span>{evidence.saleLabel}</span></div>
+      <div className="product-footer"><span>{evidence.dateLabel}</span><time dateTime={evidence.date}>{formatDate(evidence.date)}</time></div>
     </div>
   </article>;
 }

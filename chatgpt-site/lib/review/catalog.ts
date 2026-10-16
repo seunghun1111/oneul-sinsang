@@ -5,6 +5,9 @@ export type ReviewProduct = {
   decisionSource?: "manual" | "automatic" | "legacy";
   automaticReason?: string; automaticCheckedAt?: string; verifiedDate?: string;
   detectionKind?: "initial" | "newly_detected";
+  sourceType?:string;
+  reviewEvidence?:import("./discovery-evidence").DiscoveryItem["reviewEvidence"];
+  discoveryReferences?:import("./discovery-evidence").DiscoveryReference[];
 };
 export type AutomaticReview = { products:Record<string,{decision:"approved"|"pending"|"rejected";reason:string;checkedAt:string;verifiedDate?:string}> };
 export type ReviewDecision = { decision: "approved" | "rejected"; reviewedAt: string };

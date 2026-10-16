@@ -1,5 +1,6 @@
 import type { Product } from "../../src/types/product.ts";
 import {coffeeBrandSources} from "../../src/data/coffee-sources.ts";
+import {normalizeProductName} from "../../src/lib/normalize-product-name.ts";
 
 // Explicit brand/host pairs, never learned from incoming product data.
 const officialHosts: Record<string, string[]> = {
@@ -19,9 +20,10 @@ export const reasons: Record<string,string> = {
   blocked:"수집 정책에서 제한한 경로입니다",new:"개별 NEW 또는 공식 신제품 발표 근거가 없습니다",
   date:"검증된 공식 출시·발표일이 없습니다 (발견일·수정일은 대체 불가)",future:"공식 출시·발표일이 미래입니다",
   expired:"공식 출시·발표일 기준 30일이 지났습니다",sale:"현재 판매 근거가 없거나 오래되었습니다",
-  ended:"공식 NEW 표시 종료 (판매 종료를 의미하지 않습니다)",passed:"공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
+  evidence_invalid:"공식 발표의 상품명·날짜·출처 근거가 일치하지 않습니다",ended:"공식 NEW 표시 종료 (판매 종료를 의미하지 않습니다)",passed:"공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다",
 };
-export type AutoVerdict = { decision:"approved"|"pending"|"rejected"; codes:string[]; reason:string; checkedAt:string; verifiedDate?:string };
+export type ReviewAction="publish"|"observe"|"archive"|"scheduled"|"retry"|"manual"|"exclude";
+export type AutoVerdict = { decision:"approved"|"pending"|"rejected"; codes:string[]; reason:string; checkedAt:string; verifiedDate?:string;action?:ReviewAction;rule?:string };
 export type AutoReport = { version:1; checkedAt:string; products:Record<string,AutoVerdict> };
 const newCheckReasons = {
   dynamic_page:"공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다",
@@ -29,6 +31,23 @@ const newCheckReasons = {
   announcement_only:"공식 출시 발표는 확인했으나 현재 NEW 표시를 확인하지 못했습니다. 과거 출시 발표만으로 현재 신상품을 자동 승인하지 않습니다",
   source_unavailable:"공식 출처 또는 수집 정책을 재확인하지 못해 기존 검수 대기를 유지합니다",
 };
+const announcementPaths:Record<string,string>={"풀무원":"/pulmuone/newsroom/viewNewsroom.do","오리온":"/board/view/87","매일유업":"/news/press_view.jsp","삼양식품":"/kor/publicity/press/view.do","빙그레":"/news/news_announced_view"};
+export function announcementState(p:Product,now:Date):"recent"|"old"|"future"|"invalid"|"stale"|"none" {
+  const e=p.reviewEvidence;
+  if(!e?.officialLaunchAnnouncement)return "none";
+  let path="";try{path=new URL(p.sourceUrl).pathname;}catch{return "invalid";}
+  if(p.sourceType!=="press_release"||!announcementPaths[p.brand]||path!==announcementPaths[p.brand]
+    ||e.sourceUrl!==p.sourceUrl||e.dateKind!=="announcement"||!e.announcementProductName||normalizeProductName(e.announcementProductName)!==normalizeProductName(p.name))return "invalid";
+  const day=e.officialDate??"";
+  const date=Date.parse(day+"T00:00:00+09:00");
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(day)||!Number.isFinite(date)||new Date(date).toLocaleDateString("en-CA",{timeZone:"Asia/Seoul"})!==day)return "invalid";
+  const today=now.toLocaleDateString("en-CA",{timeZone:"Asia/Seoul"});
+  const checked=Date.parse(e.checkedAt);
+  if(!Number.isFinite(checked)||checked>now.getTime())return "invalid";
+  if(now.getTime()-checked>36*3600000)return "stale";
+  if(day>today)return "future";
+  return Date.parse(today+"T00:00:00+09:00")-date<=30*86400000?"recent":"old";
+}
 export function evaluateProducts(products:Product[], now=new Date()): AutoReport {
   const counts=new Map<string,number>();
   products.forEach(p=>counts.set(p.id,(counts.get(p.id)??0)+1));
@@ -45,11 +64,20 @@ export function evaluateProducts(products:Product[], now=new Date()): AutoReport
     const kyochonListing = p.brand==="교촌치킨"
       && p.sourceUrl==="https://www.kyochon.com/menu/chicken.asp?code=21"
       && e?.sourceUrl===p.sourceUrl && e.officialNewListing==="kyochon_code_21";
-    if(!e?.explicitNew && !kyochonListing) codes.push("new");
+    const announcement=official?announcementState(p,now):"none";
+    if(announcement==="invalid")codes.push("evidence_invalid");
+    if(!e?.explicitNew && !kyochonListing && announcement!=="recent") codes.push("new");
     if(!p.isActive || p.newStatus==="removed") codes.push("ended");
     const rejected=codes.some(code=>["blocked","ended"].includes(code));
     const date=e?.officialDate;
     verdicts[p.id]={decision:rejected?"rejected":codes.length?"pending":"approved",codes:codes.length?codes:["passed"],reason:!codes.length && kyochonListing && !e?.explicitNew ? "교촌치킨 공식 신메뉴 탭(code=21) 등록 확인으로 자동 승인했습니다. 이미지 NEW 문자 인식·출시일·매장 재고 확인과는 별개입니다" : (codes.length?codes:["passed"]).map(code=>code==="new" && e?.newCheckReason ? newCheckReasons[e.newCheckReason]??reasons.new : reasons[code]).join(" · "),checkedAt:now.toISOString(),...(date?{verifiedDate:date}:{})};
+    const verdict=verdicts[p.id];
+    verdict.action=rejected?"exclude":codes.some(c=>["identity","source","robots","evidence_invalid"].includes(c))?"manual":!codes.length?"publish":announcement==="future"?"scheduled":announcement==="old"?"archive":announcement==="stale"||e?.newCheckReason==="source_unavailable"?"retry":"observe";
+    verdict.rule=verdict.action==="publish"?(e?.explicitNew?"official_new":kyochonListing?"official_new_tab":"recent_official_announcement"):verdict.action;
+    if(verdict.action==="publish"&&announcement==="recent"&&!e?.explicitNew&&!kyochonListing)verdict.reason="상품명이 일치하는 최근 30일 공식 출시 발표로 자동 승인했습니다. 발표일은 출시일·판매 중 확인과 별개입니다";
+    if(verdict.action==="scheduled")verdict.reason="공식 발표일이 미래이므로 비공개 예약 후 날짜 도래 시 재판정합니다";
+    if(verdict.action==="archive")verdict.reason="30일 이전 공식 발표이며 현재 NEW 근거가 없어 비공개 기록으로 보관합니다. 수동 승인은 필요하지 않습니다";
+    if(verdict.action==="observe")verdict.reason+=" · 비공개 관찰 중 (수동 승인 불필요)";
   }
   return {version:1,checkedAt:now.toISOString(),products:verdicts};
 }

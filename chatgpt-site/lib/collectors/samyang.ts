@@ -1,4 +1,5 @@
 import { extractCommerce } from "./commerce.ts";
+import {officialAnnouncementEvidence} from "./press-evidence.ts";
 
 const ORIGIN = "https://samyangfoods.com";
 const LIST_URL = `${ORIGIN}/kor/publicity/press/list.do?searchCateCd=035002&pageUnit=20`;
@@ -18,6 +19,7 @@ export type SamyangProduct = {
   announcedDate: string;
   description: string;
   sourceUrl: string;
+  reviewEvidence: ReturnType<typeof officialAnnouncementEvidence>;
   imageUrl: string | null;
   emoji: "🍜" | "🍝" | "🍽️" | "🎁";
 };
@@ -90,6 +92,7 @@ export function parseSamyangDetail(html: string, article: Article): SamyangProdu
     announcedDate: article.date,
     description: `공식 발표 ${article.date} · ${title}`,
     sourceUrl: article.url,
+    reviewEvidence:officialAnnouncementEvidence(name,article.url,article.date),
     imageUrl,
     emoji: /선물세트/.test(name) ? "🎁" : category === "ramen" ? "🍜" : category === "meal" ? "🍝" : "🍽️",
   };

@@ -8,6 +8,8 @@ const read=async(name:string)=>JSON.parse(await readFile(new URL(name,base),"utf
 const report=await read("auto-review.json");
 const state=await read("review-notification-state.json");
 const decisions=await read("review-decisions.json");
+let queue;
+try {queue=await read("review-queue.json");}catch(error){if((error as NodeJS.ErrnoException).code!=="ENOENT")throw error;}
 const brand=await read("brand-collection-status.json");
 const failures=brandCollectionFailures(brand,"추가 브랜드");
 failures.push(...coffeeCollectionFailures(await read("coffee-collection-status.json")));
@@ -17,7 +19,7 @@ failures.push(...brandCollectionFailures(await read("cu-collection-status.json")
 failures.push(...brandCollectionFailures(await read("icecream-collection-status.json"),"아이스크림"));
 failures.push(...pressCollectionFailures(await read("press-collection-status.json")));
 if(process.env.COLLECTION_FAILED==="true") failures.push("일일 수집·검수 작업 실패 (Actions 실행 기록 확인)");
-const alerts=reviewAlerts(report,decisions,state.sent,failures);
+const alerts=reviewAlerts(report,decisions,state.sent,failures,queue);
 if(!alerts.length) {console.log("새 확인 필요 항목 없음");process.exit(0);}
 // Local execution is always a dry run unless --send is explicitly supplied.
 if(!process.argv.includes("--send")) {console.log(`새 확인 필요 항목 ${alerts.length}건 (알림 전송 안 함)`);process.exit(0);}

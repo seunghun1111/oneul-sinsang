@@ -43,6 +43,7 @@ export interface Product {
     officialNewListing?: "kyochon_code_21";
     newCheckReason?: "dynamic_page" | "no_new_mark" | "announcement_only" | "source_unavailable";
     officialLaunchAnnouncement?: boolean;
+    announcementProductName?: string;
     officialDate?: string;
     dateKind?: "launch" | "announcement";
     saleConfirmed?: boolean;

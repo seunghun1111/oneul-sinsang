@@ -1,4 +1,5 @@
 import { extractCommerce } from "./commerce.ts";
+import {officialAnnouncementEvidence} from "./press-evidence.ts";
 
 const ORIGIN = "https://www.bing.co.kr";
 const LIST_URL = `${ORIGIN}/news/news_announced`;
@@ -18,6 +19,7 @@ export type CollectedProduct = {
   announcedDate: string;
   description: string;
   sourceUrl: string;
+  reviewEvidence: ReturnType<typeof officialAnnouncementEvidence>;
   imageUrl: string | null;
   emoji: string;
 };
@@ -97,6 +99,7 @@ export function parseBinggraeDetail(html: string, article: Article): CollectedPr
     announcedDate: article.date,
     description: `공식 발표 ${article.date} · ${description}`,
     sourceUrl: article.url,
+    reviewEvidence:officialAnnouncementEvidence(name,article.url,article.date),
     imageUrl,
     emoji: category === "icecream" ? "🍦" : category === "drink" ? "🥤" : "🍪",
   };

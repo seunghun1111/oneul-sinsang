@@ -19,3 +19,10 @@ test("자동 판정 사유를 노출하고 관리자 결정이 우선한다",()=
  const manual=mergeReviewCatalog([p],[],{test:{decision:"approved",reviewedAt:"2026-10-15"}},auto)[0];
  assert.equal(manual.reviewStatus,"approved");assert.equal(manual.decisionSource,"manual");assert.match(reviewReason(manual),/관리자/);
 });
+test("관리자 예외만 manual로 분리하고 기존 NEW 미확인은 관찰함에 둔다",()=>{
+ const p={id:"test",name:"상품",category:"cafe",brand:"브랜드",sourceUrl:"https://example.com",firstDetectedAt:"2026-10-15",lastCheckedAt:"2026-10-15"};
+ for(const [codes,expected] of [[["new"],"observe"],[["source"],"manual"],[["identity"],"manual"]]){
+  assert.equal(mergeReviewCatalog([p],[],{},{products:{test:{decision:"pending",reason:"사유",checkedAt:"2026-10-16",codes}}})[0].automationAction,expected);
+ }
+ assert.equal(mergeReviewCatalog([p],[],{},{products:{test:{decision:"pending",reason:"재시도 초과",checkedAt:"2026-10-16",action:"manual"}}})[0].automationAction,"manual");
+});

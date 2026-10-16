@@ -1,4 +1,5 @@
 import { extractCommerce } from "./commerce.ts";
+import {officialAnnouncementEvidence} from "./press-evidence.ts";
 
 const ORIGIN = "https://news.pulmuone.co.kr";
 const LIST_URL = `${ORIGIN}/pulmuone/newsroom/listDataroom.do`;
@@ -18,6 +19,7 @@ export type PulmuoneProduct = {
   announcedDate: string;
   description: string;
   sourceUrl: string;
+  reviewEvidence: ReturnType<typeof officialAnnouncementEvidence>;
   imageUrl: string | null;
   emoji: "🍱" | "🥤" | "🍪";
 };
@@ -108,6 +110,7 @@ export function parsePulmuoneDetail(html: string, article: Article): PulmuonePro
     announcedDate: article.date,
     description: `공식 발표 ${article.date} · ${description}`,
     sourceUrl: article.url,
+    reviewEvidence:officialAnnouncementEvidence(name,article.url,article.date),
     imageUrl,
     emoji: category === "meal" ? "🍱" : category === "drink" ? "🥤" : "🍪",
   };

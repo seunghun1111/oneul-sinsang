@@ -1,0 +1,12 @@
+import assert from "node:assert/strict";
+import {createRequire} from "node:module";
+import {fileURLToPath} from "node:url";
+const require=createRequire(import.meta.url);
+const {build}=require("esbuild");
+const result=await build({stdin:{contents:`import React from "react";import{renderToStaticMarkup}from"react-dom/server";import ReviewInbox from "./app/review/review-inbox";export const render=()=>renderToStaticMarkup(React.createElement(ReviewInbox));`,resolveDir:fileURLToPath(new URL("..",import.meta.url)),loader:"tsx"},bundle:true,format:"cjs",platform:"node",write:false,jsx:"automatic",logLevel:"silent"});
+const compiled={exports:{}};
+new Function("module","exports","require",result.outputFiles[0].text)(compiled,compiled.exports,require);
+const html=compiled.exports.render();
+assert.match(html,/<option value="manual" selected="">관리자 확인 필요/);
+for(const text of ["비공개 관찰","자동 재시도","날짜 도래 대기","과거 기록 보관","비공개·처리 대기","수동 승인할 필요가 없습니다"])assert.ok(html.includes(text),text);
+console.log("자동 처리 구분 UI 렌더 검증 통과: 관리자 예외 기본값·관찰/예약/재시도 필터");

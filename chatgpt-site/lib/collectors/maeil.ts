@@ -1,4 +1,5 @@
 import { extractCommerce } from "./commerce.ts";
+import {officialAnnouncementEvidence} from "./press-evidence.ts";
 
 const ORIGIN = "https://www.maeil.com";
 const LIST_URL = `${ORIGIN}/news/press.jsp`;
@@ -18,6 +19,7 @@ export type MaeilProduct = {
   announcedDate: string;
   description: string;
   sourceUrl: string;
+  reviewEvidence: ReturnType<typeof officialAnnouncementEvidence>;
   imageUrl: string | null;
   emoji: "🥤" | "🍨";
 };
@@ -94,6 +96,7 @@ export function parseMaeilDetail(html: string, article: Article): MaeilProduct |
     announcedDate: article.date,
     description: `공식 발표 ${article.date} · ${description}`,
     sourceUrl: article.url,
+    reviewEvidence:officialAnnouncementEvidence(name,article.url,article.date),
     imageUrl,
     emoji: category === "drink" ? "🥤" : "🍨",
   };

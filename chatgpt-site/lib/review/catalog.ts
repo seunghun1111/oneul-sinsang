@@ -8,8 +8,9 @@ export type ReviewProduct = {
   sourceType?:string;
   reviewEvidence?:import("./discovery-evidence").DiscoveryItem["reviewEvidence"];
   discoveryReferences?:import("./discovery-evidence").DiscoveryReference[];
+  automationAction?:"publish"|"observe"|"archive"|"scheduled"|"retry"|"manual"|"exclude"|"manual_override";
 };
-export type AutomaticReview = { products:Record<string,{decision:"approved"|"pending"|"rejected";reason:string;checkedAt:string;verifiedDate?:string}> };
+export type AutomaticReview = { products:Record<string,{decision:"approved"|"pending"|"rejected";reason:string;checkedAt:string;verifiedDate?:string;action?:ReviewProduct["automationAction"];codes?:string[]}> };
 export type ReviewDecision = { decision: "approved" | "rejected"; reviewedAt: string };
 export function mergeReviewCatalog(catalog: ReviewProduct[], coffee: ReviewProduct[], decisions: Record<string, ReviewDecision>, automatic?:AutomaticReview) {
   return [...new Map([...catalog, ...coffee].map(product => {
@@ -17,7 +18,8 @@ export function mergeReviewCatalog(catalog: ReviewProduct[], coffee: ReviewProdu
     const auto=automatic?.products[product.id];
     return [product.id, { ...product, reviewStatus: decision?.decision ?? auto?.decision ?? product.reviewStatus ?? "approved", reviewedAt: decision?.reviewedAt ?? product.reviewedAt,
       decisionSource:decision?"manual" as const:auto?"automatic" as const:"legacy" as const,
-      automaticReason:decision?undefined:auto?.reason,automaticCheckedAt:auto?.checkedAt,verifiedDate:auto?.verifiedDate }];
+      automaticReason:decision?undefined:auto?.reason,automaticCheckedAt:auto?.checkedAt,verifiedDate:auto?.verifiedDate,
+      automationAction:decision?"manual_override":auto?.action??(auto?.decision==="approved"?"publish":auto?.decision==="rejected"?"exclude":auto?.codes?.some(code=>["identity","source","robots","evidence_invalid"].includes(code))?"manual":"observe") }];
   })).values()];
 }
 export function reviewReason(product: ReviewProduct) {

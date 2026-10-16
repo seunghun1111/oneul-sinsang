@@ -45,6 +45,8 @@ jobs:
       - name: Summarize collection operations
         if: always()
         run: npm run report:collection
+      - name: Refresh source policy guidance (robots only)
+        run: npm run check:policies
       - name: Evaluate automatic review evidence
         run: npm run review:auto
       - run: npm test
@@ -61,13 +63,13 @@ jobs:
         run: npm run review:notify -- --send
       - name: Commit updated product data
         run: |
-          if git diff --quiet -- src/data/products.json src/data/coffee-products-auto.json src/data/coffee-image-status.json src/data/brand-collection-status.json src/data/coffee-collection-status.json src/data/convenience-collection-status.json src/data/foodservice-collection-status.json src/data/press-collection-status.json src/data/cu-collection-status.json src/data/icecream-collection-status.json src/data/auto-review.json src/data/review-queue.json src/data/review-notification-state.json src/data/review-decisions.json src/data/new-history.json src/data/collection-health.json; then
+          if git diff --quiet -- src/data/products.json src/data/coffee-products-auto.json src/data/coffee-image-status.json src/data/brand-collection-status.json src/data/coffee-collection-status.json src/data/convenience-collection-status.json src/data/foodservice-collection-status.json src/data/press-collection-status.json src/data/cu-collection-status.json src/data/icecream-collection-status.json src/data/auto-review.json src/data/review-queue.json src/data/review-notification-state.json src/data/review-decisions.json src/data/new-history.json src/data/collection-health.json src/data/collection-policy-status.json; then
             echo "No product changes"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/data/products.json src/data/coffee-products-auto.json src/data/coffee-image-status.json src/data/brand-collection-status.json src/data/coffee-collection-status.json src/data/convenience-collection-status.json src/data/foodservice-collection-status.json src/data/press-collection-status.json src/data/cu-collection-status.json src/data/icecream-collection-status.json src/data/auto-review.json src/data/review-queue.json src/data/review-notification-state.json src/data/review-decisions.json src/data/new-history.json src/data/collection-health.json
+          git add src/data/products.json src/data/coffee-products-auto.json src/data/coffee-image-status.json src/data/brand-collection-status.json src/data/coffee-collection-status.json src/data/convenience-collection-status.json src/data/foodservice-collection-status.json src/data/press-collection-status.json src/data/cu-collection-status.json src/data/icecream-collection-status.json src/data/auto-review.json src/data/review-queue.json src/data/review-notification-state.json src/data/review-decisions.json src/data/new-history.json src/data/collection-health.json src/data/collection-policy-status.json
           git commit -m "chore: update official product data"
           git push
 

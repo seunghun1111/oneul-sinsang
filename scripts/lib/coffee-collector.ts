@@ -100,22 +100,8 @@ export function toCoffeeCandidates(source: CoffeeBrandSource, kind: CoffeeSource
   }).filter(candidate => candidate.normalizedName.length >= 2);
 }
 
-export function isRobotsAllowed(robotsText: string, targetUrl: string, userAgent = "OneulSinsang") {
-  const pathname = new URL(targetUrl).pathname;
-  let applies = false;
-  const rules: Array<{ allow:boolean; path:string }> = [];
-  for (const rawLine of robotsText.split(/\r?\n/)) {
-    const line = rawLine.replace(/#.*$/, "").trim();
-    if (!line) continue;
-    const [rawKey, ...rest] = line.split(":");
-    const key = rawKey.toLowerCase();
-    const value = rest.join(":").trim();
-    if (key === "user-agent") applies = value === "*" || userAgent.toLowerCase().includes(value.toLowerCase());
-    else if (applies && (key === "allow" || key === "disallow") && value) rules.push({ allow:key === "allow", path:value });
-  }
-  const matched = rules.filter(rule => pathname.startsWith(rule.path)).toSorted((a,b) => b.path.length - a.path.length)[0];
-  return matched?.allow ?? true;
-}
+export {robotsAllows as isRobotsAllowed} from "./robots-policy.ts";
+import {robotsAllows as isRobotsAllowed} from "./robots-policy.ts";
 
 export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch =collectionFetch) {
   // Retain the exported name for callers; discovery now uses the official UI's NEW JSON field.

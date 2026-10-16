@@ -40,6 +40,13 @@ test("가격 데이터는 공개 목록에 저장하지 않는다", () => {
   assert.ok(coffeeProducts.every(product => product.price == null));
 });
 
+test("엔제리너스는 검증된 롯데이츠 공식 메뉴로 안내하고 자동 수집 보류를 명시한다",()=>{
+ const source=coffeeBrandSources.find(s=>s.id==="angelinus");
+ assert.equal(source.channels[0].url,"https://www.lotteeatz.com/brand/angel");
+ assert.match(source.note,/자동 수집 보류/);
+ assert.ok(source.channels.every(c=>!c.url.includes("www.angelinus.com")));
+});
+
 test("기본 목록에는 최근 판매가 확인된 신상만 포함한다", () => {
   const currentCoffee = coffeeProducts.filter(product => product.availabilityStatus === "on_sale");
   assert.ok(currentCoffee.length > 0);

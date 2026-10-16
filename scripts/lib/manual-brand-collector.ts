@@ -78,24 +78,8 @@ export function extractBrandProducts(source: Source, raw: string, checkedAt: str
   return [...new Map(products.map(p=>[p.slug,p])).values()];
 }
 
-// Match wildcard robots paths against both path and query; explicit Allow wins equal-length ties.
-export function robotsAllows(text: string, url: string) {
-  const target=new URL(url); const path=target.pathname+target.search;
-  const groups: {agents:string[];rules:{allow:boolean;pattern:string}[]}[]=[];
-  let group={agents:[] as string[],rules:[] as {allow:boolean;pattern:string}[]};
-  for(const raw of text.split(/\r?\n/)) {
-    const line=raw.replace(/#.*$/,"").trim(); const index=line.indexOf(":"); if(index<0) continue;
-    const key=line.slice(0,index).trim().toLowerCase(), value=line.slice(index+1).trim();
-    if(key==="user-agent") { if(group.rules.length) {groups.push(group);group={agents:[],rules:[]};} group.agents.push(value.toLowerCase()); }
-    else if((key==="allow"||key==="disallow") && value) group.rules.push({allow:key==="allow",pattern:value});
-  }
-  groups.push(group);
-  const specific=groups.filter(g=>g.agents.some(a=>a!=="*" && UA.toLowerCase().includes(a)));
-  const applicable=specific.length?specific:groups.filter(g=>g.agents.includes("*"));
-  const matched=applicable.flatMap(g=>g.rules).filter(r=>new RegExp("^"+r.pattern.split("*").map(p=>p.replace(/[.+?^\x24{}()|[\]\\]/g,"\\$&")).join(".*").replace(/\\\x24$/,"$")).test(path))
-    .sort((a,b)=>b.pattern.length-a.pattern.length||Number(b.allow)-Number(a.allow));
-  return matched[0]?.allow??true;
-}
+export {robotsAllows} from "./robots-policy.ts";
+import {robotsAllows} from "./robots-policy.ts";
 
 export async function collectAutomatedBrand(source: Source, checkedAt: string, fetcher: typeof fetch=collectionFetch) {
   const init={headers:{"user-agent":UA},signal:AbortSignal.timeout(20000)};

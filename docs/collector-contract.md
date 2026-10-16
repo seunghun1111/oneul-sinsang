@@ -22,7 +22,7 @@
 
 스타벅스 어댑터는 공식 화면과 동일하게 `img_UPLOAD_PATH + file_PATH`를 조합하고 알려진 `image.istarbucks.co.kr/upload/store/skuimg/` 경로만 채택한다. NEW는 `newicon`으로 별도 판별한다.
 
-일일 수집의 공통 저장 계약·이미지 정책·누락 진단을 먼저 통합했다. 후속 작업에서 아래와 같이 기본 HTTP 전송도 통합했다. robots 해석과 HTML 파서는 여전히 브랜드별 조건을 유지한다.
+일일 수집의 공통 저장 계약·이미지 정책·누락 진단, 기본 HTTP 전송을 통합했다. 후속 로컬 구현에서는 robots 확인·해석도 공통 계층에 연결했다(`collection-http.md` 참고). HTML 파서와 브랜드별 NEW 조건은 분리해 유지한다.
 
 ## 이번 검증 결과
 

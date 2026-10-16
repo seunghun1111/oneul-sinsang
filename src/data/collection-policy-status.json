@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-10-16T15:36:19.800Z",
+  "checkedAt": "2026-10-16T15:54:21.561Z",
   "scope": "수집 진입경로 정책 확인만 수행. 상품 요청·수집·검수·알림 없음",
   "brands": 47,
   "totals": {
-    "allowed": 45,
+    "allowed": 42,
+    "failed": 11,
     "blocked": 3,
-    "failed": 9,
-    "not_provided": 7
+    "not_provided": 8
   },
   "results": [
     {
@@ -54,8 +54,8 @@
     {
       "brand": "더벤티",
       "url": "https://www.theventi.co.kr/new2022/menu/all.html",
-      "status": "allowed",
-      "reason": "",
+      "status": "failed",
+      "reason": "정책 형식·본문 검증 실패",
       "policyHttpStatus": 200
     },
     {
@@ -83,15 +83,15 @@
       "brand": "맘스터치",
       "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=new",
       "status": "failed",
-      "reason": "정책 HTTP 302",
-      "policyHttpStatus": 302
+      "reason": "정책 요청 시간 초과",
+      "failureKind": "timeout"
     },
     {
       "brand": "매머드커피",
       "url": "https://mmthcoffee.com/sub/menu/list.html",
-      "status": "failed",
-      "reason": "TLS 인증서 검증 실패",
-      "failureKind": "tls"
+      "status": "not_provided",
+      "reason": "",
+      "policyHttpStatus": 404
     },
     {
       "brand": "매일유업",
@@ -173,9 +173,9 @@
     {
       "brand": "세븐일레븐",
       "url": "https://www.7-eleven.co.kr/product/presentList.asp",
-      "status": "allowed",
-      "reason": "",
-      "policyHttpStatus": 200
+      "status": "failed",
+      "reason": "정책 요청 시간 초과",
+      "failureKind": "timeout"
     },
     {
       "brand": "스타벅스",
@@ -390,9 +390,9 @@
     {
       "brand": "풀무원",
       "url": "https://news.pulmuone.co.kr/pulmuone/newsroom/listDataroom.do",
-      "status": "allowed",
-      "reason": "",
-      "policyHttpStatus": 200
+      "status": "failed",
+      "reason": "정책 요청 시간 초과",
+      "failureKind": "timeout"
     },
     {
       "brand": "피자헛",

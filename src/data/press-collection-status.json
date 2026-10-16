@@ -1,1 +1,35 @@
-{"checkedAt":null,"results":[]}
+{
+  "checkedAt": "2026-10-16T15:53:47.837Z",
+  "results": [
+    {
+      "brand": "빙그레",
+      "status": "success",
+      "newCount": 0,
+      "requestFailures": 0
+    },
+    {
+      "brand": "매일유업",
+      "status": "success",
+      "newCount": 3,
+      "requestFailures": 0
+    },
+    {
+      "brand": "오리온",
+      "status": "success",
+      "newCount": 2,
+      "requestFailures": 0
+    },
+    {
+      "brand": "풀무원",
+      "status": "success",
+      "newCount": 2,
+      "requestFailures": 0
+    },
+    {
+      "brand": "삼양식품",
+      "status": "success",
+      "newCount": 4,
+      "requestFailures": 0
+    }
+  ]
+}

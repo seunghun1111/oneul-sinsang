@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-16T14:23:11.736Z",
+  "checkedAt": "2026-10-16T15:53:04.122Z",
   "results": [
     {
       "brand": "스타벅스",
@@ -7,7 +7,188 @@
       "status": "success",
       "checked": 3,
       "failed": 0,
-      "newCount": 51
+      "newCount": 50
+    },
+    {
+      "brand": "투썸플레이스",
+      "sourceId": "twosome",
+      "status": "failed",
+      "checked": 0,
+      "failed": 1,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z"
+    },
+    {
+      "brand": "이디야커피",
+      "sourceId": "ediya",
+      "status": "success",
+      "checked": 3,
+      "failed": 0,
+      "newCount": 23
+    },
+    {
+      "brand": "메가MGC커피",
+      "sourceId": "mega",
+      "status": "success",
+      "checked": 1,
+      "failed": 0,
+      "newCount": 0
+    },
+    {
+      "brand": "컴포즈커피",
+      "sourceId": "compose",
+      "status": "failed",
+      "checked": 0,
+      "failed": 2,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z"
+    },
+    {
+      "brand": "빽다방",
+      "sourceId": "paik",
+      "status": "success",
+      "checked": 1,
+      "failed": 0,
+      "newCount": 12
+    },
+    {
+      "brand": "우지커피",
+      "sourceId": "oozy",
+      "status": "success",
+      "checked": 1,
+      "failed": 0,
+      "newCount": 0
+    },
+    {
+      "brand": "텐퍼센트커피",
+      "sourceId": "tenpercent",
+      "status": "success",
+      "checked": 1,
+      "failed": 0,
+      "newCount": 0
+    },
+    {
+      "brand": "바나프레소",
+      "sourceId": "banapresso",
+      "status": "success",
+      "checked": 1,
+      "failed": 0,
+      "newCount": 0
+    },
+    {
+      "brand": "더벤티",
+      "sourceId": "theventi",
+      "status": "failed",
+      "checked": 0,
+      "failed": 1,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z"
+    },
+    {
+      "brand": "매머드커피",
+      "sourceId": "mammoth",
+      "status": "success",
+      "checked": 1,
+      "failed": 0,
+      "newCount": 0
+    },
+    {
+      "brand": "아티제",
+      "sourceId": "artisee",
+      "status": "failed",
+      "checked": 0,
+      "failed": 4,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z"
+    },
+    {
+      "brand": "할리스",
+      "sourceId": "hollys",
+      "status": "partial",
+      "checked": 2,
+      "failed": 1,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z",
+      "reasonCode": "unexpected_empty"
+    },
+    {
+      "brand": "커피빈코리아",
+      "sourceId": "coffeebean",
+      "status": "partial",
+      "checked": 1,
+      "failed": 1,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z"
+    },
+    {
+      "brand": "폴 바셋",
+      "sourceId": "paulbassett",
+      "status": "success",
+      "checked": 3,
+      "failed": 0,
+      "newCount": 0
+    },
+    {
+      "brand": "파스쿠찌",
+      "sourceId": "pascucci",
+      "status": "failed",
+      "checked": 0,
+      "failed": 1,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z"
+    },
+    {
+      "brand": "엔제리너스",
+      "sourceId": "angelinus",
+      "status": "failed",
+      "checked": 0,
+      "failed": 1,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z"
+    },
+    {
+      "brand": "탐앤탐스",
+      "sourceId": "tomntoms",
+      "status": "failed",
+      "checked": 0,
+      "failed": 1,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z"
+    },
+    {
+      "brand": "커피베이",
+      "sourceId": "coffeebay",
+      "status": "failed",
+      "checked": 0,
+      "failed": 1,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z"
+    },
+    {
+      "brand": "공차",
+      "sourceId": "gongcha",
+      "status": "failed",
+      "checked": 0,
+      "failed": 2,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z"
+    },
+    {
+      "brand": "블루보틀",
+      "sourceId": "bluebottle",
+      "status": "success",
+      "checked": 2,
+      "failed": 0,
+      "newCount": 0
+    },
+    {
+      "brand": "테라로사",
+      "sourceId": "terarosa",
+      "status": "failed",
+      "checked": 0,
+      "failed": 1,
+      "newCount": 0,
+      "failureSince": "2026-10-16T15:53:04.122Z"
     }
   ]
 }

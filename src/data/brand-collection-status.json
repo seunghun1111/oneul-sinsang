@@ -1,6 +1,5 @@
 {
-  "checkedAt": "2026-10-15T09:45:14.422Z",
-  "scope": "최신 목록 첫 페이지의 명시적 NEW 배지",
+  "checkedAt": "2026-10-16T15:53:29.413Z",
   "results": [
     {
       "brand": "bhc",
@@ -8,7 +7,7 @@
       "status": "success",
       "newCount": 3,
       "robots": "not_provided",
-      "note": "NEW 근거 확인, 개별 출시일 미확인으로 검수 대기"
+      "note": "공식 상품별 NEW 근거 확인 (출시일 미공개는 승인 제한 사유 아님)"
     },
     {
       "brand": "푸라닭",
@@ -16,7 +15,7 @@
       "status": "success",
       "newCount": 4,
       "robots": "checked",
-      "note": "NEW 근거 확인, 개별 출시일 미확인으로 검수 대기"
+      "note": "공식 상품별 NEW 근거 확인 (출시일 미공개는 승인 제한 사유 아님)"
     },
     {
       "brand": "네네치킨",
@@ -24,7 +23,7 @@
       "status": "success",
       "newCount": 6,
       "robots": "checked",
-      "note": "NEW 근거 확인, 개별 출시일 미확인으로 검수 대기"
+      "note": "공식 상품별 NEW 근거 확인 (출시일 미공개는 승인 제한 사유 아님)"
     },
     {
       "brand": "BBQ",
@@ -58,5 +57,6 @@
       "robots": "checked",
       "note": "읽은 최신 목록에서 상품별 NEW 배지가 확인되지 않음 (출시일·이미지 날짜로 추정하지 않음)"
     }
-  ]
+  ],
+  "scope": "최신 목록 첫 페이지의 명시적 NEW 배지"
 }

@@ -4,6 +4,7 @@ import { reviewReason, type ReviewProduct } from "../../lib/review/catalog";
 import {CollectionHealthPanel} from "./collection-health-panel";
 import type {CollectionHealth} from "../../lib/review/collection-health";
 import {DiscoveryPanel} from "./discovery-panel";
+import {categoryScope,filterReviewProducts,subCategoryOptions} from "../../lib/review/filters";
 const categories: Record<string, string> = { convenience:"편의점", cafe:"카페", burger:"햄버거", pizza:"피자", chicken:"치킨", ramen:"라면", meal:"간편식", snack:"과자", drink:"음료", dessert:"디저트", icecream:"아이스크림", etc:"기타" };
 const statuses: Record<string,string> = { pending:"검수 대기", approved:"승인", rejected:"제외" };
 const actions:Record<string,string>={manual:"관리자 확인 필요",observe:"비공개 관찰",retry:"자동 재시도",scheduled:"날짜 도래 대기",archive:"과거 기록 보관",publish:"자동 승인",exclude:"자동 제외",manual_override:"관리자 기존 판정"};
@@ -20,6 +21,7 @@ export default function ReviewInbox() {
   const [collectionHealthLoading,setCollectionHealthLoading]=useState(true);
   const healthRequest=useRef(0);
   const [category,setCategory] = useState("all");
+  const [subCategory,setSubCategory] = useState("all");
   const [brand,setBrand] = useState("all");
   const [status,setStatus] = useState("all");
   const [action,setAction]=useState("manual");
@@ -50,8 +52,9 @@ export default function ReviewInbox() {
     finally { setLoading(false); }
   }
   useEffect(() => { void load(); },[]);
-  const brands = useMemo(() => [...new Set(products.filter(p => category === "all" || p.category === category).map(p=>p.brand))].sort(),[products,category]);
-  const filtered = useMemo(() => products.filter(p => (action==="all"||p.automationAction===action) && (category==="all" || p.category===category) && (brand==="all" || p.brand===brand) && (status==="all" || p.reviewStatus===status) && (p.name+" "+p.brand).toLowerCase().includes(query.toLowerCase())),[products,action,category,brand,status,query]);
+  const brands = useMemo(() => [...new Set(categoryScope(products,category).map(p=>p.brand))].sort(),[products,category]);
+  const subCategories=useMemo(()=>subCategoryOptions(products,category,brand),[products,category,brand]);
+  const filtered = useMemo(() => filterReviewProducts(products,{action,category,subCategory,brand,status,query}),[products,action,category,subCategory,brand,status,query]);
   const visible = filtered.slice(0,page*40);
   const selectedProducts = filtered.filter(product => selected.includes(product.id));
   const requestProducts = selectedProducts.filter(product => product.reviewStatus !== (decision === "승인" ? "approved" : "rejected"));
@@ -68,8 +71,9 @@ export default function ReviewInbox() {
     <section className="review-totals" aria-label="전체 검수 현황" onClick={()=>{setSelected([]);setDecision(null)}}>{Object.entries(statuses).map(([key,label])=><button key={key} aria-pressed={status===key} onClick={()=>{setAction("all");setStatus(key);setPage(1)}}>{key==="pending"?"비공개·처리 대기":label}<strong>{products.filter(p=>p.reviewStatus===key).length}</strong></button>)}</section>
     <section className="review-controls" aria-label="검수 필터" onChange={()=>{setSelected([]);setDecision(null)}}>
       <label>자동 처리 구분<select value={action} onChange={e=>{setAction(e.target.value);setStatus("all");setPage(1)}}><option value="all">전체</option>{Object.entries(actions).map(([key,label])=><option key={key} value={key}>{label} ({products.filter(p=>p.automationAction===key).length})</option>)}</select></label>
-      <label>카테고리<select value={category} onChange={e=>{setCategory(e.target.value);setBrand("all");setPage(1)}}><option value="all">전체</option>{Object.entries(categories).map(([key,label])=><option key={key} value={key}>{label} ({products.filter(p=>p.category===key).length})</option>)}</select></label>
-      <label>브랜드<select value={brand} onChange={e=>{setBrand(e.target.value);setPage(1)}}><option value="all">전체</option>{brands.map(b=><option key={b}>{b}</option>)}</select></label>
+      <label>카테고리<select value={category} onChange={e=>{setCategory(e.target.value);setSubCategory("all");setBrand("all");setPage(1)}}><option value="all">전체</option>{Object.entries(categories).map(([key,label])=><option key={key} value={key}>{label} ({products.filter(p=>p.category===key).length})</option>)}</select></label>
+      <label>세부 카테고리<select value={subCategory} onChange={e=>{setSubCategory(e.target.value);setPage(1)}}><option value="all">전체</option>{subCategories.map(item=><option key={item.value} value={item.value}>{item.label} ({item.count})</option>)}</select></label>
+      <label>브랜드<select value={brand} onChange={e=>{setBrand(e.target.value);setSubCategory("all");setPage(1)}}><option value="all">전체</option>{brands.map(b=><option key={b}>{b}</option>)}</select></label>
       <label>상태<select value={status} onChange={e=>{setStatus(e.target.value);setPage(1)}}><option value="all">전체</option>{Object.entries(statuses).map(([key,label])=><option key={key} value={key}>{label}</option>)}</select></label>
       <label>검색<input value={query} onChange={e=>{setQuery(e.target.value);setPage(1)}} placeholder="상품명·브랜드 검색"/></label>
     </section>
@@ -91,7 +95,7 @@ export default function ReviewInbox() {
     </section>
     {error && <p role="alert">{error}</p>}
     <p role="status">{loading ? "최신 수집 데이터 조회 중…" : filtered.length+"개 상품"}</p>
-    {!loading && !error && filtered.length===0 && <p className="review-empty">{action==="manual"?"현재 조건에서 관리자 확인이 필요한 항목이 없습니다. 관찰 상품은 자동 처리 구분에서 조회할 수 있습니다.":"선택한 조건에 해당하는 상품이 없습니다."}</p>}
+    {!loading && !error && filtered.length===0 && <p className="review-empty">{action==="manual"?"현재 조건에서 관리자 확인이 필요한 항목이 없습니다. 카테고리의 전체 상품은 자동 처리 구분을 전체로 변경해 조회하세요.":"선택한 조건에 해당하는 상품이 없습니다."}</p>}
     <section aria-label="검수 상품 목록" className="review-admin-list">{visible.map(p=><article key={p.id}>
       <div><label className="review-select"><input type="checkbox" checked={selected.includes(p.id)} disabled={!selected.includes(p.id) && selected.length>=50} onChange={()=>toggleSelection(p.id)}/>{p.name} 선택</label><span>{categories[p.category] || p.category}{p.subCategory ? " · "+p.subCategory : ""}</span><b className={"review-badge "+p.reviewStatus}>{statuses[p.reviewStatus || "approved"]} · {p.decisionSource==="manual"?"관리자":p.decisionSource==="automatic"?"자동 판정":"기존 판정"}</b><h2>{p.name}</h2><small>{p.detectionKind==="initial"?"초기 수집":p.detectionKind==="newly_detected"?"새로 확인된 NEW":"이전 수집 기록"}</small><strong>{p.brand}</strong><p>{reviewReason(p)}</p><small>최초 확인 {p.firstDetectedAt?.slice(0,10)} · 최근 확인 {p.lastCheckedAt?.slice(0,10)}{p.verifiedDate ? " · 검증된 출시/발표 "+p.verifiedDate : p.releaseDate ? " · 기존 기록일(미검증) "+p.releaseDate : ""}{p.automaticCheckedAt ? " · 자동 판정 "+p.automaticCheckedAt.slice(0,10) : ""}{p.reviewedAt ? " · 검수 "+p.reviewedAt.slice(0,10) : ""}</small></div>
       <DiscoveryPanel product={p}/>

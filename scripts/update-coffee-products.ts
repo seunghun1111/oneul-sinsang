@@ -7,11 +7,15 @@ import {guardCoffeeEmptyNewLists,runCoffeeCollection,safeCoffeeVerifiedUrls} fro
 
 const dataUrl = new URL("../src/data/coffee-products-auto.json", import.meta.url);
 
-export function mergeCoffeeProducts(existing: Product[], observed: Product[], checkedAt: string, verifiedUrls = new Set<string>()) {
+export function mergeCoffeeProducts(existing: Product[], observed: Product[], checkedAt: string, verifiedUrls = new Set<string>(), confirmedNotNewUrls = new Set<string>()) {
   verifiedUrls=safeCoffeeVerifiedUrls(existing,observed,verifiedUrls).verifiedUrls;
   const byIdentity = new Map(existing.map(product => [`${product.brand}:${product.normalizedName}`, product]));
   const observedIdentities = new Set(observed.map(product => `${product.brand}:${product.normalizedName}`));
   for (const [key, product] of byIdentity) {
+    if(product.brand==="스타벅스"&&confirmedNotNewUrls.has(product.sourceUrl)&&!observedIdentities.has(key)){
+      byIdentity.set(key,{...product,newStatus:"removed",isActive:false,lastCheckedAt:checkedAt,updatedAt:checkedAt,availabilityStatus:"unknown",availabilityReason:"공식 상품 데이터 newicon=N 확인 (판매 종료 아님)",reviewEvidence:{sourceUrl:product.sourceUrl,checkedAt,robots:"allowed",explicitNew:false}});
+      continue;
+    }
     if (!verifiedUrls.has(product.sourceUrl) || observedIdentities.has(key)) continue;
     const consecutiveMisses = (product.consecutiveMisses ?? 0) + 1;
     byIdentity.set(key, { ...product, consecutiveMisses, lastCheckedAt:checkedAt, availabilityCheckedAt:checkedAt, newStatus:consecutiveMisses >= 2 ? "removed" : product.newStatus, availabilityStatus:"unknown", availabilityReason:consecutiveMisses >= 2 ? "공식 NEW 목록에서 2회 연속 확인되지 않음 (판매 종료 아님)" : "공식 상품 목록에서 재확인 대기 중", isActive:consecutiveMisses < 2, updatedAt:checkedAt });
@@ -29,17 +33,21 @@ async function main() {
   const existing = JSON.parse(await readFile(dataUrl, "utf8")) as Product[];
   const statusUrl=new URL("../src/data/coffee-collection-status.json",import.meta.url);
   const previous=JSON.parse(await readFile(statusUrl,"utf8"));
-  const batch=await runCoffeeCollection(coffeeBrandSources,checkedAt,source=>source.id === "starbucks" ? collectStarbucksFromSitemaps(source, checkedAt) : collectCoffeeSource(source, checkedAt),previous.results);
+  const requestedSource=process.argv.find(arg=>arg.startsWith("--source="))?.slice(9);
+  const sources=requestedSource?coffeeBrandSources.filter(source=>source.id===requestedSource):coffeeBrandSources;
+  if(!sources.length)throw Error("알 수 없는 커피 수집 대상");
+  const batch=await runCoffeeCollection(sources,checkedAt,source=>source.id === "starbucks" ? collectStarbucksFromSitemaps(source, checkedAt) : collectCoffeeSource(source, checkedAt),previous.results);
   const {observed}=batch;
-  const {verifiedUrls,report}=guardCoffeeEmptyNewLists(existing,observed,batch.verifiedUrls,batch.report,previous.results);
-  await writeFile(statusUrl,JSON.stringify(report,null,2)+"\n");
+  const {verifiedUrls,report}=guardCoffeeEmptyNewLists(existing,observed,batch.verifiedUrls,batch.report,previous.results,batch.confirmedNotNewUrls);
+  const savedReport=requestedSource?{...report,results:previous.results.map((result:{sourceId:string})=>report.results.find(item=>item.sourceId===result.sourceId)??result).concat(report.results.filter(item=>!previous.results.some((result:{sourceId:string})=>result.sourceId===item.sourceId)))}:report;
+  await writeFile(statusUrl,JSON.stringify(savedReport,null,2)+"\n");
   const checked = report.results.reduce((sum, result) => sum + result.checked, 0);
   const failed = report.results.reduce((sum, result) => sum + result.failed, 0);
   if (checked === 0) {
     console.warn(`커피 공식 경로를 확인하지 못해 기존 데이터 ${existing.length}건을 유지합니다.`);
     return;
   }
-  const merged = mergeCoffeeProducts(existing, observed, checkedAt, verifiedUrls);
+  const merged = mergeCoffeeProducts(existing, observed, checkedAt, verifiedUrls,batch.confirmedNotNewUrls);
   await writeFile(dataUrl, `${JSON.stringify(merged, null, 2)}\n`, "utf8");
   console.log(`커피 공식 경로 ${checked}개 확인, ${failed}개 실패, 신상품 ${observed.length}건 감지`);
 }

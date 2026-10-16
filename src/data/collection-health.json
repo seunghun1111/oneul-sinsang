@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-15T23:38:37.917Z",
+  "generatedAt": "2026-10-16T13:33:53.196Z",
   "rows": [
     {
       "id": "cu:CU",
@@ -111,8 +111,11 @@
       "group": "coffee",
       "groupLabel": "카페",
       "brand": "스타벅스",
-      "status": "not_checked",
-      "reason": "수집 결과 기록 없음 또는 유효한 확인 시각 없음"
+      "status": "success",
+      "checkedAt": "2026-10-16T13:33:19.902Z",
+      "lastSuccessfulAt": "2026-10-16T13:33:19.902Z",
+      "newCount": 51,
+      "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
     {
       "id": "coffee:투썸플레이스",

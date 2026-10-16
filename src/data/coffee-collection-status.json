@@ -1,1 +1,13 @@
-{"checkedAt":null,"results":[]}
+{
+  "checkedAt": "2026-10-16T13:33:19.902Z",
+  "results": [
+    {
+      "brand": "스타벅스",
+      "sourceId": "starbucks",
+      "status": "success",
+      "checked": 3,
+      "failed": 0,
+      "newCount": 51
+    }
+  ]
+}

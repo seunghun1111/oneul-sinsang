@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import {starbucksCategoryCodes,parseStarbucksMenu} from "./starbucks-menu.ts";
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
 import type { CoffeeBrandSource, CoffeeSourceKind } from "../../src/data/coffee-sources.ts";
 import type { Product, ProductType } from "../../src/types/product.ts";
@@ -114,38 +115,44 @@ export function isRobotsAllowed(robotsText: string, targetUrl: string, userAgent
   return matched?.allow ?? true;
 }
 
-function sitemapEntries(xml: string) {
-  return [...xml.matchAll(/<url>\s*<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>\s*<\/url>/gi)].map(match => ({ url:match[1].replaceAll("&amp;", "&"), lastmod:match[2] }));
-}
-
 export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch = fetch) {
-  const origin = "https://www.starbucks.co.kr";
-  const robotsPolicyUrl = `${origin}/robots.txt`;
-  const robotsResponse = await fetcher(robotsPolicyUrl, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
-  if (!robotsResponse.ok) throw new Error(`robots HTTP ${robotsResponse.status}`);
-  const robotsText = await robotsResponse.text();
-  const sitemapUrls = ["sitemap-drink.xml", "sitemap-food.xml", "sitemap-md.xml", "sitemap-coffee.xml"].map(item => `${origin}/${item}`);
-  if (sitemapUrls.some(url => !isRobotsAllowed(robotsText, url))) throw new Error("robots.txt에서 사이트맵 수집을 허용하지 않음");
-  const sitemapResults = await Promise.all(sitemapUrls.map(async url => {
-    const response = await fetcher(url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
-    if (!response.ok) throw new Error(`sitemap HTTP ${response.status}`);
-    return sitemapEntries(await response.text());
-  }));
-  const entries = sitemapResults.flat();
-  const candidates: CoffeeCandidate[] = [];
-  const verifiedUrls:string[]=[];
-  for (let index = 0; index < entries.length; index += 6) {
-    const batch = entries.slice(index, index + 6);
-    const details = await Promise.allSettled(batch.map(async entry => {
-      if (!isRobotsAllowed(robotsText, entry.url)) return [];
-      const response = await fetcher(entry.url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
-      if (!response.ok) return [];
-      verifiedUrls.push(entry.url);
-      return toCoffeeCandidates(source, entry.url.includes("product_view") ? "md" : "menu", entry.url, extractOfficialProductNames(await response.text(), entry.url, checkedAt, true), checkedAt).map(candidate => ({ ...candidate, reviewEvidence:{sourceUrl:entry.url,checkedAt,robots:"allowed" as const,explicitNew:true}, releaseDate:undefined, robotsPolicyUrl, robotsCheckedAt:checkedAt }));
-    }));
-    candidates.push(...details.flatMap(result => result.status === "fulfilled" ? result.value : []));
+  // Retain the exported name for callers; discovery now uses the official UI's NEW JSON field.
+  const origin="https://www.starbucks.co.kr";
+  const robotsPolicyUrl=origin+"/robots.txt";
+  const headers={"user-agent":"OneulSinsang/1.0 (+non-commercial product index)"};
+  const policy=await fetcher(robotsPolicyUrl,{headers,redirect:"manual",signal:AbortSignal.timeout(15000)});
+  if(!policy.ok)throw Error("스타벅스 robots 확인 실패");
+  const robots=await policy.text();
+  if(/<html/i.test(robots))throw Error("스타벅스 정책 응답 구조 변경");
+  const request=async(url:string,init:RequestInit={})=>{
+    if(new URL(url).origin!==origin||!isRobotsAllowed(robots,url))throw Error("스타벅스 수집 정책 제한");
+    const response=await fetcher(url,{...init,headers:{...headers,...init.headers},redirect:"manual",signal:AbortSignal.timeout(15000)});
+    if(!response.ok)throw Error("스타벅스 공식 데이터 요청 실패");
+    return response;
+  };
+  const candidates:CoffeeCandidate[]=[];const verifiedUrls:string[]=[];const confirmedNotNewUrls:string[]=[];
+  let checked=0,failed=0;
+  for(const section of ["drink","food","product"] as const) {
+    try {
+      const html=await(await request(origin+"/menu/"+section+"_list.do")).text();
+      const codes=starbucksCategoryCodes(html);
+      const rows=[];
+      for(const code of codes) {
+        const response=await request(origin+"/menu/productListAjax.do",{method:"POST",headers:{"content-type":"application/x-www-form-urlencoded"},body:new URLSearchParams({CATE_CD:code,...(section!=="product"?{SOLD_OUT:"1"}:{})})});
+        rows.push(...parseStarbucksMenu(await response.json(),section));
+      }
+      // Commit a section only after every category request/schema check succeeded.
+      for(const row of new Map(rows.map(row=>[row.id,row])).values()) {
+        verifiedUrls.push(row.sourceUrl);
+        if(!row.isNew){confirmedNotNewUrls.push(row.sourceUrl);continue;}
+        candidates.push(...toCoffeeCandidates(source,row.kind,row.sourceUrl,[row.name],checkedAt).map(p=>({...p,subCategory:row.subCategory,availabilityStatus:"unknown" as const,reviewEvidence:{sourceUrl:row.sourceUrl,checkedAt,robots:"allowed" as const,explicitNew:true},robotsPolicyUrl,robotsCheckedAt:checkedAt})));
+      }
+      checked++;
+    }catch {failed++;}
   }
-  return { candidates:[...new Map(candidates.map(candidate => [candidate.normalizedName, candidate])).values()], verifiedUrls, checked:sitemapUrls.length, failed:entries.length-verifiedUrls.length };
+  // Coverage is drink/food/MD only. Bean/VIA uses separate endpoints and is not
+  // a failed request: counting it as one would trigger permanent retry alerts.
+  return {candidates:[...new Map(candidates.map(p=>[p.normalizedName,p])).values()],verifiedUrls,confirmedNotNewUrls,checked,failed};
 }
 
 export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch = fetch) {

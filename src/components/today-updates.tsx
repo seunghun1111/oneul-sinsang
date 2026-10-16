@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import type { Product } from "@/types/product";
 import { INITIAL_SUMMARY_CUTOFF, seoulDateKey } from "@/lib/product-window";
 import { getCategoryGroupForProducts } from "@/lib/category-groups";
+import { SummaryViewport } from "./summary-viewport";
 
 const DAY_LABELS = ["월", "화", "수", "목", "금", "토", "일"];
 
@@ -17,7 +18,6 @@ export function TodayUpdates({ products, today, dates }: { products: Product[]; 
       return { label, count: categoryProducts.length, group: getCategoryGroupForProducts(categoryProducts) };
     })
     .toSorted((left, right) => right.count - left.count);
-  const featured = selectedProducts.slice(0, 6);
   const weekRange = `${dates[0].slice(5).replace("-", ".")}–${dates[6].slice(5).replace("-", ".")}`;
 
   return <section className="today-updates" aria-labelledby="today-updates-title">
@@ -36,11 +36,10 @@ export function TodayUpdates({ products, today, dates }: { products: Product[]; 
     </div>
     {selectedProducts.length === 0 ? <p className="today-empty">{selectedDate === today ? "오늘" : `${Number(selectedDate.slice(5, 7))}월 ${Number(selectedDate.slice(8))}일`} 새로 확인된 상품이 없습니다.</p> : <>
       <div className="today-category-summary" aria-label="선택한 날짜의 상품군별 건수">{categories.map(category => category.group && <Link href={`/categories/${category.group.slug}`} key={category.label} aria-label={`${category.label} ${category.count}개, ${category.group.label}으로 이동`}>{category.label} <strong>{category.count}</strong></Link>)}</div>
-      <div className="today-product-list">{featured.map(product => <Link href={`/products/${product.id}`} key={product.id} className="today-product">
+      <SummaryViewport key={selectedDate} label="이번 주 선택한 날짜의 신상"><div className="today-product-list">{selectedProducts.map(product => <Link href={`/products/${product.id}`} key={product.id} className="today-product">
         {product.imageUrl ? <img src={product.imageUrl} alt="" loading="lazy" /> : <span aria-hidden="true">NEW</span>}
         <div><small>{product.brand} · {product.subCategory ?? "기타"}</small><strong>{product.name}</strong></div>
-      </Link>)}</div>
-      {selectedProducts.length > featured.length && <a className="today-more" href="#category-directory-title">이날 확인된 {selectedProducts.length}개를 메뉴별로 보기 →</a>}
+      </Link>)}</div></SummaryViewport>
     </>}
   </section>;
 }

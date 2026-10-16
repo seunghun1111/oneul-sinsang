@@ -1,4 +1,5 @@
-export type BrandCollectionStatus={brand:string;status:"success"|"failed";newCount:number;failureSince?:string;reasonCode?:"unexpected_empty"};
+import {collectionFailureCode,type CollectionFailureCode} from "./collection-failure.ts";
+export type BrandCollectionStatus={brand:string;status:"success"|"failed";newCount:number;failureSince?:string;reasonCode?:"unexpected_empty";failureCode?:CollectionFailureCode};
 export async function runBrandCollection<T>(sources:readonly (readonly [string,(checkedAt:string)=>Promise<T[]>])[],checkedAt:string,previous:BrandCollectionStatus[]=[]) {
   const settled=await Promise.allSettled(sources.map(([,collect])=>Promise.resolve().then(()=>collect(checkedAt))));
   const candidates:T[]=[];
@@ -11,7 +12,7 @@ export async function runBrandCollection<T>(sources:readonly (readonly [string,(
     }
     const prior=previous.find(result=>result.brand===brand);
     // Never persist raw exceptions, which may contain sensitive request information.
-    return {brand,status:"failed",newCount:0,failureSince:prior?.status==="failed"&&prior.failureSince?prior.failureSince:checkedAt};
+    return {brand,status:"failed",newCount:0,failureCode:collectionFailureCode(outcome.reason),failureSince:prior?.status==="failed"&&prior.failureSince?prior.failureSince:checkedAt};
   });
   return {candidates,checkedBrands,report:{checkedAt,results}};
 }

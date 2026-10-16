@@ -1,5 +1,7 @@
 const restrictedDomains=/(^|\.)(kakaocorp\.com|kakao\.com|daum\.net|daumcorp\.com|kakaosecure\.net|dakao\.io|9rum\.cc|onkakao\.net|daumkakao\.io|daumkakao\.com|daumtools\.com)$/i;
 import {robotsAllows} from "./robots-policy.ts";
+import {CollectionFailure} from "./collection-failure.ts";
+import {networkFailure} from "./network-failure.ts";
 const userAgent="OneulSinsang/1.0 (+non-commercial product index)";
 
 /** Public collection only. Does not authorize a host or override its robots policy. */
@@ -24,7 +26,7 @@ export function createCollectionFetcher(fetcher:typeof fetch=fetch):typeof fetch
     const signals=[AbortSignal.timeout(20000),init?.signal??request?.signal].filter((s):s is AbortSignal=>!!s);
     try {
       return await fetcher(input,{...init,headers,credentials:"omit",redirect:"manual",signal:AbortSignal.any(signals)});
-    }catch{throw Error("공식 출처 네트워크 요청 실패");}
+    }catch(error){throw new CollectionFailure(networkFailure(error));}
   };
 }
 export function createRobotsFetcher(transport:typeof fetch=createCollectionFetcher(),now=()=>Date.now()):typeof fetch {
@@ -57,8 +59,12 @@ export function createRobotsFetcher(transport:typeof fetch=createCollectionFetch
     if(["authorization","proxy-authorization","cookie"].some(key=>headers.has(key)))throw Error("공개 수집 인증정보 전송 제한");
     const agent=headers.get("user-agent")??userAgent;
     if(url.pathname!=="/robots.txt"){
-      const text=await policy(url.origin,agent);
-      if(!robotsAllows(text,url.href,agent))throw Error("robots 수집 제한 경로");
+      let text:string;
+      try{text=await policy(url.origin,agent);}catch(error){
+        if(error instanceof CollectionFailure)throw error;
+        throw new CollectionFailure("policy_unavailable");
+      }
+      if(!robotsAllows(text,url.href,agent))throw new CollectionFailure("policy_blocked");
     }
     (init?.signal??request?.signal)?.throwIfAborted();
     return transport(input,init);

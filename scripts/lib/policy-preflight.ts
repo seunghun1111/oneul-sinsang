@@ -1,5 +1,6 @@
 import {createCollectionFetcher,createRobotsFetcher,collectionUrlAllowed} from "./collection-http.ts";
 import {networkFailure,networkFailureLabels,type NetworkFailure} from "./network-failure.ts";
+import {collectionFailureCode} from "./collection-failure.ts";
 export function createPolicyPreflight(fetcher:typeof fetch=fetch){
  const policies=new Map<string,number>();
  const failures=new Map<string,NetworkFailure>();
@@ -18,7 +19,7 @@ export function createPolicyPreflight(fetcher:typeof fetch=fetch){
      const policyHttpStatus=policies.get(new URL(url).origin);
      return {status:[404,410].includes(policyHttpStatus??0)?"not_provided":"allowed",reason:"",policyHttpStatus};
    }catch(error){
-     const blocked=error instanceof Error&&error.message==="robots 수집 제한 경로";
+     const blocked=collectionFailureCode(error)==="policy_blocked";
      const policyHttpStatus=policies.get(new URL(url).origin);
      const failureKind=failures.get(new URL(url).origin);
      const reason=blocked?"robots 명시적 차단":policyHttpStatus&&!([200,204].includes(policyHttpStatus))?`정책 HTTP ${policyHttpStatus}`:policyHttpStatus?"정책 형식·본문 검증 실패":networkFailureLabels[failureKind??"network"];

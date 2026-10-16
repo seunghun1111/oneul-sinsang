@@ -1,8 +1,9 @@
 import type { CoffeeBrandSource } from "../../src/data/coffee-sources.ts";
 import type { Product } from "../../src/types/product.ts";
+import {collectionFailureCode,type CollectionFailureCode} from "./collection-failure.ts";
 
-type Result={candidates:Product[];verifiedUrls:string[];confirmedNotNewUrls?:string[];checked:number;failed:number};
-export type CoffeeCollectionStatus={brand:string;sourceId:string;status:"success"|"partial"|"failed";checked:number;failed:number;newCount:number;failureSince?:string;reasonCode?:"unexpected_empty"};
+type Result={candidates:Product[];verifiedUrls:string[];confirmedNotNewUrls?:string[];checked:number;failed:number;failureCodes?:CollectionFailureCode[]};
+export type CoffeeCollectionStatus={brand:string;sourceId:string;status:"success"|"partial"|"failed";checked:number;failed:number;newCount:number;failureSince?:string;reasonCode?:"unexpected_empty";failureCodes?:CollectionFailureCode[]};
 export function safeCoffeeVerifiedUrls(existing:Product[],observed:Product[],verifiedUrls:Set<string>) {
   const seen=new Set(observed.map(product=>`${product.brand}:${product.sourceUrl}`));
   const blocked=existing.filter(product=>product.isActive&&verifiedUrls.has(product.sourceUrl)&&!seen.has(`${product.brand}:${product.sourceUrl}`));
@@ -30,6 +31,7 @@ export async function runCoffeeCollection(sources:CoffeeBrandSource[],checkedAt:
     const status=result && result.checked>0 ? result.failed>0?"partial":"success" : "failed";
     const prior=previous.find(item=>item.sourceId===source.id);
     return {brand:source.brand,sourceId:source.id,status,checked:result?.checked??0,failed:result?.failed??1,newCount:result?.candidates.length??0,
+      ...(outcome.status==="rejected"?{failureCodes:[collectionFailureCode(outcome.reason)]}:result?.failureCodes?.length?{failureCodes:result.failureCodes}:{}),
       ...(status!=="success"?{failureSince:prior?.status!=="success" && prior?.failureSince?prior.failureSince:checkedAt}:{})};
   });
   return {observed,verifiedUrls,confirmedNotNewUrls,report:{checkedAt,results}};

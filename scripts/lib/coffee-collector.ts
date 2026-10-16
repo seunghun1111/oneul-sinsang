@@ -1,4 +1,5 @@
 import {collectionFetch} from "./collection-http.ts";
+import {CollectionFailure,collectionFailureCode,type CollectionFailureCode} from "./collection-failure.ts";
 import { createHash } from "node:crypto";
 import {starbucksCategoryCodes,parseStarbucksMenu} from "./starbucks-menu.ts";
 import {coffeeProductImages} from "./coffee-images.ts";
@@ -119,7 +120,7 @@ export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, ch
     return response;
   };
   const candidates:CoffeeCandidate[]=[];const verifiedUrls:string[]=[];const confirmedNotNewUrls:string[]=[];
-  let checked=0,failed=0;
+  let checked=0,failed=0;const failureCodes:CollectionFailureCode[]=[];
   for(const section of ["drink","food","product"] as const) {
     try {
       const html=await(await request(origin+"/menu/"+section+"_list.do")).text();
@@ -136,11 +137,11 @@ export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, ch
         candidates.push(...toCoffeeCandidates(source,row.kind,row.sourceUrl,[row.name],checkedAt).map(p=>({...p,...(row.imageUrl?{imageUrl:row.imageUrl}:{}),subCategory:row.subCategory,availabilityStatus:"unknown" as const,reviewEvidence:{sourceUrl:row.sourceUrl,checkedAt,robots:"allowed" as const,explicitNew:true},robotsPolicyUrl,robotsCheckedAt:checkedAt})));
       }
       checked++;
-    }catch {failed++;}
+    }catch(error) {failed++;failureCodes.push(collectionFailureCode(error));}
   }
   // Coverage is drink/food/MD only. Bean/VIA uses separate endpoints and is not
   // a failed request: counting it as one would trigger permanent retry alerts.
-  return {candidates:[...new Map(candidates.map(p=>[p.normalizedName,p])).values()],verifiedUrls,confirmedNotNewUrls,checked,failed};
+  return {candidates:[...new Map(candidates.map(p=>[p.normalizedName,p])).values()],verifiedUrls,confirmedNotNewUrls,checked,failed,failureCodes:[...new Set(failureCodes)]};
 }
 
 export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch =collectionFetch) {
@@ -149,7 +150,7 @@ export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: 
     const url = new URL(channel.url);
     if (BLOCKED_HOSTS.test(url.hostname)) throw new Error("제한 도메인");
     const response = await fetcher(url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    if (!response.ok) throw new CollectionFailure("http");
     const html=await response.text();
     const names = extractOfficialProductNames(html, channel.url, checkedAt, true);
     const images=coffeeProductImages(html,channel.url);
@@ -157,5 +158,6 @@ export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: 
   }));
   const candidates = results.flatMap(result => result.status === "fulfilled" ? result.value : []);
   const verifiedUrls = results.flatMap((result, index) => result.status === "fulfilled" ? [channels[index].url] : []);
-  return { candidates:[...new Map(candidates.map(candidate => [candidate.normalizedName, candidate])).values()], verifiedUrls, checked:results.filter(result => result.status === "fulfilled").length, failed:results.filter(result => result.status === "rejected").length };
+  const failureCodes=[...new Set(results.flatMap(result=>result.status==="rejected"?[collectionFailureCode(result.reason)]:[]))];
+  return { candidates:[...new Map(candidates.map(candidate => [candidate.normalizedName, candidate])).values()], verifiedUrls, checked:results.filter(result => result.status === "fulfilled").length, failed:results.filter(result => result.status === "rejected").length,failureCodes };
 }

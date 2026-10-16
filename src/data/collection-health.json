@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-16T14:23:47.207Z",
+  "generatedAt": "2026-10-16T14:46:35.979Z",
   "rows": [
     {
       "id": "cu:CU",
@@ -455,8 +455,8 @@
     {
       "brand": "빽다방",
       "officialProducts": 12,
-      "withImage": 0,
-      "missingImage": 12
+      "withImage": 12,
+      "missingImage": 0
     },
     {
       "brand": "세븐일레븐",
@@ -473,8 +473,8 @@
     {
       "brand": "이디야커피",
       "officialProducts": 23,
-      "withImage": 0,
-      "missingImage": 23
+      "withImage": 16,
+      "missingImage": 7
     },
     {
       "brand": "푸라닭",
@@ -485,8 +485,8 @@
     {
       "brand": "할리스",
       "officialProducts": 25,
-      "withImage": 0,
-      "missingImage": 25
+      "withImage": 25,
+      "missingImage": 0
     },
     {
       "brand": "bhc",

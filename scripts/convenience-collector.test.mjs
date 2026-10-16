@@ -1,6 +1,14 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { extractEmart24NewProducts, extractSevenElevenNewProducts } from "./lib/convenience-collector.ts";
+import {htmlAttribute} from "./lib/html-image.ts";
+
+test("이미지 속성 순서에 관계없이 기본 이미지를 제외하고 data-src를 src로 오인하지 않는다",()=>{
+ assert.equal(htmlAttribute(`<img data-src="fake.jpg" src="real.jpg">`,"src"),"real.jpg");
+ const make=image=>`<ul class="tag_list_01"><li class="ico_tag_03">신상품</li></ul><a href="javascript: fncGoView('1');">${image}</a><div class="name">상품</div>`;
+ assert.equal(extractSevenElevenNewProducts(make(`<img alt="상품" src="/upload/product/a.jpg">`),"2026-10-16")[0].imageUrl,"https://www.7-eleven.co.kr/upload/product/a.jpg");
+ for(const image of [`<img alt="디폴트 이미지" src="/front/img/product/product_list_01.jpg">`,`<img src="/front/img/product/product_list_01.jpg" alt="디폴트 이미지">`])assert.equal(extractSevenElevenNewProducts(make(image),"2026-10-16")[0].imageUrl,null);
+});
 
 test("세븐일레븐 공식 목록에서 신상품 배지가 있는 상품만 추출한다", () => {
   const html = `

@@ -1,3 +1,4 @@
+import {collectionFetch} from "./collection-http.ts";
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
 
 export type BrandCandidate = {
@@ -96,7 +97,7 @@ export function robotsAllows(text: string, url: string) {
   return matched[0]?.allow??true;
 }
 
-export async function collectAutomatedBrand(source: Source, checkedAt: string, fetcher: typeof fetch=fetch) {
+export async function collectAutomatedBrand(source: Source, checkedAt: string, fetcher: typeof fetch=collectionFetch) {
   const init={headers:{"user-agent":UA},signal:AbortSignal.timeout(20000)};
   const policy=await fetcher(new URL("/robots.txt",source.url),init);
   let policyState="not_provided";

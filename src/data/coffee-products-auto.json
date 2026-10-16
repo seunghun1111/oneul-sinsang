@@ -1324,7 +1324,8 @@
       "robots": "allowed",
       "explicitNew": false,
       "newCheckReason": "no_new_mark"
-    }
+    },
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202610131039537780.png"
   },
   {
     "id": "coffee-hollys-5ef5f9b269d5",
@@ -1356,7 +1357,8 @@
       "robots": "allowed",
       "explicitNew": false,
       "newCheckReason": "no_new_mark"
-    }
+    },
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202610131040030980.png"
   },
   {
     "id": "coffee-starbucks-8b0bcca294ec",
@@ -1633,7 +1635,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%ED%98%B8%EC%A7%80%EC%B0%A8%EB%9D%BC%EB%96%BC-HOT-450x588.png"
   },
   {
     "id": "coffee-paik-2e6e498f9c4c",
@@ -1665,7 +1668,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%ED%98%B8%EC%A7%80%EC%B0%A8%EB%9D%BC%EB%96%BC-ICED-450x588.png"
   },
   {
     "id": "coffee-paik-520494258baf",
@@ -1697,7 +1701,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%EC%9A%B0%EB%B0%94%ED%99%8D%EC%B0%A8-HOT-450x588.png"
   },
   {
     "id": "coffee-paik-7cec31529446",
@@ -1729,7 +1734,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%EC%9A%B0%EB%B0%94%ED%99%8D%EC%B0%A8-ICED-450x588.png"
   },
   {
     "id": "coffee-paik-236f4bd2366a",
@@ -1761,7 +1767,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%EB%A6%AC%EC%B9%98%EB%A3%A8%EC%9D%B4%EB%B3%B4%EC%8A%A4%ED%8B%B0-HOT-450x588.png"
   },
   {
     "id": "coffee-paik-d38815c3bcd4",
@@ -1793,7 +1800,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%EB%A6%AC%EC%B9%98%EB%A3%A8%EC%9D%B4%EB%B3%B4%EC%8A%A4%ED%8B%B0-ICED-450x588.png"
   },
   {
     "id": "coffee-paik-517a4736b1de",
@@ -1825,7 +1833,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%EC%9E%90%EB%AA%BD%EB%B8%94%EB%9E%99%ED%8B%B0-HOT-450x588.png"
   },
   {
     "id": "coffee-paik-bd4cb585b838",
@@ -1857,7 +1866,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%EC%9E%90%EB%AA%BD%EB%B8%94%EB%9E%99%ED%8B%B0-ICED-450x588.png"
   },
   {
     "id": "coffee-paik-0eee9bb9e48b",
@@ -1889,7 +1899,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%EB%A0%88%EB%AA%AC%EB%B8%94%EB%9E%99%ED%8B%B0-HOT-450x588.png"
   },
   {
     "id": "coffee-paik-c49454fe6a04",
@@ -1921,7 +1932,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%EB%A0%88%EB%AA%AC%EB%B8%94%EB%9E%99%ED%8B%B0-ICED-450x588.png"
   },
   {
     "id": "coffee-paik-022878c71fe5",
@@ -1953,7 +1965,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%EC%82%AC%EA%B3%BC%EC%9C%A0%EC%9E%90%ED%8B%B0-HOT-450x588.png"
   },
   {
     "id": "coffee-paik-60f728e154de",
@@ -1985,7 +1998,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://paikdabang.com/wp-content/uploads/2026/10/%EC%82%AC%EA%B3%BC%EC%9C%A0%EC%9E%90%ED%8B%B0-ICED-450x588.png"
   },
   {
     "id": "coffee-ediya-364782fe4cbd",
@@ -2017,7 +2031,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1790644382294.png"
   },
   {
     "id": "coffee-ediya-f4e637ab6232",
@@ -2049,7 +2064,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1790644657339.png"
   },
   {
     "id": "coffee-ediya-b9458a6554ee",
@@ -2081,7 +2097,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1790644461569.png"
   },
   {
     "id": "coffee-ediya-77c3ebb081ab",
@@ -2113,7 +2130,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1790644715779.png"
   },
   {
     "id": "coffee-ediya-f755fb6239ee",
@@ -2145,7 +2163,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1790644526228.png"
   },
   {
     "id": "coffee-ediya-92c333502d71",
@@ -2177,7 +2196,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1790644774363.png"
   },
   {
     "id": "coffee-ediya-4dcc41343d1f",
@@ -2209,7 +2229,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1790644590333.png"
   },
   {
     "id": "coffee-ediya-94aeaf1bf417",
@@ -2241,7 +2262,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1790644827562.png"
   },
   {
     "id": "coffee-ediya-81020d913be7",
@@ -2465,7 +2487,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1790644990119.png"
   },
   {
     "id": "coffee-ediya-495538f9d1f2",
@@ -2497,7 +2520,8 @@
       "robots": "allowed",
       "explicitNew": true
     },
-    "newStatus": "active"
+    "newStatus": "active",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1790645054742.png"
   },
   {
     "id": "coffee-ediya-ac17a396090e",
@@ -6945,7 +6969,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1788999992703.png"
   },
   {
     "id": "coffee-ediya-be9fb630e103",
@@ -6971,7 +6996,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1789000069306.png"
   },
   {
     "id": "coffee-ediya-eaf70fd406d6",
@@ -6997,7 +7023,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1789000115767.png"
   },
   {
     "id": "coffee-ediya-cc7573cd1950",
@@ -7023,7 +7050,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1789000160512.png"
   },
   {
     "id": "coffee-ediya-8166f4d9a779",
@@ -7049,7 +7077,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1789000235337.png"
   },
   {
     "id": "coffee-ediya-c27d1d39a9c3",
@@ -7075,7 +7104,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://www.ediya.com/files/menu/IMG_1789000332578.png"
   },
   {
     "id": "coffee-hollys-7e0a4de95397",
@@ -7101,7 +7131,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202609150323593040.png"
   },
   {
     "id": "coffee-hollys-83151ada9e32",
@@ -7127,7 +7158,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202609150324108550.png"
   },
   {
     "id": "coffee-hollys-f551635e9b81",
@@ -7153,7 +7185,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202608120248344450.png"
   },
   {
     "id": "coffee-hollys-d1541af1353f",
@@ -7179,7 +7212,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202608120248429510.png"
   },
   {
     "id": "coffee-hollys-a065e4c3ea17",
@@ -7205,7 +7239,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202607271035154760.png"
   },
   {
     "id": "coffee-hollys-fdbacc051509",
@@ -7231,7 +7266,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202608271125187560.png"
   },
   {
     "id": "coffee-hollys-fe53ccddedb0",
@@ -7257,7 +7293,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202608271125287310.png"
   },
   {
     "id": "coffee-hollys-9593121e9fdd",
@@ -7283,7 +7320,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202608271127072850.png"
   },
   {
     "id": "coffee-hollys-e308b231f6b2",
@@ -7309,7 +7347,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202608271125410600.png"
   },
   {
     "id": "coffee-hollys-a0966a939b02",
@@ -7335,7 +7374,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202608271125518940.png"
   },
   {
     "id": "coffee-hollys-fb9c431953d1",
@@ -7361,7 +7401,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202608271126016170.png"
   },
   {
     "id": "coffee-hollys-86d0fe24d9c4",
@@ -7387,7 +7428,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202608271126103460.png"
   },
   {
     "id": "coffee-hollys-7d914846af60",
@@ -7413,7 +7455,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202607011105008200.png"
   },
   {
     "id": "coffee-hollys-ca657f238d01",
@@ -7439,7 +7482,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202607011105093610.png"
   },
   {
     "id": "coffee-hollys-1d5b11a3f3b0",
@@ -7465,7 +7509,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202607011105168600.png"
   },
   {
     "id": "coffee-hollys-fdd059ac3c4d",
@@ -7491,7 +7536,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202607011102459330.png"
   },
   {
     "id": "coffee-hollys-331c60015909",
@@ -7517,7 +7563,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202607011102577850.png"
   },
   {
     "id": "coffee-hollys-664c3bb95849",
@@ -7543,7 +7590,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202607011103062430.png"
   },
   {
     "id": "coffee-hollys-f7d03026d054",
@@ -7569,7 +7617,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202607011103213020.png"
   },
   {
     "id": "coffee-hollys-20a9e5ccbf88",
@@ -7595,7 +7644,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202607011104146480.png"
   },
   {
     "id": "coffee-hollys-6c5cf5fd8315",
@@ -7621,7 +7671,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202607011104397140.png"
   },
   {
     "id": "coffee-hollys-5b08d3723673",
@@ -7725,7 +7776,8 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202609040600451860.png"
   },
   {
     "id": "coffee-hollys-155408be4624",
@@ -7751,6 +7803,7 @@
     "availabilityReason": "공식 상품 목록에서 현재 확인됨",
     "reviewStatus": "approved",
     "reviewedAt": "2026-10-06T09:00:00.000Z",
-    "detectionKind": "initial"
+    "detectionKind": "initial",
+    "imageUrl": "https://admin.hollys.co.kr/upload/menu/etc/menuEtc_202609040600537170.png"
   }
 ]

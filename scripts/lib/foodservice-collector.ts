@@ -1,3 +1,4 @@
+import {collectionFetch} from "./collection-http.ts";
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
 import type { Product } from "../../src/types/product.ts";
 
@@ -286,37 +287,37 @@ async function fetchJson<T>(url: string, fetcher: typeof fetch, init?: RequestIn
   return response.json() as Promise<T>;
 }
 
-export async function collectLotteria(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectLotteria(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const html = await fetchHtml("https://www.lotteeatz.com/brand/ria", fetcher);
   if (!html.includes("mn-card") || !html.includes("추천메뉴")) throw new Error("롯데리아 메뉴 페이지 구조 확인 실패");
   return extractLotteriaNewProducts(html, checkedAt);
 }
 
-export async function collectDominos(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectDominos(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const html = await fetchHtml("https://web.dominos.co.kr/goods/list?dsp_ctgr=C0101", fetcher, "euc-kr");
   if (!html.includes("prd-cont") || !html.includes("피자")) throw new Error("도미노피자 메뉴 페이지 구조 확인 실패");
   return extractDominosNewProducts(html, checkedAt);
 }
 
-export async function collectGoobne(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectGoobne(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const html = await fetchHtml("https://www.goobne.co.kr/main", fetcher);
   if (!html.includes("신제품") || !html.includes("slide-info")) throw new Error("굽네 신제품 페이지 구조 확인 실패");
   return extractGoobneNewProducts(html, checkedAt);
 }
 
-export async function collectKyochon(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectKyochon(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const html = await fetchHtml("https://www.kyochon.com/menu/chicken.asp?code=21", fetcher);
   if (!html.includes("신메뉴") || !html.includes("menuProduct")) throw new Error("교촌치킨 신메뉴 페이지 구조 확인 실패");
   return extractKyochonNewProducts(html, checkedAt);
 }
 
-export async function collectMcDonalds(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectMcDonalds(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const data = await fetchJson<McDonaldsMenuResponse>("https://www.mcdonalds.co.kr/api/v1/kor/product/menu/list", fetcher);
   if (!Array.isArray(data.resultObject?.list)) throw new Error("맥도날드 메뉴 API 구조 확인 실패");
   return extractMcDonaldsNewProducts(data, checkedAt);
 }
 
-export async function collectBurgerKing(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectBurgerKing(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const message = JSON.stringify({ header: { result: true, error_code: "", error_text: "", info_text: "", message_version: "", login_session_id: "", trcode: "BKR0632", cd_call_chnn: "01" }, body: { menuKeywordList: [] } });
   const data = await fetchJson<BurgerKingMenuResponse>("https://web-prd.burgerking.co.kr/burgerking/BKR0632.json", fetcher, {
     method: "POST", headers: { "content-type": "application/x-www-form-urlencoded; charset=UTF-8", referer: "https://web-prd.burgerking.co.kr/menu/main" },
@@ -326,19 +327,19 @@ export async function collectBurgerKing(checkedAt = new Date().toISOString(), fe
   return extractBurgerKingNewProducts(data, checkedAt);
 }
 
-export async function collectMomstouch(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectMomstouch(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const html = await fetchHtml("https://www.momstouch.co.kr/menu/new.php?s_sect1=new", fetcher);
   if (!html.includes("menu-new") || !html.includes("신제품")) throw new Error("맘스터치 신제품 페이지 구조 확인 실패");
   return extractMomstouchNewProducts(html, checkedAt);
 }
 
-export async function collectKfc(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectKfc(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const html = await fetchHtml("https://www.kfckorea.com/promotion/newmenu", fetcher);
   if (!html.includes("__INITIAL_COMPONENTS_STATE__") || !html.includes("신제품")) throw new Error("KFC 신제품 페이지 구조 확인 실패");
   return extractKfcNewProducts(html, checkedAt);
 }
 
-export async function collectPizzaHut(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectPizzaHut(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const data = await fetchJson<PizzaHutMenu>("https://www.pizzahut.co.kr/api/menu/0996/list/best/VISIT", fetcher);
   if (!Array.isArray(data)) throw new Error("피자헛 메뉴 API 구조 확인 실패");
   return extractPizzaHutNewProducts(data, checkedAt);

@@ -1,5 +1,6 @@
+import {collectionFetch} from "./collection-http.ts";
 export type PressStatus={brand:string;status:"success"|"partial"|"failed";newCount:number;requestFailures:number;failureSince?:string};
-export async function runPressCollection<T>(sources:readonly(readonly[string,(fetcher:typeof fetch)=>Promise<T[]>])[],checkedAt:string,previous:PressStatus[]=[],fetcher:typeof fetch=fetch) {
+export async function runPressCollection<T>(sources:readonly(readonly[string,(fetcher:typeof fetch)=>Promise<T[]>])[],checkedAt:string,previous:PressStatus[]=[],fetcher:typeof fetch=collectionFetch) {
   const results=await Promise.all(sources.map(async([brand,collect])=>{
     let requestFailures=0;
     const monitored:typeof fetch=async(input,init)=>{

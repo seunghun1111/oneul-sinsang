@@ -1,3 +1,4 @@
+import {collectionFetch} from "./collection-http.ts";
 import {parsePulmuoneDetail} from "../../chatgpt-site/lib/collectors/pulmuone.ts";
 import {parseOrionDetail} from "../../chatgpt-site/lib/collectors/orion.ts";
 import {parseMaeilDetail} from "../../chatgpt-site/lib/collectors/maeil.ts";
@@ -68,7 +69,7 @@ async function boundedText(response:Response) {
   }finally{reader.releaseLock();}
 }
 
-export function createPressRechecker(fetcher:typeof fetch=fetch) {
+export function createPressRechecker(fetcher:typeof fetch=collectionFetch) {
   const policies=new Map<string,{text:string;state:"allowed"|"not_provided"}>();
   const init={redirect:"manual" as const,headers:{"user-agent":"OneulSinsang/1.0 (+non-commercial product index)"}};
   return async(product:Product)=>{

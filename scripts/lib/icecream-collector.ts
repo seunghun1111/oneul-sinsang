@@ -1,3 +1,4 @@
+import {collectionFetch} from "./collection-http.ts";
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
 
 export type IcecreamCandidate = {
@@ -53,7 +54,7 @@ async function fetchHtml(url: string, fetcher: typeof fetch) {
   return response.text();
 }
 
-export async function collectBaskinRobbins(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectBaskinRobbins(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const noticeHtml = await fetchHtml("https://www.baskinrobbins.co.kr/information-center/notice/list.php?page=1", fetcher);
   const announcement = extractBaskinRobbinsAnnouncement(noticeHtml);
   if (!announcement) throw new Error("배스킨라빈스 FOM 신제품 공지 확인 실패");

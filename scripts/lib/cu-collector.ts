@@ -1,3 +1,4 @@
+import {collectionFetch} from "./collection-http.ts";
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
 
 const CU_ORIGIN = "https://cu.bgfretail.com";
@@ -88,7 +89,7 @@ function requestBody(categoryCode: string, pageIndex: number) {
   });
 }
 
-export async function collectCu(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectCu(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const products: CuCandidate[] = [];
   for (const category of CU_CATEGORIES) {
     for (let page = 1; page <= 10; page++) {

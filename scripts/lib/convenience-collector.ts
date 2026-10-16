@@ -1,4 +1,6 @@
+import {collectionFetch} from "./collection-http.ts";
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
+import {productImageSource} from "./html-image.ts";
 import type {Product} from "../../src/types/product.ts";
 
 export type ConvenienceCandidate = {
@@ -32,7 +34,7 @@ export function extractSevenElevenNewProducts(html: string, checkedAt: string): 
     if (!/class=["']ico_tag_03["'][^>]*>\s*신상품/i.test(item)) continue;
     const id = item.match(/fncGoView\('([^']+)'\)/i)?.[1];
     const rawName = item.match(/<div class=["']name["'][^>]*>([\s\S]*?)<\/div>/i)?.[1];
-    const rawImage = item.match(/<img[^>]+src=["']([^"']+)["'][^>]+alt=["'](?!디폴트 이미지)/i)?.[1];
+    const rawImage = productImageSource(item.match(/<img\b[^>]*>/i)?.[0]??"");
     if (!id || !rawName) continue;
     const name = clean(rawName);
     products.push({
@@ -48,7 +50,7 @@ export function extractSevenElevenNewProducts(html: string, checkedAt: string): 
   return products;
 }
 
-export async function collectSevenEleven(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectSevenEleven(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const response = await fetcher("https://www.7-eleven.co.kr/product/presentList.asp", {
     method: "POST",
     headers: { "content-type": "application/x-www-form-urlencoded", "user-agent": "OneulSinsang/1.0 (+non-commercial product index)" },
@@ -81,7 +83,7 @@ export function extractEmart24NewProducts(html: string, checkedAt: string, secti
   return products;
 }
 
-export async function collectEmart24(checkedAt = new Date().toISOString(), fetcher: typeof fetch = fetch) {
+export async function collectEmart24(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const sections = [{ label: "차별화 상품", url: "https://emart24.co.kr/goods/pl" }, { label: "Fresh Food", url: "https://emart24.co.kr/goods/ff" }];
   const results = await Promise.all(sections.map(async section => {
     const response = await fetcher(section.url, { headers: { "user-agent": "OneulSinsang/1.0 (+non-commercial product index)" }, signal: AbortSignal.timeout(15_000) });

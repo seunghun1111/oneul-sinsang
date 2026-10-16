@@ -1,5 +1,7 @@
+import {collectionFetch} from "./collection-http.ts";
 import { createHash } from "node:crypto";
 import {starbucksCategoryCodes,parseStarbucksMenu} from "./starbucks-menu.ts";
+import {coffeeProductImages} from "./coffee-images.ts";
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
 import type { CoffeeBrandSource, CoffeeSourceKind } from "../../src/data/coffee-sources.ts";
 import type { Product, ProductType } from "../../src/types/product.ts";
@@ -115,7 +117,7 @@ export function isRobotsAllowed(robotsText: string, targetUrl: string, userAgent
   return matched?.allow ?? true;
 }
 
-export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch = fetch) {
+export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch =collectionFetch) {
   // Retain the exported name for callers; discovery now uses the official UI's NEW JSON field.
   const origin="https://www.starbucks.co.kr";
   const robotsPolicyUrl=origin+"/robots.txt";
@@ -155,15 +157,17 @@ export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, ch
   return {candidates:[...new Map(candidates.map(p=>[p.normalizedName,p])).values()],verifiedUrls,confirmedNotNewUrls,checked,failed};
 }
 
-export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch = fetch) {
+export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch =collectionFetch) {
   const channels = source.channels.filter(channel => channel.kind === "menu" || channel.kind === "md" || channel.kind === "shop");
   const results = await Promise.allSettled(channels.map(async channel => {
     const url = new URL(channel.url);
     if (BLOCKED_HOSTS.test(url.hostname)) throw new Error("제한 도메인");
     const response = await fetcher(url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const names = extractOfficialProductNames(await response.text(), channel.url, checkedAt, true);
-    return toCoffeeCandidates(source, channel.kind, channel.url, names, checkedAt).map(candidate=>({...candidate,reviewEvidence:{sourceUrl:channel.url,checkedAt,robots:"not_provided" as const,explicitNew:true}}));
+    const html=await response.text();
+    const names = extractOfficialProductNames(html, channel.url, checkedAt, true);
+    const images=coffeeProductImages(html,channel.url);
+    return toCoffeeCandidates(source, channel.kind, channel.url, names, checkedAt).map(candidate=>({...candidate,...(images.has(candidate.normalizedName)?{imageUrl:images.get(candidate.normalizedName)}:{}),reviewEvidence:{sourceUrl:channel.url,checkedAt,robots:"not_provided" as const,explicitNew:true}}));
   }));
   const candidates = results.flatMap(result => result.status === "fulfilled" ? result.value : []);
   const verifiedUrls = results.flatMap((result, index) => result.status === "fulfilled" ? [channels[index].url] : []);

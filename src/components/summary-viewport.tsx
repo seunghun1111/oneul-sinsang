@@ -13,7 +13,7 @@ export function SummaryViewport({children,label}:{children:ReactNode;label:strin
     return ()=>observer.disconnect();
   },[]);
   return <div className="summary-viewport">
-    <div id={id} ref={viewport} className="summary-scroll" style={{maxHeight:height}} role="region" aria-label={`${label} 상품 목록`} tabIndex={0}>
+    <div id={id} ref={viewport} className="summary-scroll" style={{maxHeight:`min(${height}px, 80svh)`}} role="region" aria-label={`${label} 상품 목록`} tabIndex={0}>
       <div ref={content}>{children}</div>
     </div>
     <div className="summary-scroll-actions">

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-17T02:34:42.954Z",
+  "checkedAt": "2026-10-17T05:22:54.083Z",
   "scope": "수집 진입경로 정책 확인만 수행. 상품 요청·수집·검수·알림 없음",
   "brands": 47,
   "totals": {
@@ -11,7 +11,7 @@
   "results": [
     {
       "brand": "공차",
-      "url": "https://www.gong-cha.co.kr/brand/menu/new_menu?scroll=y",
+      "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001001&scroll=y",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -306,7 +306,7 @@
     },
     {
       "brand": "커피베이",
-      "url": "https://www.coffeebay.com/menu/menu.php",
+      "url": "https://www.coffeebay.com/menu/coffeebay",
       "status": "not_provided",
       "reason": "",
       "policyHttpStatus": 404

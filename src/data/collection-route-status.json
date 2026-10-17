@@ -1,17 +1,17 @@
 {
-  "checkedAt": "2026-10-17T02:34:51.260Z",
-  "policyCheckedAt": "2026-10-17T02:34:42.954Z",
+  "checkedAt": "2026-10-17T05:23:17.003Z",
+  "policyCheckedAt": "2026-10-17T05:22:54.083Z",
   "scope": "등록 진입 URL의 GET 응답 진단만 수행. HTTP 200은 수집 성공·NEW 확인을 의미하지 않음. POST·동적 하위 경로 미검증. 상품·검수·알림 변경 없음",
   "totals": {
     "reachable": 48,
     "policy_hold": 12,
     "collector_method_required": 3,
-    "http_error": 1
+    "failed": 1
   },
   "results": [
     {
       "brand": "공차",
-      "url": "https://www.gong-cha.co.kr/brand/menu/new_menu?scroll=y",
+      "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001001&scroll=y",
       "check": "reachable",
       "httpStatus": 200,
       "contentType": "text/html"
@@ -299,10 +299,10 @@
     },
     {
       "brand": "커피베이",
-      "url": "https://www.coffeebay.com/menu/menu.php",
-      "check": "http_error",
-      "httpStatus": 403,
-      "contentType": "text/plain"
+      "url": "https://www.coffeebay.com/menu/coffeebay",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
     },
     {
       "brand": "커피빈코리아",
@@ -314,9 +314,8 @@
     {
       "brand": "커피빈코리아",
       "url": "https://www.coffeebeankorea.com/product/list.asp",
-      "check": "reachable",
-      "httpStatus": 200,
-      "contentType": "text/html"
+      "check": "failed",
+      "failureCode": "timeout"
     },
     {
       "brand": "컴포즈커피",

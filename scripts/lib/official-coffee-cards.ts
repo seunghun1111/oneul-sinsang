@@ -25,7 +25,8 @@ export function inspectOfficialCoffeeCards(raw:string,sourceUrl:string) {
   const marked=[...visible.matchAll(/<img\b[^>]*>/gi)].some(m=>/^(?:new|신상품|신메뉴)$/i.test(htmlAttribute(m[0],"alt")??""))
    ||/<(?:span|b|em)\b[^>]*>\s*(?:NEW|신상품|신메뉴)\s*<\/(?:span|b|em)>/i.test(visible);
   const name=clean(body.match(/<(?:div|p|h[2-4]|strong)\b[^>]*class=["'][^"']*(?:cafemenu-menu-name|product-name|goods-name|item-name)[^"']*["'][^>]*>([\s\S]*?)<\/(?:div|p|h[2-4]|strong)>/i)?.[1]
-   ??(source.hostname==="www.gong-cha.co.kr"?body.match(/<div\b[^>]*class=["']text-a["'][^>]*>\s*<p[^>]*>([\s\S]*?)<\/p>/i)?.[1]:undefined)??"");
+   ??(source.hostname==="www.gong-cha.co.kr"?body.match(/<div\b[^>]*class=["']text-a["'][^>]*>\s*<p[^>]*>([\s\S]*?)<\/p>/i)?.[1]:undefined)
+   ??(source.hostname==="terarosa.com"?body.match(/<div\b[^>]*class=["'][^"']*\bcont_title\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i)?.[1]:undefined)??"");
   if(name.length<2||name.length>80)continue;
   namedCards++;
   if(!marked)continue;

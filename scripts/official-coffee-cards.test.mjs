@@ -5,6 +5,16 @@ import {extractOfficialProductNames,collectCoffeeSource} from "./lib/coffee-coll
 import {coffeeProductImages} from "./lib/coffee-images.ts";
 const source="https://www.gong-cha.co.kr/brand/menu/product?category=003001";
 const card=(name,badge="",id=1)=>`<a href="/brand/menu/product_detail?no=${id}"><div class="figure"><img src="/upload/product/${id}.png">${badge}</div><div class="text-a"><p>${name}</p></div></a>`;
+test("테라로사 실제 cont_title 구조를 읽되 월별 상품명을 NEW로 추정하지 않는다",()=>{
+ const html='<a href="/product/detail/?ItemCode=100582"><div class="cont_title text text_row2">[10월 KING콩] 파나마 원두</div><div class="cont_title_en">영문명</div></a>';
+ const inspection=inspectOfficialCoffeeCards(html,"https://terarosa.com/product/list/?category=12");
+ assert.equal(inspection.namedCards,1);assert.deepEqual(inspection.products,[]);
+ assert.equal(inspectOfficialCoffeeCards(html.replace('</a>','<span>NEW</span></a>'),"https://terarosa.com/product/list/?category=12").products[0].name,"[10월 KING콩] 파나마 원두");
+});
+test("커피베이 동적 NEW 필터만 있는 페이지는 정상 0건이 아니다",async()=>{
+ const result=await collectCoffeeSource({id:"coffeebay",brand:"커피베이",channels:[{kind:"menu",url:"https://www.coffeebay.com/menu/coffeebay"}]},"2026-10-17",async()=>new Response('<button>NEW</button>'));
+ assert.equal(result.failed,1);assert.deepEqual(result.failureCodes,["structure"]);assert.deepEqual(result.verifiedUrls,[]);
+});
 test("정상 NEW 0건과 상품 구조 미확인을 구분하고 실패 경로를 검증 목록에서 제외한다",async()=>{
  const sourceConfig={id:"gongcha",brand:"공차",note:"",channels:[{kind:"md",label:"MD",url:source}]};
  const good=await collectCoffeeSource(sourceConfig,"2026-10-17",async()=>new Response(card("일반 머그")));

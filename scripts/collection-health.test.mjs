@@ -4,6 +4,11 @@ import {buildCollectionHealth,isCollectionStale,needsCollectionAttention} from "
 import {loadCollectionHealth} from "../chatgpt-site/lib/review/load-collection-health.ts";
 const groups=[{id:"coffee",label:"카페",brands:["A","B"]}];
 const now=new Date("2026-10-16T01:00:00Z");
+test("운영 현황은 그룹 보고 시각 대신 브랜드별 실제 확인 시각을 우선한다",()=>{
+ const h=buildCollectionHealth(groups,{coffee:{checkedAt:now.toISOString(),results:[{brand:"A",status:"success",checkedAt:"2026-10-13"},{brand:"B",status:"success",checkedAt:"bad"}]}},undefined,now);
+ assert.equal(h.rows[0].checkedAt,"2026-10-13");assert.equal(needsCollectionAttention(h.rows[0],now),true);
+ assert.equal(h.rows[1].status,"not_checked");
+});
 test("운영 사유는 허용된 실패 코드만 번역하며 원문은 표시하지 않는다",()=>{
  const h=buildCollectionHealth(groups,{coffee:{checkedAt:now.toISOString(),results:[{brand:"A",status:"failed",failureCodes:["tls","SECRET"],failureCode:"policy_blocked"}]}},undefined,now);
  assert.match(h.rows[0].reason,/TLS 인증서 검증 실패/);assert.match(h.rows[0].reason,/robots 명시적 제한/);assert.ok(!JSON.stringify(h).includes("SECRET"));

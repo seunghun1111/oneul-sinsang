@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-17T04:49:22.377Z",
+  "generatedAt": "2026-10-17T05:22:47.948Z",
   "rows": [
     {
       "id": "cu:CU",
@@ -160,7 +160,7 @@
       "groupLabel": "카페",
       "brand": "투썸플레이스",
       "status": "failed",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
       "reason": "DNS 조회 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -191,10 +191,11 @@
       "group": "coffee",
       "groupLabel": "카페",
       "brand": "컴포즈커피",
-      "status": "failed",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "status": "success",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
+      "lastSuccessfulAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
-      "reason": "공식 경로 HTTP 오류. 수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
     {
       "id": "coffee:빽다방",
@@ -245,21 +246,22 @@
       "group": "coffee",
       "groupLabel": "카페",
       "brand": "더벤티",
-      "status": "failed",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "status": "success",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
+      "lastSuccessfulAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
-      "reason": "robots 정책 확인 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
     {
       "id": "coffee:매머드커피",
       "group": "coffee",
       "groupLabel": "카페",
       "brand": "매머드커피",
-      "status": "success",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "status": "failed",
+      "checkedAt": "2026-10-17T05:22:47.541Z",
       "lastSuccessfulAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
+      "reason": "TLS 인증서 검증 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "coffee:아티제",
@@ -267,7 +269,7 @@
       "groupLabel": "카페",
       "brand": "아티제",
       "status": "failed",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
       "reason": "robots 정책 확인 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -277,7 +279,7 @@
       "groupLabel": "카페",
       "brand": "할리스",
       "status": "partial",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
       "reason": "기존 NEW가 갑자기 0건입니다. 기존 상품을 유지하며 공식 목록·수집 구조 확인이 필요합니다."
     },
@@ -286,10 +288,11 @@
       "group": "coffee",
       "groupLabel": "카페",
       "brand": "커피빈코리아",
-      "status": "partial",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "status": "success",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
+      "lastSuccessfulAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
-      "reason": "공식 경로 HTTP 오류. 일부 경로·기사 요청이 실패했습니다. 성공한 결과만 반영합니다."
+      "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
     {
       "id": "coffee:폴 바셋",
@@ -308,7 +311,7 @@
       "groupLabel": "카페",
       "brand": "파스쿠찌",
       "status": "failed",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
       "reason": "TLS 인증서 검증 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -318,7 +321,7 @@
       "groupLabel": "카페",
       "brand": "엔제리너스",
       "status": "failed",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
       "reason": "robots 명시적 제한. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -328,7 +331,7 @@
       "groupLabel": "카페",
       "brand": "탐앤탐스",
       "status": "failed",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
       "reason": "TLS 인증서 검증 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
@@ -338,19 +341,20 @@
       "groupLabel": "카페",
       "brand": "커피베이",
       "status": "failed",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
-      "reason": "공식 경로 HTTP 오류. 수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "상품 구조 확인 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "coffee:공차",
       "group": "coffee",
       "groupLabel": "카페",
       "brand": "공차",
-      "status": "failed",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "status": "success",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
+      "lastSuccessfulAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
-      "reason": "공식 경로 HTTP 오류. 수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
     {
       "id": "coffee:블루보틀",
@@ -368,10 +372,11 @@
       "group": "coffee",
       "groupLabel": "카페",
       "brand": "테라로사",
-      "status": "failed",
-      "checkedAt": "2026-10-16T23:46:51.909Z",
+      "status": "success",
+      "checkedAt": "2026-10-17T05:22:01.864Z",
+      "lastSuccessfulAt": "2026-10-17T05:22:01.864Z",
       "newCount": 0,
-      "reason": "공식 경로 HTTP 오류. 수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
     {
       "id": "additional:bhc",

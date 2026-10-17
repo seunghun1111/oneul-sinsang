@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "check:attention": "node --experimental-strip-types scripts/check-collection-attention.ts",
     "check:quality": "node --experimental-strip-types scripts/check-catalog-quality.ts",
     "check:routes": "node --experimental-strip-types scripts/check-collection-routes.ts",
     "check:policies": "node --experimental-strip-types scripts/check-collection-policies.ts",

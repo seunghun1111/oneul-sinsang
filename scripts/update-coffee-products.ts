@@ -3,8 +3,9 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { coffeeBrandSources } from "../src/data/coffee-sources.ts";
 import type { Product } from "../src/types/product.ts";
 import { collectCoffeeSource, collectStarbucksFromSitemaps } from "./lib/coffee-collector.ts";
-import {guardCoffeeEmptyNewLists,runCoffeeCollection,safeCoffeeVerifiedUrls} from "./lib/coffee-collection-run.ts";
+import {guardCoffeeEmptyNewLists,runCoffeeCollection,safeCoffeeVerifiedUrls,mergeCoffeeReports} from "./lib/coffee-collection-run.ts";
 import {normalizeCollectedProduct} from "./lib/collected-product.ts";
+import {needsCollectionAttention,type CollectionHealth} from "../chatgpt-site/lib/review/collection-health.ts";
 
 const dataUrl = new URL("../src/data/coffee-products-auto.json", import.meta.url);
 
@@ -35,12 +36,17 @@ async function main() {
   const statusUrl=new URL("../src/data/coffee-collection-status.json",import.meta.url);
   const previous=JSON.parse(await readFile(statusUrl,"utf8"));
   const requestedSource=process.argv.find(arg=>arg.startsWith("--source="))?.slice(9);
-  const sources=requestedSource?coffeeBrandSources.filter(source=>source.id===requestedSource):coffeeBrandSources;
+  const attentionOnly=process.argv.includes("--attention");
+  if(requestedSource&&attentionOnly)throw Error("--source와 --attention은 함께 사용할 수 없습니다.");
+  const health=attentionOnly?JSON.parse(await readFile(new URL("../src/data/collection-health.json",import.meta.url),"utf8")) as CollectionHealth:undefined;
+  const attentionBrands=new Set(health?.rows.filter(row=>row.group==="coffee"&&needsCollectionAttention(row)).map(row=>row.brand));
+  const sources=requestedSource?coffeeBrandSources.filter(source=>source.id===requestedSource):attentionOnly?coffeeBrandSources.filter(source=>attentionBrands.has(source.brand)):coffeeBrandSources;
+  if(attentionOnly&&!sources.length){console.log("확인 필요 커피 브랜드 없음");return;}
   if(!sources.length)throw Error("알 수 없는 커피 수집 대상");
   const batch=await runCoffeeCollection(sources,checkedAt,source=>source.id === "starbucks" ? collectStarbucksFromSitemaps(source, checkedAt) : collectCoffeeSource(source, checkedAt),previous.results);
   const {observed}=batch;
   const {verifiedUrls,report}=guardCoffeeEmptyNewLists(existing,observed,batch.verifiedUrls,batch.report,previous.results,batch.confirmedNotNewUrls);
-  const savedReport=requestedSource?{...report,results:previous.results.map((result:{sourceId:string})=>report.results.find(item=>item.sourceId===result.sourceId)??result).concat(report.results.filter(item=>!previous.results.some((result:{sourceId:string})=>result.sourceId===item.sourceId)))}:report;
+  const savedReport=requestedSource||attentionOnly?mergeCoffeeReports(previous,report):report;
   await writeFile(statusUrl,JSON.stringify(savedReport,null,2)+"\n");
   const checked = report.results.reduce((sum, result) => sum + result.checked, 0);
   const failed = report.results.reduce((sum, result) => sum + result.failed, 0);

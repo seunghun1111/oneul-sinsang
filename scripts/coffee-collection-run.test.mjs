@@ -1,7 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {runCoffeeCollection,coffeeCollectionFailures} from "./lib/coffee-collection-run.ts";
+import {runCoffeeCollection,coffeeCollectionFailures,mergeCoffeeReports} from "./lib/coffee-collection-run.ts";
 const sources=[{id:"a",brand:"A"},{id:"b",brand:"B"},{id:"c",brand:"C"}];
+test("일부 브랜드 재수집은 다른 브랜드의 확인 시각을 갱신하지 않는다",()=>{
+ const previous={checkedAt:"2026-10-15",results:[{sourceId:"a",brand:"A"},{sourceId:"b",brand:"B"},{sourceId:"c",brand:"C",checkedAt:"2026-10-14"}]};
+ const report=mergeCoffeeReports(previous,{checkedAt:"2026-10-17",results:[{sourceId:"b",brand:"B",status:"success"}]});
+ assert.deepEqual(report.results.map(r=>r.checkedAt),["2026-10-15","2026-10-17","2026-10-14"]);
+});
 test("브랜드 예외를 격리하고 성공 경로만 누락 판정에 전달한다",async()=>{
  const result=await runCoffeeCollection(sources,"2026-10-16",async(source)=>{
   if(source.id==="a") throw new Error("private diagnostic must not enter report");

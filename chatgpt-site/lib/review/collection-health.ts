@@ -12,7 +12,8 @@ export function buildCollectionHealth(groups:CollectionGroup[],reports:Record<st
     const result=results.find(result=>result.brand===brand);
     const priorRows=Array.isArray(previous?.rows)?previous.rows:[];
     const prior=priorRows.find(row=>row&&row.id===id);
-    const checkedAt=validDate(report.checkedAt,now)?report.checkedAt:undefined;
+    const resultTime=result&&Object.hasOwn(result,"checkedAt")?result.checkedAt:report.checkedAt;
+    const checkedAt=validDate(resultTime,now)?resultTime:undefined;
     const recognized=result&&["success","partial","failed"].includes(String(result.status));
     const status:CollectionHealthRow["status"]=checkedAt&&recognized?result.status as CollectionHealthRow["status"]:"not_checked";
     const previousSuccess=validDate(prior?.lastSuccessfulAt,now)?prior.lastSuccessfulAt:undefined;

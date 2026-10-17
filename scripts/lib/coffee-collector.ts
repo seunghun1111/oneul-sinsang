@@ -154,6 +154,9 @@ export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: 
     const response = await fetcher(url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
     if (!response.ok) throw new CollectionFailure("http");
     const html=await response.text();
+    // The redesigned CoffeeBay shell contains a NEW filter but no server-rendered
+    // product cards. It cannot prove a verified empty catalog.
+    if(url.hostname==="www.coffeebay.com")throw new CollectionFailure("structure");
     const inspection=inspectOfficialCoffeeCards(html,channel.url);
     if(inspection&&(!inspection.namedCards||inspection.namedCards!==inspection.identifiedCards))throw new CollectionFailure("structure");
     const names = extractOfficialProductNames(html, channel.url, checkedAt, true);

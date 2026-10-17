@@ -19,12 +19,12 @@ jobs:
     if: >-
       (startsWith(github.event.issue.title, '[상품 승인] ') || startsWith(github.event.issue.title, '[상품 거절] ') || startsWith(github.event.issue.title, '[상품 일괄 승인] ') || startsWith(github.event.issue.title, '[상품 일괄 거절] ')) &&
       (github.event.issue.author_association == 'OWNER' || github.event.issue.author_association == 'MEMBER' || github.event.issue.author_association == 'COLLABORATOR')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: npm
@@ -38,7 +38,7 @@ jobs:
       - run: npm test
       - run: npm run lint
       - run: env GITHUB_ACTIONS=true npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: ./out
       - name: Commit reviewed product
@@ -73,8 +73,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

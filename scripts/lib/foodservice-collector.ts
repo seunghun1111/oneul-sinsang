@@ -1,4 +1,5 @@
 import {collectionFetch} from "./collection-http.ts";
+import {resolvePizzaHutImage} from "./pizzahut-images.ts";
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
 import type { Product } from "../../src/types/product.ts";
 
@@ -356,5 +357,13 @@ export async function collectKfc(checkedAt = new Date().toISOString(), fetcher: 
 export async function collectPizzaHut(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const data = await fetchJson<PizzaHutMenu>("https://www.pizzahut.co.kr/api/menu/0996/list/best/VISIT", fetcher);
   if (!Array.isArray(data)) throw new Error("피자헛 메뉴 API 구조 확인 실패");
-  return extractPizzaHutNewProducts(data, checkedAt);
+  const products=extractPizzaHutNewProducts(data, checkedAt);
+  for(const product of products.filter(product=>!product.imageUrl).slice(0,20)){
+    const id=product.sourceUrl.split("/").at(-1)??"";
+    let html="";
+    try{html=await fetchHtml(product.sourceUrl,fetcher);}catch{/* Image enrichment must not discard a NEW product. */}
+    const image=await resolvePizzaHutImage(id,html,fetcher);
+    if(image)product.imageUrl=image;
+  }
+  return products;
 }

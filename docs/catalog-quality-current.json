@@ -1,0 +1,184 @@
+{
+  "checkedAt": "2026-10-17T03:54:04.000Z",
+  "scope": "로컬 저장 데이터와 현재 공개 필터만 검사. 외부 NEW·이미지 응답·실기기 상태는 검증하지 않음",
+  "total": 1157,
+  "published": 855,
+  "errors": [],
+  "gaps": [
+    {
+      "id": "lotteria-rep_001018",
+      "brand": "롯데리아",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "lotteria-rep_001019",
+      "brand": "롯데리아",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "seven-eleven-104275",
+      "brand": "세븐일레븐",
+      "issues": [
+        "missing_image"
+      ]
+    },
+    {
+      "id": "seven-eleven-105871",
+      "brand": "세븐일레븐",
+      "issues": [
+        "missing_image"
+      ]
+    },
+    {
+      "id": "seven-eleven-106219",
+      "brand": "세븐일레븐",
+      "issues": [
+        "missing_image"
+      ]
+    },
+    {
+      "id": "seven-eleven-108594",
+      "brand": "세븐일레븐",
+      "issues": [
+        "missing_image"
+      ]
+    },
+    {
+      "id": "seven-eleven-113184",
+      "brand": "세븐일레븐",
+      "issues": [
+        "missing_image"
+      ]
+    },
+    {
+      "id": "momstouch-310",
+      "brand": "맘스터치",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "momstouch-311",
+      "brand": "맘스터치",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "momstouch-312",
+      "brand": "맘스터치",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "momstouch-313",
+      "brand": "맘스터치",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "momstouch-314",
+      "brand": "맘스터치",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "momstouch-315",
+      "brand": "맘스터치",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "momstouch-306",
+      "brand": "맘스터치",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "momstouch-307",
+      "brand": "맘스터치",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "momstouch-305",
+      "brand": "맘스터치",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "momstouch-309",
+      "brand": "맘스터치",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "momstouch-308",
+      "brand": "맘스터치",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "coffee-ediya-81020d913be7",
+      "brand": "이디야커피",
+      "issues": [
+        "missing_image"
+      ]
+    },
+    {
+      "id": "coffee-ediya-6b68b5044d78",
+      "brand": "이디야커피",
+      "issues": [
+        "missing_image"
+      ]
+    },
+    {
+      "id": "coffee-ediya-6d61f6558421",
+      "brand": "이디야커피",
+      "issues": [
+        "missing_image"
+      ]
+    },
+    {
+      "id": "coffee-ediya-d53205696dab",
+      "brand": "이디야커피",
+      "issues": [
+        "missing_image"
+      ]
+    },
+    {
+      "id": "coffee-ediya-bbcc5eb47b5f",
+      "brand": "이디야커피",
+      "issues": [
+        "missing_image"
+      ]
+    },
+    {
+      "id": "coffee-ediya-7b09a8810aa7",
+      "brand": "이디야커피",
+      "issues": [
+        "missing_image"
+      ]
+    },
+    {
+      "id": "coffee-ediya-ac17a396090e",
+      "brand": "이디야커피",
+      "issues": [
+        "missing_image"
+      ]
+    }
+  ]
+}

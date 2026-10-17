@@ -49,6 +49,8 @@ jobs:
         run: npm run check:policies
       - name: Evaluate automatic review evidence
         run: npm run review:auto
+      - name: Validate catalog integrity without changing data
+        run: npm run check:quality -- --check
       - run: npm test
       - run: npm run lint
       - run: env GITHUB_ACTIONS=true npm run build

@@ -1,0 +1,12 @@
+import {readFile,writeFile} from "node:fs/promises";
+import {coffeeProducts} from "../src/data/coffee-products.ts";
+import type {Product} from "../src/types/product.ts";
+import {catalogQuality} from "./lib/catalog-quality.ts";
+const data=new URL("../src/data/",import.meta.url);
+const read=async(name:string)=>JSON.parse(await readFile(new URL(name,data),"utf8"));
+const decisions=await read("review-decisions.json"),automatic=await read("auto-review.json");
+const products=[...await read("products.json"),...coffeeProducts].map((p:Product)=>({...p,reviewStatus:decisions[p.id]?.decision??automatic.products[p.id]?.decision??p.reviewStatus}));
+const report={checkedAt:new Date().toISOString(),scope:"로컬 저장 데이터와 현재 공개 필터만 검사. 외부 NEW·이미지 응답·실기기 상태는 검증하지 않음",...catalogQuality(products)};
+if(!process.argv.includes("--check"))await writeFile(new URL("../docs/catalog-quality-current.json",import.meta.url),JSON.stringify(report,null,2)+"\n");
+console.log(JSON.stringify({total:report.total,published:report.published,errors:report.errors.length,gaps:report.gaps.length}));
+if(report.errors.length)process.exitCode=1;

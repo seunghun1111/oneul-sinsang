@@ -4,6 +4,10 @@ import {buildCollectionHealth,isCollectionStale,needsCollectionAttention} from "
 import {loadCollectionHealth} from "../chatgpt-site/lib/review/load-collection-health.ts";
 const groups=[{id:"coffee",label:"카페",brands:["A","B"]}];
 const now=new Date("2026-10-16T01:00:00Z");
+test("운영 사유는 허용된 실패 코드만 번역하며 원문은 표시하지 않는다",()=>{
+ const h=buildCollectionHealth(groups,{coffee:{checkedAt:now.toISOString(),results:[{brand:"A",status:"failed",failureCodes:["tls","SECRET"],failureCode:"policy_blocked"}]}},undefined,now);
+ assert.match(h.rows[0].reason,/TLS 인증서 검증 실패/);assert.match(h.rows[0].reason,/robots 명시적 제한/);assert.ok(!JSON.stringify(h).includes("SECRET"));
+});
 test("실제 성공 기록만 마지막 정상 확인으로 저장하고 실패 후에도 유지한다",()=>{
  const success=buildCollectionHealth(groups,{coffee:{checkedAt:"2026-10-15T01:00:00Z",results:[{brand:"A",status:"success",newCount:0}]}},undefined,now);
  assert.equal(success.rows[0].lastSuccessfulAt,"2026-10-15T01:00:00Z");
@@ -23,6 +27,7 @@ test("미수집·깨진 기록·미래 기록을 정상 또는 NEW 0건으로 �
  for(const report of [undefined,{}, {checkedAt:"bad",results:[]},{checkedAt:"2028-01-01",results:[{brand:"A",status:"success",newCount:1}]}]) {
   const row=buildCollectionHealth(groups,{coffee:report},undefined,now).rows[0];
   assert.equal(row.status,"not_checked");assert.equal(row.lastSuccessfulAt,undefined);assert.equal(row.newCount,undefined);
+  assert.equal(needsCollectionAttention(row,now),true);
  }
  assert.equal(buildCollectionHealth(groups,{}, {rows:{}},now).rows[0].status,"not_checked");
 });

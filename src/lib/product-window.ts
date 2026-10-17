@@ -1,4 +1,5 @@
 import type { Product } from "../types/product.ts";
+import {hasOfficialNewTab} from "../../chatgpt-site/lib/review/official-new.ts";
 
 export const INITIAL_SUMMARY_CUTOFF = "2026-10-19";
 
@@ -43,5 +44,5 @@ export function isDetectedOn(product: Product, dateKey: string) {
 export function isCurrentlyOnSale(product: Product, now = new Date()) {
   void now; // Kept for compatibility: NEW visibility has no launch-date window.
   if (product.reviewStatus === "pending" || product.reviewStatus === "rejected") return false;
-  return product.isActive && product.newStatus !== "removed" && product.reviewEvidence?.explicitNew === true;
+  return product.isActive && product.newStatus !== "removed" && (product.reviewEvidence?.explicitNew === true||hasOfficialNewTab(product));
 }

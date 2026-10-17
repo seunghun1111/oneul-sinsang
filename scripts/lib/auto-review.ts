@@ -1,4 +1,5 @@
 import type { Product } from "../../src/types/product.ts";
+import {hasOfficialNewTab} from "../../chatgpt-site/lib/review/official-new.ts";
 import {coffeeBrandSources} from "../../src/data/coffee-sources.ts";
 import {normalizeProductName} from "../../src/lib/normalize-product-name.ts";
 
@@ -61,9 +62,7 @@ export function evaluateProducts(products:Product[], now=new Date()): AutoReport
     if(!official) codes.push("source");
     if(e?.robots==="blocked") codes.push("blocked");
     else if(e && e.sourceUrl!==p.sourceUrl) codes.push("robots");
-    const kyochonListing = p.brand==="교촌치킨"
-      && p.sourceUrl==="https://www.kyochon.com/menu/chicken.asp?code=21"
-      && e?.sourceUrl===p.sourceUrl && e.officialNewListing==="kyochon_code_21";
+    const kyochonListing = hasOfficialNewTab(p);
     const announcement=official?announcementState(p,now):"none";
     if(announcement==="invalid")codes.push("evidence_invalid");
     if(!e?.explicitNew && !kyochonListing && announcement!=="recent") codes.push("new");

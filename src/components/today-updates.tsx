@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useId, useMemo, useState } from "react";
 import type { Product } from "@/types/product";
 import { INITIAL_SUMMARY_CUTOFF, seoulDateKey } from "@/lib/product-window";
 import { getCategoryGroupForProducts } from "@/lib/category-groups";
@@ -11,6 +11,7 @@ const DAY_LABELS = ["월", "화", "수", "목", "금", "토", "일"];
 
 export function TodayUpdates({ products, today, dates }: { products: Product[]; today: string; dates: string[] }) {
   const [selectedDate, setSelectedDate] = useState(today);
+  const tabsId=useId();
   const selectedProducts = useMemo(() => products.filter(product => seoulDateKey(product.firstDetectedAt) === selectedDate), [products, selectedDate]);
   const categories = [...new Map(selectedProducts.map(product => [product.subCategory ?? "기타", 0])).keys()]
     .map(label => {
@@ -29,17 +30,22 @@ export function TodayUpdates({ products, today, dates }: { products: Product[]; 
       {dates.map((date, index) => {
         const count = products.filter(product => seoulDateKey(product.firstDetectedAt) === date).length;
         const selected = date === selectedDate;
-        return <button type="button" role="tab" aria-selected={selected} className={selected ? "is-active" : ""} onClick={() => setSelectedDate(date)} key={date}>
+        return <button type="button" role="tab" id={`${tabsId}-${date}`} aria-controls={`${tabsId}-panel`} tabIndex={selected?0:-1} aria-label={`${Number(date.slice(5,7))}월 ${Number(date.slice(8))}일 ${DAY_LABELS[index]}요일 신상 ${count}개`} aria-selected={selected} className={selected ? "is-active" : ""} onClick={() => setSelectedDate(date)} onKeyDown={event=>{
+          const next=event.key==="ArrowRight"?(index+1)%dates.length:event.key==="ArrowLeft"?(index+dates.length-1)%dates.length:event.key==="Home"?0:event.key==="End"?dates.length-1:undefined;
+          if(next===undefined)return;event.preventDefault();setSelectedDate(dates[next]);
+          event.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]')[next]?.focus();
+        }} key={date}>
           <span>{DAY_LABELS[index]}</span><strong>{Number(date.slice(8))}</strong><small>{count}</small>
         </button>;
       })}
     </div>
+    <div role="tabpanel" id={`${tabsId}-panel`} aria-labelledby={`${tabsId}-${selectedDate}`}>
     {selectedProducts.length === 0 ? <p className="today-empty">{selectedDate === today ? "오늘" : `${Number(selectedDate.slice(5, 7))}월 ${Number(selectedDate.slice(8))}일`} 새로 확인된 상품이 없습니다.</p> : <>
       <div className="today-category-summary" aria-label="선택한 날짜의 상품군별 건수">{categories.map(category => category.group && <Link href={`/categories/${category.group.slug}`} key={category.label} aria-label={`${category.label} ${category.count}개, ${category.group.label}으로 이동`}>{category.label} <strong>{category.count}</strong></Link>)}</div>
       <SummaryViewport key={selectedDate} label="이번 주 선택한 날짜의 신상"><div className="today-product-list">{selectedProducts.map(product => <Link href={`/products/${product.id}`} key={product.id} className="today-product">
         {product.imageUrl ? <img src={product.imageUrl} alt="" loading="lazy" /> : <span aria-hidden="true">NEW</span>}
         <div><small>{product.brand} · {product.subCategory ?? "기타"}</small><strong>{product.name}</strong></div>
       </Link>)}</div></SummaryViewport>
-    </>}
+    </>}</div>
   </section>;
 }

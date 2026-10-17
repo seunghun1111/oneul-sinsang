@@ -1,7 +1,8 @@
+import {hasOfficialNewTab} from "./official-new.ts";
 export type DiscoveryReference = {kind:"launch"|"sale";url:string;checkedAt:string;verified:boolean;label?:string;verification?:"official_orderable";evidenceUrl?:string};
 export type DiscoveryItem = {
   brand:string;name:string;category:string;firstDetectedAt:string;sourceUrl:string;sourceType?:string;newStatus?:string;isActive?:boolean;
-  reviewEvidence?:{explicitNew?:boolean;officialNewListing?:string;officialDate?:string;dateKind?:string};
+  reviewEvidence?:{sourceUrl?:string;explicitNew?:boolean;officialNewListing?:string;officialDate?:string;dateKind?:string};
   discoveryReferences?:DiscoveryReference[];
 };
 export function safeEvidenceUrl(value:string) {
@@ -22,7 +23,7 @@ export function discoveryEvidence(product:DiscoveryItem) {
     return url.origin==="https://www.pizzahut.co.kr"&&/^\/menu\/pizza\/best\/RPPZ\d+$/.test(url.pathname)&&!url.search&&!url.hash
       &&r.evidenceUrl==="https://www.pizzahut.co.kr/api/menu/0996/list/best/VISIT";
   }).sort((a,b)=>Date.parse(b.checkedAt)-Date.parse(a.checkedAt));
-  const directNew=!!(product.reviewEvidence?.explicitNew||product.reviewEvidence?.officialNewListing);
+  const directNew=!!(product.reviewEvidence?.explicitNew||hasOfficialNewTab(product));
   return {
     newLabel:directNew?(product.newStatus==="removed"||product.isActive===false?"과거 NEW 확인 (현재 종료)":"공식 NEW 확인"):launches.some(r=>r.verified)?"출시 근거 확인":launches.length?"출시 소식 후보":"공식 근거 참조",
     saleLabel:ordered.length?(product.isActive===false||product.newStatus==="removed"?"과거 공식 주문 가능 확인 (매장별 재고·배달 별도)":"공식 주문 가능 확인 (매장별 재고·배달 별도)"):sales.some(r=>r.verified)?"판매 페이지 확인 (재고·매장 판매 별도)":sales.length?"판매 링크 후보 (미검증)":"판매 여부 미확인",

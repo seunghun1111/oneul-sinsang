@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import {discoveryEvidence} from "../chatgpt-site/lib/review/discovery-evidence.ts";
+import {evaluateProducts} from "./lib/auto-review.ts";
 import { isCurrentlyOnSale, isDetectedOn, isDetectedToday, seoulDateKey, seoulMonthKey, seoulWeekDateKeys } from "../src/lib/product-window.ts";
 
 function product(overrides = {}) {
@@ -11,6 +13,17 @@ function product(overrides = {}) {
     createdAt: "2026-09-07T00:00:00.000Z", updatedAt: "2026-10-06T00:00:00.000Z", ...overrides,
   };
 }
+test("검증된 교촌 신메뉴 탭은 자동 검수·공개 목록·근거 표시가 일치한다",()=>{
+ const url="https://www.kyochon.com/menu/chicken.asp?code=21";
+ const item=product({brand:"교촌치킨",category:"chicken",sourceUrl:url,reviewEvidence:{sourceUrl:url,officialNewListing:"kyochon_code_21"}});
+ assert.equal(evaluateProducts([item]).products[item.id].decision,"approved");
+ assert.equal(isCurrentlyOnSale(item),true);assert.equal(discoveryEvidence(item).newLabel,"공식 NEW 확인");
+ for(const invalid of [{...item,brand:"다른 브랜드"},{...item,sourceUrl:url+"0"},{...item,reviewEvidence:{...item.reviewEvidence,officialNewListing:"invented"}}]){
+  assert.equal(isCurrentlyOnSale(invalid),false);assert.equal(discoveryEvidence(invalid).newLabel,"공식 근거 참조");
+ }
+ assert.equal(isCurrentlyOnSale({...item,reviewStatus:"pending"}),false);
+ assert.equal(isCurrentlyOnSale({...item,isActive:false}),false);
+});
 
 test("CU는 NEW가 유지되는 동안 30일 제한 없이 표시한다", () => {
   assert.equal(isCurrentlyOnSale(product(), new Date("2026-10-06T00:00:00.000Z")), true);

@@ -24,6 +24,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Validate catalog integrity without changing data
+        run: npm run check:quality -- --check
       - run: npm test
       - run: npm run lint
       - run: npm run build

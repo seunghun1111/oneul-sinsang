@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-17T03:54:04.000Z",
+  "checkedAt": "2026-10-17T04:49:22.983Z",
   "scope": "로컬 저장 데이터와 현재 공개 필터만 검사. 외부 NEW·이미지 응답·실기기 상태는 검증하지 않음",
   "total": 1157,
   "published": 855,
@@ -17,13 +17,6 @@
       "brand": "롯데리아",
       "issues": [
         "stale_check"
-      ]
-    },
-    {
-      "id": "seven-eleven-104275",
-      "brand": "세븐일레븐",
-      "issues": [
-        "missing_image"
       ]
     },
     {

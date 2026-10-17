@@ -1,12 +1,10 @@
 {
-  "checkedAt": "2026-10-16T23:46:28.156Z",
+  "checkedAt": "2026-10-17T04:49:07.404Z",
   "results": [
     {
       "brand": "세븐일레븐",
-      "status": "failed",
-      "newCount": 0,
-      "failureCode": "timeout",
-      "failureSince": "2026-10-16T15:52:40.427Z"
+      "status": "success",
+      "newCount": 13
     },
     {
       "brand": "이마트24",

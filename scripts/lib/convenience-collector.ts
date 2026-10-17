@@ -34,7 +34,7 @@ export function extractSevenElevenNewProducts(html: string, checkedAt: string): 
     if (!/class=["']ico_tag_03["'][^>]*>\s*신상품/i.test(item)) continue;
     const id = item.match(/fncGoView\('([^']+)'\)/i)?.[1];
     const rawName = item.match(/<div class=["']name["'][^>]*>([\s\S]*?)<\/div>/i)?.[1];
-    const rawImage = productImageSource(item.match(/<img\b[^>]*>/i)?.[0]??"");
+    const rawImage = productImageSource(item);
     if (!id || !rawName) continue;
     const name = clean(rawName);
     products.push({
@@ -67,7 +67,7 @@ export function extractEmart24NewProducts(html: string, checkedAt: string, secti
   const items = html.split(/<div class=["']itemWrap["']>/i).slice(1);
   for (const item of items) {
     if (!/<span class=["']floatL["']>\s*NEW\s*<\/span>/i.test(item)) continue;
-    const rawImage = item.match(/<img[^>]+src=["']([^"']+)["']/i)?.[1];
+    const rawImage = productImageSource(item);
     const rawName = item.match(/<div class=["']itemtitle["']>[\s\S]*?<a[^>]*>([\s\S]*?)<\/a>/i)?.[1];
     if (!rawName) continue;
     const name = clean(rawName);

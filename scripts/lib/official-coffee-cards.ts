@@ -1,4 +1,4 @@
-import {htmlAttribute} from "./html-image.ts";
+import {htmlAttribute,productImageSource} from "./html-image.ts";
 import {normalizeImageUrl} from "./collected-product.ts";
 
 const clean=(value:string)=>value.replace(/<[^>]*>/g," ").replace(/&amp;/g,"&").replace(/&nbsp;/g," ").replace(/\s+/g," ").trim();
@@ -29,8 +29,7 @@ export function inspectOfficialCoffeeCards(raw:string,sourceUrl:string) {
   if(name.length<2||name.length>80)continue;
   namedCards++;
   if(!marked)continue;
-  const image=[...body.matchAll(/<img\b[^>]*>/gi)].find(m=>! /^(?:new|신상품|신메뉴)$/i.test(htmlAttribute(m[0],"alt")??""));
-  const imageUrl=image?normalizeImageUrl(htmlAttribute(image[0],"src"),sourceUrl):undefined;
+  const imageUrl=normalizeImageUrl(productImageSource(body),sourceUrl);
   products.push({name,...(imageUrl?{imageUrl}:{})});
  }
  return {products,identifiedCards,namedCards};

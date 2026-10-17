@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-16T23:47:59.646Z",
+  "generatedAt": "2026-10-17T04:49:22.697Z",
   "policyVersion": "2026-10-16-v2",
   "totals": {
     "publish": 850,
@@ -869,91 +869,91 @@
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-090329": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-100431": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-104275": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-105871": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-106219": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-108594": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-111272": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-112581": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-113184": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-114403": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-117105": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "seven-eleven-119073": {
       "brand": "세븐일레븐",
       "action": "publish",
       "attempts": 0,
-      "observation": "2026-10-16T00:12:06.122Z",
+      "observation": "2026-10-17T04:49:07.404Z",
       "reason": "공식 상품별 NEW 표시 확인으로 자동 승인했습니다. 출시일·매장 재고는 별도입니다"
     },
     "cu-28433": {
@@ -6642,7 +6642,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-5429e58cd232": {
       "brand": "스타벅스",
@@ -6650,7 +6650,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-paik-94923f032bb5": {
       "brand": "빽다방",
@@ -7330,7 +7330,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-12fbb6b1bf23": {
       "brand": "스타벅스",
@@ -7338,7 +7338,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-0f6d042537e1": {
       "brand": "스타벅스",
@@ -7346,7 +7346,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-eff14076ef97": {
       "brand": "스타벅스",
@@ -7368,7 +7368,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-37e8cd08760e": {
       "brand": "스타벅스",
@@ -7383,7 +7383,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-c52bc3f2a583": {
       "brand": "스타벅스",
@@ -7391,7 +7391,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-1367ba4757b3": {
       "brand": "스타벅스",
@@ -7399,7 +7399,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-f5e5ac07c29b": {
       "brand": "스타벅스",
@@ -7407,7 +7407,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-7dad8c211972": {
       "brand": "스타벅스",
@@ -7429,7 +7429,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-45b4108a536f": {
       "brand": "스타벅스",
@@ -7458,7 +7458,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-304a685e4215": {
       "brand": "스타벅스",
@@ -7466,7 +7466,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-dd5c451ca1c7": {
       "brand": "스타벅스",
@@ -7474,7 +7474,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-a7d5053cc31d": {
       "brand": "스타벅스",
@@ -7482,7 +7482,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-a24a74278ad4": {
       "brand": "스타벅스",
@@ -7490,7 +7490,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-2aa636618ca0": {
       "brand": "스타벅스",
@@ -7498,7 +7498,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-4866aacb3c29": {
       "brand": "스타벅스",
@@ -7506,7 +7506,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-7e4eb1882c9b": {
       "brand": "스타벅스",
@@ -7514,7 +7514,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-890fe5effd97": {
       "brand": "스타벅스",
@@ -7522,7 +7522,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-57fd3a9cb075": {
       "brand": "스타벅스",
@@ -7530,7 +7530,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-353366e26e6a": {
       "brand": "스타벅스",
@@ -7538,7 +7538,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-5a7411122a45": {
       "brand": "스타벅스",
@@ -7567,7 +7567,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-3d6a29fe96ce": {
       "brand": "스타벅스",
@@ -7603,7 +7603,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-d9d2556f7670": {
       "brand": "스타벅스",
@@ -7611,7 +7611,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-083525f46210": {
       "brand": "스타벅스",
@@ -7619,7 +7619,7 @@
       "attempts": 0,
       "observation": "2026-10-16T00:11:51.419Z",
       "reason": "공식 상세 페이지 응답에 상품별 NEW 근거가 없어 확인 보류입니다. 동적 상품 데이터 또는 실제 화면 확인이 필요합니다 · 비공개 관찰 중 (수동 승인 불필요)",
-      "nextCheckAt": "2026-10-17T23:47:59.646Z"
+      "nextCheckAt": "2026-10-18T04:49:22.697Z"
     },
     "coffee-starbucks-3e919e8bb928": {
       "brand": "스타벅스",

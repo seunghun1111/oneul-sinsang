@@ -1,6 +1,6 @@
 import {normalizeProductName} from "../../src/lib/normalize-product-name.ts";
 import {normalizeImageUrl} from "./collected-product.ts";
-import {htmlAttribute as attribute} from "./html-image.ts";
+import {htmlAttribute as attribute,productImageSource} from "./html-image.ts";
 import {officialCoffeeCards} from "./official-coffee-cards.ts";
 
 const text=(value:string)=>value.replace(/<[^>]*>/g," ").replace(/&amp;/g,"&").replace(/&nbsp;/g," ").replace(/&#39;|&apos;/g,"'").replace(/&quot;/g,'"').replace(/\s+/g," ").trim();
@@ -33,11 +33,10 @@ export function coffeeProductImageResults(raw:string,sourceUrl:string) {
     // Each slide is its own identity boundary. Never use the next slide's image.
     for(const card of slider.split(/<div\b[^>]*class=["']swiper-slide["'][^>]*>/i).slice(1)){
       const title=card.match(/<p\b[^>]*class=["']best_tit["'][^>]*>([\s\S]*?)<\/p>/i)?.[1];
-      const image=card.match(/<img\b[^>]*>/i)?.[0];
-      if(title&&image)add(title,attribute(image,"src"));
+      if(title)add(title,productImageSource(card));
     }
   }else if(["www.ediya.com","www.hollys.co.kr"].includes(host)){
-    for(const image of html.matchAll(/<img\b[^>]*>/gi))add(attribute(image[0],"alt")??"",attribute(image[0],"src"));
+    for(const image of html.matchAll(/<img\b[^>]*>/gi))add(attribute(image[0],"alt")??"",productImageSource(image[0]));
   }
   // Conflicting images for one normalized name are ambiguous: leave them unresolved.
   return {images:new Map([...matches].filter(([,urls])=>urls.size===1).map(([name,urls])=>[name,[...urls][0]])),ambiguous:new Map([...matches].filter(([,urls])=>urls.size>1).map(([name,urls])=>[name,urls.size]))};

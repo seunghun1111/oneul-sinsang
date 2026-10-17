@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-16T23:47:34.697Z",
+  "generatedAt": "2026-10-17T04:49:22.377Z",
   "rows": [
     {
       "id": "cu:CU",
@@ -18,10 +18,11 @@
       "group": "convenience",
       "groupLabel": "편의점 · 세븐·이마트24",
       "brand": "세븐일레븐",
-      "status": "failed",
-      "checkedAt": "2026-10-16T23:46:28.156Z",
-      "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "status": "success",
+      "checkedAt": "2026-10-17T04:49:07.404Z",
+      "lastSuccessfulAt": "2026-10-17T04:49:07.404Z",
+      "newCount": 13,
+      "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
     {
       "id": "convenience:이마트24",
@@ -29,8 +30,8 @@
       "groupLabel": "편의점 · 세븐·이마트24",
       "brand": "이마트24",
       "status": "success",
-      "checkedAt": "2026-10-16T23:46:28.156Z",
-      "lastSuccessfulAt": "2026-10-16T23:46:28.156Z",
+      "checkedAt": "2026-10-17T04:49:07.404Z",
+      "lastSuccessfulAt": "2026-10-17T04:49:07.404Z",
       "newCount": 0,
       "reason": "정상 확인 (NEW 0건도 정상 결과일 수 있습니다)"
     },
@@ -42,7 +43,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:38.979Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "robots 명시적 제한. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "foodservice:맥도날드",
@@ -74,7 +75,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:38.979Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "요청 시간 초과. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "foodservice:도미노피자",
@@ -161,7 +162,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "DNS 조회 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "coffee:이디야커피",
@@ -193,7 +194,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "공식 경로 HTTP 오류. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "coffee:빽다방",
@@ -247,7 +248,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "robots 정책 확인 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "coffee:매머드커피",
@@ -268,7 +269,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "robots 정책 확인 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "coffee:할리스",
@@ -288,7 +289,7 @@
       "status": "partial",
       "checkedAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "일부 경로·기사 요청이 실패했습니다. 성공한 결과만 반영합니다."
+      "reason": "공식 경로 HTTP 오류. 일부 경로·기사 요청이 실패했습니다. 성공한 결과만 반영합니다."
     },
     {
       "id": "coffee:폴 바셋",
@@ -309,7 +310,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "TLS 인증서 검증 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "coffee:엔제리너스",
@@ -319,7 +320,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "robots 명시적 제한. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "coffee:탐앤탐스",
@@ -329,7 +330,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "TLS 인증서 검증 실패. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "coffee:커피베이",
@@ -339,7 +340,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "공식 경로 HTTP 오류. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "coffee:공차",
@@ -349,7 +350,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "공식 경로 HTTP 오류. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "coffee:블루보틀",
@@ -370,7 +371,7 @@
       "status": "failed",
       "checkedAt": "2026-10-16T23:46:51.909Z",
       "newCount": 0,
-      "reason": "수집에 실패했습니다. 기존 상품은 유지됩니다."
+      "reason": "공식 경로 HTTP 오류. 수집에 실패했습니다. 기존 상품은 유지됩니다."
     },
     {
       "id": "additional:bhc",
@@ -563,8 +564,8 @@
     {
       "brand": "세븐일레븐",
       "officialProducts": 13,
-      "withImage": 8,
-      "missingImage": 5
+      "withImage": 9,
+      "missingImage": 4
     },
     {
       "brand": "스타벅스",
@@ -587,8 +588,8 @@
     {
       "brand": "피자헛",
       "officialProducts": 1,
-      "withImage": 0,
-      "missingImage": 1
+      "withImage": 1,
+      "missingImage": 0
     },
     {
       "brand": "할리스",

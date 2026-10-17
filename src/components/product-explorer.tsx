@@ -1,37 +1,42 @@
 "use client";
-
-import { useMemo, useState } from "react";
-import { categoryMeta } from "@/lib/product-meta";
-import type { Product, ProductCategory } from "@/types/product";
-import { ProductCard } from "./product-card";
-import {catalogScope,catalogSubcategory,catalogSubcategoryOptions} from "@/lib/catalog-filters";
-
-const filters: Array<{ value: ProductCategory | "all"; label: string }> = [
-  { value: "all", label: "전체" }, { value: "convenience", label: "편의점" }, { value: "cafe", label: "카페" }, { value: "burger", label: "햄버거" }, { value: "pizza", label: "피자" }, { value: "chicken", label: "치킨" }, { value: "drink", label: "음료" }, { value: "ramen", label: "라면" }, { value: "meal", label: "간편식" }, { value: "snack", label: "과자" }, { value: "dessert", label: "디저트" }, { value: "icecream", label: "아이스크림" }, { value: "etc", label: "기타" },
-];
-
-export function ProductExplorer({ products, title = "공식 NEW 상품", description = "공식 사이트에서 NEW로 소개하는 상품을 모았습니다. 출시일·매장 재고는 별도입니다." }: { products: Product[]; title?: string; description?: string }) {
-  const [category, setCategory] = useState<ProductCategory | "all">("all");
-  const [brand, setBrand] = useState("all");
-  const [subCategory, setSubCategory] = useState("all");
-  const [sort, setSort] = useState<"release" | "detected">("release");
-  const [view, setView] = useState<"compact" | "card" | "list">("compact");
-  const availableCategories = useMemo(() => new Set(products.map(product => product.category)), [products]);
-  const categoryFilters = useMemo(() => filters.filter(filter => filter.value === "all" || availableCategories.has(filter.value)), [availableCategories]);
-  const brands = useMemo(() => [...new Set(products.filter(product => category === "all" || product.category === category).map(product => product.brand))].toSorted(), [category, products]);
-  const subCategories = useMemo(() => catalogSubcategoryOptions(products,category,brand), [brand, category, products]);
-  const filtered = useMemo(() => catalogScope(products,category,brand).filter((product) => subCategory === "all" || catalogSubcategory(product) === subCategory).toSorted((a, b) => {
-    const left = sort === "release" ? a.releaseDate ?? "" : a.firstDetectedAt;
-    const right = sort === "release" ? b.releaseDate ?? "" : b.firstDetectedAt;
-    return right.localeCompare(left);
-  }), [brand, category, products, sort, subCategory]);
-
-  return <section className="catalog" aria-labelledby="catalog-title">
-    <div className="catalog-heading"><div><p className="section-kicker">ON SALE NOW</p><h2 id="catalog-title">{title}</h2><p>{description}</p></div><span className="result-count" aria-live="polite">{filtered.length}개의 공식 NEW</span></div>
-    {categoryFilters.length > 2 && <div className="filter-group"><span>상품군</span><div className="filter-row" aria-label="상품군 카테고리 필터">{categoryFilters.map((filter) => <button type="button" key={filter.value} className={category === filter.value ? "filter-chip selected" : "filter-chip"} aria-pressed={category === filter.value} onClick={() => { setCategory(filter.value); setBrand("all"); setSubCategory("all"); }}>{filter.value !== "all" && categoryMeta[filter.value].emoji} {filter.label}</button>)}</div></div>}
-    {brands.length > 0 && <div className="filter-group brand-filter"><span>브랜드</span><div className="filter-row" aria-label="중분류 브랜드 필터"><button type="button" className={brand === "all" ? "filter-chip selected" : "filter-chip"} aria-pressed={brand === "all"} onClick={() => { setBrand("all"); setSubCategory("all"); }}>전체</button>{brands.map(item => <button type="button" key={item} className={brand === item ? "filter-chip selected" : "filter-chip"} aria-pressed={brand === item} onClick={() => { setBrand(item); setSubCategory("all"); }}>{item}</button>)}</div></div>}
-    {subCategories.length > 0 && <div className="filter-group"><span>세부 분류</span><div className="filter-row" aria-label="세부 카테고리 필터"><button type="button" className={subCategory === "all" ? "filter-chip selected" : "filter-chip"} aria-pressed={subCategory === "all"} onClick={() => setSubCategory("all")}>전체</button>{subCategories.map(item => <button type="button" key={item.value} className={subCategory === item.value ? "filter-chip selected" : "filter-chip"} aria-pressed={subCategory === item.value} onClick={() => setSubCategory(item.value)}>{item.label} ({item.count})</button>)}</div></div>}
-    <div className="sort-row"><span>브랜드의 공식 NEW 표시를 기준으로 정리했습니다</span><div className="catalog-controls"><div className="sort-options" aria-label="정렬"><button type="button" className={sort === "release" ? "selected" : ""} aria-pressed={sort === "release"} onClick={() => setSort("release")}>기록일순</button><button type="button" className={sort === "detected" ? "selected" : ""} aria-pressed={sort === "detected"} onClick={() => setSort("detected")}>최초 확인순</button></div><div className="view-options" aria-label="목록 표시 방식"><button type="button" className={view === "compact" ? "selected" : ""} aria-pressed={view === "compact"} onClick={() => setView("compact")}>컴팩트</button><button type="button" className={view === "card" ? "selected" : ""} aria-pressed={view === "card"} onClick={() => setView("card")}>카드</button><button type="button" className={view === "list" ? "selected" : ""} aria-pressed={view === "list"} onClick={() => setView("list")}>리스트</button></div></div></div>
-    {filtered.length === 0 ? <p className="empty-products">확인된 신상품이 아직 없습니다. 다음 자동 수집 후 갱신됩니다.</p> : <div className={`product-grid view-${view}`}>{filtered.map((product) => <ProductCard key={product.id} product={product} />)}</div>}
-  </section>;
+import {useId,useMemo,useState,useSyncExternalStore} from "react";
+import {categoryMeta} from "@/lib/product-meta";
+import type {Product,ProductCategory} from "@/types/product";
+import {ProductCard} from "./product-card";
+import {catalogScope,catalogSubcategoryOptions} from "@/lib/catalog-filters";
+import {catalogDefaults,readCatalogState,searchCatalog} from "@/lib/catalog-search";
+const subscribe=(change:()=>void)=>{window.addEventListener("popstate",change);window.addEventListener("catalog-change",change);return()=>{window.removeEventListener("popstate",change);window.removeEventListener("catalog-change",change);};};
+const snapshot=()=>window.location.search;
+const serverSnapshot=()=>"";
+export function ProductExplorer({products,title="공식 NEW 상품",description="공식 사이트의 NEW 상품입니다. 출시일·매장 재고는 별도입니다."}:{products:Product[];title?:string;description?:string}){
+ const search=useSyncExternalStore(subscribe,snapshot,serverSnapshot);
+ const state=useMemo(()=>readCatalogState(search,products),[search,products]);
+ const [filtersOpen,setFiltersOpen]=useState(false);
+ const id=useId();
+ const categories=[...new Set(products.map(p=>p.category))];
+ const brands=[...new Set(catalogScope(products,state.category,"all").map(p=>p.brand))].sort((a,b)=>a.localeCompare(b,"ko"));
+ const subCategories=catalogSubcategoryOptions(products,state.category,state.brand);
+ const filtered=useMemo(()=>searchCatalog(products,state),[products,state]);
+ const change=(patch:Partial<typeof state>)=>{
+  const next={...state,...patch},url=new URL(window.location.href);
+  for(const key of Object.keys(catalogDefaults) as (keyof typeof state)[]){if(next[key]===catalogDefaults[key])url.searchParams.delete(key);else url.searchParams.set(key,next[key]);}
+  window.history.replaceState(window.history.state,"",url);window.dispatchEvent(new Event("catalog-change"));
+ };
+ const reset=()=>change({category:"all",brand:"all",sub:"all",q:""});
+ const active=[state.category!=="all"?categoryMeta[state.category as ProductCategory].label:null,state.brand!=="all"?state.brand:null,state.sub!=="all"?subCategories.find(s=>s.value===state.sub)?.label:null].filter(Boolean);
+ const chip=(value:string,label:string,selected:boolean,onClick:()=>void)=><button key={value} type="button" className={`filter-chip${selected?" selected":""}`} aria-pressed={selected} onClick={onClick}>{label}</button>;
+ return <section className="catalog" aria-labelledby={`${id}-title`}>
+  <div className="catalog-heading"><div><p className="section-kicker">DISCOVER NEW</p><h2 id={`${id}-title`}>{title}</h2><p>{description}</p></div><span className="result-count" aria-live="polite">{filtered.length.toLocaleString()}개 상품</span></div>
+  <div className="catalog-filter-panel">
+   <div className="catalog-search"><label htmlFor={`${id}-search`}>상품·브랜드 검색</label><div><input id={`${id}-search`} type="search" maxLength={120} placeholder="예: 스타벅스 라떼, 텀블러" value={state.q} onChange={e=>change({q:e.target.value})}/>{state.q&&<button type="button" aria-label="검색어 지우기" onClick={()=>change({q:""})}>지우기</button>}</div></div>
+   <div className="filter-summary"><span>{active.length?active.join(" › "):"전체 상품"}{state.q.trim()?` · “${state.q.trim()}” 검색`:""}</span><div><button type="button" onClick={reset}>초기화</button><button className="mobile-filter-toggle" type="button" aria-expanded={filtersOpen} aria-controls={`${id}-filters`} onClick={()=>setFiltersOpen(!filtersOpen)}>필터 {filtersOpen?"접기":"펼치기"}</button></div></div>
+   <div id={`${id}-filters`} className={`catalog-filter-fields${filtersOpen?" is-open":""}`}>
+    {categories.length>1&&<div className="filter-group"><span>상품군</span><div className="filter-row" aria-label="상품군 필터">{chip("all","전체",state.category==="all",()=>change({category:"all",brand:"all",sub:"all"}))}{categories.map(category=>chip(category,`${categoryMeta[category].emoji} ${categoryMeta[category].label}`,state.category===category,()=>change({category,brand:"all",sub:"all"})))}</div></div>}
+    <div className="filter-group brand-filter"><span>브랜드</span><div className="filter-row" aria-label="브랜드 필터">{chip("all","전체",state.brand==="all",()=>change({brand:"all",sub:"all"}))}{brands.map(brand=>chip(brand,brand,state.brand===brand,()=>change({brand,sub:"all"})))}</div></div>
+    {subCategories.length>0&&<div className="filter-group"><span>세부 분류</span><div className="filter-row" aria-label="세부 카테고리 필터">{chip("all","전체",state.sub==="all",()=>change({sub:"all"}))}{subCategories.map(sub=>chip(sub.value,`${sub.label} (${sub.count})`,state.sub===sub.value,()=>change({sub:sub.value})))}</div></div>}
+   </div>
+  </div>
+  <div className="sort-row"><span>발견일은 출시일이 아닙니다</span><div className="catalog-controls"><label className="catalog-sort">정렬 <select aria-label="상품 정렬" value={state.sort} onChange={e=>change({sort:e.target.value})}><option value="detected">최근 발견순</option><option value="release">출시 기록순 · 미확인 뒤로</option></select></label><div className="view-options" aria-label="목록 표시 방식">{["compact","card","list"].map((view,index)=><button key={view} type="button" className={state.view===view?"selected":""} aria-pressed={state.view===view} onClick={()=>change({view})}>{["컴팩트","카드","리스트"][index]}</button>)}</div></div></div>
+  {filtered.length===0?<div className="empty-products"><strong>조건에 맞는 상품이 없습니다</strong><p>검색어를 줄이거나 다른 브랜드·분류를 선택해 보세요.</p><button type="button" onClick={reset}>검색·필터 초기화</button></div>:<div className={`product-grid view-${state.view}`}>{filtered.map(product=><ProductCard key={product.id} product={product}/>)}</div>}
+ </section>;
 }

@@ -19,6 +19,7 @@ export default async function ProductDetailPage(props: PageProps<"/products/[id]
     <section className="detail-card"><div className="detail-visual" style={{ background: meta.color }}>{product.imageUrl ? <img src={product.imageUrl} alt={product.name} /> : <span aria-hidden="true">{meta.emoji}</span>}<span className={`badge badge-${product.productType}`}>{typeLabel[product.productType]}</span></div>
       <div className="detail-copy"><p className="eyebrow">{product.brand} · {meta.label}</p><h1>{product.name}</h1><p className="detail-description">{product.description}</p>
         <dl className="detail-list"><div><dt>{evidence.dateLabel}</dt><dd>{evidence.date||"미확인"}</dd></div><div><dt>신상 근거</dt><dd>{evidence.newLabel}</dd></div><div><dt>판매 근거</dt><dd>{evidence.saleLabel}</dd></div><div><dt>최근 목록 확인일</dt><dd>{product.lastCheckedAt.slice(0,10)}</dd></div><div><dt>상품 유형</dt><dd>{typeLabel[product.productType]}</dd></div></dl>
+        {evidence.saleCheckedAt&&<p>주문 가능 확인 시각: {new Date(evidence.saleCheckedAt).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",hour12:false})} (한국 시간) · 확인 당시 기준입니다.</p>}
         <p>최초 발견일은 출시일이 아닙니다. 검색·판매 링크 노출만으로 신상이나 매장 재고를 확정하지 않습니다.</p>
         <a className="source-button" href={product.sourceUrl} target="_blank" rel="noopener noreferrer">공식 출처 보기</a>
       </div></section>

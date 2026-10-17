@@ -27,6 +27,7 @@ type Candidate = {
   imageUrl: string | null;
   reviewStatus?: "pending";
   reviewEvidence?: Product["reviewEvidence"];
+  discoveryReferences?: Product["discoveryReferences"];
 };
 
 const dataUrl = new URL("../src/data/products.json", import.meta.url);
@@ -51,6 +52,7 @@ export function mergeProducts(existing: Product[], candidates: Candidate[], chec
       productType: candidate.productType,
       ...(previous?.detectionKind ? { detectionKind:previous.detectionKind } : {}),
       newStatus:"active",
+      ...(candidate.discoveryReferences?{discoveryReferences:[...(previous?.discoveryReferences??[]).filter(old=>!candidate.discoveryReferences?.some(next=>next.kind===old.kind&&next.url===old.url)),...candidate.discoveryReferences]}:{}),
       ...(candidate.reviewEvidence ? { reviewEvidence:candidate.reviewEvidence } : {}),
       ...(!candidate.reviewEvidence && candidate.sourceType === "official_site" && /\bNEW\b/i.test(candidate.description) ? {reviewEvidence:{sourceUrl:candidate.sourceUrl,checkedAt,robots:"not_provided" as const,explicitNew:true}} : {}),
       ...(previous?.reviewStatus || candidate.reviewStatus ? { reviewStatus:previous?.reviewStatus ?? candidate.reviewStatus } : {}),

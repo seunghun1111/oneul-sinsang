@@ -1,0 +1,472 @@
+{
+  "checkedAt": "2026-10-17T02:34:51.260Z",
+  "policyCheckedAt": "2026-10-17T02:34:42.954Z",
+  "scope": "등록 진입 URL의 GET 응답 진단만 수행. HTTP 200은 수집 성공·NEW 확인을 의미하지 않음. POST·동적 하위 경로 미검증. 상품·검수·알림 변경 없음",
+  "totals": {
+    "reachable": 48,
+    "policy_hold": 12,
+    "collector_method_required": 3,
+    "http_error": 1
+  },
+  "results": [
+    {
+      "brand": "공차",
+      "url": "https://www.gong-cha.co.kr/brand/menu/new_menu?scroll=y",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "공차",
+      "url": "https://www.gong-cha.co.kr/brand/menu/product?category=003001&scroll=y",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "교촌치킨",
+      "url": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "굽네",
+      "url": "https://www.goobne.co.kr/main",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "나뚜루",
+      "url": "https://www.lottesweetmall.com/product/list_ice.html?cate_no=344&sort_method=5",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "네네치킨",
+      "url": "https://nenechicken.com/home_menu.asp",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "더벤티",
+      "url": "https://www.theventi.co.kr/new2022/menu/all.html",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "도미노피자",
+      "url": "https://web.dominos.co.kr/goods/list?dsp_ctgr=C0101",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "롯데리아",
+      "url": "https://www.lotteeatz.com/brand/ria",
+      "method": "GET",
+      "status": "blocked",
+      "reason": "robots 명시적 차단",
+      "policyHttpStatus": 200,
+      "check": "policy_hold"
+    },
+    {
+      "brand": "롯데웰푸드",
+      "url": "https://www.lottesweetmall.com/product/list_ice.html?cate_no=343&sort_method=5",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "맘스터치",
+      "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=new",
+      "method": "GET",
+      "status": "failed",
+      "reason": "정책 HTTP 302",
+      "policyHttpStatus": 302,
+      "check": "policy_hold"
+    },
+    {
+      "brand": "매머드커피",
+      "url": "https://mmthcoffee.com/sub/menu/list.html",
+      "status": "failed",
+      "reason": "TLS 인증서 검증 실패",
+      "failureKind": "tls",
+      "check": "policy_hold"
+    },
+    {
+      "brand": "매일유업",
+      "url": "https://www.maeil.com/news/press.jsp",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "맥도날드",
+      "url": "https://www.mcdonalds.co.kr/api/v1/kor/product/menu/list",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "application/json"
+    },
+    {
+      "brand": "메가MGC커피",
+      "url": "https://www.mega-mgccoffee.com/menu/",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "바나프레소",
+      "url": "https://www.banapresso.com/menu/contents/1",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "배스킨라빈스",
+      "url": "https://www.baskinrobbins.co.kr/information-center/notice/list.php?page=1",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "버거킹",
+      "url": "https://web-prd.burgerking.co.kr/burgerking/BKR0632.json",
+      "method": "POST",
+      "check": "collector_method_required"
+    },
+    {
+      "brand": "블루보틀",
+      "url": "https://kr.bluebottlecoffee.com/collections/blends",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "블루보틀",
+      "url": "https://kr.bluebottlecoffee.com/pages/all-cup-n-tumbler",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "빙그레",
+      "url": "https://www.bing.co.kr/news/news_announced",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "빽다방",
+      "url": "https://paikdabang.com/menu/menu_new/",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "삼양식품",
+      "url": "https://samyangfoods.com/kor/publicity/press/list.do?searchCateCd=035002&pageUnit=20",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "세븐일레븐",
+      "url": "https://www.7-eleven.co.kr/product/presentList.asp",
+      "method": "POST",
+      "check": "collector_method_required"
+    },
+    {
+      "brand": "스타벅스",
+      "url": "https://www.starbucks.co.kr/coffee/product_list.do",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "스타벅스",
+      "url": "https://www.starbucks.co.kr/menu/drink_list.do",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "스타벅스",
+      "url": "https://www.starbucks.co.kr/menu/food_list.do",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "스타벅스",
+      "url": "https://www.starbucks.co.kr/menu/product_list.do",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "아티제",
+      "url": "https://www.cafeartisee.com/menu/bakery/",
+      "status": "failed",
+      "reason": "정책 형식·본문 검증 실패",
+      "policyHttpStatus": 200,
+      "check": "policy_hold"
+    },
+    {
+      "brand": "아티제",
+      "url": "https://www.cafeartisee.com/menu/beverage/",
+      "status": "failed",
+      "reason": "정책 형식·본문 검증 실패",
+      "policyHttpStatus": 200,
+      "check": "policy_hold"
+    },
+    {
+      "brand": "아티제",
+      "url": "https://www.cafeartisee.com/menu/dessert/",
+      "status": "failed",
+      "reason": "정책 형식·본문 검증 실패",
+      "policyHttpStatus": 200,
+      "check": "policy_hold"
+    },
+    {
+      "brand": "아티제",
+      "url": "https://www.cafeartisee.com/menu/retail/",
+      "status": "failed",
+      "reason": "정책 형식·본문 검증 실패",
+      "policyHttpStatus": 200,
+      "check": "policy_hold"
+    },
+    {
+      "brand": "엔제리너스",
+      "url": "https://www.lotteeatz.com/brand/angel",
+      "status": "blocked",
+      "reason": "robots 명시적 차단",
+      "policyHttpStatus": 200,
+      "check": "policy_hold"
+    },
+    {
+      "brand": "오리온",
+      "url": "https://www.orionworld.com/board/list/87",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "우지커피",
+      "url": "https://oozycoffee.com/",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "이디야커피",
+      "url": "https://ediyastore.com/",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "이디야커피",
+      "url": "https://www.ediya.com/contents/drink.html",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "이디야커피",
+      "url": "https://www.ediya.com/contents/product.html",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "이마트24",
+      "url": "https://emart24.co.kr/goods/ff",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "이마트24",
+      "url": "https://emart24.co.kr/goods/pl",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "커피베이",
+      "url": "https://www.coffeebay.com/menu/menu.php",
+      "check": "http_error",
+      "httpStatus": 403,
+      "contentType": "text/plain"
+    },
+    {
+      "brand": "커피빈코리아",
+      "url": "https://www.coffeebeankorea.com/menu/list.asp?category=13",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "커피빈코리아",
+      "url": "https://www.coffeebeankorea.com/product/list.asp",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "컴포즈커피",
+      "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "탐앤탐스",
+      "url": "https://www.tomntoms.com/menu/menu.html",
+      "status": "failed",
+      "reason": "TLS 인증서 검증 실패",
+      "failureKind": "tls",
+      "check": "policy_hold"
+    },
+    {
+      "brand": "테라로사",
+      "url": "https://terarosa.com/product/list/?category=12",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "테라로사",
+      "url": "https://terarosa.com/product/list/?category=88",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "텐퍼센트커피",
+      "url": "https://www.tenpercentcoffee.com/",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "투썸플레이스",
+      "url": "https://d-mcdn.twosome.co.kr/mn/menuInfoList.do",
+      "status": "failed",
+      "reason": "DNS 조회 실패",
+      "failureKind": "dns",
+      "check": "policy_hold"
+    },
+    {
+      "brand": "파스쿠찌",
+      "url": "https://www.caffe-pascucci.co.kr/menu/menuList.asp",
+      "status": "failed",
+      "reason": "TLS 인증서 검증 실패",
+      "failureKind": "tls",
+      "check": "policy_hold"
+    },
+    {
+      "brand": "폴 바셋",
+      "url": "https://www.baristapaulbassett.co.kr/eshop/index.pb",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "폴 바셋",
+      "url": "https://www.baristapaulbassett.co.kr/menu/List.pb",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "폴 바셋",
+      "url": "https://www.baristapaulbassett.co.kr/menu/List.pb?cid1=E",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "푸라닭",
+      "url": "https://puradakchicken.com/menu/product.asp",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "풀무원",
+      "url": "https://news.pulmuone.co.kr/pulmuone/newsroom/listDataroom.do",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "피자헛",
+      "url": "https://www.pizzahut.co.kr/api/menu/0996/list/best/VISIT",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "application/json"
+    },
+    {
+      "brand": "하겐다즈",
+      "url": "https://haagendazs-store.co.kr/product/list.html?cate_no=25&sort_method=5",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "할리스",
+      "url": "https://smartstore.naver.com/hollyscoffee",
+      "status": "blocked",
+      "reason": "robots 명시적 차단",
+      "policyHttpStatus": 200,
+      "check": "policy_hold"
+    },
+    {
+      "brand": "할리스",
+      "url": "https://www.hollys.co.kr/menu/espresso.do",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "할리스",
+      "url": "https://www.hollys.co.kr/menu/md.do",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "BBQ",
+      "url": "https://dt.bbq.co.kr/menu/menuList.asp?cidx=113&cname=%EC%8B%A0%EB%A9%94%EB%89%B4",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
+    },
+    {
+      "brand": "bhc",
+      "url": "https://www.bhc.co.kr/api/v1/web/categories/22/products",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "application/json"
+    },
+    {
+      "brand": "CU",
+      "url": "https://cu.bgfretail.com/product/productAjax.do",
+      "method": "POST",
+      "check": "collector_method_required"
+    },
+    {
+      "brand": "KFC",
+      "url": "https://www.kfckorea.com/promotion/newmenu",
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": ""
+    }
+  ]
+}

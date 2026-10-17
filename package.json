@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "check:routes": "node --experimental-strip-types scripts/check-collection-routes.ts",
     "check:policies": "node --experimental-strip-types scripts/check-collection-policies.ts",
     "update:coffee-images": "node --experimental-strip-types scripts/update-coffee-images.ts",
     "review:press-recheck": "node --experimental-strip-types scripts/recheck-press-products.ts",

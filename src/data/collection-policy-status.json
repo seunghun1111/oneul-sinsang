@@ -1,24 +1,24 @@
 {
-  "checkedAt": "2026-10-16T23:47:59.368Z",
+  "checkedAt": "2026-10-17T02:34:42.954Z",
   "scope": "수집 진입경로 정책 확인만 수행. 상품 요청·수집·검수·알림 없음",
   "brands": 47,
   "totals": {
-    "allowed": 42,
-    "failed": 11,
+    "allowed": 45,
     "blocked": 3,
-    "not_provided": 8
+    "failed": 9,
+    "not_provided": 7
   },
   "results": [
     {
       "brand": "공차",
-      "url": "https://www.gong-cha.co.kr/brand/menu/new.php",
+      "url": "https://www.gong-cha.co.kr/brand/menu/new_menu?scroll=y",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
     },
     {
       "brand": "공차",
-      "url": "https://www.gong-cha.co.kr/brand/menu/product.php",
+      "url": "https://www.gong-cha.co.kr/brand/menu/product?category=003001&scroll=y",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -26,6 +26,7 @@
     {
       "brand": "교촌치킨",
       "url": "https://www.kyochon.com/menu/chicken.asp?code=21",
+      "method": "GET",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -33,6 +34,7 @@
     {
       "brand": "굽네",
       "url": "https://www.goobne.co.kr/main",
+      "method": "GET",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -54,13 +56,14 @@
     {
       "brand": "더벤티",
       "url": "https://www.theventi.co.kr/new2022/menu/all.html",
-      "status": "failed",
-      "reason": "정책 형식·본문 검증 실패",
+      "status": "allowed",
+      "reason": "",
       "policyHttpStatus": 200
     },
     {
       "brand": "도미노피자",
       "url": "https://web.dominos.co.kr/goods/list?dsp_ctgr=C0101",
+      "method": "GET",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -68,6 +71,7 @@
     {
       "brand": "롯데리아",
       "url": "https://www.lotteeatz.com/brand/ria",
+      "method": "GET",
       "status": "blocked",
       "reason": "robots 명시적 차단",
       "policyHttpStatus": 200
@@ -82,20 +86,22 @@
     {
       "brand": "맘스터치",
       "url": "https://www.momstouch.co.kr/menu/new.php?s_sect1=new",
+      "method": "GET",
       "status": "failed",
-      "reason": "정책 요청 시간 초과",
-      "failureKind": "timeout"
+      "reason": "정책 HTTP 302",
+      "policyHttpStatus": 302
     },
     {
       "brand": "매머드커피",
       "url": "https://mmthcoffee.com/sub/menu/list.html",
-      "status": "not_provided",
-      "reason": "",
-      "policyHttpStatus": 404
+      "status": "failed",
+      "reason": "TLS 인증서 검증 실패",
+      "failureKind": "tls"
     },
     {
       "brand": "매일유업",
       "url": "https://www.maeil.com/news/press.jsp",
+      "method": "GET",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -103,6 +109,7 @@
     {
       "brand": "맥도날드",
       "url": "https://www.mcdonalds.co.kr/api/v1/kor/product/menu/list",
+      "method": "GET",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -124,6 +131,7 @@
     {
       "brand": "배스킨라빈스",
       "url": "https://www.baskinrobbins.co.kr/information-center/notice/list.php?page=1",
+      "method": "GET",
       "status": "not_provided",
       "reason": "",
       "policyHttpStatus": 404
@@ -131,6 +139,7 @@
     {
       "brand": "버거킹",
       "url": "https://web-prd.burgerking.co.kr/burgerking/BKR0632.json",
+      "method": "POST",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -152,6 +161,7 @@
     {
       "brand": "빙그레",
       "url": "https://www.bing.co.kr/news/news_announced",
+      "method": "GET",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -166,6 +176,7 @@
     {
       "brand": "삼양식품",
       "url": "https://samyangfoods.com/kor/publicity/press/list.do?searchCateCd=035002&pageUnit=20",
+      "method": "GET",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -173,9 +184,10 @@
     {
       "brand": "세븐일레븐",
       "url": "https://www.7-eleven.co.kr/product/presentList.asp",
-      "status": "failed",
-      "reason": "정책 요청 시간 초과",
-      "failureKind": "timeout"
+      "method": "POST",
+      "status": "allowed",
+      "reason": "",
+      "policyHttpStatus": 200
     },
     {
       "brand": "스타벅스",
@@ -243,6 +255,7 @@
     {
       "brand": "오리온",
       "url": "https://www.orionworld.com/board/list/87",
+      "method": "GET",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -278,6 +291,7 @@
     {
       "brand": "이마트24",
       "url": "https://emart24.co.kr/goods/ff",
+      "method": "GET",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -285,6 +299,7 @@
     {
       "brand": "이마트24",
       "url": "https://emart24.co.kr/goods/pl",
+      "method": "GET",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -298,7 +313,7 @@
     },
     {
       "brand": "커피빈코리아",
-      "url": "https://www.coffeebeankorea.com/menu/list.asp",
+      "url": "https://www.coffeebeankorea.com/menu/list.asp?category=13",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -312,14 +327,7 @@
     },
     {
       "brand": "컴포즈커피",
-      "url": "https://composecoffee.com/menu",
-      "status": "allowed",
-      "reason": "",
-      "policyHttpStatus": 200
-    },
-    {
-      "brand": "컴포즈커피",
-      "url": "https://composecoffee.com/menu/category/98609",
+      "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -333,7 +341,14 @@
     },
     {
       "brand": "테라로사",
-      "url": "https://terarosa.com/shop",
+      "url": "https://terarosa.com/product/list/?category=12",
+      "status": "allowed",
+      "reason": "",
+      "policyHttpStatus": 200
+    },
+    {
+      "brand": "테라로사",
+      "url": "https://terarosa.com/product/list/?category=88",
       "status": "allowed",
       "reason": "",
       "policyHttpStatus": 200
@@ -390,13 +405,15 @@
     {
       "brand": "풀무원",
       "url": "https://news.pulmuone.co.kr/pulmuone/newsroom/listDataroom.do",
-      "status": "failed",
-      "reason": "정책 요청 시간 초과",
-      "failureKind": "timeout"
+      "method": "GET",
+      "status": "allowed",
+      "reason": "",
+      "policyHttpStatus": 200
     },
     {
       "brand": "피자헛",
       "url": "https://www.pizzahut.co.kr/api/menu/0996/list/best/VISIT",
+      "method": "GET",
       "status": "not_provided",
       "reason": "",
       "policyHttpStatus": 404
@@ -446,6 +463,7 @@
     {
       "brand": "CU",
       "url": "https://cu.bgfretail.com/product/productAjax.do",
+      "method": "POST",
       "status": "not_provided",
       "reason": "",
       "policyHttpStatus": 404
@@ -453,6 +471,7 @@
     {
       "brand": "KFC",
       "url": "https://www.kfckorea.com/promotion/newmenu",
+      "method": "GET",
       "status": "not_provided",
       "reason": "",
       "policyHttpStatus": 404

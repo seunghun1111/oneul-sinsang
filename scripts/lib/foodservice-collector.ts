@@ -22,6 +22,7 @@ export type FoodserviceCandidate = {
   sourceType: "official_site";
   imageUrl: string | null;
   reviewEvidence?: Product["reviewEvidence"];
+  discoveryReferences?: Product["discoveryReferences"];
 };
 
 const USER_AGENT = "OneulSinsang/1.0 (+non-commercial product index)";
@@ -280,12 +281,13 @@ export function extractPizzaHutNewProducts(data: PizzaHutMenu, checkedAt: string
     const started = entries.map(entry => String(entry.saleStartDate ?? "")).filter(Boolean).sort()[0];
     const active = entries.some(entry => String(entry.orderable ?? "") === "YES" && activeAt(String(entry.saleStartDate ?? ""), String(entry.saleEndDate ?? ""), checkedAt));
     if (!id || !name || String(item.badge ?? "") !== "NEW" || !started || !active) return [];
-    return [candidate({
+    const product=candidate({
       slug: `pizzahut-${id.toLowerCase()}`, brand: "피자헛", name, category: "pizza", subCategory: "피자", checkedAt,
       releaseDate: started.slice(0, 10), description: "피자헛 공식 메뉴 API의 NEW 배지에서 확인된 피자",
       sourceUrl: `https://www.pizzahut.co.kr/menu/pizza/best/${id}`,
       imageUrl: pizzaHutImage(item),
-    })];
+    });
+    return [{...product,discoveryReferences:[{kind:"sale" as const,url:product.sourceUrl,checkedAt,verified:true,verification:"official_orderable" as const,evidenceUrl:"https://www.pizzahut.co.kr/api/menu/0996/list/best/VISIT"}]}];
   });
 }
 

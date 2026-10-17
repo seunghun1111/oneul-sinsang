@@ -27904,6 +27904,16 @@
     "sourceUrl": "https://www.pizzahut.co.kr/menu/pizza/best/RPPZ2275",
     "sourceType": "official_site",
     "imageUrl": "https://akamai.pizzahut.co.kr/2020pizzahut-prod/public/img/menu/RPPZ2275_RPEG0056_RPDO0001_l.png",
+    "discoveryReferences": [
+      {
+        "kind": "sale",
+        "url": "https://www.pizzahut.co.kr/menu/pizza/best/RPPZ2275",
+        "checkedAt": "2026-10-17T02:36:40.417Z",
+        "verified": true,
+        "verification": "official_orderable",
+        "evidenceUrl": "https://www.pizzahut.co.kr/api/menu/0996/list/best/VISIT"
+      }
+    ],
     "releaseDate": "2026-06-11",
     "firstDetectedAt": "2026-10-16T15:52:51.270Z",
     "lastCheckedAt": "2026-10-16T23:46:38.979Z",

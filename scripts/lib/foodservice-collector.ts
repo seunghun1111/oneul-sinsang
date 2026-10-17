@@ -258,6 +258,19 @@ export function extractKfcNewProducts(html: string, checkedAt: string): Foodserv
 
 type PizzaHutMenu = Array<Record<string, unknown>>;
 
+function pizzaHutImage(item:Record<string,unknown>) {
+  for(const value of [item.thumb,item.image]){
+    if(typeof value!=="string"||!value.trim())continue;
+    try{
+      const url=new URL(value,"https://www.pizzahut.co.kr");
+      if(url.protocol!=="https:"||url.username||url.password||url.port||!["www.pizzahut.co.kr","akamai.pizzahut.co.kr"].includes(url.hostname))continue;
+      if(/kakao_\d+|logo|placeholder|no[_-]?image/i.test(url.pathname))continue;
+      return url.href;
+    }catch{/* Missing/invalid images must not invalidate an official NEW product. */}
+  }
+  return null;
+}
+
 export function extractPizzaHutNewProducts(data: PizzaHutMenu, checkedAt: string): FoodserviceCandidate[] {
   return data.flatMap(item => {
     const id = String(item.digitalKey ?? "");
@@ -270,6 +283,7 @@ export function extractPizzaHutNewProducts(data: PizzaHutMenu, checkedAt: string
       slug: `pizzahut-${id.toLowerCase()}`, brand: "피자헛", name, category: "pizza", subCategory: "피자", checkedAt,
       releaseDate: started.slice(0, 10), description: "피자헛 공식 메뉴 API의 NEW 배지에서 확인된 피자",
       sourceUrl: `https://www.pizzahut.co.kr/menu/pizza/best/${id}`,
+      imageUrl: pizzaHutImage(item),
     })];
   });
 }

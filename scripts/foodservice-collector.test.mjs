@@ -95,3 +95,11 @@ test("피자헛은 30일 이전 상품도 NEW 배지가 유지되면 추출한�
   const data = [{ digitalKey: "NEW1", rpstName: "새 피자", badge: "NEW", items: [{ saleStartDate: "2026-09-20T00:00:00+0900", saleEndDate: "2026-12-01T00:00:00+0900", orderable: "YES" }] }, { digitalKey: "OLD1", rpstName: "옛 피자", badge: "NEW", items: [{ saleStartDate: "2026-06-01T00:00:00+0900", saleEndDate: "2026-12-01T00:00:00+0900", orderable: "YES" }] }];
   assert.deepEqual(extractPizzaHutNewProducts(data, checkedAt).map(product => product.name), ["새 피자", "옛 피자"]);
 });
+
+test("피자헛은 같은 상품 API의 이미지가 있을 때만 연결하고 배너·외부 주소는 제외한다",()=>{
+ const item={digitalKey:"NEW1",rpstName:"새 피자",badge:"NEW",items:[{saleStartDate:"2026-09-20T00:00:00+0900",saleEndDate:"2026-12-01T00:00:00+0900",orderable:"YES"}]};
+ const image=(fields)=>extractPizzaHutNewProducts([{...item,...fields}],checkedAt)[0].imageUrl;
+ assert.equal(image({thumb:"https://akamai.pizzahut.co.kr/menu/pizza.png"}),"https://akamai.pizzahut.co.kr/menu/pizza.png");
+ assert.equal(image({thumb:null,image:"/menu/pizza.png"}),"https://www.pizzahut.co.kr/menu/pizza.png");
+ for(const fields of [{thumb:null,image:null},{thumb:"https://other.example/pizza.png"},{image:"https://akamai.pizzahut.co.kr/images/kakao_20260701.jpg"},{thumb:"https://user:secret@www.pizzahut.co.kr/menu/a.png"}])assert.equal(image(fields),null);
+});

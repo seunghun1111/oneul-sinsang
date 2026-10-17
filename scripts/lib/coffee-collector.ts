@@ -1,4 +1,5 @@
 import {collectionFetch} from "./collection-http.ts";
+import {officialCoffeeCards,inspectOfficialCoffeeCards} from "./official-coffee-cards.ts";
 import {CollectionFailure,collectionFailureCode,type CollectionFailureCode} from "./collection-failure.ts";
 import { createHash } from "node:crypto";
 import {starbucksCategoryCodes,parseStarbucksMenu} from "./starbucks-menu.ts";
@@ -67,6 +68,7 @@ function extractKnownOfficialCards(html: string, sourceUrl: string, checkedAt: s
 }
 
 export function extractOfficialProductNames(html: string, sourceUrl = "", checkedAt = new Date().toISOString(), newOnly = false) {
+  if(newOnly&&sourceUrl){const cards=officialCoffeeCards(html,sourceUrl);if(cards)return [...new Set(cards.map(card=>card.name))];}
   html=html.replace(/<!--[\s\S]*?-->/g, comment=>/^<!--\s*고메/.test(comment)?"<!-- 고메 -->":"");
   const structuredNames: string[] = [];
   for (const match of html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
@@ -152,6 +154,8 @@ export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: 
     const response = await fetcher(url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
     if (!response.ok) throw new CollectionFailure("http");
     const html=await response.text();
+    const inspection=inspectOfficialCoffeeCards(html,channel.url);
+    if(inspection&&(!inspection.namedCards||inspection.namedCards!==inspection.identifiedCards))throw new CollectionFailure("structure");
     const names = extractOfficialProductNames(html, channel.url, checkedAt, true);
     const images=coffeeProductImages(html,channel.url);
     return toCoffeeCandidates(source, channel.kind, channel.url, names, checkedAt).map(candidate=>({...candidate,...(images.has(candidate.normalizedName)?{imageUrl:images.get(candidate.normalizedName)}:{}),reviewEvidence:{sourceUrl:channel.url,checkedAt,robots:"not_provided" as const,explicitNew:true}}));

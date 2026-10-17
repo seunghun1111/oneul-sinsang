@@ -5,6 +5,7 @@ import { getCategoryGroupForCategory } from "@/lib/category-groups";
 import { categoryMeta, typeLabel } from "@/lib/product-meta";
 import { getProduct, products } from "@/lib/products";
 import {discoveryEvidence} from "../../../../chatgpt-site/lib/review/discovery-evidence";
+import {FavoriteButton} from "@/components/favorite-button";
 
 export function generateStaticParams() { return products.map(({ id }) => ({ id })); }
 
@@ -21,6 +22,7 @@ export default async function ProductDetailPage(props: PageProps<"/products/[id]
         <dl className="detail-list"><div><dt>{evidence.dateLabel}</dt><dd>{evidence.date||"미확인"}</dd></div><div><dt>신상 근거</dt><dd>{evidence.newLabel}</dd></div><div><dt>판매 근거</dt><dd>{evidence.saleLabel}</dd></div><div><dt>최근 목록 확인일</dt><dd>{product.lastCheckedAt.slice(0,10)}</dd></div><div><dt>상품 유형</dt><dd>{typeLabel[product.productType]}</dd></div></dl>
         {evidence.saleCheckedAt&&<p>주문 가능 확인 시각: {new Date(evidence.saleCheckedAt).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",hour12:false})} (한국 시간) · 확인 당시 기준입니다.</p>}
         <p>최초 발견일은 출시일이 아닙니다. 검색·판매 링크 노출만으로 신상이나 매장 재고를 확정하지 않습니다.</p>
+        <div className="detail-favorite"><FavoriteButton kind="products" value={product.id} label={`${product.brand} ${product.name}`}/><span>관심 상품</span></div>
         <a className="source-button" href={product.sourceUrl} target="_blank" rel="noopener noreferrer">공식 출처 보기</a>
       </div></section>
   </main></>;

@@ -9,6 +9,7 @@ import Link from "next/link";
 import {useFavorites} from "./use-favorites";
 import {FavoriteButton} from "./favorite-button";
 import {matchesFavorite} from "@/lib/favorites";
+import {FavoritesBackup} from "./favorites-backup";
 const subscribe=(change:()=>void)=>{window.addEventListener("popstate",change);window.addEventListener("catalog-change",change);return()=>{window.removeEventListener("popstate",change);window.removeEventListener("catalog-change",change);};};
 const snapshot=()=>window.location.search;
 const serverSnapshot=()=>"";
@@ -33,6 +34,7 @@ export function ProductExplorer({products,title="공식 NEW 상품",description=
  return <section className="catalog" aria-labelledby={`${id}-title`}>
   <div className="catalog-heading"><div><p className="section-kicker">DISCOVER NEW</p><h2 id={`${id}-title`}>{title}</h2><p>{description}</p></div><span className="result-count" aria-live="polite">{filtered.length.toLocaleString()}개 상품</span></div>
   <div className="favorites-toolbar">{favoritesPage?<><div className="favorites-modes" aria-label="관심 목록 종류">{chip("products",`관심 상품 (${favorites.products.length})`,savedMode==="products",()=>change({saved:"products",category:"all",brand:"all",sub:"all",q:""}))}{chip("brands",`관심 브랜드 (${favorites.brands.length})`,savedMode==="brands",()=>change({saved:"brands",category:"all",brand:"all",sub:"all",q:""}))}</div><p>브라우저 데이터를 지우면 관심 기록도 사라집니다. 현재 공개 중인 상품만 표시하며, 미노출 상품의 저장 기록은 자동 삭제하지 않습니다.</p></>:<Link href="/saved">★ 내 관심 신상 모아보기</Link>}<details className="favorite-brand-manager"><summary>관심 브랜드 관리</summary><p>별표를 누른 브랜드의 공개 NEW 상품을 모아볼 수 있습니다.</p><div>{brands.map(item=><FavoriteButton key={item} kind="brands" value={item} label={item}/>)}</div></details></div>
+  {favoritesPage&&<FavoritesBackup products={products.map(({id,brand,name})=>({id,brand,name}))}/>}
   <div className="catalog-filter-panel">
    <div className="catalog-search"><label htmlFor={`${id}-search`}>상품·브랜드 검색</label><div><input id={`${id}-search`} type="search" maxLength={120} placeholder="예: 스타벅스 라떼, 텀블러" value={state.q} onChange={e=>change({q:e.target.value})}/>{state.q&&<button type="button" aria-label="검색어 지우기" onClick={()=>change({q:""})}>지우기</button>}</div></div>
    <div className="filter-summary"><span>{active.length?active.join(" › "):"전체 상품"}{state.q.trim()?` · “${state.q.trim()}” 검색`:""}</span><div><button type="button" onClick={reset}>초기화</button><button className="mobile-filter-toggle" type="button" aria-expanded={filtersOpen} aria-controls={`${id}-filters`} onClick={()=>setFiltersOpen(!filtersOpen)}>필터 {filtersOpen?"접기":"펼치기"}</button></div></div>

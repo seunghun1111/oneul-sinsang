@@ -4,6 +4,8 @@ import {needsCollectionAttention,type CollectionHealth} from "../chatgpt-site/li
 import {collectCoffeeSource} from "./lib/coffee-collector.ts";
 import {collectLotteria,collectMomstouch} from "./lib/foodservice-collector.ts";
 import {collectionFailureCode} from "./lib/collection-failure.ts";
+import {collectionRemediation} from "./lib/collection-remediation.ts";
+import {coffeeProducts} from "../src/data/coffee-products.ts";
 
 // Diagnostic only: never merge products, update health timestamps, or send notifications.
 const data=new URL("../src/data/",import.meta.url);
@@ -24,7 +26,13 @@ for(const target of targets){
   if(collect){try{const products=await collect(checkedAt);paths.push({status:"checked",newCount:products.length});}catch(error){paths.push({status:"failed",failureCodes:[collectionFailureCode(error)]});}}
   else paths.push({status:"not_supported"});
  }
- const row={brand:target.brand,previousStatus:target.status,previousCheckedAt:target.checkedAt,paths};
+ const classified=paths.map(path=>{
+  const existing="url" in path&&coffeeProducts.some(product=>product.brand===target.brand&&product.sourceUrl===path.url&&product.isActive&&product.newStatus!=="removed");
+  const unexpectedEmpty=!!existing&&path.status==="checked"&&path.newCount===0;
+  const codes="failureCodes" in path?path.failureCodes??[]:[];
+  return {...path,...(unexpectedEmpty?{status:"needs_review",reasonCode:"unexpected_empty"}:{}),remediation:collectionRemediation(codes,unexpectedEmpty)};
+ });
+ const row={brand:target.brand,previousStatus:target.status,previousCheckedAt:target.checkedAt,paths:classified};
  results.push(row);console.log(JSON.stringify(row));
 }
 await writeFile(new URL("../docs/collection-attention-current.json",import.meta.url),JSON.stringify({checkedAt,scope:"확인 필요 항목의 실제 수집기 진단. 상품·운영 상태·검수·알림 변경 없음. checked/NEW 0건은 기존 상품의 NEW 종료 근거가 아님",targetCount:targets.length,results},null,2)+"\n");

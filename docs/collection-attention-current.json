@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-10-17T05:21:41.997Z",
+  "checkedAt": "2026-10-17T11:54:01.561Z",
   "scope": "확인 필요 항목의 실제 수집기 진단. 상품·운영 상태·검수·알림 변경 없음. checked/NEW 0건은 기존 상품의 NEW 종료 근거가 아님",
-  "targetCount": 14,
+  "targetCount": 10,
   "results": [
     {
       "brand": "롯데리아",
@@ -12,7 +12,11 @@
           "status": "failed",
           "failureCodes": [
             "policy_blocked"
-          ]
+          ],
+          "remediation": {
+            "category": "policy_hold",
+            "action": "현재 경로 수집 보류. 허용된 공식 대체 경로만 검토하며 제한을 우회하지 않습니다."
+          }
         }
       ]
     },
@@ -25,14 +29,18 @@
           "status": "failed",
           "failureCodes": [
             "policy_unavailable"
-          ]
+          ],
+          "remediation": {
+            "category": "policy_recheck",
+            "action": "robots 정책 확인 후 재시도. 정책 미확인을 허용으로 간주하지 않습니다."
+          }
         }
       ]
     },
     {
       "brand": "투썸플레이스",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
+      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
       "paths": [
         {
           "url": "https://d-mcdn.twosome.co.kr/mn/menuInfoList.do",
@@ -41,42 +49,38 @@
           "newCount": 0,
           "failureCodes": [
             "dns"
-          ]
+          ],
+          "remediation": {
+            "category": "route_recheck",
+            "action": "공식 홈페이지에서 현재 메뉴 주소·응답 상태를 재확인합니다."
+          }
         }
       ]
     },
     {
-      "brand": "컴포즈커피",
+      "brand": "매머드커피",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
+      "previousCheckedAt": "2026-10-17T05:22:47.541Z",
       "paths": [
         {
-          "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList",
+          "url": "https://mmthcoffee.com/sub/menu/list.html",
           "kind": "menu",
-          "status": "checked",
+          "status": "failed",
           "newCount": 0,
-          "failureCodes": []
-        }
-      ]
-    },
-    {
-      "brand": "더벤티",
-      "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
-      "paths": [
-        {
-          "url": "https://www.theventi.co.kr/new2022/menu/all.html",
-          "kind": "menu",
-          "status": "checked",
-          "newCount": 0,
-          "failureCodes": []
+          "failureCodes": [
+            "tls"
+          ],
+          "remediation": {
+            "category": "certificate",
+            "action": "공식 인증서·호스트 상태 확인. TLS 검증을 끄지 않고 정상 공식 대체 주소만 검토합니다."
+          }
         }
       ]
     },
     {
       "brand": "아티제",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
+      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
       "paths": [
         {
           "url": "https://www.cafeartisee.com/menu/beverage/",
@@ -85,7 +89,11 @@
           "newCount": 0,
           "failureCodes": [
             "policy_unavailable"
-          ]
+          ],
+          "remediation": {
+            "category": "policy_recheck",
+            "action": "robots 정책 확인 후 재시도. 정책 미확인을 허용으로 간주하지 않습니다."
+          }
         },
         {
           "url": "https://www.cafeartisee.com/menu/bakery/",
@@ -94,7 +102,11 @@
           "newCount": 0,
           "failureCodes": [
             "policy_unavailable"
-          ]
+          ],
+          "remediation": {
+            "category": "policy_recheck",
+            "action": "robots 정책 확인 후 재시도. 정책 미확인을 허용으로 간주하지 않습니다."
+          }
         },
         {
           "url": "https://www.cafeartisee.com/menu/dessert/",
@@ -103,7 +115,11 @@
           "newCount": 0,
           "failureCodes": [
             "policy_unavailable"
-          ]
+          ],
+          "remediation": {
+            "category": "policy_recheck",
+            "action": "robots 정책 확인 후 재시도. 정책 미확인을 허용으로 간주하지 않습니다."
+          }
         },
         {
           "url": "https://www.cafeartisee.com/menu/retail/",
@@ -112,28 +128,41 @@
           "newCount": 0,
           "failureCodes": [
             "policy_unavailable"
-          ]
+          ],
+          "remediation": {
+            "category": "policy_recheck",
+            "action": "robots 정책 확인 후 재시도. 정책 미확인을 허용으로 간주하지 않습니다."
+          }
         }
       ]
     },
     {
       "brand": "할리스",
       "previousStatus": "partial",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
+      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
       "paths": [
         {
           "url": "https://www.hollys.co.kr/menu/espresso.do",
           "kind": "menu",
           "status": "checked",
           "newCount": 0,
-          "failureCodes": []
+          "failureCodes": [],
+          "remediation": {
+            "category": "checked",
+            "action": "진단 응답 확인. 상품·운영 상태는 갱신하지 않았습니다."
+          }
         },
         {
           "url": "https://www.hollys.co.kr/menu/md.do",
           "kind": "md",
-          "status": "checked",
+          "status": "needs_review",
           "newCount": 0,
-          "failureCodes": []
+          "failureCodes": [],
+          "reasonCode": "unexpected_empty",
+          "remediation": {
+            "category": "parser_recheck",
+            "action": "공식 상품 카드·NEW 표시 구조를 점검합니다. 기존 상품의 NEW 종료로 처리하지 않습니다."
+          }
         },
         {
           "url": "https://smartstore.naver.com/hollyscoffee",
@@ -142,37 +171,18 @@
           "newCount": 0,
           "failureCodes": [
             "policy_blocked"
-          ]
-        }
-      ]
-    },
-    {
-      "brand": "커피빈코리아",
-      "previousStatus": "partial",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
-      "paths": [
-        {
-          "url": "https://www.coffeebeankorea.com/menu/list.asp?category=13",
-          "kind": "menu",
-          "status": "checked",
-          "newCount": 0,
-          "failureCodes": []
-        },
-        {
-          "url": "https://www.coffeebeankorea.com/product/list.asp",
-          "kind": "shop",
-          "status": "failed",
-          "newCount": 0,
-          "failureCodes": [
-            "timeout"
-          ]
+          ],
+          "remediation": {
+            "category": "policy_hold",
+            "action": "현재 경로 수집 보류. 허용된 공식 대체 경로만 검토하며 제한을 우회하지 않습니다."
+          }
         }
       ]
     },
     {
       "brand": "파스쿠찌",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
+      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
       "paths": [
         {
           "url": "https://www.caffe-pascucci.co.kr/menu/menuList.asp",
@@ -181,14 +191,18 @@
           "newCount": 0,
           "failureCodes": [
             "tls"
-          ]
+          ],
+          "remediation": {
+            "category": "certificate",
+            "action": "공식 인증서·호스트 상태 확인. TLS 검증을 끄지 않고 정상 공식 대체 주소만 검토합니다."
+          }
         }
       ]
     },
     {
       "brand": "엔제리너스",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
+      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
       "paths": [
         {
           "url": "https://www.lotteeatz.com/brand/angel",
@@ -197,14 +211,18 @@
           "newCount": 0,
           "failureCodes": [
             "policy_blocked"
-          ]
+          ],
+          "remediation": {
+            "category": "policy_hold",
+            "action": "현재 경로 수집 보류. 허용된 공식 대체 경로만 검토하며 제한을 우회하지 않습니다."
+          }
         }
       ]
     },
     {
       "brand": "탐앤탐스",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
+      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
       "paths": [
         {
           "url": "https://www.tomntoms.com/menu/menu.html",
@@ -213,14 +231,18 @@
           "newCount": 0,
           "failureCodes": [
             "tls"
-          ]
+          ],
+          "remediation": {
+            "category": "certificate",
+            "action": "공식 인증서·호스트 상태 확인. TLS 검증을 끄지 않고 정상 공식 대체 주소만 검토합니다."
+          }
         }
       ]
     },
     {
       "brand": "커피베이",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
+      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
       "paths": [
         {
           "url": "https://www.coffeebay.com/menu/coffeebay",
@@ -229,49 +251,11 @@
           "newCount": 0,
           "failureCodes": [
             "structure"
-          ]
-        }
-      ]
-    },
-    {
-      "brand": "공차",
-      "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
-      "paths": [
-        {
-          "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001001&scroll=y",
-          "kind": "menu",
-          "status": "checked",
-          "newCount": 0,
-          "failureCodes": []
-        },
-        {
-          "url": "https://www.gong-cha.co.kr/brand/menu/product?category=003001&scroll=y",
-          "kind": "md",
-          "status": "checked",
-          "newCount": 0,
-          "failureCodes": []
-        }
-      ]
-    },
-    {
-      "brand": "테라로사",
-      "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:51.909Z",
-      "paths": [
-        {
-          "url": "https://terarosa.com/product/list/?category=12",
-          "kind": "shop",
-          "status": "checked",
-          "newCount": 0,
-          "failureCodes": []
-        },
-        {
-          "url": "https://terarosa.com/product/list/?category=88",
-          "kind": "md",
-          "status": "checked",
-          "newCount": 0,
-          "failureCodes": []
+          ],
+          "remediation": {
+            "category": "parser_recheck",
+            "action": "공식 상품 카드·NEW 표시 구조를 점검합니다. 기존 상품의 NEW 종료로 처리하지 않습니다."
+          }
         }
       ]
     }

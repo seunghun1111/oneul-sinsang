@@ -1,6 +1,7 @@
 "use client";
 import {useMemo,useSyncExternalStore} from "react";
 import {FAVORITES_KEY,parseFavorites,persistFavorite} from "@/lib/favorites";
+import {importFavoritesBackup,readFavoritesBackup} from "@/lib/favorites-backup";
 const changed="oneul-favorites-change";
 const snapshot=()=>{try{return window.localStorage.getItem(FAVORITES_KEY)??"";}catch{return "";}};
 const serverSnapshot=()=>"";
@@ -14,5 +15,7 @@ export function useFavorites(){
  const toggle=(kind:"products"|"brands",value:string)=>{
   try{if(!persistFavorite(window.localStorage,kind,value))return false;window.dispatchEvent(new Event(changed));return true;}catch{return false;}
  };
- return {favorites,toggle};
+ const importBackup=(raw:string)=>{try{importFavoritesBackup(window.localStorage,raw);window.dispatchEvent(new Event(changed));return true;}catch{return false;}};
+ const exportBackup=()=>JSON.stringify(readFavoritesBackup(window.localStorage),null,2);
+ return {favorites,toggle,importBackup,exportBackup};
 }

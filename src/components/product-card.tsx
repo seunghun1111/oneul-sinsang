@@ -6,6 +6,7 @@ import {ProductThumbnail} from "./product-thumbnail";
 import {seoulDateKey} from "@/lib/product-window";
 import {discoveryKind} from "@/lib/discovery-display";
 import {FavoriteButton} from "./favorite-button";
+import {ProductFreshness} from "./product-freshness";
 
 export function ProductCard({ product }: { product: Product }) {
   const meta = categoryMeta[product.category];
@@ -20,6 +21,7 @@ export function ProductCard({ product }: { product: Product }) {
     <div className="product-content"><div className="product-kicker"><span>{product.brand}</span><span>·</span><span>{product.subCategory ?? meta.label}</span></div>
       <Link href={`/products/${product.id}`}><h2>{product.name}</h2></Link><small className={`discovery-kind kind-${product.detectionKind??"unknown"}`} title={kind.description}>{kind.label}</small><p className="product-description">{product.description}</p><p className="product-evidence">{product.sourceType === "press_release" ? "공식 신제품 발표 확인" : "공식 메뉴·상품 목록 확인"}</p>
       <div className="product-commerce"><strong>{evidence.newLabel}</strong><span>{evidence.saleLabel}</span></div>
+      <ProductFreshness product={{brand:product.brand,sourceUrl:product.sourceUrl,lastSeenAt:product.lastSeenAt,reviewEvidence:product.reviewEvidence,consecutiveMisses:product.consecutiveMisses}}/>
       <div className="product-footer"><span>{evidence.dateLabel}</span><time dateTime={displayDate}>{formatDate(displayDate)}</time></div>
     </div>
   </article>;

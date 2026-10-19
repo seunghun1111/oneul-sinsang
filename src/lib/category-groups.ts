@@ -1,4 +1,5 @@
 import type { Product, ProductCategory } from "@/types/product";
+import {convenienceBrowseGroup} from "./product-browse.ts";
 
 export type CategoryGroup = {
   slug: string;
@@ -20,6 +21,10 @@ export const categoryGroups: CategoryGroup[] = [
 
 export function getCategoryGroup(slug: string) {
   return categoryGroups.find(group => group.slug === slug);
+}
+export function productInCategoryGroup(product:Product,slug:string){
+ const group=getCategoryGroup(slug);
+ return !!group&&(group.categories.includes(product.category)||convenienceBrowseGroup(product)===slug);
 }
 
 export function getCategoryGroupForCategory(category: ProductCategory) {

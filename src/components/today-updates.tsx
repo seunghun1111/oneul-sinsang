@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useId, useMemo, useState } from "react";
 import type { Product } from "@/types/product";
 import { INITIAL_SUMMARY_CUTOFF, seoulDateKey } from "@/lib/product-window";
-import { getCategoryGroupForProducts } from "@/lib/category-groups";
 import { SummaryViewport } from "./summary-viewport";
 import {ProductThumbnail} from "./product-thumbnail";
 
@@ -12,15 +11,19 @@ const DAY_LABELS = ["월", "화", "수", "목", "금", "토", "일"];
 
 export function TodayUpdates({ products, today, dates }: { products: Product[]; today: string; dates: string[] }) {
   const [selectedDate, setSelectedDate] = useState(today);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  function selectDate(date:string){setSelectedDate(date);setCategoryFilter(null);}
   const tabsId=useId();
   const selectedProducts = useMemo(() => products.filter(product => seoulDateKey(product.firstDetectedAt) === selectedDate), [products, selectedDate]);
   const categories = [...new Map(selectedProducts.map(product => [product.subCategory ?? "기타", 0])).keys()]
     .map(label => {
       const categoryProducts = selectedProducts.filter(product => (product.subCategory ?? "기타") === label);
-      return { label, count: categoryProducts.length, group: getCategoryGroupForProducts(categoryProducts) };
+      return { label, count: categoryProducts.length };
     })
     .toSorted((left, right) => right.count - left.count);
   const weekRange = `${dates[0].slice(5).replace("-", ".")}–${dates[6].slice(5).replace("-", ".")}`;
+  const activeCategory=categories.some(category=>category.label===categoryFilter)?categoryFilter:null;
+  const filteredProducts=selectedProducts.filter(product=>activeCategory===null||(product.subCategory??"기타")===activeCategory);
 
   return <section className="today-updates" aria-labelledby="today-updates-title">
     <div className="today-update-heading">
@@ -31,9 +34,9 @@ export function TodayUpdates({ products, today, dates }: { products: Product[]; 
       {dates.map((date, index) => {
         const count = products.filter(product => seoulDateKey(product.firstDetectedAt) === date).length;
         const selected = date === selectedDate;
-        return <button type="button" role="tab" id={`${tabsId}-${date}`} aria-controls={`${tabsId}-panel`} tabIndex={selected?0:-1} aria-label={`${Number(date.slice(5,7))}월 ${Number(date.slice(8))}일 ${DAY_LABELS[index]}요일 신상 ${count}개`} aria-selected={selected} className={selected ? "is-active" : ""} onClick={() => setSelectedDate(date)} onKeyDown={event=>{
+        return <button type="button" role="tab" id={`${tabsId}-${date}`} aria-controls={`${tabsId}-panel`} tabIndex={selected?0:-1} aria-label={`${Number(date.slice(5,7))}월 ${Number(date.slice(8))}일 ${DAY_LABELS[index]}요일 신상 ${count}개`} aria-selected={selected} className={selected ? "is-active" : ""} onClick={() => selectDate(date)} onKeyDown={event=>{
           const next=event.key==="ArrowRight"?(index+1)%dates.length:event.key==="ArrowLeft"?(index+dates.length-1)%dates.length:event.key==="Home"?0:event.key==="End"?dates.length-1:undefined;
-          if(next===undefined)return;event.preventDefault();setSelectedDate(dates[next]);
+          if(next===undefined)return;event.preventDefault();selectDate(dates[next]);
           event.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]')[next]?.focus();
         }} key={date}>
           <span>{DAY_LABELS[index]}</span><strong>{Number(date.slice(8))}</strong><small>{count}</small>
@@ -42,8 +45,12 @@ export function TodayUpdates({ products, today, dates }: { products: Product[]; 
     </div>
     <div role="tabpanel" id={`${tabsId}-panel`} aria-labelledby={`${tabsId}-${selectedDate}`}>
     {selectedProducts.length === 0 ? <p className="today-empty">{selectedDate === today ? "오늘" : `${Number(selectedDate.slice(5, 7))}월 ${Number(selectedDate.slice(8))}일`} 새로 확인된 상품이 없습니다.</p> : <>
-      <div className="today-category-summary" aria-label="선택한 날짜의 상품군별 건수">{categories.map(category => category.group && <Link href={`/categories/${category.group.slug}`} key={category.label} aria-label={`${category.label} ${category.count}개, ${category.group.label}으로 이동`}>{category.label} <strong>{category.count}</strong></Link>)}</div>
-      <SummaryViewport key={selectedDate} label="이번 주 선택한 날짜의 신상"><div className="today-product-list">{selectedProducts.map(product => <Link href={`/products/${product.id}`} key={product.id} className="today-product">
+      <div className="today-category-summary" role="group" aria-label="선택한 날짜의 상품군 필터">
+        <button type="button" aria-pressed={activeCategory===null} onClick={()=>setCategoryFilter(null)}>전체 <strong>{selectedProducts.length}</strong></button>
+        {categories.map(category => <button type="button" key={category.label} aria-pressed={activeCategory===category.label} onClick={()=>setCategoryFilter(category.label)}>{category.label} <strong>{category.count}</strong></button>)}
+      </div>
+      <p className="summary-filter-result" role="status">{activeCategory??"전체"} · {filteredProducts.length}개</p>
+      <SummaryViewport key={`${selectedDate}:${activeCategory??"all"}`} label="이번 주 선택한 날짜의 신상"><div className="today-product-list">{filteredProducts.map(product => <Link href={`/products/${product.id}`} key={product.id} className="today-product">
         <ProductThumbnail product={product}/>
         <div><small>{product.brand} · {product.subCategory ?? "기타"}</small><strong>{product.name}</strong></div>
       </Link>)}</div></SummaryViewport>

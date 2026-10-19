@@ -1,12 +1,11 @@
 {
-  "checkedAt": "2026-10-17T05:23:17.003Z",
-  "policyCheckedAt": "2026-10-17T05:22:54.083Z",
+  "checkedAt": "2026-10-19T06:13:45.292Z",
+  "policyCheckedAt": "2026-10-19T06:13:07.040Z",
   "scope": "등록 진입 URL의 GET 응답 진단만 수행. HTTP 200은 수집 성공·NEW 확인을 의미하지 않음. POST·동적 하위 경로 미검증. 상품·검수·알림 변경 없음",
   "totals": {
-    "reachable": 48,
-    "policy_hold": 12,
-    "collector_method_required": 3,
-    "failed": 1
+    "reachable": 50,
+    "policy_hold": 11,
+    "collector_method_required": 3
   },
   "results": [
     {
@@ -93,10 +92,9 @@
     {
       "brand": "매머드커피",
       "url": "https://mmthcoffee.com/sub/menu/list.html",
-      "status": "failed",
-      "reason": "TLS 인증서 검증 실패",
-      "failureKind": "tls",
-      "check": "policy_hold"
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
     },
     {
       "brand": "매일유업",
@@ -314,8 +312,9 @@
     {
       "brand": "커피빈코리아",
       "url": "https://www.coffeebeankorea.com/product/list.asp",
-      "check": "failed",
-      "failureCode": "timeout"
+      "check": "reachable",
+      "httpStatus": 200,
+      "contentType": "text/html"
     },
     {
       "brand": "컴포즈커피",

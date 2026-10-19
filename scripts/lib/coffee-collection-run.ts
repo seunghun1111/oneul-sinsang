@@ -4,7 +4,7 @@ import {collectionFailureCode,type CollectionFailureCode} from "./collection-fai
 import {retryCollection} from "./collection-retry.ts";
 
 type Result={candidates:Product[];verifiedUrls:string[];confirmedNotNewUrls?:string[];checked:number;failed:number;failureCodes?:CollectionFailureCode[]};
-export type CoffeeCollectionStatus={brand:string;sourceId:string;checkedAt?:string;status:"success"|"partial"|"failed";checked:number;failed:number;newCount:number;failureSince?:string;reasonCode?:"unexpected_empty";failureCodes?:CollectionFailureCode[]};
+export type CoffeeCollectionStatus={brand:string;sourceId:string;checkedAt?:string;status:"success"|"partial"|"failed";checked:number;failed:number;newCount:number;attempts?:number;initialFailureCodes?:CollectionFailureCode[];failureSince?:string;reasonCode?:"unexpected_empty";failureCodes?:CollectionFailureCode[]};
 export function mergeCoffeeReports(previous:{checkedAt:string;results:CoffeeCollectionStatus[]},current:{checkedAt:string;results:CoffeeCollectionStatus[]}) {
  const refreshed=new Map(current.results.map(row=>[row.sourceId,{...row,checkedAt:current.checkedAt}]));
  return {...current,results:[...previous.results.map(row=>refreshed.get(row.sourceId)??{...row,checkedAt:row.checkedAt??previous.checkedAt}),...current.results.filter(row=>!previous.results.some(prior=>prior.sourceId===row.sourceId)).map(row=>({...row,checkedAt:current.checkedAt}))]};
@@ -25,7 +25,15 @@ export function guardCoffeeEmptyNewLists(existing:Product[],observed:Product[],v
   })}};
 }
 export async function runCoffeeCollection(sources:CoffeeBrandSource[],checkedAt:string,collect:(source:CoffeeBrandSource)=>Promise<Result>,previous:CoffeeCollectionStatus[]=[]) {
-  const settled=await Promise.allSettled(sources.map(source=>retryCollection(()=>collect(source),result=>result.checked===0&&result.failed>0?result.failureCodes??[]:[])));
+  const diagnostics=sources.map(()=>({attempts:0,initialFailureCodes:[] as CollectionFailureCode[]}));
+  const settled=await Promise.allSettled(sources.map((source,index)=>retryCollection(async()=>{
+    const diagnostic=diagnostics[index];diagnostic.attempts++;
+    try{
+      const result=await collect(source);
+      if(diagnostic.attempts===1)diagnostic.initialFailureCodes=result.failureCodes??[];
+      return result;
+    }catch(error){if(diagnostic.attempts===1)diagnostic.initialFailureCodes=[collectionFailureCode(error)];throw error;}
+  },result=>result.checked===0&&result.failed>0?result.failureCodes??[]:[])));
   const observed:Product[]=[];
   const verifiedUrls=new Set<string>();
   const confirmedNotNewUrls=new Set<string>();
@@ -35,7 +43,7 @@ export async function runCoffeeCollection(sources:CoffeeBrandSource[],checkedAt:
     if(result) {observed.push(...result.candidates);result.verifiedUrls.forEach(url=>verifiedUrls.add(url));result.confirmedNotNewUrls?.forEach(url=>confirmedNotNewUrls.add(url));}
     const status=result && result.checked>0 ? result.failed>0?"partial":"success" : "failed";
     const prior=previous.find(item=>item.sourceId===source.id);
-    return {brand:source.brand,sourceId:source.id,checkedAt,status,checked:result?.checked??0,failed:result?.failed??1,newCount:result?.candidates.length??0,
+    return {brand:source.brand,sourceId:source.id,checkedAt,status,checked:result?.checked??0,failed:result?.failed??1,newCount:result?.candidates.length??0,...diagnostics[index],
       ...(outcome.status==="rejected"?{failureCodes:[collectionFailureCode(outcome.reason)]}:result?.failureCodes?.length?{failureCodes:result.failureCodes}:{}),
       ...(status!=="success"?{failureSince:prior?.status!=="success" && prior?.failureSince?prior.failureSince:checkedAt}:{})};
   });

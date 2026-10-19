@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-10-19T02:25:28.735Z",
+  "checkedAt": "2026-10-19T06:11:45.230Z",
   "scope": "확인 필요 항목의 실제 수집기 진단. 상품·운영 상태·검수·알림 변경 없음. checked/NEW 0건은 기존 상품의 NEW 종료 근거가 아님",
   "targetCount": 12,
   "results": [
     {
       "brand": "세븐일레븐",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-18T23:31:44.416Z",
+      "previousCheckedAt": "2026-10-19T05:58:05.704Z",
       "paths": [
         {
           "status": "checked",
@@ -21,7 +21,7 @@
     {
       "brand": "롯데리아",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-18T23:31:55.252Z",
+      "previousCheckedAt": "2026-10-19T05:58:17.034Z",
       "paths": [
         {
           "status": "failed",
@@ -38,7 +38,7 @@
     {
       "brand": "맘스터치",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-18T23:31:55.252Z",
+      "previousCheckedAt": "2026-10-19T05:58:17.034Z",
       "paths": [
         {
           "status": "failed",
@@ -59,7 +59,7 @@
     {
       "brand": "투썸플레이스",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
+      "previousCheckedAt": "2026-10-19T05:58:30.597Z",
       "paths": [
         {
           "url": "https://d-mcdn.twosome.co.kr/mn/menuInfoList.do",
@@ -79,7 +79,7 @@
     {
       "brand": "컴포즈커피",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
+      "previousCheckedAt": "2026-10-19T05:58:30.597Z",
       "paths": [
         {
           "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList",
@@ -97,7 +97,7 @@
     {
       "brand": "더벤티",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
+      "previousCheckedAt": "2026-10-19T05:58:30.597Z",
       "paths": [
         {
           "url": "https://www.theventi.co.kr/new2022/menu/all.html",
@@ -115,7 +115,7 @@
     {
       "brand": "아티제",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
+      "previousCheckedAt": "2026-10-19T05:58:30.597Z",
       "paths": [
         {
           "url": "https://www.cafeartisee.com/menu/beverage/",
@@ -190,7 +190,7 @@
     {
       "brand": "할리스",
       "previousStatus": "partial",
-      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
+      "previousCheckedAt": "2026-10-19T05:58:30.597Z",
       "paths": [
         {
           "url": "https://www.hollys.co.kr/menu/espresso.do",
@@ -233,7 +233,7 @@
     {
       "brand": "파스쿠찌",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
+      "previousCheckedAt": "2026-10-19T05:58:30.597Z",
       "paths": [
         {
           "url": "https://www.caffe-pascucci.co.kr/menu/menuList.asp",
@@ -253,7 +253,7 @@
     {
       "brand": "엔제리너스",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
+      "previousCheckedAt": "2026-10-19T05:58:30.597Z",
       "paths": [
         {
           "url": "https://www.lotteeatz.com/brand/angel",
@@ -273,7 +273,7 @@
     {
       "brand": "탐앤탐스",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
+      "previousCheckedAt": "2026-10-19T05:58:30.597Z",
       "paths": [
         {
           "url": "https://www.tomntoms.com/menu/menu.html",
@@ -293,7 +293,7 @@
     {
       "brand": "커피베이",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
+      "previousCheckedAt": "2026-10-19T05:58:30.597Z",
       "paths": [
         {
           "url": "https://www.coffeebay.com/menu/coffeebay",

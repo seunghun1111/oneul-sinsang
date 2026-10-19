@@ -1,19 +1,23 @@
 import {collectionFailureCode,type CollectionFailureCode} from "./collection-failure.ts";
 import {retryCollection} from "./collection-retry.ts";
-export type BrandCollectionStatus={brand:string;status:"success"|"failed";newCount:number;failureSince?:string;reasonCode?:"unexpected_empty";failureCode?:CollectionFailureCode};
+export type BrandCollectionStatus={brand:string;status:"success"|"failed";newCount:number;attempts?:number;initialFailureCode?:CollectionFailureCode;failureSince?:string;reasonCode?:"unexpected_empty";failureCode?:CollectionFailureCode};
 export async function runBrandCollection<T>(sources:readonly (readonly [string,(checkedAt:string)=>Promise<T[]>])[],checkedAt:string,previous:BrandCollectionStatus[]=[]) {
-  const settled=await Promise.allSettled(sources.map(([,collect])=>retryCollection(()=>collect(checkedAt))));
+  const diagnostics=sources.map(()=>({attempts:0,initialFailureCode:undefined as CollectionFailureCode|undefined}));
+  const settled=await Promise.allSettled(sources.map(([,collect],index)=>retryCollection(async()=>{
+    const diagnostic=diagnostics[index];diagnostic.attempts++;
+    try{return await collect(checkedAt);}catch(error){diagnostic.initialFailureCode??=collectionFailureCode(error);throw error;}
+  })));
   const candidates:T[]=[];
   const checkedBrands:string[]=[];
   const results=settled.map((outcome,index):BrandCollectionStatus=>{
     const brand=sources[index][0];
     if(outcome.status==="fulfilled") {
       candidates.push(...outcome.value);checkedBrands.push(brand);
-      return {brand,status:"success",newCount:outcome.value.length};
+      return {brand,status:"success",newCount:outcome.value.length,...diagnostics[index]};
     }
     const prior=previous.find(result=>result.brand===brand);
     // Never persist raw exceptions, which may contain sensitive request information.
-    return {brand,status:"failed",newCount:0,failureCode:collectionFailureCode(outcome.reason),failureSince:prior?.status==="failed"&&prior.failureSince?prior.failureSince:checkedAt};
+    return {brand,status:"failed",newCount:0,...diagnostics[index],failureCode:collectionFailureCode(outcome.reason),failureSince:prior?.status==="failed"&&prior.failureSince?prior.failureSince:checkedAt};
   });
   return {candidates,checkedBrands,report:{checkedAt,results}};
 }

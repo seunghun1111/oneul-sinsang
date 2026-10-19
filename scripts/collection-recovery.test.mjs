@@ -35,6 +35,22 @@ test("실패 반환값은 전체 일시 실패만 재시도하고 부분 성공�
 test("일반 브랜드 재시도 최종 실패는 성공·삭제 근거로 변환하지 않는다",async()=>{
  let count=0;const result=await runBrandCollection([["A",async()=>{count++;throw new CollectionFailure("timeout");}]],"2026-10-19");assert.equal(count,2);assert.deepEqual(result.checkedBrands,[]);assert.equal(result.report.results[0].status,"failed");assert.equal(result.report.results[0].failureCode,"timeout");
 });
+test("재시도 횟수와 최초 오류만 기록하고 복구 뒤 최종 실패로 표시하지 않는다",async()=>{
+ let calls=0;
+ const batch=await runBrandCollection([["A",async()=>{if(++calls===1)throw new CollectionFailure("timeout");return ["ok"];}]],"2026-10-19");
+ const row=batch.report.results[0];assert.equal(row.attempts,2);assert.equal(row.initialFailureCode,"timeout");assert.equal(row.status,"success");assert.equal(row.failureCode,undefined);
+ let coffeeCalls=0;
+ const coffee=await runCoffeeCollection([{id:"a",brand:"A"}],"2026-10-19",async()=>++coffeeCalls===1?{checked:0,failed:1,failureCodes:["connection"],candidates:[],verifiedUrls:[]}:{checked:1,failed:0,candidates:[],verifiedUrls:[]});
+ assert.equal(coffee.report.results[0].attempts,2);assert.deepEqual(coffee.report.results[0].initialFailureCodes,["connection"]);assert.equal(coffee.report.results[0].status,"success");assert.equal(coffee.report.results[0].failureCodes,undefined);
+});
+test("반복 불가 오류와 부분 성공도 실제 시도 횟수를 보존하고 원문 오류는 저장하지 않는다",async()=>{
+ const batch=await runBrandCollection([["A",async()=>{throw new CollectionFailure("tls");}]],"2026-10-19");
+ assert.equal(batch.report.results[0].attempts,1);assert.equal(batch.report.results[0].initialFailureCode,"tls");
+ const coffee=await runCoffeeCollection([{id:"a",brand:"A"}],"2026-10-19",async()=>({checked:1,failed:1,failureCodes:["timeout"],candidates:[],verifiedUrls:[]}));
+ assert.equal(coffee.report.results[0].attempts,1);assert.equal(coffee.report.results[0].status,"partial");
+ const secret=await runBrandCollection([["A",async()=>{throw Error("sensitive-cookie-value");}]],"2026-10-19");
+ assert.ok(!JSON.stringify(secret).includes("sensitive-cookie-value"));
+});
 test("한국 시간 06:30 일정의 지연을 측정하고 수동 실행은 제외한다",()=>{
  assert.equal(scheduleDelay("schedule",new Date("2026-10-17T23:18:44Z")).delayMinutes,108);
  assert.equal(scheduleDelay("schedule",new Date("2026-10-18T23:30:53Z")).delayMinutes,120);

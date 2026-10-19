@@ -19,6 +19,9 @@ failures.push(...brandCollectionFailures(await read("cu-collection-status.json")
 failures.push(...brandCollectionFailures(await read("icecream-collection-status.json"),"아이스크림"));
 failures.push(...pressCollectionFailures(await read("press-collection-status.json")));
 if(process.env.COLLECTION_FAILED==="true") failures.push("일일 수집·검수 작업 실패 (Actions 실행 기록 확인)");
+const delay=Number(process.env.COLLECTION_DELAY_MINUTES),scheduledDay=process.env.COLLECTION_SCHEDULED_DAY??"";
+// Stable per scheduled day: retries do not create another alert for changing minute counts.
+if(Number.isFinite(delay)&&delay>=60&&/^\d{4}-\d{2}-\d{2}$/.test(scheduledDay))failures.push(`예약 실행 60분 이상 지연 / 예정일 ${scheduledDay} / Actions 실행 기록 확인`);
 const alerts=reviewAlerts(report,decisions,state.sent,failures,queue);
 if(!alerts.length) {console.log("새 확인 필요 항목 없음");process.exit(0);}
 // Local execution is always a dry run unless --send is explicitly supplied.

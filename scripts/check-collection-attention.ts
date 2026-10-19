@@ -6,6 +6,10 @@ import {collectLotteria,collectMomstouch} from "./lib/foodservice-collector.ts";
 import {collectionFailureCode} from "./lib/collection-failure.ts";
 import {collectionRemediation} from "./lib/collection-remediation.ts";
 import {coffeeProducts} from "../src/data/coffee-products.ts";
+import {collectSevenEleven} from "./lib/convenience-collector.ts";
+import {retryCollection} from "./lib/collection-retry.ts";
+import {createCollectionFetcher} from "./lib/collection-http.ts";
+import {diagnosePolicyResponse} from "./lib/policy-diagnosis.ts";
 
 // Diagnostic only: never merge products, update health timestamps, or send notifications.
 const data=new URL("../src/data/",import.meta.url);
@@ -13,17 +17,26 @@ const health=JSON.parse(await readFile(new URL("collection-health.json",data),"u
 const targets=health.rows.filter(row=>needsCollectionAttention(row));
 const checkedAt=new Date().toISOString();
 const results=[];
+const transport=createCollectionFetcher(),policyChecks=new Map<string,Promise<ReturnType<typeof diagnosePolicyResponse>|{status:string}>>();
+function diagnosePolicy(url:string){
+ const origin=new URL(url).origin;
+ if(!policyChecks.has(origin))policyChecks.set(origin,(async()=>{
+  try{const response=await transport(origin+"/robots.txt");const result=diagnosePolicyResponse({status:response.status,contentType:response.headers.get("content-type"),location:response.headers.get("location")},origin);await response.body?.cancel();return result;}
+  catch(error){return {status:collectionFailureCode(error)};}
+ })());
+ return policyChecks.get(origin)!;
+}
 for(const target of targets){
  const source=coffeeBrandSources.find(source=>source.brand===target.brand);
  const paths=[];
  if(source){
   for(const channel of source.channels.filter(channel=>["menu","md","shop"].includes(channel.kind))){
-   const result=await collectCoffeeSource({...source,channels:[channel]},checkedAt);
-   paths.push({url:channel.url,kind:channel.kind,status:result.failed?"failed":"checked",newCount:result.candidates.length,failureCodes:result.failureCodes});
+   const result=await retryCollection(()=>collectCoffeeSource({...source,channels:[channel]},checkedAt),result=>result.checked===0?result.failureCodes??[]:[]);
+   paths.push({url:channel.url,kind:channel.kind,status:result.failed?"failed":"checked",newCount:result.candidates.length,failureCodes:result.failureCodes,...(result.failureCodes?.includes("policy_unavailable")?{policyDiagnosis:await diagnosePolicy(channel.url)}:{})});
   }
  }else{
-  const collect=target.brand==="롯데리아"?collectLotteria:target.brand==="맘스터치"?collectMomstouch:undefined;
-  if(collect){try{const products=await collect(checkedAt);paths.push({status:"checked",newCount:products.length});}catch(error){paths.push({status:"failed",failureCodes:[collectionFailureCode(error)]});}}
+  const collect=target.brand==="롯데리아"?collectLotteria:target.brand==="맘스터치"?collectMomstouch:target.brand==="세븐일레븐"?collectSevenEleven:undefined;
+  if(collect){try{const products=await retryCollection<unknown[]>(()=>collect(checkedAt));paths.push({status:"checked",newCount:products.length});}catch(error){const code=collectionFailureCode(error);paths.push({status:"failed",failureCodes:[code],...(code==="policy_unavailable"&&target.brand==="맘스터치"?{policyDiagnosis:await diagnosePolicy("https://www.momstouch.co.kr/")}:{})});}}
   else paths.push({status:"not_supported"});
  }
  const classified=paths.map(path=>{

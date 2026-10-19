@@ -2,7 +2,7 @@ import {htmlAttribute,productImageSource} from "./html-image.ts";
 import {normalizeImageUrl} from "./collected-product.ts";
 
 const clean=(value:string)=>value.replace(/<[^>]*>/g," ").replace(/&amp;/g,"&").replace(/&nbsp;/g," ").replace(/\s+/g," ").trim();
-const enabledHosts=new Set(["composecoffee.com","www.gong-cha.co.kr","terarosa.com"]);
+const enabledHosts=new Set(["composecoffee.com","www.gong-cha.co.kr","terarosa.com","www.theventi.co.kr"]);
 /** undefined means unsupported. Empty means supported but no explicit product NEW evidence. */
 export function inspectOfficialCoffeeCards(raw:string,sourceUrl:string) {
  const source=new URL(sourceUrl);
@@ -16,21 +16,29 @@ export function inspectOfficialCoffeeCards(raw:string,sourceUrl:string) {
   if(detail.origin!==source.origin||detail.username||detail.password)continue;
   const identity=source.hostname==="composecoffee.com"?detail.pathname==="/index.php"&&detail.searchParams.get("act")==="dispCafemenuGalleryItem"&&/^\d+$/.test(detail.searchParams.get("item_srl")??"")
    :source.hostname==="www.gong-cha.co.kr"?detail.pathname==="/brand/menu/product_detail"&&/^\d+$/.test(detail.searchParams.get("no")??"")
-   :detail.pathname==="/product/detail/"&&/^\d+$/.test(detail.searchParams.get("ItemCode")??"");
+   :source.hostname==="terarosa.com"?detail.pathname==="/product/detail/"&&/^\d+$/.test(detail.searchParams.get("ItemCode")??"")
+   :detail.pathname==="/new2022/menu/all-view.new.html"&&/^\d+$/.test(detail.searchParams.get("uid")??"");
   if(!identity||/\shidden(?:\s|=|$)|aria-hidden\s*=\s*["']true|display\s*:\s*none|visibility\s*:\s*hidden/i.test(tag))continue;
   identifiedCards++;
   if(/<[^>]*(?:\shidden(?:\s|=|>)|aria-hidden\s*=\s*["']true|display\s*:\s*none|visibility\s*:\s*hidden)[^>]*>/i.test(body))continue;
   // A marker belongs to this exact product anchor, never the page title or next card.
   const visible=body.replace(/<(span|b|em|img)\b[^>]*(?:\shidden\b|aria-hidden\s*=\s*["']true|display\s*:\s*none)[^>]*>(?:[\s\S]*?<\/\1>)?/gi,"");
   const marked=[...visible.matchAll(/<img\b[^>]*>/gi)].some(m=>/^(?:new|신상품|신메뉴)$/i.test(htmlAttribute(m[0],"alt")??""))
-   ||/<(?:span|b|em)\b[^>]*>\s*(?:NEW|신상품|신메뉴)\s*<\/(?:span|b|em)>/i.test(visible);
+   ||/<(?:span|b|em)\b[^>]*>\s*(?:NEW|신상품|신메뉴)\s*<\/(?:span|b|em)>/i.test(visible)
+   ||source.hostname==="www.theventi.co.kr"&&[...visible.matchAll(/<i\b[^>]*>/gi)].some(m=>htmlAttribute(m[0],"data-tag")==="NEW");
   const name=clean(body.match(/<(?:div|p|h[2-4]|strong)\b[^>]*class=["'][^"']*(?:cafemenu-menu-name|product-name|goods-name|item-name)[^"']*["'][^>]*>([\s\S]*?)<\/(?:div|p|h[2-4]|strong)>/i)?.[1]
    ??(source.hostname==="www.gong-cha.co.kr"?body.match(/<div\b[^>]*class=["']text-a["'][^>]*>\s*<p[^>]*>([\s\S]*?)<\/p>/i)?.[1]:undefined)
-   ??(source.hostname==="terarosa.com"?body.match(/<div\b[^>]*class=["'][^"']*\bcont_title\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i)?.[1]:undefined)??"");
+   ??(source.hostname==="terarosa.com"?body.match(/<div\b[^>]*class=["'][^"']*\bcont_title\b[^"']*["'][^>]*>([\s\S]*?)<\/div>/i)?.[1]:undefined)
+   ??(source.hostname==="www.theventi.co.kr"?body.match(/<p\b[^>]*class=["']tit["'][^>]*>([\s\S]*?)<\/p>/i)?.[1]:undefined)??"");
   if(name.length<2||name.length>80)continue;
   namedCards++;
   if(!marked)continue;
-  const imageUrl=normalizeImageUrl(productImageSource(body),sourceUrl);
+  let image=productImageSource(body);
+  // This official site emits its own image URL as HTTP; use HTTPS only, never downgrade TLS.
+  if(image&&source.hostname==="www.theventi.co.kr"){
+   try{const u=new URL(image,sourceUrl);if(u.protocol==="http:"&&u.hostname===source.hostname&&u.pathname.startsWith("/new/upload/menu_new/")){u.protocol="https:";image=u.href;}}catch{/* Normalizer rejects malformed URLs. */}
+  }
+  const imageUrl=normalizeImageUrl(image,sourceUrl);
   products.push({name,...(imageUrl?{imageUrl}:{})});
  }
  return {products,identifiedCards,namedCards};

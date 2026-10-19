@@ -1,12 +1,27 @@
 {
-  "checkedAt": "2026-10-17T11:54:01.561Z",
+  "checkedAt": "2026-10-19T02:25:28.735Z",
   "scope": "확인 필요 항목의 실제 수집기 진단. 상품·운영 상태·검수·알림 변경 없음. checked/NEW 0건은 기존 상품의 NEW 종료 근거가 아님",
-  "targetCount": 10,
+  "targetCount": 12,
   "results": [
+    {
+      "brand": "세븐일레븐",
+      "previousStatus": "failed",
+      "previousCheckedAt": "2026-10-18T23:31:44.416Z",
+      "paths": [
+        {
+          "status": "checked",
+          "newCount": 13,
+          "remediation": {
+            "category": "checked",
+            "action": "진단 응답 확인. 상품·운영 상태는 갱신하지 않았습니다."
+          }
+        }
+      ]
+    },
     {
       "brand": "롯데리아",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:38.979Z",
+      "previousCheckedAt": "2026-10-18T23:31:55.252Z",
       "paths": [
         {
           "status": "failed",
@@ -23,13 +38,17 @@
     {
       "brand": "맘스터치",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-16T23:46:38.979Z",
+      "previousCheckedAt": "2026-10-18T23:31:55.252Z",
       "paths": [
         {
           "status": "failed",
           "failureCodes": [
             "policy_unavailable"
           ],
+          "policyDiagnosis": {
+            "status": "homepage_redirect",
+            "httpStatus": 302
+          },
           "remediation": {
             "category": "policy_recheck",
             "action": "robots 정책 확인 후 재시도. 정책 미확인을 허용으로 간주하지 않습니다."
@@ -40,7 +59,7 @@
     {
       "brand": "투썸플레이스",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
+      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
       "paths": [
         {
           "url": "https://d-mcdn.twosome.co.kr/mn/menuInfoList.do",
@@ -58,21 +77,37 @@
       ]
     },
     {
-      "brand": "매머드커피",
+      "brand": "컴포즈커피",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-17T05:22:47.541Z",
+      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
       "paths": [
         {
-          "url": "https://mmthcoffee.com/sub/menu/list.html",
+          "url": "https://composecoffee.com/index.php?mid=compose&act=dispCafemenuGalleryList",
           "kind": "menu",
-          "status": "failed",
+          "status": "checked",
           "newCount": 0,
-          "failureCodes": [
-            "tls"
-          ],
+          "failureCodes": [],
           "remediation": {
-            "category": "certificate",
-            "action": "공식 인증서·호스트 상태 확인. TLS 검증을 끄지 않고 정상 공식 대체 주소만 검토합니다."
+            "category": "checked",
+            "action": "진단 응답 확인. 상품·운영 상태는 갱신하지 않았습니다."
+          }
+        }
+      ]
+    },
+    {
+      "brand": "더벤티",
+      "previousStatus": "failed",
+      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
+      "paths": [
+        {
+          "url": "https://www.theventi.co.kr/new2022/menu/all.html",
+          "kind": "menu",
+          "status": "checked",
+          "newCount": 25,
+          "failureCodes": [],
+          "remediation": {
+            "category": "checked",
+            "action": "진단 응답 확인. 상품·운영 상태는 갱신하지 않았습니다."
           }
         }
       ]
@@ -80,7 +115,7 @@
     {
       "brand": "아티제",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
+      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
       "paths": [
         {
           "url": "https://www.cafeartisee.com/menu/beverage/",
@@ -90,6 +125,10 @@
           "failureCodes": [
             "policy_unavailable"
           ],
+          "policyDiagnosis": {
+            "status": "invalid_content_type",
+            "httpStatus": 200
+          },
           "remediation": {
             "category": "policy_recheck",
             "action": "robots 정책 확인 후 재시도. 정책 미확인을 허용으로 간주하지 않습니다."
@@ -103,6 +142,10 @@
           "failureCodes": [
             "policy_unavailable"
           ],
+          "policyDiagnosis": {
+            "status": "invalid_content_type",
+            "httpStatus": 200
+          },
           "remediation": {
             "category": "policy_recheck",
             "action": "robots 정책 확인 후 재시도. 정책 미확인을 허용으로 간주하지 않습니다."
@@ -116,6 +159,10 @@
           "failureCodes": [
             "policy_unavailable"
           ],
+          "policyDiagnosis": {
+            "status": "invalid_content_type",
+            "httpStatus": 200
+          },
           "remediation": {
             "category": "policy_recheck",
             "action": "robots 정책 확인 후 재시도. 정책 미확인을 허용으로 간주하지 않습니다."
@@ -129,6 +176,10 @@
           "failureCodes": [
             "policy_unavailable"
           ],
+          "policyDiagnosis": {
+            "status": "invalid_content_type",
+            "httpStatus": 200
+          },
           "remediation": {
             "category": "policy_recheck",
             "action": "robots 정책 확인 후 재시도. 정책 미확인을 허용으로 간주하지 않습니다."
@@ -139,7 +190,7 @@
     {
       "brand": "할리스",
       "previousStatus": "partial",
-      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
+      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
       "paths": [
         {
           "url": "https://www.hollys.co.kr/menu/espresso.do",
@@ -182,7 +233,7 @@
     {
       "brand": "파스쿠찌",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
+      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
       "paths": [
         {
           "url": "https://www.caffe-pascucci.co.kr/menu/menuList.asp",
@@ -202,7 +253,7 @@
     {
       "brand": "엔제리너스",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
+      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
       "paths": [
         {
           "url": "https://www.lotteeatz.com/brand/angel",
@@ -222,7 +273,7 @@
     {
       "brand": "탐앤탐스",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
+      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
       "paths": [
         {
           "url": "https://www.tomntoms.com/menu/menu.html",
@@ -242,7 +293,7 @@
     {
       "brand": "커피베이",
       "previousStatus": "failed",
-      "previousCheckedAt": "2026-10-17T05:22:01.864Z",
+      "previousCheckedAt": "2026-10-18T23:32:08.522Z",
       "paths": [
         {
           "url": "https://www.coffeebay.com/menu/coffeebay",

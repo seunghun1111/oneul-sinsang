@@ -1,7 +1,8 @@
 import {collectionFailureCode,type CollectionFailureCode} from "./collection-failure.ts";
+import {retryCollection} from "./collection-retry.ts";
 export type BrandCollectionStatus={brand:string;status:"success"|"failed";newCount:number;failureSince?:string;reasonCode?:"unexpected_empty";failureCode?:CollectionFailureCode};
 export async function runBrandCollection<T>(sources:readonly (readonly [string,(checkedAt:string)=>Promise<T[]>])[],checkedAt:string,previous:BrandCollectionStatus[]=[]) {
-  const settled=await Promise.allSettled(sources.map(([,collect])=>Promise.resolve().then(()=>collect(checkedAt))));
+  const settled=await Promise.allSettled(sources.map(([,collect])=>retryCollection(()=>collect(checkedAt))));
   const candidates:T[]=[];
   const checkedBrands:string[]=[];
   const results=settled.map((outcome,index):BrandCollectionStatus=>{

@@ -1,4 +1,5 @@
 import {collectionFetch} from "./collection-http.ts";
+import {CollectionFailure} from "./collection-failure.ts";
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
 import {productImageSource} from "./html-image.ts";
 import type {Product} from "../../src/types/product.ts";
@@ -56,9 +57,9 @@ export async function collectSevenEleven(checkedAt = new Date().toISOString(), f
     headers: { "content-type": "application/x-www-form-urlencoded", "user-agent": "OneulSinsang/1.0 (+non-commercial product index)" },
     body: new URLSearchParams({ pTab: "8" }), signal: AbortSignal.timeout(15_000),
   });
-  if (!response.ok) throw new Error(`세븐일레븐 신상품 HTTP ${response.status}`);
+  if (!response.ok) throw new CollectionFailure("http");
   const html = await response.text();
-  if (!html.includes("PB상품/신상품") || !html.includes('value="8"')) throw new Error("세븐일레븐 신상품 페이지 구조 확인 실패");
+  if (!html.includes("PB상품/신상품") || !html.includes('value="8"')) throw new CollectionFailure("structure");
   return extractSevenElevenNewProducts(html, checkedAt);
 }
 

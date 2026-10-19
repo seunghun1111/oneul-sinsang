@@ -1,6 +1,7 @@
 import type { CoffeeBrandSource } from "../../src/data/coffee-sources.ts";
 import type { Product } from "../../src/types/product.ts";
 import {collectionFailureCode,type CollectionFailureCode} from "./collection-failure.ts";
+import {retryCollection} from "./collection-retry.ts";
 
 type Result={candidates:Product[];verifiedUrls:string[];confirmedNotNewUrls?:string[];checked:number;failed:number;failureCodes?:CollectionFailureCode[]};
 export type CoffeeCollectionStatus={brand:string;sourceId:string;checkedAt?:string;status:"success"|"partial"|"failed";checked:number;failed:number;newCount:number;failureSince?:string;reasonCode?:"unexpected_empty";failureCodes?:CollectionFailureCode[]};
@@ -24,7 +25,7 @@ export function guardCoffeeEmptyNewLists(existing:Product[],observed:Product[],v
   })}};
 }
 export async function runCoffeeCollection(sources:CoffeeBrandSource[],checkedAt:string,collect:(source:CoffeeBrandSource)=>Promise<Result>,previous:CoffeeCollectionStatus[]=[]) {
-  const settled=await Promise.allSettled(sources.map(source=>Promise.resolve().then(()=>collect(source))));
+  const settled=await Promise.allSettled(sources.map(source=>retryCollection(()=>collect(source),result=>result.checked===0&&result.failed>0?result.failureCodes??[]:[])));
   const observed:Product[]=[];
   const verifiedUrls=new Set<string>();
   const confirmedNotNewUrls=new Set<string>();

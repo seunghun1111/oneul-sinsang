@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - name: Record daily schedule delay without extra collection runs
+        id: schedule
+        run: node scripts/check-schedule-delay.mjs
       - run: npm ci
       - name: Check CU official NEW products
         run: npm run update:cu
@@ -69,6 +72,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           COLLECTION_FAILED: ${{ job.status == 'failure' }}
+          COLLECTION_DELAY_MINUTES: ${{ steps.schedule.outputs.delay_minutes }}
+          COLLECTION_SCHEDULED_DAY: ${{ steps.schedule.outputs.scheduled_day }}
         run: npm run review:notify -- --send
       - name: Commit updated product data
         run: |
@@ -98,6 +103,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           COLLECTION_FAILED: "true"
+          COLLECTION_DELAY_MINUTES: ${{ steps.schedule.outputs.delay_minutes }}
+          COLLECTION_SCHEDULED_DAY: ${{ steps.schedule.outputs.scheduled_day }}
         run: npm run review:notify -- --send
 
   deploy:

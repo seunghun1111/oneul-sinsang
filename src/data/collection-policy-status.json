@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-10-18T23:33:46.385Z",
+  "checkedAt": "2026-10-19T06:00:00.337Z",
   "scope": "수집 진입경로 정책 확인만 수행. 상품 요청·수집·검수·알림 없음",
   "brands": 47,
   "totals": {
-    "allowed": 43,
-    "failed": 10,
+    "allowed": 42,
+    "failed": 11,
     "blocked": 3,
     "not_provided": 8
   },
@@ -406,9 +406,9 @@
       "brand": "풀무원",
       "url": "https://news.pulmuone.co.kr/pulmuone/newsroom/listDataroom.do",
       "method": "GET",
-      "status": "allowed",
-      "reason": "",
-      "policyHttpStatus": 200
+      "status": "failed",
+      "reason": "정책 요청 시간 초과",
+      "failureKind": "timeout"
     },
     {
       "brand": "피자헛",

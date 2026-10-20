@@ -1,6 +1,7 @@
 import {collectionFetch} from "./collection-http.ts";
-import {CollectionFailure,readCollectionText} from "./collection-failure.ts";
+import {CollectionFailure,readCollectionText,collectionFailureCode,collectionFailureDetail,type CollectionFailureCode,type CollectionFailureDetail} from "./collection-failure.ts";
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
+import {retryCollection} from "./collection-retry.ts";
 
 const CU_ORIGIN = "https://cu.bgfretail.com";
 const CU_CATALOG_URL = `${CU_ORIGIN}/product/product.do?category=product&depth2=4&sf=N`;
@@ -90,10 +91,17 @@ function requestBody(categoryCode: string, pageIndex: number) {
   });
 }
 
-export async function collectCu(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
+export type CuCategoryCheck={label:string;pages:number;requests?:number;complete:boolean;newCount:number;reason?:"page_limit"|"repeated_page"|"structure"|"request_failed";failureCode?:CollectionFailureCode;failureDetail?:CollectionFailureDetail};
+export async function collectCuDetailed(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch) {
   const products: CuCandidate[] = [];
+  const categories:CuCategoryCheck[]=[];
   for (const category of CU_CATEGORIES) {
+    const check:CuCategoryCheck={label:category.label,pages:0,requests:0,complete:false,newCount:0};
+    const seenPages=new Set<string>();
+    try{
     for (let page = 1; page <= 10; page++) {
+      const html=await retryCollection(async()=>{
+      check.requests=(check.requests??0)+1;
       const response = await fetcher(`${CU_ORIGIN}/product/productAjax.do`, {
         method: "POST",
         headers: {
@@ -105,14 +113,33 @@ export async function collectCu(checkedAt = new Date().toISOString(), fetcher: t
         signal: AbortSignal.timeout(15_000),
       });
       if (!response.ok) throw new CollectionFailure("http",{stage:"product_request",httpStatus:response.status});
-      const html = await readCollectionText(response);
+      return readCollectionText(response);
+      });
+      check.pages++;
       const pageProducts = extractCuNewProducts(html, category, checkedAt);
       products.push(...pageProducts);
 
       const hasMore = /class=["']prodListBtn-w["']/i.test(html);
       const itemCount = [...html.matchAll(/<li\s+class=["']prod_list["']/gi)].length;
-      if (!hasMore || itemCount === 0 || pageProducts.length === 0) break;
+      const ids=[...html.matchAll(/<li\s+class=["']prod_list["'][^>]*>([\s\S]*?)<\/li>/gi)].flatMap(match=>{const id=match[1].match(/onclick=["']view\((\d+)\)/i)?.[1];return id?[id]:[];});
+      const signature=ids.join(",");
+      const newBadges=[...html.matchAll(/<span\s+class=["']new["'][^>]*>/gi)].length;
+      if((itemCount>0&&(ids.length!==itemCount||new Set(ids).size!==ids.length))||newBadges!==pageProducts.length||(itemCount===0&&!/상품이\s*없|등록된\s*상품이\s*없|검색된\s*상품이\s*없/.test(html))){check.reason="structure";break;}
+      if(itemCount>0&&seenPages.has(signature)){check.reason="repeated_page";break;}
+      seenPages.add(signature);
+      if (!hasMore) {check.complete=true;break;}
+      if(itemCount===0){check.reason="structure";break;}
+      if(page===10)check.reason="page_limit";
     }
+    }catch(error){check.reason="request_failed";check.failureCode=collectionFailureCode(error);check.failureDetail=collectionFailureDetail(error);}
+    check.newCount=new Set(products.filter(product=>product.subCategory===category.label).map(product=>product.slug)).size;
+    categories.push(check);
   }
-  return [...new Map(products.map(product => [product.slug, product])).values()];
+  return {candidates:[...new Map(products.map(product => [product.slug, product])).values()],categories};
+}
+export async function collectCu(checkedAt = new Date().toISOString(), fetcher: typeof fetch =collectionFetch){
+ const result=await collectCuDetailed(checkedAt,fetcher);
+ const failure=result.categories.find(category=>!category.complete);
+ if(failure)throw new CollectionFailure(failure.failureCode??"structure",failure.failureDetail);
+ return result.candidates;
 }

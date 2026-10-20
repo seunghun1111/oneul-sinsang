@@ -26,7 +26,7 @@ export function createCollectionFetcher(fetcher:typeof fetch=fetch):typeof fetch
     const signals=[AbortSignal.timeout(20000),init?.signal??request?.signal].filter((s):s is AbortSignal=>!!s);
     try {
       return await fetcher(input,{...init,headers,credentials:"omit",redirect:"manual",signal:AbortSignal.any(signals)});
-    }catch(error){throw new CollectionFailure(networkFailure(error));}
+    }catch(error){throw new CollectionFailure(networkFailure(error),{stage:new URL(url).pathname==="/robots.txt"?"robots_request":"product_request"});}
   };
 }
 export function createRobotsFetcher(transport:typeof fetch=createCollectionFetcher(),now=()=>Date.now()):typeof fetch {
@@ -37,12 +37,12 @@ export function createRobotsFetcher(transport:typeof fetch=createCollectionFetch
     const pending=(async()=>{
       const response=await transport(origin+"/robots.txt",{headers:{"user-agent":agent},signal:AbortSignal.timeout(15000)});
       if([404,410].includes(response.status))return "";
-      if(!response.ok||!response.body)throw Error("robots 정책 확인 실패");
+      if(!response.ok||!response.body)throw new CollectionFailure("policy_unavailable",{stage:"robots_request",httpStatus:response.status});
       const type=response.headers.get("content-type");
-      if(type&&!/text\/plain|application\/octet-stream/i.test(type))throw Error("robots 정책 응답 형식 오류");
+      if(type&&!/text\/plain|application\/octet-stream/i.test(type))throw new CollectionFailure("policy_unavailable",{stage:"robots_body",httpStatus:response.status});
       const reader=response.body.getReader(),decoder=new TextDecoder();let bytes=0,text="";
-      try{while(true){const chunk=await reader.read();if(chunk.done)break;bytes+=chunk.value.byteLength;if(bytes>512000){await reader.cancel();throw Error("robots 정책 크기 초과");}text+=decoder.decode(chunk.value,{stream:true});}text+=decoder.decode();}finally{reader.releaseLock();}
-      if(/<html|<!doctype/i.test(text))throw Error("robots 정책 대신 HTML 응답");
+      try{while(true){const chunk=await reader.read();if(chunk.done)break;bytes+=chunk.value.byteLength;if(bytes>512000){await reader.cancel();throw new CollectionFailure("policy_unavailable",{stage:"robots_body",httpStatus:response.status});}text+=decoder.decode(chunk.value,{stream:true});}text+=decoder.decode();}catch(error){if(error instanceof CollectionFailure)throw error;throw new CollectionFailure(networkFailure(error),{stage:"robots_body",httpStatus:response.status});}finally{reader.releaseLock();}
+      if(/<html|<!doctype/i.test(text))throw new CollectionFailure("policy_unavailable",{stage:"robots_body",httpStatus:response.status});
       return text;
     })();
     cache.set(key,{expiresAt:now()+3600000,pending});

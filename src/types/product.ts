@@ -32,6 +32,8 @@ export interface Product {
   availabilityReason?: string;
   reviewStatus?: "pending" | "approved" | "rejected";
   newStatus?: "active" | "removed";
+  cuMissingChecks?: number;
+  cuMissingCheckedAt?: string;
   detectionKind?: "initial" | "newly_detected";
   discoveryReferences?: import("../../chatgpt-site/lib/review/discovery-evidence").DiscoveryReference[];
   reviewedAt?: string;

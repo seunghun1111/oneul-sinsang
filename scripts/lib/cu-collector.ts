@@ -1,4 +1,5 @@
 import {collectionFetch} from "./collection-http.ts";
+import {CollectionFailure,readCollectionText} from "./collection-failure.ts";
 import { normalizeProductName } from "../../src/lib/normalize-product-name.ts";
 
 const CU_ORIGIN = "https://cu.bgfretail.com";
@@ -103,8 +104,8 @@ export async function collectCu(checkedAt = new Date().toISOString(), fetcher: t
         body: requestBody(category.code, page),
         signal: AbortSignal.timeout(15_000),
       });
-      if (!response.ok) throw new Error(`CU ${category.label} 목록 HTTP ${response.status}`);
-      const html = await response.text();
+      if (!response.ok) throw new CollectionFailure("http",{stage:"product_request",httpStatus:response.status});
+      const html = await readCollectionText(response);
       const pageProducts = extractCuNewProducts(html, category, checkedAt);
       products.push(...pageProducts);
 

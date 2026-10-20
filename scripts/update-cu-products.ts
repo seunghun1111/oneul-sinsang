@@ -5,6 +5,7 @@ import { collectCu, type CuCandidate } from "./lib/cu-collector.ts";
 import { mergeProducts } from "./update-static-products.ts";
 import {runBrandCollection} from "./lib/brand-collection-run.ts";
 import {guardEmptyNewLists,safeNewListBrands} from "./lib/new-list-safety.ts";
+import {seoulDateKey} from "../src/lib/product-window.ts";
 
 const dataUrl = new URL("../src/data/products.json", import.meta.url);
 
@@ -12,9 +13,17 @@ export function mergeCuProducts(existing: Product[], candidates: CuCandidate[], 
   if(!safeNewListBrands(existing,candidates,["CU"]).includes("CU")) return existing;
   const currentIds = new Set(candidates.map(candidate => candidate.slug));
   return mergeProducts(existing, candidates, checkedAt).map(product => {
-    if (product.brand !== "CU" || currentIds.has(product.id)) return product;
+    if(product.brand!=="CU")return product;
+    if(currentIds.has(product.id))return {...product,cuMissingChecks:0,cuMissingCheckedAt:undefined};
+    // Never restore previously removed items without a new positive observation.
+    const prior=existing.find(item=>item.id===product.id);
+    if(!prior?.isActive||prior.newStatus==="removed")return prior??product;
+    const distinctDay=!prior.cuMissingCheckedAt||seoulDateKey(prior.cuMissingCheckedAt)!==seoulDateKey(checkedAt);
+    const count=(prior.cuMissingChecks??0)+(distinctDay?1:0);
+    if(count<2)return {...prior,cuMissingChecks:count,cuMissingCheckedAt:checkedAt};
     return {
       ...product,
+      cuMissingChecks:count,cuMissingCheckedAt:checkedAt,
       newStatus: "removed" as const, availabilityStatus: "unknown" as const,
       availabilityCheckedAt: checkedAt,
       isActive: false,

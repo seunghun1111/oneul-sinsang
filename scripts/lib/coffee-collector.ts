@@ -1,6 +1,6 @@
 import {collectionFetch} from "./collection-http.ts";
 import {officialCoffeeCards,inspectOfficialCoffeeCards} from "./official-coffee-cards.ts";
-import {CollectionFailure,collectionFailureCode,type CollectionFailureCode} from "./collection-failure.ts";
+import {CollectionFailure,collectionFailureCode,collectionFailureDetail,readCollectionText,type CollectionFailureCode} from "./collection-failure.ts";
 import { createHash } from "node:crypto";
 import {starbucksCategoryCodes,parseStarbucksMenu} from "./starbucks-menu.ts";
 import {coffeeProductImages} from "./coffee-images.ts";
@@ -152,8 +152,8 @@ export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: 
     const url = new URL(channel.url);
     if (BLOCKED_HOSTS.test(url.hostname)) throw new Error("제한 도메인");
     const response = await fetcher(url, { headers:{ "user-agent":"OneulSinsang/1.0 (+non-commercial product index)" }, signal:AbortSignal.timeout(15_000) });
-    if (!response.ok) throw new CollectionFailure("http");
-    const html=await response.text();
+    if (!response.ok) throw new CollectionFailure("http",{stage:"product_request",httpStatus:response.status});
+    const html=await readCollectionText(response);
     // The redesigned CoffeeBay shell contains a NEW filter but no server-rendered
     // product cards. It cannot prove a verified empty catalog.
     if(url.hostname==="www.coffeebay.com")throw new CollectionFailure("structure");
@@ -166,5 +166,5 @@ export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: 
   const candidates = results.flatMap(result => result.status === "fulfilled" ? result.value : []);
   const verifiedUrls = results.flatMap((result, index) => result.status === "fulfilled" ? [channels[index].url] : []);
   const failureCodes=[...new Set(results.flatMap(result=>result.status==="rejected"?[collectionFailureCode(result.reason)]:[]))];
-  return { candidates:[...new Map(candidates.map(candidate => [candidate.normalizedName, candidate])).values()], verifiedUrls, checked:results.filter(result => result.status === "fulfilled").length, failed:results.filter(result => result.status === "rejected").length,failureCodes };
+  return { candidates:[...new Map(candidates.map(candidate => [candidate.normalizedName, candidate])).values()], verifiedUrls, checked:results.filter(result => result.status === "fulfilled").length, failed:results.filter(result => result.status === "rejected").length,failureCodes,failureDetails:results.flatMap(result=>result.status==="rejected"?[collectionFailureDetail(result.reason)]:[]) };
 }

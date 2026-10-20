@@ -1,9 +1,9 @@
 import type { CoffeeBrandSource } from "../../src/data/coffee-sources.ts";
 import type { Product } from "../../src/types/product.ts";
-import {collectionFailureCode,type CollectionFailureCode} from "./collection-failure.ts";
+import {collectionFailureCode,collectionFailureDetail,type CollectionFailureDetail,type CollectionFailureCode} from "./collection-failure.ts";
 import {retryCollection} from "./collection-retry.ts";
 
-type Result={candidates:Product[];verifiedUrls:string[];confirmedNotNewUrls?:string[];checked:number;failed:number;failureCodes?:CollectionFailureCode[]};
+type Result={candidates:Product[];verifiedUrls:string[];confirmedNotNewUrls?:string[];checked:number;failed:number;failureCodes?:CollectionFailureCode[];failureDetails?:CollectionFailureDetail[]};
 export type CoffeeCollectionStatus={brand:string;sourceId:string;checkedAt?:string;status:"success"|"partial"|"failed";checked:number;failed:number;newCount:number;attempts?:number;initialFailureCodes?:CollectionFailureCode[];failureSince?:string;reasonCode?:"unexpected_empty";failureCodes?:CollectionFailureCode[]};
 export function mergeCoffeeReports(previous:{checkedAt:string;results:CoffeeCollectionStatus[]},current:{checkedAt:string;results:CoffeeCollectionStatus[]}) {
  const refreshed=new Map(current.results.map(row=>[row.sourceId,{...row,checkedAt:current.checkedAt}]));
@@ -44,6 +44,7 @@ export async function runCoffeeCollection(sources:CoffeeBrandSource[],checkedAt:
     const status=result && result.checked>0 ? result.failed>0?"partial":"success" : "failed";
     const prior=previous.find(item=>item.sourceId===source.id);
     return {brand:source.brand,sourceId:source.id,checkedAt,status,checked:result?.checked??0,failed:result?.failed??1,newCount:result?.candidates.length??0,...diagnostics[index],
+      ...(outcome.status==="rejected"?{failureDetails:[collectionFailureDetail(outcome.reason)]}:result?.failureDetails?.length?{failureDetails:result.failureDetails}:{}),
       ...(outcome.status==="rejected"?{failureCodes:[collectionFailureCode(outcome.reason)]}:result?.failureCodes?.length?{failureCodes:result.failureCodes}:{}),
       ...(status!=="success"?{failureSince:prior?.status!=="success" && prior?.failureSince?prior.failureSince:checkedAt}:{})};
   });

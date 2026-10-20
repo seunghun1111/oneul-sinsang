@@ -1,10 +1,11 @@
 {
-  "checkedAt": "2026-10-19T05:58:28.347Z",
+  "checkedAt": "2026-10-20T00:32:14.474Z",
   "results": [
     {
       "brand": "배스킨라빈스",
       "status": "success",
-      "newCount": 2
+      "newCount": 2,
+      "attempts": 1
     }
   ]
 }

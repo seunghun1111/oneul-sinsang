@@ -1,54 +1,65 @@
 {
-  "checkedAt": "2026-10-19T05:58:17.034Z",
+  "checkedAt": "2026-10-20T00:32:03.218Z",
   "results": [
     {
       "brand": "롯데리아",
       "status": "failed",
       "newCount": 0,
+      "attempts": 1,
+      "initialFailureCode": "policy_blocked",
       "failureCode": "policy_blocked",
       "failureSince": "2026-10-16T15:52:51.270Z"
     },
     {
       "brand": "맥도날드",
       "status": "success",
-      "newCount": 0
+      "newCount": 0,
+      "attempts": 1
     },
     {
       "brand": "버거킹",
       "status": "success",
-      "newCount": 10
+      "newCount": 10,
+      "attempts": 1
     },
     {
       "brand": "맘스터치",
       "status": "failed",
       "newCount": 0,
+      "attempts": 2,
+      "initialFailureCode": "timeout",
       "failureCode": "timeout",
       "failureSince": "2026-10-16T15:52:51.270Z"
     },
     {
       "brand": "도미노피자",
       "status": "success",
-      "newCount": 1
+      "newCount": 1,
+      "attempts": 1
     },
     {
       "brand": "피자헛",
       "status": "success",
-      "newCount": 1
+      "newCount": 1,
+      "attempts": 1
     },
     {
       "brand": "굽네",
       "status": "success",
-      "newCount": 6
+      "newCount": 6,
+      "attempts": 1
     },
     {
       "brand": "교촌치킨",
       "status": "success",
-      "newCount": 12
+      "newCount": 12,
+      "attempts": 1
     },
     {
       "brand": "KFC",
       "status": "success",
-      "newCount": 0
+      "newCount": 0,
+      "attempts": 1
     }
   ]
 }

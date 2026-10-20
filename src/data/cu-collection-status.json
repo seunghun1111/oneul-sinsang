@@ -1,10 +1,11 @@
 {
-  "checkedAt": "2026-10-19T05:57:33.837Z",
+  "checkedAt": "2026-10-20T00:31:30.666Z",
   "results": [
     {
       "brand": "CU",
       "status": "success",
-      "newCount": 776
+      "newCount": 753,
+      "attempts": 1
     }
   ]
 }

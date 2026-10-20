@@ -1,5 +1,6 @@
+import {collectionDiagnostics,type CollectionDiagnostics} from "./collection-diagnostics.ts";
 export type CollectionGroup={id:string;label:string;brands:string[]};
-export type CollectionHealthRow={id:string;group:string;groupLabel:string;brand:string;status:"success"|"partial"|"failed"|"not_checked";checkedAt?:string;lastSuccessfulAt?:string;newCount?:number;reason:string};
+export type CollectionHealthRow={id:string;group:string;groupLabel:string;brand:string;status:"success"|"partial"|"failed"|"not_checked";checkedAt?:string;lastSuccessfulAt?:string;lastFailedAt?:string;newCount?:number;reason:string;diagnostics?:CollectionDiagnostics};
 export type CollectionHealth={version:1;generatedAt:string;rows:CollectionHealthRow[]};
 const validDate=(value:unknown,now:Date):value is string=>typeof value==="string"&&Number.isFinite(Date.parse(value))&&Date.parse(value)<=now.getTime();
 const object=(value:unknown):Record<string,unknown>=>value!==null&&typeof value==="object"&&!Array.isArray(value)?value as Record<string,unknown>:{};
@@ -19,12 +20,15 @@ export function buildCollectionHealth(groups:CollectionGroup[],reports:Record<st
     const previousSuccess=validDate(prior?.lastSuccessfulAt,now)?prior.lastSuccessfulAt:undefined;
     const success=status==="success"?checkedAt:undefined;
     const lastSuccessfulAt=[previousSuccess,success].filter((v):v is string=>!!v).sort((a,b)=>Date.parse(b)-Date.parse(a))[0];
+    const lastFailedAt=[validDate(prior?.lastFailedAt,now)?prior.lastFailedAt:undefined,(prior?.status==="failed"||prior?.status==="partial")&&validDate(prior.checkedAt,now)?prior.checkedAt:undefined,status==="failed"||status==="partial"?checkedAt:undefined].filter((v):v is string=>!!v).sort((a,b)=>Date.parse(b)-Date.parse(a))[0];
     const empty=result?.reasonCode==="unexpected_empty";
     const codes=[result?.failureCode,...(Array.isArray(result?.failureCodes)?result.failureCodes:[])];
     const detail=[...new Set(codes.filter((v):v is string=>typeof v==="string"&&Object.hasOwn(failureLabels,v)).map(v=>failureLabels[v]))].join(" · ");
     const reason=status==="not_checked"?"수집 결과 기록 없음 또는 유효한 확인 시각 없음":empty?"기존 NEW가 갑자기 0건입니다. 기존 상품을 유지하며 공식 목록·수집 구조 확인이 필요합니다.":status==="failed"?`${detail?detail+". ":""}수집에 실패했습니다. 기존 상품은 유지됩니다.`:status==="partial"?`${detail?detail+". ":""}일부 경로·기사 요청이 실패했습니다. 성공한 결과만 반영합니다.`:"정상 확인 (NEW 0건도 정상 결과일 수 있습니다)";
     const newCount=status!=="not_checked"&&typeof result?.newCount==="number"&&Number.isInteger(result.newCount)&&result.newCount>=0?result.newCount:undefined;
-    return {id,group:group.id,groupLabel:group.label,brand,status,checkedAt:status!=="not_checked"?checkedAt:undefined,lastSuccessfulAt,newCount,reason};
+    const diagnostics=status!=="not_checked"?collectionDiagnostics(result):undefined;
+    const held=diagnostics?.categories?.filter(category=>category.holdReason||!category.complete).length??0;
+    return {id,group:group.id,groupLabel:group.label,brand,status,checkedAt:status!=="not_checked"?checkedAt:undefined,lastSuccessfulAt,lastFailedAt,newCount,reason:held?`${held}개 카테고리의 제외 판정을 보류했습니다. 정상 확인된 NEW는 반영하고 미관찰 기존 상품은 유지합니다.`:reason,...(diagnostics?{diagnostics}:{})};
   }));
   return {version:1,generatedAt:now.toISOString(),rows};
 }

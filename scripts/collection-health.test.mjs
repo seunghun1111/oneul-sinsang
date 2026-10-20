@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {buildCollectionHealth,isCollectionStale,needsCollectionAttention} from "../chatgpt-site/lib/review/collection-health.ts";
 import {loadCollectionHealth} from "../chatgpt-site/lib/review/load-collection-health.ts";
+import {collectionDiagnostics} from "../chatgpt-site/lib/review/collection-diagnostics.ts";
 const groups=[{id:"coffee",label:"카페",brands:["A","B"]}];
 const now=new Date("2026-10-16T01:00:00Z");
 test("운영 현황은 그룹 보고 시각 대신 브랜드별 실제 확인 시각을 우선한다",()=>{
@@ -45,4 +46,17 @@ test("원문 오류·토큰·임의 출처는 운영 화면 데이터에 포함�
  const health=buildCollectionHealth(groups,{coffee:{checkedAt:now.toISOString(),results:[{brand:"A",status:"failed",note:"SECRET",sourceUrl:"https://invalid.test/?token=SECRET"}]}},undefined,now);
  assert.equal(JSON.stringify(health).includes("SECRET"),false);
  assert.equal(health.rows[1].status,"not_checked");
+});
+test("재시도·실패 단계·카테고리 보류를 생성하고 원문·임의 필드는 제거한다",async()=>{
+ const report={checkedAt:now.toISOString(),results:[{brand:"A",status:"failed",attempts:2,initialFailureCode:"timeout",failureDetail:{stage:"product_request",httpStatus:503,url:"SECRET"},categories:[{label:"음료",pages:2,requests:3,newCount:1,complete:true,html:"SECRET"}],categoryIssues:[{label:"음료",reason:"sharp_drop",note:"SECRET"}]}]};
+ const health=buildCollectionHealth(groups,{coffee:report},undefined,now),row=health.rows[0];
+ assert.equal(row.diagnostics.attempts,2);assert.equal(row.diagnostics.failures[0].httpStatus,503);assert.equal(row.diagnostics.categories[0].holdReason,"sharp_drop");assert.match(row.reason,/카테고리/);
+ const loaded=await loadCollectionHealth(async()=>Response.json({...health,token:"SECRET",rows:health.rows.map(r=>({...r,raw:"SECRET",diagnostics:{...r.diagnostics,token:"SECRET"}}))}));
+ assert.ok(!JSON.stringify(loaded).includes("SECRET"));assert.equal(loaded.rows[0].diagnostics.attempts,2);
+ assert.equal(collectionDiagnostics({attempts:99,failureDetail:{stage:"SECRET",httpStatus:999},categories:[{label:"SECRET",complete:true}]}),undefined);
+});
+test("정상 복구 후에도 최근 실패와 마지막 정상 시각을 각각 보존한다",()=>{
+ const failed=buildCollectionHealth(groups,{coffee:{checkedAt:"2026-10-15T00:00:00Z",results:[{brand:"A",status:"failed"}]}},undefined,now);
+ const restored=buildCollectionHealth(groups,{coffee:{checkedAt:now.toISOString(),results:[{brand:"A",status:"success"}]}},failed,now);
+ assert.equal(restored.rows[0].lastFailedAt,"2026-10-15T00:00:00Z");assert.equal(restored.rows[0].lastSuccessfulAt,now.toISOString());
 });

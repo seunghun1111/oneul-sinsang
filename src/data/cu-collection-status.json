@@ -1,11 +1,88 @@
 {
-  "checkedAt": "2026-10-20T00:31:30.666Z",
+  "checkedAt": "2026-10-21T00:02:04.844Z",
   "results": [
     {
       "brand": "CU",
-      "status": "success",
-      "newCount": 753,
-      "attempts": 1
+      "status": "failed",
+      "newCount": 708,
+      "attempts": 1,
+      "categories": [
+        {
+          "label": "간편식사",
+          "pages": 7,
+          "requests": 7,
+          "complete": true,
+          "newCount": 42
+        },
+        {
+          "label": "즉석조리",
+          "pages": 3,
+          "requests": 3,
+          "complete": true,
+          "newCount": 4
+        },
+        {
+          "label": "과자류",
+          "pages": 10,
+          "requests": 10,
+          "complete": false,
+          "newCount": 230,
+          "reason": "page_limit"
+        },
+        {
+          "label": "아이스크림",
+          "pages": 6,
+          "requests": 6,
+          "complete": true,
+          "newCount": 38
+        },
+        {
+          "label": "식품",
+          "pages": 10,
+          "requests": 10,
+          "complete": false,
+          "newCount": 270,
+          "reason": "page_limit"
+        },
+        {
+          "label": "음료",
+          "pages": 10,
+          "requests": 10,
+          "complete": false,
+          "newCount": 44,
+          "reason": "page_limit"
+        },
+        {
+          "label": "생활용품",
+          "pages": 10,
+          "requests": 10,
+          "complete": false,
+          "newCount": 80,
+          "reason": "page_limit"
+        }
+      ],
+      "categoryIssues": [
+        {
+          "label": "과자류",
+          "reason": "page_limit",
+          "failureSince": "2026-10-21T00:02:04.844Z"
+        },
+        {
+          "label": "식품",
+          "reason": "page_limit",
+          "failureSince": "2026-10-21T00:02:04.844Z"
+        },
+        {
+          "label": "음료",
+          "reason": "page_limit",
+          "failureSince": "2026-10-21T00:02:04.844Z"
+        },
+        {
+          "label": "생활용품",
+          "reason": "page_limit",
+          "failureSince": "2026-10-21T00:02:04.844Z"
+        }
+      ]
     }
   ]
 }

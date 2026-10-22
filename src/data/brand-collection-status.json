@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-10-21T00:03:32.969Z",
+  "checkedAt": "2026-10-22T00:08:27.316Z",
   "results": [
     {
       "brand": "bhc",
       "sourceUrl": "https://www.bhc.co.kr/api/v1/web/categories/22/products",
       "status": "success",
-      "newCount": 3,
+      "newCount": 4,
       "robots": "not_provided",
       "note": "공식 상품별 NEW 근거 확인 (출시일 미공개는 승인 제한 사유 아님)"
     },

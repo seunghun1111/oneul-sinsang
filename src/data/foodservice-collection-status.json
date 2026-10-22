@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-21T00:02:53.890Z",
+  "checkedAt": "2026-10-22T00:07:45.679Z",
   "results": [
     {
       "brand": "롯데리아",
@@ -14,7 +14,7 @@
     {
       "brand": "맥도날드",
       "status": "success",
-      "newCount": 0,
+      "newCount": 1,
       "attempts": 1
     },
     {
@@ -43,9 +43,11 @@
     },
     {
       "brand": "피자헛",
-      "status": "success",
-      "newCount": 1,
-      "attempts": 1
+      "status": "failed",
+      "newCount": 0,
+      "attempts": 1,
+      "reasonCode": "unexpected_empty",
+      "failureSince": "2026-10-22T00:07:45.679Z"
     },
     {
       "brand": "굽네",
@@ -56,7 +58,7 @@
     {
       "brand": "교촌치킨",
       "status": "success",
-      "newCount": 12,
+      "newCount": 2,
       "attempts": 1
     },
     {

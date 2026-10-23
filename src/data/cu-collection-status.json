@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-10-22T00:06:45.986Z",
+  "checkedAt": "2026-10-23T00:04:58.295Z",
   "results": [
     {
       "brand": "CU",
       "status": "failed",
-      "newCount": 708,
+      "newCount": 627,
       "attempts": 1,
       "categories": [
         {
@@ -26,7 +26,7 @@
           "pages": 10,
           "requests": 10,
           "complete": false,
-          "newCount": 230,
+          "newCount": 178,
           "reason": "page_limit"
         },
         {
@@ -34,7 +34,7 @@
           "pages": 6,
           "requests": 6,
           "complete": true,
-          "newCount": 38
+          "newCount": 19
         },
         {
           "label": "식품",
@@ -49,7 +49,7 @@
           "pages": 10,
           "requests": 10,
           "complete": false,
-          "newCount": 44,
+          "newCount": 34,
           "reason": "page_limit"
         },
         {

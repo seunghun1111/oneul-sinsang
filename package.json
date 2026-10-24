@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.23.4 <23 || >=24.22.1 <25 || >=26.12.1 <27"
+  },
   "scripts": {
+    "security:runtime": "node scripts/check-node-runtime.mjs",
     "check:attention": "node --experimental-strip-types scripts/check-collection-attention.ts",
     "check:quality": "node --experimental-strip-types scripts/check-catalog-quality.ts",
     "check:routes": "node --experimental-strip-types scripts/check-collection-routes.ts",

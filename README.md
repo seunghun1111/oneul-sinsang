@@ -15,6 +15,7 @@
 
 ```bash
 # GitHub Pages 정적 서비스
+npm run security:runtime
 npm ci
 npm run update:products
 npm run dev
@@ -22,6 +23,7 @@ npm run build
 
 # 서버·DB 사이트 (별도 터미널)
 cd chatgpt-site
+npm run security:runtime
 npm ci
 npm run dev
 node --experimental-strip-types --test lib/collectors/*.test.mjs

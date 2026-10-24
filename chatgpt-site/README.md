@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-- Node.js `>=22.13.0`
+- Patched Node.js `22.23.4+`, `24.22.1+`, or `26.12.1+` (odd-numbered releases are unsupported)
 - Portable: Windows, macOS, or Linux; no Bash required
 - Managed Linux: managed Linux runtime with Bash, `flock`, `curl`, `sha256sum`, and GNU `timeout`
 - Git is required only for publishing
@@ -17,7 +17,7 @@ Run `node <plugin-root>/scripts/configure-execution-profile.mjs` only when the p
 
 This starter does not use `wrangler.jsonc`.
 
-`install:ci` runs `npm ci` once against the shared lockfile, disables parent-workspace discovery, and includes required dev/optional dependencies despite production/omit settings. Sharp defaults to prebuilt binaries unless explicitly configured otherwise. Do not overlap installers.
+Run `npm run security:runtime` before a direct `npm ci`. `install:ci` performs the same fail-closed check before any network access, then runs `npm ci` once against the shared lockfile, disables parent-workspace discovery, and includes required dev/optional dependencies despite production/omit settings. Sharp defaults to prebuilt binaries unless explicitly configured otherwise. Do not overlap installers.
 
 - **Portable:** Preserve host HOME, npm cache, registry, proxy, temporary paths, retry/concurrency settings, and lifecycle-script policy. Use `--prefer-offline --no-audit --no-fund`.
 - **Managed Linux:** Use the existing project-local HOME/cache/tmp setup and Linux install lock, tarball preflight, and timeout. Restore the image-seeded npm cache only when its lockfile hash matches; retain network fallback. Builds keep their existing timeout. These helpers are not invoked by the portable profile.
@@ -119,6 +119,7 @@ Use `.wrangler/state`, not `.wrangler/state/v3`; Wrangler adds the versioned dir
 ## Diagnostic Commands
 
 - `npm run install:ci`: perform the one locked dependency install
+- `npm run security:runtime`: verify the Node.js and Brotli security patch level before installation or external requests
 - `npm run dev`: start the Vite/Vinext development server
 - `npm run build`: build the deployable Sites artifact
 - `npm run start`: preview the built Worker locally with D1/R2 support

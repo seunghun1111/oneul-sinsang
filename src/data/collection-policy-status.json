@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-10-27T00:43:42.079Z",
+  "checkedAt": "2026-10-28T00:42:09.642Z",
   "scope": "수집 진입경로 정책 확인만 수행. 상품 요청·수집·검수·알림 없음",
   "brands": 47,
   "totals": {
     "allowed": 43,
-    "failed": 10,
+    "failed": 11,
     "blocked": 3,
-    "not_provided": 8
+    "not_provided": 7
   },
   "results": [
     {
@@ -406,9 +406,9 @@
       "brand": "풀무원",
       "url": "https://news.pulmuone.co.kr/pulmuone/newsroom/listDataroom.do",
       "method": "GET",
-      "status": "allowed",
-      "reason": "",
-      "policyHttpStatus": 200
+      "status": "failed",
+      "reason": "정책 요청 시간 초과",
+      "failureKind": "timeout"
     },
     {
       "brand": "피자헛",
@@ -456,9 +456,9 @@
     {
       "brand": "bhc",
       "url": "https://www.bhc.co.kr/api/v1/web/categories/22/products",
-      "status": "not_provided",
+      "status": "allowed",
       "reason": "",
-      "policyHttpStatus": 404
+      "policyHttpStatus": 200
     },
     {
       "brand": "CU",

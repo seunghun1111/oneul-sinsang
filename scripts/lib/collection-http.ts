@@ -1,6 +1,7 @@
 const restrictedDomains=/(^|\.)(kakaocorp\.com|kakao\.com|daum\.net|daumcorp\.com|kakaosecure\.net|dakao\.io|9rum\.cc|onkakao\.net|daumkakao\.io|daumkakao\.com|daumtools\.com)$/i;
 import {robotsAllows} from "./robots-policy.ts";
-import {CollectionFailure} from "./collection-failure.ts";
+import {CollectionFailure,collectionFailureCode} from "./collection-failure.ts";
+import {isTransientCollectionFailure} from "./collection-retry.ts";
 import {networkFailure} from "./network-failure.ts";
 const userAgent="OneulSinsang/1.0 (+non-commercial product index)";
 
@@ -47,7 +48,9 @@ export function createRobotsFetcher(transport:typeof fetch=createCollectionFetch
     })();
     cache.set(key,{expiresAt:now()+3600000,pending});
     // Cache failures briefly so parallel calls cannot hammer a failing policy endpoint.
-    pending.catch(()=>{const item=cache.get(key);if(item?.pending===pending)item.expiresAt=now()+60000;});
+    // Keep concurrent callers coalesced, but let the bounded 500ms retry make
+    // a fresh policy request after a transient outage. Never reuse failed text as permission.
+    pending.catch(error=>{const item=cache.get(key);if(item?.pending===pending)item.expiresAt=now()+(isTransientCollectionFailure([collectionFailureCode(error)])?250:60000);});
     return pending;
   }
   return async(input,init)=>{

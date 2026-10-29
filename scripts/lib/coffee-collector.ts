@@ -1,6 +1,6 @@
 import {collectionFetch} from "./collection-http.ts";
 import {officialCoffeeCards,inspectOfficialCoffeeCards} from "./official-coffee-cards.ts";
-import {CollectionFailure,collectionFailureCode,collectionFailureDetail,readCollectionText,type CollectionFailureCode} from "./collection-failure.ts";
+import {CollectionFailure,collectionFailureCode,collectionFailureDetail,readCollectionText,readCollectionJson,type CollectionFailureCode,type CollectionFailureDetail} from "./collection-failure.ts";
 import { createHash } from "node:crypto";
 import {starbucksCategoryCodes,parseStarbucksMenu} from "./starbucks-menu.ts";
 import {coffeeProductImages} from "./coffee-images.ts";
@@ -112,25 +112,26 @@ export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, ch
   const robotsPolicyUrl=origin+"/robots.txt";
   const headers={"user-agent":"OneulSinsang/1.0 (+non-commercial product index)"};
   const policy=await fetcher(robotsPolicyUrl,{headers,redirect:"manual",signal:AbortSignal.timeout(15000)});
-  if(!policy.ok)throw Error("스타벅스 robots 확인 실패");
-  const robots=await policy.text();
-  if(/<html/i.test(robots))throw Error("스타벅스 정책 응답 구조 변경");
+  if(!policy.ok)throw new CollectionFailure("policy_unavailable",{stage:"robots_request",httpStatus:policy.status});
+  const robots=await readCollectionText(policy,"robots_body");
+  if(/<html|<!doctype/i.test(robots))throw new CollectionFailure("policy_unavailable",{stage:"robots_body",httpStatus:policy.status});
   const request=async(url:string,init:RequestInit={})=>{
-    if(new URL(url).origin!==origin||!isRobotsAllowed(robots,url))throw Error("스타벅스 수집 정책 제한");
+    if(new URL(url).origin!==origin)throw new CollectionFailure("restricted");
+    if(!isRobotsAllowed(robots,url))throw new CollectionFailure("policy_blocked");
     const response=await fetcher(url,{...init,headers:{...headers,...init.headers},redirect:"manual",signal:AbortSignal.timeout(15000)});
-    if(!response.ok)throw Error("스타벅스 공식 데이터 요청 실패");
+    if(!response.ok)throw new CollectionFailure("http",{stage:"product_request",httpStatus:response.status});
     return response;
   };
   const candidates:CoffeeCandidate[]=[];const verifiedUrls:string[]=[];const confirmedNotNewUrls:string[]=[];
-  let checked=0,failed=0;const failureCodes:CollectionFailureCode[]=[];
+  let checked=0,failed=0;const failureCodes:CollectionFailureCode[]=[];const failureDetails:CollectionFailureDetail[]=[];
   for(const section of ["drink","food","product"] as const) {
     try {
-      const html=await(await request(origin+"/menu/"+section+"_list.do")).text();
+      const html=await readCollectionText(await request(origin+"/menu/"+section+"_list.do"));
       const codes=starbucksCategoryCodes(html);
       const rows=[];
       for(const code of codes) {
         const response=await request(origin+"/menu/productListAjax.do",{method:"POST",headers:{"content-type":"application/x-www-form-urlencoded"},body:new URLSearchParams({CATE_CD:code,...(section!=="product"?{SOLD_OUT:"1"}:{})})});
-        rows.push(...parseStarbucksMenu(await response.json(),section));
+        rows.push(...parseStarbucksMenu(await readCollectionJson(response),section));
       }
       // Commit a section only after every category request/schema check succeeded.
       for(const row of new Map(rows.map(row=>[row.id,row])).values()) {
@@ -139,11 +140,16 @@ export async function collectStarbucksFromSitemaps(source: CoffeeBrandSource, ch
         candidates.push(...toCoffeeCandidates(source,row.kind,row.sourceUrl,[row.name],checkedAt).map(p=>({...p,...(row.imageUrl?{imageUrl:row.imageUrl}:{}),subCategory:row.subCategory,availabilityStatus:"unknown" as const,reviewEvidence:{sourceUrl:row.sourceUrl,checkedAt,robots:"allowed" as const,explicitNew:true},robotsPolicyUrl,robotsCheckedAt:checkedAt})));
       }
       checked++;
-    }catch(error) {failed++;failureCodes.push(collectionFailureCode(error));}
+    }catch(error) {failed++;failureCodes.push(collectionFailureCode(error));failureDetails.push(collectionFailureDetail(error));}
   }
   // Coverage is drink/food/MD only. Bean/VIA uses separate endpoints and is not
   // a failed request: counting it as one would trigger permanent retry alerts.
-  return {candidates:[...new Map(candidates.map(p=>[p.normalizedName,p])).values()],verifiedUrls,confirmedNotNewUrls,checked,failed,failureCodes:[...new Set(failureCodes)]};
+  return {candidates:[...new Map(candidates.map(p=>[p.normalizedName,p])).values()],verifiedUrls,confirmedNotNewUrls,checked,failed,failureCodes:[...new Set(failureCodes)],failureDetails};
+}
+
+/** Scheduled collection and read-only diagnostics must use the same brand adapter. */
+export function collectCoffeeBrand(source:CoffeeBrandSource,checkedAt:string,fetcher:typeof fetch=collectionFetch){
+  return source.id==="starbucks"?collectStarbucksFromSitemaps(source,checkedAt,fetcher):collectCoffeeSource(source,checkedAt,fetcher);
 }
 
 export async function collectCoffeeSource(source: CoffeeBrandSource, checkedAt: string, fetcher: typeof fetch =collectionFetch) {

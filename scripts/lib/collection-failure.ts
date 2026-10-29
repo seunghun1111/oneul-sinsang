@@ -8,7 +8,12 @@ export class CollectionFailure extends Error {
 }
 export type CollectionFailureDetail={stage?:"robots_request"|"robots_body"|"product_request"|"product_body";httpStatus?:number};
 export function collectionFailureDetail(error:unknown):CollectionFailureDetail{return error instanceof CollectionFailure?{...error.detail}:{};}
-export async function readCollectionText(response:Response){try{return await response.text();}catch(error){throw new CollectionFailure(networkFailure(error),{stage:"product_body",httpStatus:response.status});}}
+export async function readCollectionText(response:Response,stage:CollectionFailureDetail["stage"]="product_body"){try{return await response.text();}catch(error){throw new CollectionFailure(networkFailure(error),{stage,httpStatus:response.status});}}
+/** Keep transport/body failures distinct from invalid JSON; never retain response data. */
+export async function readCollectionJson(response:Response):Promise<unknown>{
+ const text=await readCollectionText(response);
+ try{return JSON.parse(text);}catch{throw new CollectionFailure("structure",{stage:"product_body",httpStatus:response.status});}
+}
 /** Only trusted typed errors and allowlisted system codes; never persist raw messages. */
 export function collectionFailureCode(error:unknown):CollectionFailureCode {
  if(error instanceof CollectionFailure)return error.failureCode;

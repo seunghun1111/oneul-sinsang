@@ -1,10 +1,17 @@
 {
-  "checkedAt": "2026-10-19T06:13:11.761Z",
-  "scope": "로컬 저장 데이터와 현재 공개 필터만 검사. 외부 NEW·이미지 응답·실기기 상태는 검증하지 않음",
-  "total": 1236,
-  "published": 934,
+  "checkedAt": "2026-10-29T07:57:18.068Z",
+  "scope": "로컬 저장 데이터와 현재 공개 필터만 검사. 오래된 운영 기록은 실제 장애의 증거가 아님. 외부 NEW·이미지 응답·실기기 상태는 검증하지 않음",
+  "total": 1361,
+  "published": 968,
   "errors": [],
   "gaps": [
+    {
+      "id": "cu-28522",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
     {
       "id": "lotteria-rep_001018",
       "brand": "롯데리아",
@@ -115,6 +122,776 @@
       ]
     },
     {
+      "id": "cu-28362",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28270",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28242",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28215",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28197",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28196",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28177",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28144",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28143",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28110",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28109",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28089",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28085",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28084",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28082",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28079",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28076",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28069",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28068",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28067",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28066",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28065",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28031",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28030",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28029",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28025",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28018",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28017",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28011",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27986",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27985",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27983",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27982",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27981",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27961",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27946",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27944",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27943",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27942",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27935",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27926",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27925",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27918",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27906",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27905",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27904",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27903",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27902",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27898",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27897",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27891",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27889",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27888",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27876",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27872",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27871",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27869",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27868",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27862",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27860",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27857",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27856",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27853",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27852",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27843",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27841",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27840",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27838",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27837",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27832",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27824",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27815",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27814",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27813",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27801",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27800",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27785",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27784",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27783",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27782",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27781",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27780",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27776",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27773",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27770",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27769",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27763",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27761",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27760",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27754",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27753",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27749",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27744",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27742",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27718",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27711",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27698",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27697",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28073",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27863",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-28003",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27999",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27976",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27880",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27879",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27875",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27874",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27865",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27818",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "cu-27709",
+      "brand": "CU",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
       "id": "momstouch-310",
       "brand": "맘스터치",
       "issues": [
@@ -192,6 +969,34 @@
       ]
     },
     {
+      "id": "pizzahut-rppz2275",
+      "brand": "피자헛",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "coffee-starbucks-26966b29693c",
+      "brand": "스타벅스",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "coffee-starbucks-4e875f9f7cfa",
+      "brand": "스타벅스",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "coffee-starbucks-b3c8a68189df",
+      "brand": "스타벅스",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
       "id": "coffee-starbucks-b76a63005a53",
       "brand": "스타벅스",
       "issues": [
@@ -246,6 +1051,390 @@
       "issues": [
         "missing_image"
       ]
+    },
+    {
+      "id": "coffee-starbucks-88fbedcdae92",
+      "brand": "스타벅스",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "coffee-starbucks-092162dad706",
+      "brand": "스타벅스",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "coffee-starbucks-c99577230d7b",
+      "brand": "스타벅스",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "coffee-starbucks-5ae1fdd02f25",
+      "brand": "스타벅스",
+      "issues": [
+        "stale_check"
+      ]
+    },
+    {
+      "id": "coffee-starbucks-3d4a41afb20f",
+      "brand": "스타벅스",
+      "issues": [
+        "stale_check"
+      ]
     }
-  ]
+  ],
+  "summary": {
+    "freshnessHours": 36,
+    "snapshot": {
+      "state": "current",
+      "generatedAt": "2026-10-29T01:11:03.357Z"
+    },
+    "affectedPublicProducts": 154,
+    "issueCounts": {
+      "missing_image": 11,
+      "stale_check": 147
+    },
+    "errorCounts": {},
+    "brands": [
+      {
+        "brand": "CU",
+        "published": 804,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 111,
+        "issues": {
+          "stale_check": 111
+        },
+        "oldestProductCheckAt": "2026-10-20T00:31:30.666Z",
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector",
+          "recheck_products"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "세븐일레븐",
+        "published": 13,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 13,
+        "issues": {
+          "missing_image": 4,
+          "stale_check": 13
+        },
+        "oldestProductCheckAt": "2026-10-17T04:49:07.404Z",
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector",
+          "recheck_products",
+          "map_images"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "맘스터치",
+        "published": 11,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 11,
+        "issues": {
+          "stale_check": 11
+        },
+        "oldestProductCheckAt": "2026-10-08T08:22:10.103Z",
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector",
+          "recheck_products"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "롯데리아",
+        "published": 2,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 2,
+        "issues": {
+          "stale_check": 2
+        },
+        "oldestProductCheckAt": "2026-10-15T00:01:20.672Z",
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector",
+          "recheck_products"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "피자헛",
+        "published": 1,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 1,
+        "issues": {
+          "stale_check": 1
+        },
+        "oldestProductCheckAt": "2026-10-21T00:02:53.890Z",
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector",
+          "recheck_products"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "더벤티",
+        "published": 0,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 0,
+        "issues": {},
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "바나프레소",
+        "published": 0,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 0,
+        "issues": {},
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "아티제",
+        "published": 0,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 0,
+        "issues": {},
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "엔제리너스",
+        "published": 0,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 0,
+        "issues": {},
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "커피베이",
+        "published": 0,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 0,
+        "issues": {},
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "컴포즈커피",
+        "published": 0,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 0,
+        "issues": {},
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "탐앤탐스",
+        "published": 0,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 0,
+        "issues": {},
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "투썸플레이스",
+        "published": 0,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 0,
+        "issues": {},
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "파스쿠찌",
+        "published": 0,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 0,
+        "issues": {},
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "failed"
+          ]
+        },
+        "actions": [
+          "inspect_collector"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "할리스",
+        "published": 0,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 0,
+        "issues": {},
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "partial"
+          ]
+        },
+        "actions": [
+          "inspect_collector"
+        ],
+        "priority": 1
+      },
+      {
+        "brand": "스타벅스",
+        "published": 77,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 9,
+        "issues": {
+          "stale_check": 9
+        },
+        "oldestProductCheckAt": "2026-10-16T14:23:11.736Z",
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "success"
+          ]
+        },
+        "actions": [
+          "recheck_products"
+        ],
+        "priority": 2
+      },
+      {
+        "brand": "이디야커피",
+        "published": 19,
+        "errorCount": 0,
+        "errorCounts": {},
+        "affectedPublicProducts": 7,
+        "issues": {
+          "missing_image": 7
+        },
+        "oldestProductCheckAt": "2026-10-29T01:10:11.229Z",
+        "collection": {
+          "evidence": "current",
+          "statuses": [
+            "success"
+          ]
+        },
+        "actions": [
+          "map_images"
+        ],
+        "priority": 3
+      }
+    ]
+  }
 }

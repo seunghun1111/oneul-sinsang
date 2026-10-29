@@ -2,7 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { coffeeBrandSources } from "../src/data/coffee-sources.ts";
 import type { Product } from "../src/types/product.ts";
-import { collectCoffeeSource, collectStarbucksFromSitemaps } from "./lib/coffee-collector.ts";
+import { collectCoffeeBrand } from "./lib/coffee-collector.ts";
 import {guardCoffeeEmptyNewLists,runCoffeeCollection,safeCoffeeVerifiedUrls,mergeCoffeeReports} from "./lib/coffee-collection-run.ts";
 import {normalizeCollectedProduct} from "./lib/collected-product.ts";
 import {needsCollectionAttention,type CollectionHealth} from "../chatgpt-site/lib/review/collection-health.ts";
@@ -43,7 +43,7 @@ async function main() {
   const sources=requestedSource?coffeeBrandSources.filter(source=>source.id===requestedSource):attentionOnly?coffeeBrandSources.filter(source=>attentionBrands.has(source.brand)):coffeeBrandSources;
   if(attentionOnly&&!sources.length){console.log("확인 필요 커피 브랜드 없음");return;}
   if(!sources.length)throw Error("알 수 없는 커피 수집 대상");
-  const batch=await runCoffeeCollection(sources,checkedAt,source=>source.id === "starbucks" ? collectStarbucksFromSitemaps(source, checkedAt) : collectCoffeeSource(source, checkedAt),previous.results);
+  const batch=await runCoffeeCollection(sources,checkedAt,source=>collectCoffeeBrand(source,checkedAt),previous.results);
   const {observed}=batch;
   const {verifiedUrls,report}=guardCoffeeEmptyNewLists(existing,observed,batch.verifiedUrls,batch.report,previous.results,batch.confirmedNotNewUrls);
   const savedReport=requestedSource||attentionOnly?mergeCoffeeReports(previous,report):report;

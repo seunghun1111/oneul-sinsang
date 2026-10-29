@@ -4,7 +4,7 @@ import {collectionFailureCode,collectionFailureDetail,type CollectionFailureDeta
 import {retryCollection} from "./collection-retry.ts";
 
 type Result={candidates:Product[];verifiedUrls:string[];confirmedNotNewUrls?:string[];checked:number;failed:number;failureCodes?:CollectionFailureCode[];failureDetails?:CollectionFailureDetail[]};
-export type CoffeeCollectionStatus={brand:string;sourceId:string;checkedAt?:string;status:"success"|"partial"|"failed";checked:number;failed:number;newCount:number;attempts?:number;initialFailureCodes?:CollectionFailureCode[];failureSince?:string;reasonCode?:"unexpected_empty";failureCodes?:CollectionFailureCode[]};
+export type CoffeeCollectionStatus={brand:string;sourceId:string;checkedAt?:string;status:"success"|"partial"|"failed";checked:number;failed:number;newCount:number;attempts?:number;initialFailureCodes?:CollectionFailureCode[];failureSince?:string;reasonCode?:"unexpected_empty";failureCodes?:CollectionFailureCode[];failureDetails?:CollectionFailureDetail[]};
 export function mergeCoffeeReports(previous:{checkedAt:string;results:CoffeeCollectionStatus[]},current:{checkedAt:string;results:CoffeeCollectionStatus[]}) {
  const refreshed=new Map(current.results.map(row=>[row.sourceId,{...row,checkedAt:current.checkedAt}]));
  return {...current,results:[...previous.results.map(row=>refreshed.get(row.sourceId)??{...row,checkedAt:row.checkedAt??previous.checkedAt}),...current.results.filter(row=>!previous.results.some(prior=>prior.sourceId===row.sourceId)).map(row=>({...row,checkedAt:current.checkedAt}))]};

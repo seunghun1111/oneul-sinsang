@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {robotsAllows} from "./lib/robots-policy.ts";
 import {createCollectionFetcher,createRobotsFetcher} from "./lib/collection-http.ts";
 import {runBrandCollection} from "./lib/brand-collection-run.ts";
+import {retryCollection} from "./lib/collection-retry.ts";
 const origin="https://official.example.com";
 test("공통 robots는 구체적인 사용자 에이전트·와일드카드·쿼리·Allow 우선순위를 적용한다",()=>{
  const policy="User-agent: *\nDisallow: /\nUser-agent: OneulSinsang\nDisallow: /private*\nAllow: /private/public$\nDisallow: /*?token=*";
@@ -39,4 +40,33 @@ test("오래된 정책과 실패 캐시는 만료 후 재확인한다",async()=>
  await assert.rejects(()=>fetcher(origin+"/menu"));await assert.rejects(()=>fetcher(origin+"/menu"));assert.equal(calls,1);
  time=60001;await fetcher(origin+"/menu");assert.equal(calls,2);
  time+=3600001;await fetcher(origin+"/menu");assert.equal(calls,3);
+});
+test("일시적 정책 실패 캐시는 500ms 재시도 전에 만료되어 실제 정책을 다시 확인한다",async()=>{
+ for(const code of ["ETIMEDOUT","ECONNRESET"]){
+  let time=0,policies=0,products=0;
+  const fetcher=createRobotsFetcher(createCollectionFetcher(async(url)=>{
+   if(String(url).endsWith("robots.txt")){if(++policies===1)throw Object.assign(Error("secret"),{code});return new Response("User-agent: *\nAllow: /");}
+   products++;return new Response("ok");
+  }),()=>time);
+  await retryCollection(()=>fetcher(origin+"/menu"),()=>[],async()=>{time+=500;});
+  assert.equal(policies,2);assert.equal(products,1);
+ }
+});
+test("일시 실패 직후 병렬 호출은 여전히 합치고 재확인한 차단 정책은 우회하지 않는다",async()=>{
+ let time=0,policies=0,products=0;
+ const fetcher=createRobotsFetcher(createCollectionFetcher(async(url)=>{
+  if(String(url).endsWith("robots.txt")){if(++policies===1)throw Object.assign(Error("timeout"),{code:"ETIMEDOUT"});return new Response("User-agent: *\nDisallow: /");}
+  products++;return new Response("ok");
+ }),()=>time);
+ await Promise.allSettled([fetcher(origin+"/a"),fetcher(origin+"/b")]);assert.equal(policies,1);
+ await assert.rejects(()=>fetcher(origin+"/a"));assert.equal(policies,1);
+ time=500;await assert.rejects(()=>fetcher(origin+"/a"),/robots 수집 제한/);
+ assert.equal(policies,2);assert.equal(products,0);
+});
+test("TLS·정책 오류는 일시 오류용 짧은 캐시로 바꾸지 않는다",async()=>{
+ for(const code of ["CERT_HAS_EXPIRED","ENOTFOUND"]){
+  let time=0,calls=0;
+  const fetcher=createRobotsFetcher(createCollectionFetcher(async()=>{calls++;throw Object.assign(Error("secret"),{code});}),()=>time);
+  await assert.rejects(()=>fetcher(origin+"/menu"));time=500;await assert.rejects(()=>fetcher(origin+"/menu"));assert.equal(calls,1);
+ }
 });

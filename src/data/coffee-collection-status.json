@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-10-30T01:17:39.579Z",
+  "checkedAt": "2026-10-31T00:59:20.303Z",
   "results": [
     {
       "brand": "스타벅스",
       "sourceId": "starbucks",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 3,
       "failed": 0,
@@ -15,7 +15,7 @@
     {
       "brand": "투썸플레이스",
       "sourceId": "twosome",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "failed",
       "checked": 0,
       "failed": 1,
@@ -37,7 +37,7 @@
     {
       "brand": "이디야커피",
       "sourceId": "ediya",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 3,
       "failed": 0,
@@ -48,7 +48,7 @@
     {
       "brand": "메가MGC커피",
       "sourceId": "mega",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 1,
       "failed": 0,
@@ -59,7 +59,7 @@
     {
       "brand": "컴포즈커피",
       "sourceId": "compose",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "failed",
       "checked": 0,
       "failed": 1,
@@ -82,7 +82,7 @@
     {
       "brand": "빽다방",
       "sourceId": "paik",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 1,
       "failed": 0,
@@ -93,7 +93,7 @@
     {
       "brand": "우지커피",
       "sourceId": "oozy",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 1,
       "failed": 0,
@@ -104,7 +104,7 @@
     {
       "brand": "텐퍼센트커피",
       "sourceId": "tenpercent",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 1,
       "failed": 0,
@@ -115,7 +115,7 @@
     {
       "brand": "바나프레소",
       "sourceId": "banapresso",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "failed",
       "checked": 0,
       "failed": 1,
@@ -138,7 +138,7 @@
     {
       "brand": "더벤티",
       "sourceId": "theventi",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "failed",
       "checked": 0,
       "failed": 1,
@@ -161,7 +161,7 @@
     {
       "brand": "매머드커피",
       "sourceId": "mammoth",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 1,
       "failed": 0,
@@ -172,7 +172,7 @@
     {
       "brand": "아티제",
       "sourceId": "artisee",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "failed",
       "checked": 0,
       "failed": 4,
@@ -207,7 +207,7 @@
     {
       "brand": "할리스",
       "sourceId": "hollys",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "partial",
       "checked": 2,
       "failed": 1,
@@ -228,7 +228,7 @@
     {
       "brand": "커피빈코리아",
       "sourceId": "coffeebean",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 2,
       "failed": 0,
@@ -239,7 +239,7 @@
     {
       "brand": "폴 바셋",
       "sourceId": "paulbassett",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 3,
       "failed": 0,
@@ -250,7 +250,7 @@
     {
       "brand": "파스쿠찌",
       "sourceId": "pascucci",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "failed",
       "checked": 0,
       "failed": 1,
@@ -272,7 +272,7 @@
     {
       "brand": "엔제리너스",
       "sourceId": "angelinus",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "failed",
       "checked": 0,
       "failed": 1,
@@ -292,7 +292,7 @@
     {
       "brand": "탐앤탐스",
       "sourceId": "tomntoms",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "failed",
       "checked": 0,
       "failed": 1,
@@ -314,7 +314,7 @@
     {
       "brand": "커피베이",
       "sourceId": "coffeebay",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "failed",
       "checked": 0,
       "failed": 1,
@@ -334,7 +334,7 @@
     {
       "brand": "공차",
       "sourceId": "gongcha",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 2,
       "failed": 0,
@@ -345,7 +345,7 @@
     {
       "brand": "블루보틀",
       "sourceId": "bluebottle",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 2,
       "failed": 0,
@@ -356,7 +356,7 @@
     {
       "brand": "테라로사",
       "sourceId": "terarosa",
-      "checkedAt": "2026-10-30T01:17:39.579Z",
+      "checkedAt": "2026-10-31T00:59:20.303Z",
       "status": "success",
       "checked": 2,
       "failed": 0,

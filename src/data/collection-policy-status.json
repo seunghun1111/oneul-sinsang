@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-11-04T01:37:31.542Z",
+  "checkedAt": "2026-11-05T01:44:12.422Z",
   "scope": "수집 진입경로 정책 확인만 수행. 상품 요청·수집·검수·알림 없음",
   "brands": 47,
   "totals": {
     "allowed": 44,
-    "failed": 11,
+    "failed": 10,
     "blocked": 3,
-    "not_provided": 6
+    "not_provided": 7
   },
   "results": [
     {
@@ -414,9 +414,9 @@
       "brand": "피자헛",
       "url": "https://www.pizzahut.co.kr/api/menu/0996/list/best/VISIT",
       "method": "GET",
-      "status": "failed",
-      "reason": "DNS 조회 실패",
-      "failureKind": "dns"
+      "status": "not_provided",
+      "reason": "",
+      "policyHttpStatus": 404
     },
     {
       "brand": "하겐다즈",

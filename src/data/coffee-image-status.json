@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-06T01:45:56.353Z",
+  "checkedAt": "2026-11-07T01:05:46.426Z",
   "results": [
     {
       "brand": "빽다방",
@@ -11,50 +11,38 @@
     {
       "brand": "이디야커피",
       "status": "checked",
-      "matched": 12,
+      "matched": 3,
       "updated": 0,
       "unresolved": [
         {
           "id": "coffee-ediya-81020d913be7",
           "name": "(L) HOT 오트 커피",
-          "reason": "ambiguous_images",
-          "candidateCount": 2
+          "reason": "not_found"
         },
         {
           "id": "coffee-ediya-6b68b5044d78",
           "name": "(EX) HOT 오트 커피",
-          "reason": "ambiguous_images",
-          "candidateCount": 2
+          "reason": "not_found"
         },
         {
           "id": "coffee-ediya-6d61f6558421",
           "name": "(L) ICED 오트 커피",
-          "reason": "ambiguous_images",
-          "candidateCount": 2
+          "reason": "not_found"
         },
         {
           "id": "coffee-ediya-d53205696dab",
           "name": "(EX) ICED 오트 커피",
-          "reason": "ambiguous_images",
-          "candidateCount": 2
+          "reason": "not_found"
         },
         {
           "id": "coffee-ediya-bbcc5eb47b5f",
           "name": "(L) ICED 오트 콜드브루",
-          "reason": "ambiguous_images",
-          "candidateCount": 2
+          "reason": "not_found"
         },
         {
           "id": "coffee-ediya-7b09a8810aa7",
           "name": "(EX) ICED 오트 콜드브루",
-          "reason": "ambiguous_images",
-          "candidateCount": 2
-        },
-        {
-          "id": "coffee-ediya-ac17a396090e",
-          "name": "가나 초코 소프트 아이스크림 아포가토",
-          "reason": "ambiguous_images",
-          "candidateCount": 2
+          "reason": "not_found"
         }
       ]
     },

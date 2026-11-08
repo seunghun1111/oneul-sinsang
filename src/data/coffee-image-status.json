@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-07T01:05:46.426Z",
+  "checkedAt": "2026-11-08T00:53:37.824Z",
   "results": [
     {
       "brand": "빽다방",
@@ -11,40 +11,9 @@
     {
       "brand": "이디야커피",
       "status": "checked",
-      "matched": 3,
+      "matched": 2,
       "updated": 0,
-      "unresolved": [
-        {
-          "id": "coffee-ediya-81020d913be7",
-          "name": "(L) HOT 오트 커피",
-          "reason": "not_found"
-        },
-        {
-          "id": "coffee-ediya-6b68b5044d78",
-          "name": "(EX) HOT 오트 커피",
-          "reason": "not_found"
-        },
-        {
-          "id": "coffee-ediya-6d61f6558421",
-          "name": "(L) ICED 오트 커피",
-          "reason": "not_found"
-        },
-        {
-          "id": "coffee-ediya-d53205696dab",
-          "name": "(EX) ICED 오트 커피",
-          "reason": "not_found"
-        },
-        {
-          "id": "coffee-ediya-bbcc5eb47b5f",
-          "name": "(L) ICED 오트 콜드브루",
-          "reason": "not_found"
-        },
-        {
-          "id": "coffee-ediya-7b09a8810aa7",
-          "name": "(EX) ICED 오트 콜드브루",
-          "reason": "not_found"
-        }
-      ]
+      "unresolved": []
     },
     {
       "brand": "할리스",

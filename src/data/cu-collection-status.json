@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-11-09T01:08:09.542Z",
+  "checkedAt": "2026-11-10T03:43:47.482Z",
   "results": [
     {
       "brand": "CU",
       "status": "failed",
-      "newCount": 647,
+      "newCount": 666,
       "attempts": 1,
       "categories": [
         {
@@ -12,7 +12,7 @@
           "pages": 7,
           "requests": 7,
           "complete": true,
-          "newCount": 55
+          "newCount": 51
         },
         {
           "label": "즉석조리",
@@ -26,7 +26,7 @@
           "pages": 10,
           "requests": 10,
           "complete": false,
-          "newCount": 138,
+          "newCount": 153,
           "reason": "page_limit"
         },
         {
@@ -41,7 +41,7 @@
           "pages": 10,
           "requests": 10,
           "complete": false,
-          "newCount": 298,
+          "newCount": 304,
           "reason": "page_limit"
         },
         {
@@ -57,7 +57,7 @@
           "pages": 10,
           "requests": 10,
           "complete": false,
-          "newCount": 87,
+          "newCount": 89,
           "reason": "page_limit"
         }
       ],

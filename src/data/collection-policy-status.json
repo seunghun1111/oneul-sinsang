@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-11-17T04:09:42.131Z",
+  "checkedAt": "2026-11-18T03:06:57.686Z",
   "scope": "수집 진입경로 정책 확인만 수행. 상품 요청·수집·검수·알림 없음",
   "brands": 47,
   "totals": {
-    "allowed": 44,
-    "failed": 10,
+    "allowed": 42,
+    "failed": 12,
     "blocked": 3,
     "not_provided": 7
   },
@@ -356,9 +356,9 @@
     {
       "brand": "텐퍼센트커피",
       "url": "https://www.tenpercentcoffee.com/",
-      "status": "allowed",
-      "reason": "",
-      "policyHttpStatus": 200
+      "status": "failed",
+      "reason": "정책 요청 시간 초과",
+      "failureKind": "timeout"
     },
     {
       "brand": "투썸플레이스",
@@ -406,9 +406,9 @@
       "brand": "풀무원",
       "url": "https://news.pulmuone.co.kr/pulmuone/newsroom/listDataroom.do",
       "method": "GET",
-      "status": "allowed",
-      "reason": "",
-      "policyHttpStatus": 200
+      "status": "failed",
+      "reason": "정책 요청 시간 초과",
+      "failureKind": "timeout"
     },
     {
       "brand": "피자헛",

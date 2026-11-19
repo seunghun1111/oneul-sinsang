@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-11-18T03:04:19.886Z",
+  "checkedAt": "2026-11-19T02:44:16.946Z",
   "results": [
     {
       "brand": "CU",
       "status": "failed",
-      "newCount": 673,
+      "newCount": 643,
       "attempts": 1,
       "categories": [
         {
@@ -57,7 +57,7 @@
           "pages": 10,
           "requests": 10,
           "complete": false,
-          "newCount": 95,
+          "newCount": 65,
           "reason": "page_limit"
         }
       ],

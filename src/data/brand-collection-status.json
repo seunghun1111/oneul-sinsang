@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-19T02:46:13.644Z",
+  "checkedAt": "2026-11-20T02:31:42.152Z",
   "results": [
     {
       "brand": "bhc",
@@ -13,7 +13,7 @@
       "brand": "푸라닭",
       "sourceUrl": "https://puradakchicken.com/menu/product.asp",
       "status": "success",
-      "newCount": 6,
+      "newCount": 1,
       "robots": "checked",
       "note": "공식 상품별 NEW 근거 확인 (출시일 미공개는 승인 제한 사유 아님)"
     },

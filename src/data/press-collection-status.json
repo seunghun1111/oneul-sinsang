@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-19T02:46:29.128Z",
+  "checkedAt": "2026-11-20T02:32:01.142Z",
   "results": [
     {
       "brand": "빙그레",
@@ -28,7 +28,7 @@
     {
       "brand": "삼양식품",
       "status": "success",
-      "newCount": 4,
+      "newCount": 3,
       "requestFailures": 0
     }
   ]

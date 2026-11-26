@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-11-25T04:32:14.915Z",
+  "checkedAt": "2026-11-26T03:46:14.734Z",
   "scope": "수집 진입경로 정책 확인만 수행. 상품 요청·수집·검수·알림 없음",
   "brands": 47,
   "totals": {
-    "allowed": 45,
-    "failed": 10,
+    "failed": 12,
+    "allowed": 43,
     "blocked": 3,
     "not_provided": 6
   },
@@ -12,16 +12,16 @@
     {
       "brand": "공차",
       "url": "https://www.gong-cha.co.kr/brand/menu/product?category=001001&scroll=y",
-      "status": "allowed",
-      "reason": "",
-      "policyHttpStatus": 200
+      "status": "failed",
+      "reason": "TLS 인증서 검증 실패",
+      "failureKind": "tls"
     },
     {
       "brand": "공차",
       "url": "https://www.gong-cha.co.kr/brand/menu/product?category=003001&scroll=y",
-      "status": "allowed",
-      "reason": "",
-      "policyHttpStatus": 200
+      "status": "failed",
+      "reason": "TLS 인증서 검증 실패",
+      "failureKind": "tls"
     },
     {
       "brand": "교촌치킨",

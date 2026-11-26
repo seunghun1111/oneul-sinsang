@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-25T04:30:27.120Z",
+  "checkedAt": "2026-11-26T03:44:12.961Z",
   "results": [
     {
       "brand": "롯데리아",
@@ -13,11 +13,9 @@
     },
     {
       "brand": "맥도날드",
-      "status": "failed",
-      "newCount": 0,
-      "attempts": 1,
-      "reasonCode": "unexpected_empty",
-      "failureSince": "2026-11-19T02:45:27.211Z"
+      "status": "success",
+      "newCount": 2,
+      "attempts": 1
     },
     {
       "brand": "버거킹",
